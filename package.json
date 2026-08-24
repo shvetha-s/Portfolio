@@ -1,0 +1,27 @@
+{
+  "name": "swetha-portfolio",
+  "version": "1.0.0",
+  "description": "Swetha S. — UI/UX Designer Portfolio & Interactive Case Studies",
+  "main": "index.html",
+  "scripts": {
+    "dev": "serve -l 8080",
+    "build": "echo 'Static site ready for Vercel deployment'",
+    "start": "serve -l 8080"
+  },
+  "keywords": [
+    "portfolio",
+    "ui-ux",
+    "designer",
+    "case-study",
+    "figma",
+    "design-system",
+    "html5",
+    "css3",
+    "javascript"
+  ],
+  "author": "Swetha S.",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}

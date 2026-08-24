@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/(.*).(png|jpg|jpeg|svg|pdf|css|js)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/butterfingers",
+      "destination": "/butterfingers.html"
+    },
+    {
+      "source": "/neighbour-to-neighbour",
+      "destination": "/neighbour-to-neighbour.html"
+    }
+  ]
+}
