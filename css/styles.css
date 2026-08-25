@@ -1355,13 +1355,15 @@ body {
         width: 100% !important;
     }
 
-    .hero-chapter {
+    .hero-chapter,
+    .topo-hero {
         height: auto !important;
-        min-height: 75vh !important;
+        min-height: 125vh !important;
+        min-height: 125dvh !important;
         display: flex !important;
         flex-direction: column !important;
-        justify-content: center !important;
-        padding: 6.5rem 0 3.5rem !important;
+        justify-content: space-between !important;
+        padding: 9rem 0 5.5rem !important;
     }
 
     .sticky-wrapper {
@@ -2167,16 +2169,16 @@ body {
 @media (max-width: 768px) {
     /* Taller, Expanded Hero Section Length on Mobile */
     .topo-hero {
-        min-height: 140vh !important;
-        min-height: 140dvh !important;
-        padding-top: 10.5rem !important;
-        padding-bottom: 6.5rem !important;
+        min-height: 128vh !important;
+        min-height: 128dvh !important;
+        padding-top: 9.5rem !important;
+        padding-bottom: 6rem !important;
         display: flex !important;
         flex-direction: column !important;
         justify-content: space-between !important;
         align-items: center !important;
         box-sizing: border-box !important;
-        margin-bottom: 2rem !important;
+        margin-bottom: 0 !important;
     }
 
     .port-lockup-container {
