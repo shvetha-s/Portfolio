@@ -1914,7 +1914,7 @@ body {
 
 .port-eyebrow {
     font-family: var(--font-heading), 'Space Grotesk', sans-serif;
-    font-size: clamp(1.1rem, 2.3vw, 2.5rem);
+    font-size: clamp(1.6rem, 3.2vw, 3.4rem);
     font-weight: 700;
     color: var(--accent);
     letter-spacing: -0.02em;
@@ -1933,7 +1933,7 @@ body {
     row-gap: 0;
     align-items: center;
     font-family: var(--font-heading);
-    font-size: clamp(5.5rem, 17vw, 18rem);
+    font-size: clamp(7rem, 23.5vw, 22rem);
     font-weight: 800;
     line-height: 0.82;
     letter-spacing: -0.04em;
@@ -1993,7 +1993,7 @@ body {
 /* Sans-Serif "SWETHA" placed under LIO at bottom right */
 .port-swetha-sans {
     font-family: var(--font-heading), 'Space Grotesk', sans-serif;
-    font-size: clamp(1.2rem, 2.5vw, 3rem);
+    font-size: clamp(1.6rem, 3.2vw, 3.4rem);
     font-weight: 800;
     color: var(--accent);
     letter-spacing: 0.28em;
@@ -2196,20 +2196,20 @@ body {
     }
 
     .port-eyebrow {
-        font-size: clamp(1.25rem, 5.2vw, 2rem);
+        font-size: clamp(1.6rem, 6.8vw, 2.8rem);
         margin-bottom: 0.4rem;
         align-self: flex-start;
         padding-left: 0;
     }
 
     .port-lockup-grid {
-        font-size: clamp(4.2rem, 18.5vw, 7.5rem);
+        font-size: clamp(5.5rem, 23.5vw, 11rem);
         line-height: 0.88;
         column-gap: 0.05rem;
     }
 
     .port-swetha-sans {
-        font-size: clamp(1.25rem, 5.2vw, 2rem);
+        font-size: clamp(1.6rem, 6.8vw, 2.8rem);
         letter-spacing: 0.22em;
         margin-top: 0.6rem;
         align-self: flex-end;
