@@ -23,6 +23,10 @@
     {
       "source": "/neighbour-to-neighbour",
       "destination": "/neighbour-to-neighbour.html"
+    },
+    {
+      "source": "/freshtrack",
+      "destination": "/freshtrack.html"
     }
   ]
 }

@@ -1357,8 +1357,7 @@ body {
 
     .hero-chapter {
         height: auto !important;
-        min-height: 100vh !important;
-        min-height: 100dvh !important;
+        min-height: 75vh !important;
         display: flex !important;
         flex-direction: column !important;
         justify-content: center !important;
@@ -1914,7 +1913,7 @@ body {
 
 .port-eyebrow {
     font-family: var(--font-heading), 'Space Grotesk', sans-serif;
-    font-size: clamp(1.6rem, 3.2vw, 3.4rem);
+    font-size: clamp(1.1rem, 2.3vw, 2.5rem);
     font-weight: 700;
     color: var(--accent);
     letter-spacing: -0.02em;
@@ -1933,7 +1932,7 @@ body {
     row-gap: 0;
     align-items: center;
     font-family: var(--font-heading);
-    font-size: clamp(7rem, 23.5vw, 22rem);
+    font-size: clamp(5.5rem, 17vw, 18rem);
     font-weight: 800;
     line-height: 0.82;
     letter-spacing: -0.04em;
@@ -1993,7 +1992,7 @@ body {
 /* Sans-Serif "SWETHA" placed under LIO at bottom right */
 .port-swetha-sans {
     font-family: var(--font-heading), 'Space Grotesk', sans-serif;
-    font-size: clamp(1.6rem, 3.2vw, 3.4rem);
+    font-size: clamp(1.2rem, 2.5vw, 3rem);
     font-weight: 800;
     color: var(--accent);
     letter-spacing: 0.28em;
@@ -2166,54 +2165,56 @@ body {
 }
 
 @media (max-width: 768px) {
-    /* Taller, Expanded Hero Section Length on Mobile */
+    /* Significantly Expanded Hero Section Length & Word Sizes on Mobile */
     .topo-hero {
-        min-height: 140vh !important;
-        min-height: 140dvh !important;
-        padding-top: 10.5rem !important;
-        padding-bottom: 7.5rem !important;
-        display: flex !important;
-        flex-direction: column !important;
-        justify-content: space-between !important;
-        align-items: center !important;
-        box-sizing: border-box !important;
-        margin-bottom: 0 !important;
+        min-height: 135vh;
+        min-height: 135dvh;
+        padding-top: 9.5rem;
+        padding-bottom: 5.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+        margin-bottom: 0;
     }
 
     .port-lockup-container {
         width: 100%;
-        padding: 0 3%;
+        padding: 0 2%;
         display: flex;
         justify-content: center;
     }
 
     .port-lockup-wrapper {
         width: 100%;
-        max-width: 96%;
+        max-width: 98%;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
     .port-eyebrow {
-        font-size: clamp(1.6rem, 6.8vw, 2.8rem);
-        margin-bottom: 0.4rem;
+        font-size: clamp(1.6rem, 6.8vw, 2.5rem);
+        margin-bottom: 0.6rem;
         align-self: flex-start;
         padding-left: 0;
+        font-weight: 700;
     }
 
     .port-lockup-grid {
-        font-size: clamp(5.5rem, 23.5vw, 11rem);
-        line-height: 0.88;
+        font-size: clamp(5.2rem, 23.5vw, 9.5rem);
+        line-height: 0.86;
         column-gap: 0.05rem;
     }
 
     .port-swetha-sans {
-        font-size: clamp(1.6rem, 6.8vw, 2.8rem);
-        letter-spacing: 0.22em;
-        margin-top: 0.6rem;
+        font-size: clamp(1.6rem, 6.8vw, 2.6rem);
+        letter-spacing: 0.24em;
+        margin-top: 0.8rem;
         align-self: flex-end;
         padding-right: 0;
+        font-weight: 800;
     }
 
     /* Position Begin The Journey prompt cleanly on mobile */
@@ -2221,22 +2222,27 @@ body {
         position: relative;
         bottom: auto;
         left: auto;
-        margin-top: 1.5rem;
+        margin-top: 2.5rem;
         align-self: center;
-        font-size: 0.82rem;
+        font-size: 0.95rem;
     }
 
-    /* Tight section divider on mobile */
+    .topo-scroll-prompt span {
+        font-size: 0.92rem;
+        letter-spacing: 0.14em;
+    }
+
+    /* Generous section divider spacing on mobile */
     .section-divider {
-        padding: 0.5rem 6.5%;
+        padding: 2.5rem 6.5%;
     }
 
-    /* Compact About Me section on mobile — tight space above title */
+    /* About Me section on mobile */
     #about {
         min-height: auto;
-        padding: 0.75rem 6.5% 2rem;
+        padding: 1.5rem 6.5% 3rem;
         flex-direction: column;
-        gap: 1.25rem;
+        gap: 1.5rem;
     }
 
     #about .sticky-title-area {
