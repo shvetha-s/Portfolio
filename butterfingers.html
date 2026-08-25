@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Butterfingers Case Study | Swetha S.</title>
-    <meta name="description" content="UX/UI Case Study for Butterfingers - Home Bakery Mobile App by Swetha S.">
+    <title>Butterfingers Case Study | Swetha S. — UI/UX Designer</title>
+    <meta name="description" content="UX/UI Case Study for Butterfingers - Artisan Home Bakery Mobile App by Swetha S.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,8 +13,261 @@
         href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="css/styles.css?v=20260821">
-    <link rel="stylesheet" href="css/case-study.css?v=20260821">
+    <link rel="stylesheet" href="css/styles.css?v=20260825">
+    <link rel="stylesheet" href="css/case-study.css?v=20260825">
+    <style>
+        /* Portfolio Design System Case Study Component Rules */
+        .cs-hero-card {
+            background: var(--bg-alt);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 20px;
+            padding: 3.5rem 3rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cs-hero-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--accent);
+        }
+
+        .cs-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: var(--font-heading);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--accent);
+            background: rgba(255, 77, 0, 0.08);
+            border: 1px solid rgba(255, 77, 0, 0.25);
+            padding: 0.4rem 1rem;
+            border-radius: 999px;
+            margin-bottom: 1.5rem;
+        }
+
+        .cs-title-main {
+            font-family: var(--font-heading);
+            font-size: clamp(2.8rem, 6.5vw, 5.5rem);
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: -0.03em;
+            color: var(--text-primary);
+            margin-bottom: 1.25rem;
+        }
+
+        .cs-title-main span {
+            color: var(--accent);
+        }
+
+        .cs-dek-text {
+            font-size: 1.25rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            max-width: 680px;
+            margin-bottom: 2.5rem;
+        }
+
+        .cs-metagrid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+            padding-top: 1.75rem;
+        }
+
+        .cs-meta-item .cs-meta-label {
+            font-family: var(--font-heading);
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 0.35rem;
+            display: block;
+        }
+
+        .cs-meta-item .cs-meta-value {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .cs-section {
+            background: var(--bg-alt);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+        }
+
+        .cs-sec-label {
+            font-family: var(--font-heading);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 0.75rem;
+            display: block;
+        }
+
+        .cs-sec-heading {
+            font-family: var(--font-heading);
+            font-size: clamp(1.8rem, 3.8vw, 3rem);
+            font-weight: 600;
+            line-height: 1.25;
+            letter-spacing: -0.02em;
+            color: var(--text-primary);
+            margin-bottom: 1.25rem;
+        }
+
+        .cs-p {
+            font-size: 1.08rem;
+            line-height: 1.75;
+            color: var(--text-secondary);
+            margin-bottom: 1.25rem;
+        }
+
+        .cs-p.lead {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .cs-goals-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .cs-goal-card {
+            background: var(--bg-color);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 14px;
+            padding: 1.75rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .cs-goal-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+        }
+
+        .cs-goal-num {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--accent);
+        }
+
+        .cs-goal-text {
+            font-size: 0.98rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+        }
+
+        .cs-goal-text strong {
+            color: var(--text-primary);
+            display: block;
+            margin-bottom: 0.35rem;
+        }
+
+        .cs-decisions-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .cs-decision-card {
+            background: var(--text-primary);
+            color: #FFFFFF;
+            border-radius: 16px;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .cs-decision-card .cs-tag-mini {
+            font-family: var(--font-heading);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 0.75rem;
+            display: block;
+        }
+
+        .cs-decision-card h4 {
+            font-family: var(--font-heading);
+            font-size: 1.35rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .cs-decision-card p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+            line-height: 1.65;
+            margin: 0;
+        }
+
+        .cs-list-bullets {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+        }
+
+        .cs-list-bullets li {
+            position: relative;
+            padding-left: 1.75rem;
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .cs-list-bullets li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        @media (max-width: 900px) {
+            .cs-metagrid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.25rem;
+            }
+            .cs-goals-grid {
+                grid-template-columns: 1fr;
+            }
+            .cs-decisions-grid {
+                grid-template-columns: 1fr;
+            }
+            .cs-hero-card, .cs-section {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
 </head>
 
 <body class="case-study-body">
@@ -53,12 +306,113 @@
     </header>
 
     <main class="cs-container">
-        <!-- Main Case Study Infographic -->
-        <section class="cs-slide-section">
-            <div class="cs-slide-wrap">
+        <!-- Hero Card Header -->
+        <div class="cs-hero-card">
+            <span class="cs-badge">UI/UX Case Study</span>
+            <h1 class="cs-title-main">Butter<span>fingers</span></h1>
+            <p class="cs-dek-text">Artisan Home Bakery Mobile App &amp; Scheduled Delivery Flow featuring customized cake builders, transparent pricing, and real-time order tracking.</p>
+
+            <div class="cs-metagrid">
+                <div class="cs-meta-item">
+                    <span class="cs-meta-label">Role</span>
+                    <span class="cs-meta-value">Solo UI/UX Designer</span>
+                </div>
+                <div class="cs-meta-item">
+                    <span class="cs-meta-label">Category</span>
+                    <span class="cs-meta-value">Mobile E-Commerce</span>
+                </div>
+                <div class="cs-meta-item">
+                    <span class="cs-meta-label">Tool</span>
+                    <span class="cs-meta-value">Figma</span>
+                </div>
+                <div class="cs-meta-item">
+                    <span class="cs-meta-label">Status</span>
+                    <span class="cs-meta-value">Interactive Prototype</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 01: The Problem -->
+        <section class="cs-section">
+            <span class="cs-sec-label">01. The Problem</span>
+            <h2 class="cs-sec-heading">Ordering custom baked goods shouldn't feel like endless back-and-forth messages.</h2>
+            <p class="cs-p lead">Home bakeries offer unmatched quality, but their order intake is often fragmented.</p>
+            <p class="cs-p">Custom cake ordering currently relies heavily on unorganized messaging channels (WhatsApp, Instagram DMs). Customers struggle to specify flavors, dietary options, and delivery time slots, while bakers spend hours clarifying details and confirming payments manually.</p>
+        </section>
+
+        <!-- Section 02: Core Objectives -->
+        <section class="cs-section">
+            <span class="cs-sec-label">02. Core Objectives</span>
+            <h2 class="cs-sec-heading">Three pillars of the Butterfingers experience.</h2>
+            
+            <div class="cs-goals-grid">
+                <div class="cs-goal-card">
+                    <span class="cs-goal-num">01</span>
+                    <div class="cs-goal-text">
+                        <strong>Interactive Visual Cake Customizer.</strong>
+                        Allow customers to pick cake tiers, flavors, frostings, and custom messages with instant visual previews.
+                    </div>
+                </div>
+
+                <div class="cs-goal-card">
+                    <span class="cs-goal-num">02</span>
+                    <div class="cs-goal-text">
+                        <strong>Guaranteed Delivery Slots.</strong>
+                        Clear calendar scheduling for fresh delivery times, eliminating pickup confusion for celebrations.
+                    </div>
+                </div>
+
+                <div class="cs-goal-card">
+                    <span class="cs-goal-num">03</span>
+                    <div class="cs-goal-text">
+                        <strong>Real-Time Preparation Status.</strong>
+                        Track order progress from baking in the oven to final decoration and out-for-delivery updates.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 03: Full Case Study Walkthrough & Infographic -->
+        <section class="cs-section">
+            <span class="cs-sec-label">03. Complete Case Study Walkthrough</span>
+            <h2 class="cs-sec-heading">End-to-End Design Presentation</h2>
+            <p class="cs-p">Explore the full high-fidelity mobile flow, wireframes, and design system breakdown below. Click the image to view in full resolution lightbox mode.</p>
+            
+            <div class="cs-slide-wrap" style="margin-top: 1.5rem;">
                 <img src="assets/images/butterfinger-casestudy.png" alt="Butterfingers - Complete Case Study"
                     class="cs-slide-img" style="aspect-ratio: auto;" onclick="openLightbox(this.src)">
             </div>
+        </section>
+
+        <!-- Section 04: Key UX Decisions -->
+        <section class="cs-section">
+            <span class="cs-sec-label">04. Key Design Decisions</span>
+            <h2 class="cs-sec-heading">Crafting delight while reducing checkout friction.</h2>
+
+            <div class="cs-decisions-grid">
+                <div class="cs-decision-card">
+                    <span class="cs-tag-mini">Decision 01</span>
+                    <h4>Step-by-Step Customizer Progress</h4>
+                    <p>Broke complex customization into a 4-step guided wizard (Base → Filling → Toppers → Inscription) to prevent choice overload.</p>
+                </div>
+
+                <div class="cs-decision-card">
+                    <span class="cs-tag-mini">Decision 02</span>
+                    <h4>Upfront Price Transparency</h4>
+                    <p>Live order total updates instantly as options are selected, so customers never face unexpected price surprises at checkout.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 05: Reflection & Learnings -->
+        <section class="cs-section">
+            <span class="cs-sec-label">05. Reflection &amp; Takeaways</span>
+            <h2 class="cs-sec-heading">Key insights gained from building Butterfingers.</h2>
+            <ul class="cs-list-bullets">
+                <li><strong>Sensory UI Design:</strong> Warm color palettes and rich micro-typography elevate appetite appeal and brand trust.</li>
+                <li><strong>Streamlined Checkout:</strong> Reducing input fields during address selection boosted checkout speed significantly.</li>
+                <li><strong>Empowering Home Creators:</strong> Standardized order intake frees home bakers to focus on baking rather than admin messaging.</li>
+            </ul>
         </section>
 
         <!-- Bottom Navigation & CTA -->
@@ -68,8 +422,8 @@
                 <h2 class="cs-next-title">Have a project in mind?</h2>
                 <div class="cs-btn-group">
                     <a href="index.html#work" class="cs-btn-primary">View All Projects</a>
-                    <a href="neighbour-to-neighbour.html" class="cs-btn-secondary">Neighbour to Neighbour Case Study
-                        &rarr;</a>
+                    <a href="neighbour-to-neighbour.html" class="cs-btn-secondary">Neighbour to Neighbour Case Study &rarr;</a>
+                    <a href="freshtrack-case-study.html" class="cs-btn-secondary">Fresh Track Case Study &rarr;</a>
                     <a href="mailto:swethaseyavelu@gmail.com" class="cs-btn-secondary">Get in Touch</a>
                 </div>
             </div>

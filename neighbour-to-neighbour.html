@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neighbour to Neighbour Case Study | Swetha S.</title>
-    <meta name="description"
-        content="UX/UI Case Study for Neighbour to Neighbour - Hyperlocal Tool-Lending App by Swetha S.">
+    <title>Neighbour to Neighbour Case Study | Swetha S. — UI/UX Designer</title>
+    <meta name="description" content="UX/UI Case Study for Neighbour to Neighbour - Hyperlocal Tool-Lending App by Swetha S.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,10 +13,264 @@
         href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/case-study.css">
+    <link rel="stylesheet" href="css/styles.css?v=20260825">
+    <link rel="stylesheet" href="css/case-study.css?v=20260825">
+    <style>
+        /* Portfolio Design System Case Study Component Rules */
+        .cs-hero-card {
+            background: var(--bg-alt);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 20px;
+            padding: 3.5rem 3rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cs-hero-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--accent);
+        }
+
+        .cs-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: var(--font-heading);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--accent);
+            background: rgba(255, 77, 0, 0.08);
+            border: 1px solid rgba(255, 77, 0, 0.25);
+            padding: 0.4rem 1rem;
+            border-radius: 999px;
+            margin-bottom: 1.5rem;
+        }
+
+        .cs-title-main {
+            font-family: var(--font-heading);
+            font-size: clamp(2.5rem, 5.5vw, 4.8rem);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            color: var(--text-primary);
+            margin-bottom: 1.25rem;
+        }
+
+        .cs-title-main span {
+            color: var(--accent);
+        }
+
+        .cs-dek-text {
+            font-size: 1.25rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            max-width: 680px;
+            margin-bottom: 2.5rem;
+        }
+
+        .cs-metagrid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+            padding-top: 1.75rem;
+        }
+
+        .cs-meta-item .cs-meta-label {
+            font-family: var(--font-heading);
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 0.35rem;
+            display: block;
+        }
+
+        .cs-meta-item .cs-meta-value {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .cs-section {
+            background: var(--bg-alt);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+        }
+
+        .cs-sec-label {
+            font-family: var(--font-heading);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 0.75rem;
+            display: block;
+        }
+
+        .cs-sec-heading {
+            font-family: var(--font-heading);
+            font-size: clamp(1.8rem, 3.8vw, 3rem);
+            font-weight: 600;
+            line-height: 1.25;
+            letter-spacing: -0.02em;
+            color: var(--text-primary);
+            margin-bottom: 1.25rem;
+        }
+
+        .cs-p {
+            font-size: 1.08rem;
+            line-height: 1.75;
+            color: var(--text-secondary);
+            margin-bottom: 1.25rem;
+        }
+
+        .cs-p.lead {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .cs-goals-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .cs-goal-card {
+            background: var(--bg-color);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 14px;
+            padding: 1.75rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .cs-goal-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+        }
+
+        .cs-goal-num {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--accent);
+        }
+
+        .cs-goal-text {
+            font-size: 0.98rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+        }
+
+        .cs-goal-text strong {
+            color: var(--text-primary);
+            display: block;
+            margin-bottom: 0.35rem;
+        }
+
+        .cs-decisions-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .cs-decision-card {
+            background: var(--text-primary);
+            color: #FFFFFF;
+            border-radius: 16px;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .cs-decision-card .cs-tag-mini {
+            font-family: var(--font-heading);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 0.75rem;
+            display: block;
+        }
+
+        .cs-decision-card h4 {
+            font-family: var(--font-heading);
+            font-size: 1.35rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .cs-decision-card p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+            line-height: 1.65;
+            margin: 0;
+        }
+
+        .cs-list-bullets {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+        }
+
+        .cs-list-bullets li {
+            position: relative;
+            padding-left: 1.75rem;
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .cs-list-bullets li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        @media (max-width: 900px) {
+            .cs-metagrid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.25rem;
+            }
+            .cs-goals-grid {
+                grid-template-columns: 1fr;
+            }
+            .cs-decisions-grid {
+                grid-template-columns: 1fr;
+            }
+            .cs-hero-card, .cs-section {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
 </head>
 
+<body class="case-study-body">
     <!-- Orange Sunflower Custom Cursor -->
     <div class="cursor-dot" id="cursorDot">
         <svg class="sunflower-cursor-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -53,12 +306,113 @@
     </header>
 
     <main class="cs-container">
-        <!-- Main Case Study Infographic -->
-        <section class="cs-slide-section">
-            <div class="cs-slide-wrap">
+        <!-- Hero Card Header -->
+        <div class="cs-hero-card">
+            <span class="cs-badge">UI/UX Case Study</span>
+            <h1 class="cs-title-main">Neighbour <span>to Neighbour</span></h1>
+            <p class="cs-dek-text">Hyperlocal Tool-Lending &amp; Community Trust Platform connecting neighbors to share household items, eliminate wasteful duplicate purchases, and foster local trust.</p>
+
+            <div class="cs-metagrid">
+                <div class="cs-meta-item">
+                    <span class="cs-meta-label">Role</span>
+                    <span class="cs-meta-value">Solo UI/UX Designer</span>
+                </div>
+                <div class="cs-meta-item">
+                    <span class="cs-meta-label">Category</span>
+                    <span class="cs-meta-value">Community Tech &amp; Trust</span>
+                </div>
+                <div class="cs-meta-item">
+                    <span class="cs-meta-label">Tool</span>
+                    <span class="cs-meta-value">Figma</span>
+                </div>
+                <div class="cs-meta-item">
+                    <span class="cs-meta-label">Status</span>
+                    <span class="cs-meta-value">Interactive Prototype</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 01: The Problem -->
+        <section class="cs-section">
+            <span class="cs-sec-label">01. The Problem</span>
+            <h2 class="cs-sec-heading">Household tools sit idle 95% of the time while neighbors buy duplicates.</h2>
+            <p class="cs-p lead">Most households own expensive tools (drills, ladders, pressure washers) that are used only a few times per year.</p>
+            <p class="cs-p">Meanwhile, nearby neighbors buy exact duplicate items for one-off tasks. Informal borrowing currently relies on personal acquaintances or unorganized WhatsApp groups with zero tracking or accountability, creating awkwardness around item damage or delayed returns.</p>
+        </section>
+
+        <!-- Section 02: Core Objectives -->
+        <section class="cs-section">
+            <span class="cs-sec-label">02. Core Objectives</span>
+            <h2 class="cs-sec-heading">Three pillars of the Neighbour to Neighbour ecosystem.</h2>
+            
+            <div class="cs-goals-grid">
+                <div class="cs-goal-card">
+                    <span class="cs-goal-num">01</span>
+                    <div class="cs-goal-text">
+                        <strong>Hyperlocal Item Discovery.</strong>
+                        Allow users to search available tools and equipment within a 2-km radius with real-time availability status.
+                    </div>
+                </div>
+
+                <div class="cs-goal-card">
+                    <span class="cs-goal-num">02</span>
+                    <div class="cs-goal-text">
+                        <strong>Verified Borrowing &amp; Return Handoff.</strong>
+                        Seamless QR-code verification during item pick-up and return to guarantee accountability and peace of mind.
+                    </div>
+                </div>
+
+                <div class="cs-goal-card">
+                    <span class="cs-goal-num">03</span>
+                    <div class="cs-goal-text">
+                        <strong>Frictionless Community Requests.</strong>
+                        Post quick help or item requests to verified neighbors in seconds without social anxiety.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 03: Full Case Study Walkthrough & Infographic -->
+        <section class="cs-section">
+            <span class="cs-sec-label">03. Complete Case Study Walkthrough</span>
+            <h2 class="cs-sec-heading">End-to-End Design Presentation</h2>
+            <p class="cs-p">Explore the full high-fidelity mobile flow, wireframes, and design system breakdown below. Click the image to view in full resolution lightbox mode.</p>
+            
+            <div class="cs-slide-wrap" style="margin-top: 1.5rem;">
                 <img src="assets/images/n2n-casestudy.png" alt="Neighbour to Neighbour - Complete Case Study"
                     class="cs-slide-img" style="aspect-ratio: auto;" onclick="openLightbox(this.src)">
             </div>
+        </section>
+
+        <!-- Section 04: Key UX Decisions -->
+        <section class="cs-section">
+            <span class="cs-sec-label">04. Key Design Decisions</span>
+            <h2 class="cs-sec-heading">Designing for trust and local accountability.</h2>
+
+            <div class="cs-decisions-grid">
+                <div class="cs-decision-card">
+                    <span class="cs-tag-mini">Decision 01</span>
+                    <h4>Proximity-Based Map &amp; List Toggle</h4>
+                    <p>Enabled users to switch effortlessly between map view (seeing nearby tools within walking distance) and filtered category lists.</p>
+                </div>
+
+                <div class="cs-decision-card">
+                    <span class="cs-tag-mini">Decision 02</span>
+                    <h4>Trust Score &amp; Damage Coverage</h4>
+                    <p>Integrated community trust badges and item return reminders so lenders feel 100% confident sharing valuable equipment.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 05: Reflection & Learnings -->
+        <section class="cs-section">
+            <span class="cs-sec-label">05. Reflection &amp; Takeaways</span>
+            <h2 class="cs-sec-heading">Key insights gained from designing Neighbour to Neighbour.</h2>
+            <ul class="cs-list-bullets">
+                <li><strong>Trust is the Core Product:</strong> Peer-to-peer sharing platforms succeed when safety and accountability are built into every interaction.</li>
+                <li><strong>Micro-Location Matters:</strong> Keeping searches focused within a tight neighborhood radius increases fulfillment speed and community bonding.</li>
+                <li><strong>Clear Borrower Contracts:</strong> Transparent terms upfront eliminate awkwardness and build long-term platform participation.</li>
+            </ul>
         </section>
 
         <!-- Bottom Navigation & CTA -->
@@ -69,6 +423,7 @@
                 <div class="cs-btn-group">
                     <a href="index.html#work" class="cs-btn-primary">View All Projects</a>
                     <a href="butterfingers.html" class="cs-btn-secondary">Butterfingers Case Study &rarr;</a>
+                    <a href="freshtrack-case-study.html" class="cs-btn-secondary">Fresh Track Case Study &rarr;</a>
                     <a href="mailto:swethaseyavelu@gmail.com" class="cs-btn-secondary">Get in Touch</a>
                 </div>
             </div>
@@ -99,98 +454,6 @@
             if (e.key === 'Escape') closeLightbox();
         });
     </script>
-</body>
-
-</html>
-<!-- Massive Typographic Footer (Design System Match) -->
-<footer id="contact" class="massive-footer">
-    <div class="footer-top-content">
-        <div class="footer-left">
-            <div class="footer-brand">
-                <span class="footer-logo-text">Swetha S.</span>
-            </div>
-
-            <div class="footer-social-icons">
-                <a href="#" aria-label="LinkedIn">
-                    <svg viewBox="0 0 24 24" width="18" height="18">
-                        <path
-                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                    </svg>
-                </a>
-                <a href="mailto:swethaseyavelu@gmail.com" aria-label="Email">
-                    <svg viewBox="0 0 24 24" width="18" height="18">
-                        <path
-                            d="M12 12.713l-11.985-9.713h23.971l-11.986 9.713zm-5.425-1.822l-6.575-5.329v12.501l6.575-7.172zm10.85 0l6.575 7.172v-12.501l-6.575 5.329zm-1.557 1.261l-3.868 3.135-3.868-3.135-8.11 8.848h23.956l-8.11-8.848z" />
-                    </svg>
-                </a>
-                <a href="tel:9498828876" aria-label="Phone">
-                    <svg viewBox="0 0 24 24" width="18" height="18">
-                        <path
-                            d="M20 22.621l-3.521-6.795c-.007.004-1.974.97-2.064 1.011-2.24 1.086-6.799-7.82-4.609-8.994l2.082-1.026-3.492-6.817-2.106 1.039c-2.617 1.29-6.074 4.743-6.284 8.761-.205 3.905 3.513 11.233 11.294 13.916 3.018 1.042 5.513 1.027 7.742-.072l.958-.423z" />
-                    </svg>
-                </a>
-                <a href="#" aria-label="Behance">
-                    <svg viewBox="0 0 24 24" width="18" height="18">
-                        <path
-                            d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14h-8.027c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.226-2.427-2.226-1.611 0-2.423.952-2.538 2.226zm-8.303 6.993c-2.31 0-3.737-1.178-3.737-3.215 0-2.146 1.848-2.906 3.167-3.045-1.229-.408-2.083-1.248-2.083-2.607 0-1.597 1.341-2.934 3.739-2.934h4.673v11.801h-5.759zm1.782-5.719c1.642 0 1.944-1.168 1.944-1.77 0-1.144-.614-1.636-1.758-1.636h-1.954v3.406h1.768zm.056 4.148c1.378 0 2.083-.756 2.083-1.85 0-1.218-.897-1.852-2.39-1.852h-1.517v3.702h1.824z" />
-                    </svg>
-                </a>
-                <a href="#" aria-label="Dribbble">
-                    <svg viewBox="0 0 24 24" width="18" height="18">
-                        <path
-                            d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm8.431 7.424c.94 1.353 1.493 2.99 1.547 4.743-1.026-.144-2.316-.279-3.757-.142-.519-1.375-1.146-2.73-1.855-4.004 1.632-.676 2.977-1.054 3.655-1.226 1.365.233.155 1.513.41 1.737zm-2.155-2.42c-.521.157-1.824.52-3.35 1.153-.94-1.603-2.029-3.136-3.23-4.571 1.31-.418 2.723-.623 4.179-.588 1.058 1.082 1.884 2.378 2.401 3.864zm-7.618-4.062c1.238 1.341 2.348 2.784 3.305 4.301-3.003.882-5.918 1.258-8.156 1.411 1.042-2.403 2.766-4.417 4.851-5.712zm-7.142 6.541c2.408-.18 5.617-.611 8.847-1.621.683 1.246 1.288 2.531 1.796 3.844-3.663 1.161-6.732 3.195-8.583 4.741-1.385-1.748-2.148-3.957-2.06-6.421 0-.179.006-.358.02-.536zm2.341 8.274c1.802-1.544 4.772-3.52 8.358-4.664.269.803.504 1.611.706 2.418-.118.021-.237.042-.358.064-3.585.679-6.282 2.793-7.235 3.693-1.031-1.298-1.73-2.825-1.921-4.475zm3.766 5.253c1.032-.98 3.874-3.238 7.575-3.992 1.046 2.871 1.397 5.611 1.503 6.643-1.666.427-3.418.571-5.176.388-1.503-.306-2.894-.972-4.067-1.892zm9.64-1.996c-.156-1.127-.55-3.886-1.579-6.71.189-.033.377-.064.567-.094 1.53-.243 2.928-.106 3.995.035-.371 2.883-2.06 5.378-4.629 6.842z" />
-                    </svg>
-                </a>
-            </div>
-        </div>
-
-        <div class="footer-right">
-            <div class="footer-nav-grid">
-                <a href="index.html#about">About</a>
-                <a href="index.html#work">Work</a>
-                <a href="Swetha_S_Resume.pdf" target="_blank">Resume</a>
-                <a href="index.html#contact">Contact</a>
-                <a href="#">LinkedIn</a>
-                <a href="#">Behance</a>
-                <a href="#">Dribbble</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer-text-wrapper">
-        <h2 class="footer-huge-text">Get in touch</h2>
-    </div>
-
-    <div class="footer-bottom-content">
-        <div class="footer-copyright">&copy; 2026 Swetha S.</div>
-        <div class="footer-contact-details">swethaseyavelu@gmail.com</div>
-    </div>
-</footer>
-
-<!-- Lightbox Modal -->
-<div id="csLightbox" class="cs-lightbox" onclick="closeLightbox()">
-    <span class="cs-lightbox-close">&times;</span>
-    <img id="csLightboxImg" class="cs-lightbox-content" alt="Enlarged view">
-</div>
-
-<script src="script.js?v=20260821"></script>
-<script>
-    const lightbox = document.getElementById('csLightbox');
-    const lightboxImg = document.getElementById('csLightboxImg');
-
-    function openLightbox(src) {
-        lightboxImg.src = src;
-        lightbox.classList.add('open');
-    }
-
-    function closeLightbox() {
-        lightbox.classList.remove('open');
-    }
-
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') closeLightbox();
-    });
-</script>
 </body>
 
 </html>
