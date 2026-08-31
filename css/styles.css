@@ -1928,12 +1928,12 @@ body {
 }
 
 .port-lockup-wrapper {
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     position: relative;
-    width: 100%;
+    width: max-content;
     max-width: 100%;
-    align-items: center;
+    align-items: flex-start;
 }
 
 /* Localized Circle Radial Gradients directly anchored into letter F and letter T */
