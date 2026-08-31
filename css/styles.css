@@ -2203,7 +2203,20 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
     position: relative;
     overflow: hidden;
-    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+    opacity: 0;
+    transform: translateY(48px) scale(0.92);
+    transition: opacity 0.75s cubic-bezier(0.34, 1.56, 0.64, 1), transform 0.75s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+    will-change: transform, opacity;
+}
+
+.exp-cert-chapter.is-popped .exp-panel,
+.exp-cert-chapter.is-popped .cert-panel {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.exp-cert-chapter.is-popped .cert-panel {
+    transition-delay: 0.16s;
 }
 
 /* Subtle top accent highlight bar for each card */
@@ -2219,11 +2232,11 @@ body {
     opacity: 0.85;
 }
 
-.exp-panel:hover,
-.cert-panel:hover {
-    transform: translateY(-6px);
+.exp-cert-chapter.is-popped .exp-panel:hover,
+.exp-cert-chapter.is-popped .cert-panel:hover {
+    transform: translateY(-6px) scale(1.015);
     border-color: rgba(255, 77, 0, 0.35);
-    box-shadow: 0 20px 48px rgba(255, 77, 0, 0.09);
+    box-shadow: 0 20px 48px rgba(255, 77, 0, 0.12);
 }
 
 .exp-panel .massive-title,

@@ -136,6 +136,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // ═══════════════════════════════════════════════════════════
+    //  EXPERIENCE & CERTIFICATIONS POP-ON-SCROLL ANIMATION
+    //  Triggers dynamic spring pop when scrolling/swiping from About Me
+    // ═══════════════════════════════════════════════════════════
+    const expSection = document.getElementById('experience');
+    if (expSection) {
+        const expObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    expSection.classList.add('is-popped');
+                }
+            });
+        }, {
+            threshold: 0.12,
+            rootMargin: '0px 0px -40px 0px'
+        });
+        expObserver.observe(expSection);
+    }
+
 });
 
 function initHero3DSphere() {
