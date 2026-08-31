@@ -2385,15 +2385,15 @@ body {
     align-items: center;
     justify-content: space-between;
     height: 100%;
-    max-height: 1020px;
-    gap: clamp(0.5rem, 1.2vh, 1.2rem);
+    max-height: 1150px;
+    gap: clamp(1.0rem, 2.2vh, 2.2rem);
     font-family: var(--font-heading);
-    font-size: clamp(3.2rem, 5.8vw, 7.2rem);
+    font-size: clamp(3.6rem, 6.2vw, 7.8rem);
     font-weight: 900;
     line-height: 1;
     color: var(--text-primary);
     text-transform: uppercase;
-    -webkit-text-stroke: 1.5px var(--text-primary);
+    -webkit-text-stroke: 3.5px var(--text-primary);
     paint-order: stroke fill;
 }
 
@@ -2403,7 +2403,7 @@ body {
     line-height: 0.95;
     transform: scaleY(1.45);
     transform-origin: center;
-    margin: 0.55rem 0;
+    margin: 1.1rem 0;
 }
 
 .edu-letter.edu-e-wrapper {
