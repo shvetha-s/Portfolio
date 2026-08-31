@@ -1946,22 +1946,22 @@ body {
     opacity: 0.92;
 }
 
-/* Circle 1: Centered around letter F (bottom-left) as marked */
+/* Circle 1: Centered 100% dead-center inside the left red circle (around letter F) */
 .lockup-glow-pf {
-    top: 42%;
-    left: -4%;
+    top: 52%;
+    left: 4%;
     width: clamp(240px, 28vw, 420px);
     height: clamp(240px, 28vw, 420px);
-    background: radial-gradient(circle, rgba(255, 80, 0, 0.62) 0%, rgba(255, 120, 50, 0.3) 45%, transparent 70%);
+    background: radial-gradient(circle, rgba(255, 80, 0, 0.65) 0%, rgba(255, 120, 50, 0.32) 45%, transparent 70%);
 }
 
-/* Circle 2: Centered around top-right of T / above IO as marked */
+/* Circle 2: Centered 100% dead-center inside the right red circle (top-right of T) */
 .lockup-glow-rt {
-    top: -10%;
-    right: 8%;
+    top: -24%;
+    right: 2%;
     width: clamp(240px, 28vw, 420px);
     height: clamp(240px, 28vw, 420px);
-    background: radial-gradient(circle, rgba(255, 80, 0, 0.62) 0%, rgba(255, 120, 50, 0.3) 45%, transparent 70%);
+    background: radial-gradient(circle, rgba(255, 80, 0, 0.65) 0%, rgba(255, 120, 50, 0.32) 45%, transparent 70%);
 }
 
 .port-eyebrow {
