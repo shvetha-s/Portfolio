@@ -1946,24 +1946,24 @@ body {
     opacity: 0.95;
 }
 
-/* Circle 1: Centered 100% dead-center on letter F as marked */
+/* Circle 1: Centered 100% dead-center inside the left red circle around letter F */
 .lockup-glow-pf {
-    top: 48%;
-    left: 45%;
-    transform: translate(-50%, -50%);
-    width: clamp(240px, 28vw, 420px);
-    height: clamp(240px, 28vw, 420px);
-    background: radial-gradient(circle, rgba(255, 80, 0, 0.65) 0%, rgba(255, 120, 50, 0.32) 45%, transparent 70%);
+    top: 50%;
+    left: 4%;
+    transform: translate(-35%, -20%);
+    width: clamp(260px, 30vw, 440px);
+    height: clamp(260px, 30vw, 440px);
+    background: radial-gradient(circle, rgba(255, 80, 0, 0.68) 0%, rgba(255, 120, 50, 0.34) 45%, transparent 70%);
 }
 
-/* Circle 2: Centered 100% dead-center on top-right of T as marked */
+/* Circle 2: Centered 100% dead-center inside the right red circle over top-right of T */
 .lockup-glow-rt {
-    top: 5%;
-    left: 65%;
-    transform: translate(-50%, -50%);
-    width: clamp(240px, 28vw, 420px);
-    height: clamp(240px, 28vw, 420px);
-    background: radial-gradient(circle, rgba(255, 80, 0, 0.65) 0%, rgba(255, 120, 50, 0.32) 45%, transparent 70%);
+    top: -5%;
+    right: 4%;
+    transform: translate(25%, -20%);
+    width: clamp(260px, 30vw, 440px);
+    height: clamp(260px, 30vw, 440px);
+    background: radial-gradient(circle, rgba(255, 80, 0, 0.68) 0%, rgba(255, 120, 50, 0.34) 45%, transparent 70%);
 }
 
 .port-eyebrow {
