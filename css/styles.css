@@ -306,24 +306,6 @@ body {
     padding-left: 8%;
 }
 
-/* Organic Wave Partition Transition on top of #about */
-.about-wave-top {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: clamp(70px, 10vw, 150px);
-    z-index: 5;
-    pointer-events: none;
-    line-height: 0;
-}
-
-.about-wave-top svg {
-    width: 100%;
-    height: 100%;
-    display: block;
-}
-
 /* About Section — Orange Glassy Gradient Background */
 #about {
     min-height: 100vh;
@@ -395,6 +377,26 @@ body {
     border-radius: 0;
     padding: 0;
     box-shadow: none;
+}
+
+/* Wave Partition below About Page */
+.about-wave-partition {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: clamp(60px, 9vw, 130px);
+    overflow: hidden;
+    line-height: 0;
+    pointer-events: none;
+    z-index: 3;
+}
+
+.about-wave-svg {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .scrolling-content-area {
