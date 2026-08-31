@@ -306,15 +306,51 @@ body {
     padding-left: 8%;
 }
 
-/* About Section — Dedicated Full 2nd Page with Grid Paper Background */
+/* About Section — Orange Glassy Gradient Background */
 #about {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background-image: url('../assets/images/about-grid-bg.png');
-    background-repeat: repeat;
-    background-size: 160px auto;
-    background-position: top left;
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(circle at 15% 25%, rgba(255, 80, 0, 0.25) 0%, transparent 55%),
+                radial-gradient(circle at 85% 75%, rgba(255, 140, 50, 0.22) 0%, transparent 60%),
+                radial-gradient(circle at 50% 50%, rgba(255, 100, 30, 0.15) 0%, transparent 70%),
+                linear-gradient(135deg, #FFF8F3 0%, #FFEEDF 40%, #FFF3E8 100%);
+}
+
+#about::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: -5%;
+    width: clamp(300px, 40vw, 600px);
+    height: clamp(300px, 40vw, 600px);
+    background: radial-gradient(circle, rgba(255, 80, 0, 0.38) 0%, rgba(255, 120, 50, 0.15) 50%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(60px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+#about::after {
+    content: '';
+    position: absolute;
+    bottom: 5%;
+    right: -5%;
+    width: clamp(320px, 42vw, 650px);
+    height: clamp(320px, 42vw, 650px);
+    background: radial-gradient(circle, rgba(255, 120, 50, 0.35) 0%, rgba(255, 77, 0, 0.18) 50%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(65px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+#about .sticky-title-area,
+#about .scrolling-content-area {
+    position: relative;
+    z-index: 1;
 }
 
 #about .sticky-title-area {
@@ -331,8 +367,25 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 2.5rem;
+    gap: 2rem;
     padding: 5rem 8% 5rem 0;
+}
+
+#about .content-block {
+    background: rgba(255, 255, 255, 0.52);
+    backdrop-filter: blur(16px) saturate(160%);
+    -webkit-backdrop-filter: blur(16px) saturate(160%);
+    border: 1px solid rgba(255, 120, 50, 0.25);
+    border-radius: 24px;
+    padding: 2.2rem 2.6rem;
+    box-shadow: 0 20px 45px rgba(255, 80, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+#about .content-block:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 80, 0, 0.45);
+    box-shadow: 0 28px 55px rgba(255, 80, 0, 0.14), inset 0 1px 0 #ffffff;
 }
 
 .scrolling-content-area {
