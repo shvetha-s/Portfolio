@@ -1946,21 +1946,21 @@ body {
     opacity: 0.92;
 }
 
-/* Circle 1: Centered directly over P & F in the marked area */
+/* Circle 1: Centered around letter F (bottom-left) as marked */
 .lockup-glow-pf {
-    top: 20%;
-    left: 12%;
-    width: clamp(200px, 24vw, 360px);
-    height: clamp(200px, 24vw, 360px);
+    top: 42%;
+    left: -4%;
+    width: clamp(240px, 28vw, 420px);
+    height: clamp(240px, 28vw, 420px);
     background: radial-gradient(circle, rgba(255, 80, 0, 0.62) 0%, rgba(255, 120, 50, 0.3) 45%, transparent 70%);
 }
 
-/* Circle 2: Centered directly over RT at top-right of lockup */
+/* Circle 2: Centered around top-right of T / above IO as marked */
 .lockup-glow-rt {
-    top: 5%;
-    right: 22%;
-    width: clamp(200px, 24vw, 360px);
-    height: clamp(200px, 24vw, 360px);
+    top: -10%;
+    right: 8%;
+    width: clamp(240px, 28vw, 420px);
+    height: clamp(240px, 28vw, 420px);
     background: radial-gradient(circle, rgba(255, 80, 0, 0.62) 0%, rgba(255, 120, 50, 0.3) 45%, transparent 70%);
 }
 
