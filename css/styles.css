@@ -2366,6 +2366,47 @@ body {
     overflow: hidden;
 }
 
+/* Vertical Bold Uppercase Title for Education Section */
+#education .sticky-title-area {
+    width: 50%;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 6%;
+}
+
+.edu-vertical-title {
+    font-family: var(--font-heading);
+    font-size: clamp(3.2rem, 5.8vw, 7.5rem);
+    font-weight: 800;
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    letter-spacing: 0.12em;
+    line-height: 1;
+    color: var(--text-primary);
+    white-space: nowrap !important;
+}
+
+.edu-vertical-title .edu-e-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.edu-vertical-title .grad-cap-icon {
+    position: absolute;
+    top: -0.42em;
+    left: -0.28em;
+    width: 0.95em;
+    height: 0.95em;
+    transform: rotate(-25deg);
+    color: var(--accent);
+    filter: drop-shadow(0 6px 12px rgba(255, 80, 0, 0.35));
+}
+
 .pinned-board-area {
     width: 50%;
     min-height: 100vh;
@@ -2555,208 +2596,4 @@ body {
     .pinned-card-1 { transform: rotate(-2deg); }
     .pinned-card-2 { transform: rotate(2deg); }
     .pinned-card-3 { transform: rotate(-1.5deg); }
-}
-
-/* ═══════════════════════════════════════════════════════════════
-   SKILLS SECTION — REFERENCE 2-HALF SPLIT CARDS (DESIGN SYSTEM)
-   ═══════════════════════════════════════════════════════════════ */
-.ref-skills-chapter {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-}
-
-.ref-skills-area {
-    width: 50%;
-    min-height: 100vh;
-    padding: 5rem 6% 5rem 0;
-    display: flex;
-    align-items: center;
-}
-
-.ref-skills-grid {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2.5rem;
-}
-
-/* Individual Split Card Container */
-.ref-skill-card {
-    position: relative;
-    background: #FFFFFF;
-    border-radius: 28px;
-    overflow: hidden;
-    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08), 0 4px 16px rgba(0, 0, 0, 0.03);
-    border: 1px solid rgba(0, 0, 0, 0.06);
-    display: flex;
-    flex-direction: column;
-    height: 380px;
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
-}
-
-.ref-skill-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 30px 65px rgba(0, 0, 0, 0.14), 0 8px 24px rgba(0, 0, 0, 0.05);
-}
-
-/* Top Half: Light Container with Icon */
-.ref-card-top {
-    height: 48%;
-    background: #FAFAFB;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 1.5rem 2.2rem;
-    position: relative;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
-}
-
-.ref-icon-wrapper {
-    width: 58px;
-    height: 58px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #333338;
-}
-
-.ref-card-icon {
-    width: 44px;
-    height: 44px;
-}
-
-/* Bottom Half: Accent Block & Content */
-.ref-card-bottom {
-    height: 52%;
-    padding: 2.2rem 2rem 1.8rem 2.2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 0.75rem;
-    color: #FFFFFF;
-}
-
-.ref-card-title {
-    font-family: var(--font-heading);
-    font-size: 1.25rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: #FFFFFF;
-    line-height: 1.2;
-}
-
-.ref-card-description {
-    font-size: 0.9rem;
-    line-height: 1.5;
-    color: rgba(255, 255, 255, 0.92);
-    font-weight: 400;
-}
-
-/* Tools Tag Grid */
-.ref-tools-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.45rem;
-    margin-top: 0.2rem;
-}
-
-.ref-tool-tag {
-    font-size: 0.76rem;
-    font-weight: 600;
-    padding: 0.25rem 0.65rem;
-    background: rgba(255, 255, 255, 0.18);
-    border-radius: 12px;
-    color: #FFFFFF;
-    backdrop-filter: blur(4px);
-}
-
-/* Left Overlapping Pill Badge */
-.ref-pill-badge {
-    position: absolute;
-    top: 50%;
-    left: 1.8rem;
-    transform: translateY(-50%);
-    width: 66px;
-    padding: 8px 6px 6px 6px;
-    border-radius: 34px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 6px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.16);
-    z-index: 10;
-}
-
-.ref-pill-label {
-    font-size: 0.68rem;
-    font-weight: 800;
-    letter-spacing: 0.1em;
-    color: #FFFFFF;
-}
-
-.ref-pill-circle {
-    width: 52px;
-    height: 52px;
-    background: #FFFFFF;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06);
-}
-
-.ref-pill-num {
-    font-family: var(--font-heading);
-    font-size: 1.35rem;
-    font-weight: 800;
-}
-
-/* Theme 1: Warm Signature Orange */
-.ref-theme-orange .ref-card-bottom {
-    background: linear-gradient(135deg, #FF5000 0%, #E04300 100%);
-}
-
-.ref-theme-orange .ref-pill-badge {
-    background: linear-gradient(180deg, #FF5000 0%, #D83B00 100%);
-}
-
-.ref-theme-orange .ref-pill-num {
-    color: #FF5000;
-}
-
-/* Theme 2: Deep Dark Charcoal */
-.ref-theme-dark .ref-card-bottom {
-    background: linear-gradient(135deg, #2A2A2E 0%, #1C1C1F 100%);
-}
-
-.ref-theme-dark .ref-pill-badge {
-    background: linear-gradient(180deg, #3A3A40 0%, #1C1C1F 100%);
-}
-
-.ref-theme-dark .ref-pill-num {
-    color: #1C1C1F;
-}
-
-/* Theme 3: Deep Terracotta Navy */
-.ref-theme-navy .ref-card-bottom {
-    background: linear-gradient(135deg, #243B53 0%, #102A43 100%);
-}
-
-.ref-theme-navy .ref-pill-badge {
-    background: linear-gradient(180deg, #334E68 0%, #102A43 100%);
-}
-
-.ref-theme-navy .ref-pill-num {
-    color: #102A43;
-}
-
-/* Responsive Mobile Layout for Skills */
-@media (max-width: 991px) {
-    .ref-skills-area {
-        width: 100%;
-        min-height: auto;
-        padding: 2rem 5% 4rem;
-    }
 }
