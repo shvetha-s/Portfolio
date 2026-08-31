@@ -2393,7 +2393,7 @@ body {
     letter-spacing: -0.02em;
     color: var(--text-primary);
     text-transform: uppercase;
-    -webkit-text-stroke: 3px var(--text-primary);
+    -webkit-text-stroke: 1.5px var(--text-primary);
     paint-order: stroke fill;
     text-shadow: 0 4px 14px rgba(0, 0, 0, 0.16), 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -2421,193 +2421,241 @@ body {
     filter: drop-shadow(0 6px 14px rgba(255, 80, 0, 0.4));
 }
 
-.pinned-board-area {
+/* ═══════════════════════════════════════════════════════════════
+   MODERN INFOGRAPHIC RIBBON CARDS (EDUCATION & CERTIFICATIONS)
+   ═══════════════════════════════════════════════════════════════ */
+
+.edu-infographic-area {
     width: 50%;
     min-height: 100vh;
     position: relative;
-    padding: 5rem 5% 5.5rem 2%;
+    padding: 5rem 5% 5.5rem 3%;
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    gap: 3.5rem;
+    justify-content: center;
 }
 
-.pinned-connecting-line {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1;
-}
-
-/* Individual Pinned Note Card */
-.pinned-note-card {
+/* Base Infographic Ribbon Card */
+.ribbon-info-card {
     position: relative;
-    width: clamp(280px, 28vw, 360px);
     background: #FFFFFF;
-    border-radius: 24px;
-    padding: 1.4rem 1.4rem 1.6rem 1.4rem;
-    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.03);
-    z-index: 2;
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
-}
-
-/* Staggered Floating Positions & Tilt Rotations */
-.pinned-card-1 {
-    align-self: flex-start;
-    margin-left: 2vw;
-    transform: rotate(-3.5deg);
-}
-
-.pinned-card-2 {
-    align-self: flex-end;
-    margin-right: 2vw;
-    margin-top: -1.5rem;
-    transform: rotate(3deg);
-}
-
-.pinned-card-3 {
-    align-self: flex-start;
-    margin-left: 5vw;
-    margin-top: -1.5rem;
-    transform: rotate(-2.5deg);
-}
-
-.pinned-note-card:hover {
-    transform: rotate(0deg) translateY(-8px) scale(1.03);
-    box-shadow: 0 28px 60px rgba(0, 0, 0, 0.14), 0 8px 20px rgba(0, 0, 0, 0.06);
-    z-index: 5;
-}
-
-/* 3D Push Pin on Top Center */
-.pinned-pin {
-    position: absolute;
-    top: -22px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 32px;
-    height: 42px;
-    z-index: 10;
-    filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.28));
-}
-
-.pin-svg {
+    border-radius: 20px;
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.06), 0 2px 8px rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    overflow: visible;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
     width: 100%;
-    height: 100%;
-    display: block;
 }
 
-/* Inner Tinted Theme Containers */
-.pinned-note-inner {
-    border-radius: 18px;
-    padding: 1.5rem 1.6rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
+.exp-panel .ribbon-info-card,
+.cert-panel .ribbon-info-card {
+    max-width: 100%;
 }
 
-.note-theme-orange {
-    background: #FFF4EC;
-    border: 1px solid rgba(255, 80, 0, 0.18);
+.edu-infographic-area .ribbon-info-card {
+    max-width: 440px;
 }
 
-.note-theme-blue {
-    background: #EFF5FF;
-    border: 1px solid rgba(26, 115, 232, 0.18);
+.ribbon-info-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 22px 50px rgba(0, 0, 0, 0.11), 0 6px 16px rgba(0, 0, 0, 0.05);
 }
 
-.note-theme-purple {
-    background: #F8EFFF;
-    border: 1px solid rgba(142, 36, 170, 0.18);
+/* Staggered offsets for Education cards */
+.edu-infographic-area .ribbon-info-card:nth-child(1) {
+    align-self: flex-start;
+    margin-left: 1vw;
 }
 
-/* Script Number */
-.pinned-script-num {
-    font-family: 'Caveat', cursive, sans-serif;
-    font-size: 2.8rem;
-    font-weight: 700;
-    line-height: 1;
-    margin-bottom: 0.1rem;
+.edu-infographic-area .ribbon-info-card:nth-child(2) {
+    align-self: flex-end;
+    margin-right: 1vw;
 }
 
-.script-orange { color: #FF5000; }
-.script-blue   { color: #1A73E8; }
-.script-purple { color: #8E24AA; }
-
-/* Card Content Typography */
-.pinned-note-title {
-    font-family: var(--font-heading);
-    font-size: clamp(1.2rem, 1.8vw, 1.45rem);
-    font-weight: 700;
-    color: var(--text-primary);
-    line-height: 1.25;
+.edu-infographic-area .ribbon-info-card:nth-child(3) {
+    align-self: flex-start;
+    margin-left: 3vw;
 }
 
-.pinned-note-school {
-    font-size: 0.94rem;
-    font-weight: 600;
-    color: var(--text-primary);
-    margin-top: 0.2rem;
-}
-
-.pinned-note-text {
-    font-size: 0.86rem;
-    color: var(--text-secondary);
-}
-
-/* Card Footer Badges & Year */
-.pinned-note-footer {
+/* Top Horizontal Banner with Arrow/Chevron tip pointing right */
+.card-ribbon-banner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 1rem;
-    padding-top: 0.8rem;
-    border-top: 1px dashed rgba(0, 0, 0, 0.1);
-}
-
-.pinned-note-badge {
-    font-size: 0.78rem;
-    font-weight: 700;
+    padding: 0.85rem 1.6rem;
+    color: #FFFFFF;
+    font-family: var(--font-heading);
+    font-size: 0.88rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    padding: 0.3rem 0.75rem;
-    border-radius: 20px;
+    border-top-left-radius: 20px;
+    position: relative;
+    margin-top: 1.2rem;
+    margin-right: -18px; /* extends slightly past card edge */
+    clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 50%, calc(100% - 16px) 100%, 0 100%);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
 }
 
-.badge-orange { background: rgba(255, 80, 0, 0.12); color: #D63B00; }
-.badge-blue   { background: rgba(26, 115, 232, 0.12); color: #1557B0; }
-.badge-purple { background: rgba(142, 36, 170, 0.12); color: #6A1B9A; }
+.ribbon-label {
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    font-size: 0.86rem;
+}
 
-.pinned-note-year {
-    font-size: 0.82rem;
-    font-weight: 600;
+.ribbon-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.95;
+    margin-right: 18px; /* space before arrow cut */
+}
+
+.ribbon-icon svg {
+    width: 22px;
+    height: 22px;
+    display: block;
+}
+
+/* Color Themes for Ribbon Banners */
+.theme-orange .card-ribbon-banner {
+    background: linear-gradient(135deg, #FF5000 0%, #FF6E00 100%);
+}
+
+.theme-amber .card-ribbon-banner {
+    background: linear-gradient(135deg, #E64A00 0%, #FF7F00 100%);
+}
+
+.theme-coral .card-ribbon-banner {
+    background: linear-gradient(135deg, #FF5722 0%, #FF8A50 100%);
+}
+
+/* Card Body Content */
+.ribbon-card-body {
+    padding: 1.6rem 1.8rem 1.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.ribbon-card-title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.2rem, 1.6vw, 1.4rem);
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1.25;
+    margin-bottom: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+}
+
+.ribbon-card-org {
+    font-size: 0.96rem;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1.4;
+}
+
+.ribbon-card-sub {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+.ribbon-card-desc {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-top: 0.35rem;
+}
+
+.ribbon-card-badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0.4rem 0 0.6rem;
+}
+
+.ribbon-pill {
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.28rem 0.75rem;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.05);
     color: var(--text-secondary);
 }
 
-/* Responsive Mobile Layout for Pinned Board */
+.ribbon-pill--accent {
+    background: rgba(255, 80, 0, 0.12);
+    color: var(--accent);
+}
+
+.ribbon-card-list {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.45;
+}
+
+.ribbon-card-list li {
+    position: relative;
+    padding-left: 1.25rem;
+}
+
+.ribbon-card-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: bold;
+    font-size: 1.1rem;
+    line-height: 1;
+}
+
+/* Card Footer */
+.ribbon-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.85rem;
+    padding-top: 0.85rem;
+    border-top: 1px dashed rgba(0, 0, 0, 0.1);
+}
+
+.ribbon-badge-pill {
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 0.32rem 0.85rem;
+    border-radius: 20px;
+    background: rgba(255, 80, 0, 0.1);
+    color: var(--accent);
+}
+
+.ribbon-year {
+    font-size: 0.86rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+}
+
+/* Responsive adjustments */
 @media (max-width: 991px) {
-    .pinned-board-area {
+    .edu-infographic-area {
         width: 100%;
         min-height: auto;
         padding: 2rem 5% 4rem;
         align-items: center;
-        gap: 3.5rem;
+        gap: 2.5rem;
     }
 
-    .pinned-connecting-line {
-        display: none;
-    }
-
-    .pinned-note-card {
-        width: 100%;
-        max-width: 380px;
+    .edu-infographic-area .ribbon-info-card {
         margin-left: 0 !important;
         margin-right: 0 !important;
-        margin-top: 0 !important;
+        max-width: 100%;
     }
-
-    .pinned-card-1 { transform: rotate(-2deg); }
-    .pinned-card-2 { transform: rotate(2deg); }
-    .pinned-card-3 { transform: rotate(-1.5deg); }
 }
