@@ -306,11 +306,15 @@ body {
     padding-left: 8%;
 }
 
-/* About Section — Dedicated Full 2nd Page */
+/* About Section — Dedicated Full 2nd Page with Grid Paper Background */
 #about {
     min-height: 100vh;
     display: flex;
     align-items: center;
+    background-image: url('../assets/images/about-grid-bg.png');
+    background-repeat: repeat;
+    background-size: 160px auto;
+    background-position: top left;
 }
 
 #about .sticky-title-area {
