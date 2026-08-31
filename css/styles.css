@@ -1923,7 +1923,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 0 4vw;
+    padding: 0 1.5vw;
     z-index: 2;
 }
 
@@ -1931,6 +1931,9 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
 }
 
 /* Localized Accent Gradients Inside the Marked Areas (P/F on the left and RT on the right) */
@@ -1961,7 +1964,7 @@ body {
 
 .port-eyebrow {
     font-family: var(--font-heading), 'Space Grotesk', sans-serif;
-    font-size: clamp(1.1rem, 2.3vw, 2.5rem);
+    font-size: clamp(1.3rem, 2.8vw, 3.2rem);
     font-weight: 700;
     color: var(--accent);
     letter-spacing: -0.02em;
@@ -1971,16 +1974,16 @@ body {
     align-self: flex-start;
 }
 
-/* Grid: 3 columns × 2 rows */
+/* Grid: 3 columns × 2 rows — Full Width Filling Hero */
 .port-lockup-grid {
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto;
-    column-gap: clamp(0.1rem, 0.4vw, 0.6rem);
+    column-gap: clamp(0.2rem, 0.6vw, 1rem);
     row-gap: 0;
     align-items: center;
     font-family: var(--font-heading);
-    font-size: clamp(5.5rem, 17vw, 18rem);
+    font-size: clamp(6.8rem, 22.5vw, 24rem);
     font-weight: 800;
     line-height: 0.82;
     letter-spacing: -0.04em;
@@ -2040,7 +2043,7 @@ body {
 /* Sans-Serif "SWETHA" placed under LIO at bottom right */
 .port-swetha-sans {
     font-family: var(--font-heading), 'Space Grotesk', sans-serif;
-    font-size: clamp(1.2rem, 2.5vw, 3rem);
+    font-size: clamp(1.5rem, 3.2vw, 3.8rem);
     font-weight: 800;
     color: var(--accent);
     letter-spacing: 0.28em;
@@ -2048,7 +2051,7 @@ body {
     line-height: 1;
     margin-top: 0.8rem;
     align-self: flex-end;
-    padding-right: 4%;
+    padding-right: 2%;
 }
 
 .port-rt {
