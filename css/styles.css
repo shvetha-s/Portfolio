@@ -1946,22 +1946,22 @@ body {
     opacity: 0.92;
 }
 
-/* Circle 1: Directly behind letter F at bottom-left of lockup */
+/* Circle 1: Centered directly over P & F in the marked area */
 .lockup-glow-pf {
-    bottom: 2%;
-    left: 2%;
+    top: 20%;
+    left: 12%;
     width: clamp(200px, 24vw, 360px);
     height: clamp(200px, 24vw, 360px);
-    background: radial-gradient(circle, rgba(255, 80, 0, 0.58) 0%, rgba(255, 120, 50, 0.28) 45%, transparent 70%);
+    background: radial-gradient(circle, rgba(255, 80, 0, 0.62) 0%, rgba(255, 120, 50, 0.3) 45%, transparent 70%);
 }
 
-/* Circle 2: Directly behind top of letter T at top-right of lockup */
+/* Circle 2: Centered directly over RT at top-right of lockup */
 .lockup-glow-rt {
-    top: 2%;
-    right: 18%;
+    top: 5%;
+    right: 22%;
     width: clamp(200px, 24vw, 360px);
     height: clamp(200px, 24vw, 360px);
-    background: radial-gradient(circle, rgba(255, 80, 0, 0.58) 0%, rgba(255, 120, 50, 0.28) 45%, transparent 70%);
+    background: radial-gradient(circle, rgba(255, 80, 0, 0.62) 0%, rgba(255, 120, 50, 0.3) 45%, transparent 70%);
 }
 
 .port-eyebrow {
