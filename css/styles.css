@@ -2385,7 +2385,7 @@ body {
     align-items: center;
     justify-content: space-between;
     height: 100%;
-    max-height: 920px;
+    max-height: 980px;
     font-family: var(--font-heading);
     font-size: clamp(3.2rem, 5.8vw, 7.2rem);
     font-weight: 900;
@@ -2399,6 +2399,9 @@ body {
     display: block;
     text-align: center;
     line-height: 0.95;
+    transform: scaleY(1.45);
+    transform-origin: center;
+    margin: 0.35rem 0;
 }
 
 .edu-letter.edu-e-wrapper {
