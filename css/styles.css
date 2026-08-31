@@ -2189,6 +2189,24 @@ body {
     align-items: stretch;
 }
 
+@keyframes expPopBounce {
+    0% {
+        opacity: 0;
+        transform: translateY(60px) scale(0.86);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+    }
+    65% {
+        opacity: 1;
+        transform: translateY(-8px) scale(1.035);
+        box-shadow: 0 24px 48px rgba(255, 77, 0, 0.16);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    }
+}
+
 .exp-panel,
 .cert-panel {
     flex: 1;
@@ -2204,19 +2222,16 @@ body {
     position: relative;
     overflow: hidden;
     opacity: 0;
-    transform: translateY(48px) scale(0.92);
-    transition: opacity 0.75s cubic-bezier(0.34, 1.56, 0.64, 1), transform 0.75s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+    transform: translateY(60px) scale(0.86);
     will-change: transform, opacity;
 }
 
-.exp-cert-chapter.is-popped .exp-panel,
-.exp-cert-chapter.is-popped .cert-panel {
-    opacity: 1;
-    transform: translateY(0) scale(1);
+.exp-cert-chapter.is-popped .exp-panel {
+    animation: expPopBounce 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
 .exp-cert-chapter.is-popped .cert-panel {
-    transition-delay: 0.16s;
+    animation: expPopBounce 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.15s forwards;
 }
 
 /* Subtle top accent highlight bar for each card */
@@ -2236,7 +2251,7 @@ body {
 .exp-cert-chapter.is-popped .cert-panel:hover {
     transform: translateY(-6px) scale(1.015);
     border-color: rgba(255, 77, 0, 0.35);
-    box-shadow: 0 20px 48px rgba(255, 77, 0, 0.12);
+    box-shadow: 0 20px 48px rgba(255, 77, 0, 0.14);
 }
 
 .exp-panel .massive-title,
@@ -2369,6 +2384,19 @@ body {
     #about .scrolling-content-area {
         width: 100%;
         gap: 1.25rem;
+    }
+
+    /* Experience & Certifications on mobile */
+    .exp-cert-chapter {
+        flex-direction: column;
+        padding: 3rem 6.5%;
+        gap: 2rem;
+    }
+
+    .exp-panel,
+    .cert-panel {
+        width: 100%;
+        padding: 2.2rem 1.8rem;
     }
 }
 
