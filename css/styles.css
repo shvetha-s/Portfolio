@@ -1946,21 +1946,21 @@ body {
     opacity: 0.92;
 }
 
-/* Circle 1: Centered 100% dead-center inside the left red circle (around letter F) */
+/* Circle 1: Centered 100% dead-center inside the left red circle (around bottom of F) */
 .lockup-glow-pf {
-    top: 52%;
-    left: 4%;
-    width: clamp(240px, 28vw, 420px);
-    height: clamp(240px, 28vw, 420px);
+    top: 35%;
+    left: -14%;
+    width: clamp(260px, 30vw, 450px);
+    height: clamp(260px, 30vw, 450px);
     background: radial-gradient(circle, rgba(255, 80, 0, 0.65) 0%, rgba(255, 120, 50, 0.32) 45%, transparent 70%);
 }
 
-/* Circle 2: Centered 100% dead-center inside the right red circle (top-right of T) */
+/* Circle 2: Centered 100% dead-center inside the right red circle (top-right of T & above IO) */
 .lockup-glow-rt {
-    top: -24%;
-    right: 2%;
-    width: clamp(240px, 28vw, 420px);
-    height: clamp(240px, 28vw, 420px);
+    top: -36%;
+    right: -5%;
+    width: clamp(260px, 30vw, 450px);
+    height: clamp(260px, 30vw, 450px);
     background: radial-gradient(circle, rgba(255, 80, 0, 0.65) 0%, rgba(255, 120, 50, 0.32) 45%, transparent 70%);
 }
 
