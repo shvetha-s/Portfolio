@@ -2380,19 +2380,215 @@ body {
         width: 100%;
         height: auto;
         position: relative;
-        top: auto;
-        padding: 0;
-        display: block;
-    }
-
-    #about .sticky-title-area .massive-title {
-        font-size: clamp(2.2rem, 7.5vw, 3.5rem);
+        padding-top: 1.5rem;
+        padding-left: 0;
     }
 
     #about .scrolling-content-area {
         width: 100%;
-        min-height: auto;
-        padding: 0;
         gap: 1.25rem;
     }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   EDUCATION SECTION — PINNED STICKY NOTES BOARD
+   ═══════════════════════════════════════════════════════════════ */
+.pinned-board-chapter {
+    min-height: 100vh;
+    background-color: #FAF8F5;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.035) 1px, transparent 1px);
+    background-size: 100% 32px;
+    position: relative;
+    overflow: hidden;
+}
+
+.pinned-board-area {
+    width: 50%;
+    min-height: 100vh;
+    position: relative;
+    padding: 6rem 5% 6rem 2%;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.pinned-connecting-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Individual Pinned Note Card */
+.pinned-note-card {
+    position: relative;
+    width: clamp(280px, 28vw, 360px);
+    background: #FFFFFF;
+    border-radius: 24px;
+    padding: 1.4rem 1.4rem 1.6rem 1.4rem;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.03);
+    z-index: 2;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+/* Staggered Floating Positions & Tilt Rotations */
+.pinned-card-1 {
+    align-self: flex-start;
+    margin-left: 2vw;
+    transform: rotate(-3.5deg);
+}
+
+.pinned-card-2 {
+    align-self: flex-end;
+    margin-right: 2vw;
+    margin-top: -1.5rem;
+    transform: rotate(3deg);
+}
+
+.pinned-card-3 {
+    align-self: flex-start;
+    margin-left: 5vw;
+    margin-top: -1.5rem;
+    transform: rotate(-2.5deg);
+}
+
+.pinned-note-card:hover {
+    transform: rotate(0deg) translateY(-8px) scale(1.03);
+    box-shadow: 0 28px 60px rgba(0, 0, 0, 0.14), 0 8px 20px rgba(0, 0, 0, 0.06);
+    z-index: 5;
+}
+
+/* 3D Push Pin on Top Center */
+.pinned-pin {
+    position: absolute;
+    top: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 32px;
+    height: 42px;
+    z-index: 10;
+    filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.28));
+}
+
+.pin-svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Inner Tinted Theme Containers */
+.pinned-note-inner {
+    border-radius: 18px;
+    padding: 1.5rem 1.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.note-theme-orange {
+    background: #FFF4EC;
+    border: 1px solid rgba(255, 80, 0, 0.18);
+}
+
+.note-theme-blue {
+    background: #EFF5FF;
+    border: 1px solid rgba(26, 115, 232, 0.18);
+}
+
+.note-theme-purple {
+    background: #F8EFFF;
+    border: 1px solid rgba(142, 36, 170, 0.18);
+}
+
+/* Script Number */
+.pinned-script-num {
+    font-family: 'Caveat', cursive, sans-serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 0.1rem;
+}
+
+.script-orange { color: #FF5000; }
+.script-blue   { color: #1A73E8; }
+.script-purple { color: #8E24AA; }
+
+/* Card Content Typography */
+.pinned-note-title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.2rem, 1.8vw, 1.45rem);
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.25;
+}
+
+.pinned-note-school {
+    font-size: 0.94rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-top: 0.2rem;
+}
+
+.pinned-note-text {
+    font-size: 0.86rem;
+    color: var(--text-secondary);
+}
+
+/* Card Footer Badges & Year */
+.pinned-note-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    padding-top: 0.8rem;
+    border-top: 1px dashed rgba(0, 0, 0, 0.1);
+}
+
+.pinned-note-badge {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.3rem 0.75rem;
+    border-radius: 20px;
+}
+
+.badge-orange { background: rgba(255, 80, 0, 0.12); color: #D63B00; }
+.badge-blue   { background: rgba(26, 115, 232, 0.12); color: #1557B0; }
+.badge-purple { background: rgba(142, 36, 170, 0.12); color: #6A1B9A; }
+
+.pinned-note-year {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+/* Responsive Mobile Layout for Pinned Board */
+@media (max-width: 991px) {
+    .pinned-board-area {
+        width: 100%;
+        min-height: auto;
+        padding: 2rem 5% 4rem;
+        align-items: center;
+        gap: 3.5rem;
+    }
+
+    .pinned-connecting-line {
+        display: none;
+    }
+
+    .pinned-note-card {
+        width: 100%;
+        max-width: 380px;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-top: 0 !important;
+    }
+
+    .pinned-card-1 { transform: rotate(-2deg); }
+    .pinned-card-2 { transform: rotate(2deg); }
+    .pinned-card-3 { transform: rotate(-1.5deg); }
 }
