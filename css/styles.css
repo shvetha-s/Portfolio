@@ -2385,25 +2385,21 @@ body {
     align-items: center;
     justify-content: space-between;
     height: 100%;
-    max-height: 1020px;
-    gap: clamp(0.5rem, 1.2vh, 1.2rem);
+    max-height: 1050px;
     font-family: var(--font-heading);
-    font-size: clamp(3.5rem, 6.2vw, 7.8rem);
-    font-weight: 900;
-    line-height: 1;
+    font-size: clamp(4.2rem, 7.5vw, 8.8rem);
+    font-weight: 800;
+    line-height: 0.88;
+    letter-spacing: -0.04em;
     color: var(--text-primary);
     text-transform: uppercase;
-    -webkit-text-stroke: 3.5px var(--text-primary);
-    paint-order: stroke fill;
 }
 
 .edu-letter {
     display: block;
     text-align: center;
-    line-height: 0.95;
-    transform: scaleY(1.45);
-    transform-origin: center;
-    margin: 0.55rem 0;
+    line-height: 0.88;
+    font-weight: 800;
 }
 
 .edu-letter.edu-e-wrapper {
