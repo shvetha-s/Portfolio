@@ -2017,7 +2017,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 100%;
-    padding: 0 clamp(0.02rem, 0.1vw, 0.2rem);
+    padding-left: clamp(0.8rem, 2.2vw, 2.8rem);
+    padding-right: clamp(0.05rem, 0.3vw, 0.4rem);
 }
 
 .port-tall-o-svg {
