@@ -2367,6 +2367,7 @@ body {
 }
 
 /* Upright Vertically Stacked Bold Title for Education Section */
+/* Upright Vertically Stacked Bold Title for Education Section */
 #education .sticky-title-area {
     width: 40%;
     position: sticky;
@@ -2375,7 +2376,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-left: 4%;
+    padding: 5rem 0 5.5rem 4%;
 }
 
 .edu-stacked-title {
@@ -2383,9 +2384,10 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: clamp(620px, 82vh, 880px);
+    height: 100%;
+    max-height: 920px;
     font-family: var(--font-heading);
-    font-size: clamp(3.0rem, 5.2vw, 6.2rem);
+    font-size: clamp(3.2rem, 5.8vw, 7.2rem);
     font-weight: 900;
     line-height: 1;
     color: var(--text-primary);
@@ -2418,7 +2420,7 @@ body {
     width: 50%;
     min-height: 100vh;
     position: relative;
-    padding: 6rem 5% 6rem 2%;
+    padding: 5rem 5% 5.5rem 2%;
     display: flex;
     flex-direction: column;
     gap: 4rem;
