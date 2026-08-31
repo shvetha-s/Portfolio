@@ -1974,7 +1974,7 @@ body {
     letter-spacing: -0.01em;
     text-transform: lowercase;
     margin-bottom: 0.75rem;
-    padding-left: 0.05em;
+    margin-left: clamp(2.5rem, 9.5vw, 12rem);
     align-self: flex-start;
 }
 
