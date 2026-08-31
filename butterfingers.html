@@ -13,8 +13,8 @@
         href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="css/styles.css?v=20260825">
-    <link rel="stylesheet" href="css/case-study.css?v=20260825">
+    <link rel="stylesheet" href="css/styles.css?v=20260827_05">
+    <link rel="stylesheet" href="css/case-study.css?v=20260827_05">
 </head>
 
 <body class="case-study-body">
@@ -53,11 +53,11 @@
     </header>
 
     <main class="cs-container">
-        <!-- Main Case Study Infographic -->
+        <!-- Responsive Case Study Section -->
         <section class="cs-slide-section">
             <div class="cs-slide-wrap">
                 <img src="assets/images/butterfinger-casestudy.png" alt="Butterfingers - Complete Case Study"
-                    class="cs-slide-img" style="aspect-ratio: auto;" onclick="openLightbox(this.src)">
+                    class="cs-slide-img">
             </div>
         </section>
 
@@ -76,30 +76,7 @@
         </section>
     </main>
 
-    <!-- Lightbox Modal -->
-    <div id="csLightbox" class="cs-lightbox" onclick="closeLightbox()">
-        <span class="cs-lightbox-close">&times;</span>
-        <img id="csLightboxImg" class="cs-lightbox-content" alt="Enlarged view">
-    </div>
-
-    <script src="js/script.js"></script>
-    <script>
-        const lightbox = document.getElementById('csLightbox');
-        const lightboxImg = document.getElementById('csLightboxImg');
-
-        function openLightbox(src) {
-            lightboxImg.src = src;
-            lightbox.classList.add('open');
-        }
-
-        function closeLightbox() {
-            lightbox.classList.remove('open');
-        }
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeLightbox();
-        });
-    </script>
+    <script src="js/script.js?v=20260827_05"></script>
 </body>
 
 </html>

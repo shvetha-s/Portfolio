@@ -68,8 +68,8 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        // Project cards & Case Studies → ring becomes "VIEW" label overlay
-        const projectCards = document.querySelectorAll('.project-column-item, .project-image-box, .project-below-cta, .project-below-title a, a[href$=".html"]');
+        // Project cards on homepage → ring becomes "VIEW" label overlay
+        const projectCards = document.querySelectorAll('.project-column-item, .project-image-box, .project-below-cta, .project-below-title a');
         projectCards.forEach(el => {
             el.addEventListener('mouseenter', () => {
                 dot.classList.add('is-project');
