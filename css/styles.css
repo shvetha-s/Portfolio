@@ -368,6 +368,21 @@ body {
     gap: 4rem;
 }
 
+/* Section Separator Line */
+.section-divider {
+    width: 100%;
+    padding: 3rem 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divider-line {
+    width: 100%;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.08);
+}
+
 .project-chapter {
     min-height: 70vh;
 }
