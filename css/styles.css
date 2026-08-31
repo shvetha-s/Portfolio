@@ -2366,43 +2366,49 @@ body {
     overflow: hidden;
 }
 
-/* Vertical Bold Uppercase Title for Education Section */
+/* Upright Vertically Stacked Bold Title for Education Section */
 #education .sticky-title-area {
-    width: 50%;
+    width: 40%;
     position: sticky;
     top: 0;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-left: 6%;
+    padding-left: 4%;
 }
 
-.edu-vertical-title {
+.edu-stacked-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     font-family: var(--font-heading);
-    font-size: clamp(3.2rem, 5.8vw, 7.5rem);
+    font-size: clamp(2.2rem, 3.8vw, 4.6rem);
     font-weight: 800;
-    text-transform: uppercase;
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    letter-spacing: 0.12em;
-    line-height: 1;
+    line-height: 0.92;
     color: var(--text-primary);
-    white-space: nowrap !important;
+    text-transform: uppercase;
+    letter-spacing: normal;
 }
 
-.edu-vertical-title .edu-e-wrapper {
+.edu-letter {
+    display: block;
+    text-align: center;
+    line-height: 0.9;
+}
+
+.edu-letter.edu-e-wrapper {
     position: relative;
-    display: inline-block;
 }
 
-.edu-vertical-title .grad-cap-icon {
+.edu-letter.edu-e-wrapper .grad-cap-icon {
     position: absolute;
-    top: -0.42em;
-    left: -0.28em;
-    width: 0.95em;
-    height: 0.95em;
-    transform: rotate(-25deg);
+    top: -0.45em;
+    left: 50%;
+    transform: translateX(-50%) rotate(-15deg);
+    width: 0.85em;
+    height: 0.85em;
     color: var(--accent);
     filter: drop-shadow(0 6px 12px rgba(255, 80, 0, 0.35));
 }
