@@ -2395,6 +2395,7 @@ body {
     text-transform: uppercase;
     -webkit-text-stroke: 1.5px var(--text-primary);
     paint-order: stroke fill;
+    text-shadow: 0 4px 14px rgba(0, 0, 0, 0.16), 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .edu-letter {
