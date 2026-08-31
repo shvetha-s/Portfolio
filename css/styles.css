@@ -1936,34 +1936,34 @@ body {
     align-items: center;
 }
 
-/* Localized Circle Radial Gradients directly anchored to letter F (left) and T (right) */
+/* Localized Circle Radial Gradients directly anchored into letter F and letter T */
 .lockup-glow {
     position: absolute;
     border-radius: 50%;
     pointer-events: none;
     z-index: -1;
-    filter: blur(40px);
+    filter: blur(35px);
     opacity: 0.95;
 }
 
-/* Circle 1: Centered 100% dead-center inside the left red circle around letter F */
-.lockup-glow-pf {
+/* Gradient 1: Centered DEAD-CENTER inside the letter F */
+.lockup-glow-f {
     top: 50%;
-    left: 4%;
-    transform: translate(-35%, -20%);
-    width: clamp(260px, 30vw, 440px);
-    height: clamp(260px, 30vw, 440px);
-    background: radial-gradient(circle, rgba(255, 80, 0, 0.68) 0%, rgba(255, 120, 50, 0.34) 45%, transparent 70%);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: clamp(260px, 30vw, 450px);
+    height: clamp(260px, 30vw, 450px);
+    background: radial-gradient(circle, rgba(255, 80, 0, 0.68) 0%, rgba(255, 120, 50, 0.35) 45%, transparent 70%);
 }
 
-/* Circle 2: Centered 100% dead-center inside the right red circle over top-right of T */
-.lockup-glow-rt {
-    top: -5%;
-    right: 4%;
-    transform: translate(25%, -20%);
-    width: clamp(260px, 30vw, 440px);
-    height: clamp(260px, 30vw, 440px);
-    background: radial-gradient(circle, rgba(255, 80, 0, 0.68) 0%, rgba(255, 120, 50, 0.34) 45%, transparent 70%);
+/* Gradient 2: Centered DEAD-CENTER inside the letter T */
+.lockup-glow-t {
+    top: 45%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    width: clamp(260px, 30vw, 450px);
+    height: clamp(260px, 30vw, 450px);
+    background: radial-gradient(circle, rgba(255, 80, 0, 0.68) 0%, rgba(255, 120, 50, 0.35) 45%, transparent 70%);
 }
 
 .port-eyebrow {
@@ -2042,6 +2042,12 @@ body {
     align-self: end;
     margin-bottom: -0.04em;
     position: relative;
+    overflow: visible;
+}
+
+.port-t-wrapper {
+    position: relative;
+    display: inline-block;
     overflow: visible;
 }
 
