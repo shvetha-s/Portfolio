@@ -1936,41 +1936,43 @@ body {
     align-items: center;
 }
 
-/* Localized Accent Gradients Inside the Marked Areas (P/F on the left and RT on the right) */
+/* Localized Circle Radial Gradients directly behind letter F (left) and top of T (right) */
 .lockup-glow {
     position: absolute;
     border-radius: 50%;
     pointer-events: none;
     z-index: -1;
-    filter: blur(55px);
-    opacity: 0.88;
+    filter: blur(45px);
+    opacity: 0.92;
 }
 
+/* Circle 1: Directly behind letter F at bottom-left of lockup */
 .lockup-glow-pf {
-    top: 22%;
-    left: -8%;
-    width: clamp(240px, 32vw, 480px);
-    height: clamp(240px, 32vw, 480px);
-    background: radial-gradient(circle, rgba(255, 80, 0, 0.52) 0%, rgba(255, 120, 50, 0.22) 46%, transparent 72%);
+    bottom: 2%;
+    left: 2%;
+    width: clamp(200px, 24vw, 360px);
+    height: clamp(200px, 24vw, 360px);
+    background: radial-gradient(circle, rgba(255, 80, 0, 0.58) 0%, rgba(255, 120, 50, 0.28) 45%, transparent 70%);
 }
 
+/* Circle 2: Directly behind top of letter T at top-right of lockup */
 .lockup-glow-rt {
-    top: -2%;
-    right: -8%;
-    width: clamp(240px, 32vw, 480px);
-    height: clamp(240px, 32vw, 480px);
-    background: radial-gradient(circle, rgba(255, 80, 0, 0.52) 0%, rgba(255, 120, 50, 0.22) 46%, transparent 72%);
+    top: 2%;
+    right: 18%;
+    width: clamp(200px, 24vw, 360px);
+    height: clamp(200px, 24vw, 360px);
+    background: radial-gradient(circle, rgba(255, 80, 0, 0.58) 0%, rgba(255, 120, 50, 0.28) 45%, transparent 70%);
 }
 
 .port-eyebrow {
     font-family: var(--font-heading), 'Space Grotesk', sans-serif;
-    font-size: clamp(1.2rem, 2.4vw, 2.6rem);
+    font-size: clamp(1.4rem, 3.2vw, 3.4rem);
     font-weight: 700;
     color: var(--accent);
-    letter-spacing: 0.02em;
+    letter-spacing: -0.01em;
     text-transform: lowercase;
-    margin-bottom: 0.5rem;
-    padding-left: 0.08em;
+    margin-bottom: 0.75rem;
+    padding-left: 0.05em;
     align-self: flex-start;
 }
 
