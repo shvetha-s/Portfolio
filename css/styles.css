@@ -2384,18 +2384,19 @@ body {
     align-items: center;
     justify-content: center;
     font-family: var(--font-heading);
-    font-size: clamp(2.2rem, 3.8vw, 4.6rem);
-    font-weight: 800;
-    line-height: 0.92;
+    font-size: clamp(3.2rem, 5.5vw, 6.8rem);
+    font-weight: 900;
+    line-height: 1.02;
+    gap: 0.12rem;
     color: var(--text-primary);
     text-transform: uppercase;
-    letter-spacing: normal;
+    letter-spacing: 0.02em;
 }
 
 .edu-letter {
     display: block;
     text-align: center;
-    line-height: 0.9;
+    line-height: 0.95;
 }
 
 .edu-letter.edu-e-wrapper {
@@ -2404,13 +2405,13 @@ body {
 
 .edu-letter.edu-e-wrapper .grad-cap-icon {
     position: absolute;
-    top: -0.45em;
+    top: -0.48em;
     left: 50%;
     transform: translateX(-50%) rotate(-15deg);
     width: 0.85em;
     height: 0.85em;
     color: var(--accent);
-    filter: drop-shadow(0 6px 12px rgba(255, 80, 0, 0.35));
+    filter: drop-shadow(0 6px 14px rgba(255, 80, 0, 0.4));
 }
 
 .pinned-board-area {
