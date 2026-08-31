@@ -307,50 +307,11 @@ body {
 }
 
 /* About Section — Orange Glassy Gradient Background */
+/* About Section — Dedicated Full 2nd Page */
 #about {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    position: relative;
-    overflow: hidden;
-    background: radial-gradient(circle at 15% 25%, rgba(255, 80, 0, 0.25) 0%, transparent 55%),
-                radial-gradient(circle at 85% 75%, rgba(255, 140, 50, 0.22) 0%, transparent 60%),
-                radial-gradient(circle at 50% 50%, rgba(255, 100, 30, 0.15) 0%, transparent 70%),
-                linear-gradient(135deg, #FFF8F3 0%, #FFEEDF 40%, #FFF3E8 100%);
-}
-
-#about::before {
-    content: '';
-    position: absolute;
-    top: 10%;
-    left: -5%;
-    width: clamp(300px, 40vw, 600px);
-    height: clamp(300px, 40vw, 600px);
-    background: radial-gradient(circle, rgba(255, 80, 0, 0.38) 0%, rgba(255, 120, 50, 0.15) 50%, transparent 70%);
-    border-radius: 50%;
-    filter: blur(60px);
-    pointer-events: none;
-    z-index: 0;
-}
-
-#about::after {
-    content: '';
-    position: absolute;
-    bottom: 5%;
-    right: -5%;
-    width: clamp(320px, 42vw, 650px);
-    height: clamp(320px, 42vw, 650px);
-    background: radial-gradient(circle, rgba(255, 120, 50, 0.35) 0%, rgba(255, 77, 0, 0.18) 50%, transparent 70%);
-    border-radius: 50%;
-    filter: blur(65px);
-    pointer-events: none;
-    z-index: 0;
-}
-
-#about .sticky-title-area,
-#about .scrolling-content-area {
-    position: relative;
-    z-index: 1;
 }
 
 #about .sticky-title-area {
@@ -2395,9 +2356,7 @@ body {
    ═══════════════════════════════════════════════════════════════ */
 .pinned-board-chapter {
     min-height: 100vh;
-    background-color: #FAF8F5;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.035) 1px, transparent 1px);
-    background-size: 100% 32px;
+    background-color: var(--bg-alt);
     position: relative;
     overflow: hidden;
 }
