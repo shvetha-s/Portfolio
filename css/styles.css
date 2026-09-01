@@ -49,78 +49,20 @@ body {
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   PREMIUM DOT + RING CURSOR  — Design System Accent #FF4D00
-   Only active on desktop/fine-pointer devices
+   3D GLOSSY ORANGE CUSTOM CURSOR — Design System Accent #FF4D00
+   Hardware accelerated, instant response, zero latency
    ═══════════════════════════════════════════════════════════════ */
-
-/* Hide default cursor on desktop */
-@media (hover: hover) and (pointer: fine) {
-
-    *,
-    *::before,
-    *::after {
-        cursor: none !important;
-    }
+html, body, * {
+    cursor: url('../assets/icons/cursor_32.png') 2 2, auto !important;
 }
 
-/* ── 3D Glossy Orange Pointer Custom Cursor ── */
-.cursor-dot {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 44px;
-    height: 44px;
-    background: transparent;
-    pointer-events: none;
-    z-index: 10001;
-    transform: translate(-2px, -2px);
-    transition: transform 0.15s ease-out, opacity 0.25s ease;
-    display: none;
-    align-items: flex-start;
-    justify-content: flex-start;
-    will-change: left, top;
+a, button, [role="button"], input, select, textarea, .project-column-item, .project-image-box, .skill-card, .pinned-note-card {
+    cursor: url('../assets/icons/cursor_32.png') 2 2, pointer !important;
 }
 
-.cursor-pointer-img {
-    width: 36px;
-    height: auto;
-    display: block;
-    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.22)) drop-shadow(0 2px 6px rgba(255, 77, 0, 0.35));
-    transform-origin: top left;
-    transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), filter 0.2s ease;
-}
-
+.cursor-dot,
 .cursor-ring {
     display: none !important;
-}
-
-@media (hover: hover) and (pointer: fine) {
-    .cursor-dot {
-        display: flex;
-    }
-}
-
-@media (max-width: 1024px), (hover: none), (pointer: coarse) {
-    .cursor-dot {
-        display: none !important;
-    }
-}
-
-/* ── HOVER STATE: link / button / project cards ── */
-.cursor-dot.is-hovering .cursor-pointer-img,
-.cursor-dot.is-project .cursor-pointer-img {
-    transform: scale(1.2);
-    filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.28)) drop-shadow(0 0 12px rgba(255, 77, 0, 0.7));
-}
-
-/* ── CLICK BURST: responsive tactile bounce feel ── */
-.cursor-dot.is-clicking .cursor-pointer-img {
-    transform: scale(0.88);
-}
-
-/* ── HIDDEN when leaving window ── */
-.cursor-dot.is-hidden {
-    opacity: 0;
 }
 
 

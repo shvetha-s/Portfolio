@@ -2,6 +2,14 @@
    Case Study Styles - Edge-to-Edge Full Screen Fit (As per Screenshot)
    ========================================================================== */
 
+html, body, * {
+    cursor: url('../assets/icons/cursor_32.png') 2 2, auto !important;
+}
+
+a, button, [role="button"], input, select, textarea {
+    cursor: url('../assets/icons/cursor_32.png') 2 2, pointer !important;
+}
+
 .case-study-body {
     background-color: var(--bg-color);
     color: var(--text-primary);
