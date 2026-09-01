@@ -247,7 +247,8 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     padding: 0 8% 0 0;
 }
 
-#about .content-block {
+#about .content-block,
+#experience .content-block {
     background: transparent;
     border: none;
     border-radius: 0;
@@ -255,120 +256,80 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     box-shadow: none;
 }
 
-/* ═══════════════════════════════════════════════════════════════
-   DIFFERENTIATED COLOR THEMES: WORK EXPERIENCE & CERTIFICATE
-   ═══════════════════════════════════════════════════════════════ */
-.exp-item-card {
-    border-radius: 20px;
-    padding: 2.25rem 2.5rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 620px;
-}
-
-.exp-item-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.07);
-}
-
-/* 1. Work Experience Card — Warm Signature Orange Theme */
-.exp-card--work {
-    border: 1px solid rgba(255, 77, 0, 0.18);
-    border-left: 5px solid #FF4D00;
-    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 248, 244, 0.65) 100%);
-}
-
-.exp-title-orange {
-    color: #FF4D00 !important;
-    font-size: 1.45rem;
-    margin: 0.85rem 0 0.35rem;
-    line-height: 1.25;
-}
-
-.badge-orange-tag {
-    display: inline-flex;
+/* Framed Certificate with Right-Side Heading */
+.cert-framed-showcase {
+    margin-top: 2.25rem;
+    display: flex;
     align-items: center;
-    gap: 0.45rem;
-    font-family: var(--font-heading);
-    font-size: 0.72rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: #FF4D00;
-    background: rgba(255, 77, 0, 0.1);
-    border: 1px solid rgba(255, 77, 0, 0.28);
-    padding: 0.3rem 0.8rem;
-    border-radius: 999px;
-}
-
-.dot-orange {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: #FF4D00;
-    display: inline-block;
-}
-
-/* 2. Professional Certificate Card — Google Brand Blue Theme */
-.exp-card--cert {
-    border: 1px solid rgba(26, 115, 232, 0.2);
-    border-left: 5px solid #1A73E8;
-    background: linear-gradient(180deg, #FFFFFF 0%, rgba(245, 249, 255, 0.7) 100%);
-}
-
-.exp-title-blue {
-    color: #1A73E8 !important;
-    font-size: 1.45rem;
-    margin: 0.85rem 0 0.35rem;
-    line-height: 1.25;
-}
-
-.badge-blue-tag {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.45rem;
-    font-family: var(--font-heading);
-    font-size: 0.72rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: #1A73E8;
-    background: rgba(26, 115, 232, 0.1);
-    border: 1px solid rgba(26, 115, 232, 0.28);
-    padding: 0.3rem 0.8rem;
-    border-radius: 999px;
-}
-
-.dot-blue {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: #1A73E8;
-    display: inline-block;
-}
-
-.exp-company-text {
-    font-size: 0.95rem;
-    color: var(--text-secondary);
-    margin-bottom: 1.15rem;
-}
-
-.cert-image-card {
-    margin-top: 1.25rem;
+    gap: 2.25rem;
     width: 100%;
-    border-radius: 14px;
-    overflow: hidden;
-    border: 1px solid rgba(26, 115, 232, 0.15);
-    box-shadow: 0 8px 24px rgba(26, 115, 232, 0.06);
+}
+
+.cert-frame-wrapper {
+    flex: 1;
+    min-width: 0;
+    max-width: 520px;
+}
+
+.cert-gallery-frame {
+    padding: 10px;
     background: #FFFFFF;
+    border: 9px solid #1C1C1F;
+    border-radius: 12px;
+    box-shadow: 
+        0 20px 45px rgba(0, 0, 0, 0.12),
+        0 4px 12px rgba(0, 0, 0, 0.08),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+    overflow: hidden;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.cert-gallery-frame:hover {
+    transform: translateY(-3px);
+    box-shadow: 
+        0 25px 55px rgba(0, 0, 0, 0.16),
+        0 6px 16px rgba(255, 77, 0, 0.15);
 }
 
 .cert-display-img {
     width: 100%;
     height: auto;
     display: block;
+    border-radius: 2px;
+}
+
+.cert-sidebar-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.35rem;
+    min-width: 180px;
+}
+
+.cert-sidebar-heading {
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 2.4vw, 2.1rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    line-height: 1.05;
+    margin: 0;
+}
+
+.cert-sidebar-subheading {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin: 0.15rem 0 0 0;
+}
+
+.cert-sidebar-meta {
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    line-height: 1.45;
+    margin: 0.2rem 0 0 0;
 }
 
 /* Wave Partition below About Page */
@@ -2400,6 +2361,17 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+    }
+
+    .cert-framed-showcase {
+        flex-direction: column;
+        gap: 1.25rem;
+        align-items: flex-start;
+    }
+
+    .cert-frame-wrapper {
+        width: 100%;
+        max-width: 100%;
     }
 }
 
