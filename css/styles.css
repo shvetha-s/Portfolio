@@ -1215,147 +1215,210 @@ body {
 }
 
 /* Design System Cloudscape Footer (Reference Image Match) */
-.cloudscape-footer {
+/* ═══════════════════════════════════════════════════════════════
+   SUNSET MOUNTAIN LANDSCAPE FOOTER (Reference Image Match)
+   ═══════════════════════════════════════════════════════════════ */
+.sunset-mountain-footer {
     position: relative;
     width: 100%;
-    min-height: 520px;
-    background-color: var(--bg-color);
-    color: var(--text-primary);
+    min-height: 580px;
+    background: #E85B00;
+    color: #FFFFFF;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    border-top: 1px solid rgba(255, 80, 0, 0.15);
 }
 
-.cloudscape-bg {
+.sunset-mountain-bg {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: 1;
+    overflow: hidden;
+}
+
+.sunset-mountain-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center bottom;
+    display: block;
+    filter: saturate(1.2) brightness(0.95) contrast(1.05);
+    transform: scale(1.03);
+}
+
+.sunset-mountain-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        180deg,
+        rgba(240, 238, 233, 0.95) 0%,
+        rgba(255, 140, 0, 0.18) 32%,
+        rgba(216, 61, 0, 0.35) 68%,
+        rgba(120, 24, 0, 0.65) 100%
+    );
     pointer-events: none;
 }
 
-.cloudscape-svg {
-    width: 100%;
-    height: 100%;
-    display: block;
-}
-
-.cloudscape-content {
+.sunset-footer-content {
     position: relative;
     z-index: 5;
-    padding: 3.5rem 2rem 0;
+    padding: 4.5rem 5% 0;
     display: flex;
     flex-direction: column;
 }
 
-.footer-logo-text {
-    font-family: var(--font-heading);
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: var(--text-primary);
-}
-
-.footer-tagline {
-    font-size: 0.95rem;
-    color: var(--text-secondary);
-    max-width: 380px;
-    margin-top: 0.5rem;
-    margin-bottom: 1.25rem;
-    line-height: 1.5;
-}
-
-.footer-top-content {
+.sunset-footer-content .footer-top-content {
     display: flex;
     justify-content: space-between;
-    padding: 0 2rem;
-    margin-bottom: 1.5rem;
+    padding: 0 1.5rem;
+    margin-bottom: 2rem;
     z-index: 2;
-    gap: 2rem;
+    gap: 3rem;
 }
 
-.footer-left {
-    max-width: 420px;
+.sunset-footer-content .footer-left {
+    max-width: 440px;
 }
 
-.footer-social-icons {
+.sunset-footer-content .footer-brand {
     display: flex;
-    gap: 0.75rem;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.sunset-footer-content .footer-logo-text {
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    font-weight: 800;
+    color: #FFFFFF;
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.4);
+    letter-spacing: -0.02em;
+}
+
+.sunset-footer-content .footer-tagline {
+    font-size: 1.02rem;
+    color: rgba(255, 255, 255, 0.94);
+    max-width: 400px;
+    margin-top: 0.6rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.55;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.sunset-footer-content .footer-social-icons {
+    display: flex;
+    gap: 0.85rem;
     flex-wrap: wrap;
 }
 
-.footer-social-icons a {
+.sunset-footer-content .footer-social-icons a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 42px;
-    height: 42px;
-    background-color: var(--bg-alt);
-    border: 1px solid rgba(0, 0, 0, 0.08);
+    width: 46px;
+    height: 46px;
+    background: rgba(255, 255, 255, 0.22);
+    border: 1.5px solid rgba(255, 255, 255, 0.45);
     border-radius: 50%;
-    transition: transform 0.3s ease, border-color 0.3s ease;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.3s ease, border-color 0.3s ease;
     flex-shrink: 0;
 }
 
-.footer-social-icons a svg {
-    fill: var(--accent);
+.sunset-footer-content .footer-social-icons a svg {
+    fill: #FFFFFF;
+    transition: fill 0.3s ease;
 }
 
-.footer-social-icons a:hover {
-    transform: translateY(-4px);
-    border-color: var(--accent);
+.sunset-footer-content .footer-social-icons a:hover {
+    background: #FFFFFF;
+    border-color: #FFFFFF;
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 8px 24px rgba(255, 80, 0, 0.4);
 }
 
-.footer-right {
+.sunset-footer-content .footer-social-icons a:hover svg {
+    fill: #D83D00;
+}
+
+.sunset-footer-content .footer-right {
     display: flex;
     align-items: flex-start;
 }
 
-.footer-nav-grid {
+.sunset-footer-content .footer-nav-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem 3.5rem;
+    gap: 1.1rem 4rem;
 }
 
-.footer-nav-grid a {
-    color: var(--text-primary);
-    font-weight: 600;
+.sunset-footer-content .footer-nav-grid a {
+    color: #FFFFFF;
+    font-weight: 700;
     text-decoration: none;
-    font-size: 0.95rem;
-    transition: color 0.3s ease;
+    font-size: 1.05rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+    position: relative;
+    transition: color 0.3s ease, transform 0.25s ease;
+    display: inline-block;
 }
 
-.footer-nav-grid a:hover {
-    color: var(--accent);
+.sunset-footer-content .footer-nav-grid a::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #FFE082;
+    transition: width 0.3s ease;
 }
 
-.footer-text-wrapper {
+.sunset-footer-content .footer-nav-grid a:hover {
+    color: #FFE082;
+    transform: translateX(3px);
+}
+
+.sunset-footer-content .footer-nav-grid a:hover::after {
+    width: 100%;
+}
+
+.sunset-footer-content .footer-text-wrapper {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: flex-end;
     line-height: 0.82;
     margin-top: 2rem;
-    margin-bottom: -0.08em;
+    margin-bottom: -0.06em;
     overflow: hidden;
 }
 
-.footer-huge-text {
+.sunset-footer-content .footer-huge-text {
     font-family: var(--font-heading);
-    font-size: clamp(2.4rem, 11vw, 9.8rem);
-    font-weight: 800;
-    letter-spacing: -0.03em;
+    font-size: clamp(3.4rem, 14.5vw, 13.8rem);
+    font-weight: 900;
+    letter-spacing: -0.04em;
     text-transform: uppercase;
     color: #FFFFFF;
-    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
+    text-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
     white-space: nowrap;
     text-align: center;
     width: 100%;
     margin: 0;
-    line-height: 0.88;
+    line-height: 0.85;
+    user-select: none;
+    opacity: 0.98;
 }
 
 /* Animations */
@@ -2722,5 +2785,32 @@ body {
 
     .pinned-note-inner {
         padding: 1.1rem 0.9rem;
+    }
+}
+
+/* ─── Sunset Mountain Footer Responsive ─── */
+@media (max-width: 768px) {
+    .sunset-mountain-footer {
+        min-height: 480px;
+    }
+
+    .sunset-footer-content {
+        padding: 3.5rem 1.25rem 0;
+    }
+
+    .sunset-footer-content .footer-top-content {
+        flex-direction: column;
+        padding: 0;
+        gap: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .sunset-footer-content .footer-nav-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.85rem 2rem;
+    }
+
+    .sunset-footer-content .footer-huge-text {
+        font-size: clamp(2.8rem, 13.5vw, 5.5rem);
     }
 }
