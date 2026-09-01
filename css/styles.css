@@ -192,16 +192,16 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     padding-left: 8%;
 }
 
-/* About Section — Storybook Illustration Layout (Full Uncropped Foliage) */
+/* About Section — Storybook Illustration Layout (Slides Up Over Sticky Hero) */
 #about.about-storybook-section {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    position: sticky;
-    top: 0;
-    z-index: 1;
+    position: relative;
+    z-index: 2;
     background-color: #FFFFFF;
+    box-shadow: 0 -25px 60px rgba(0, 0, 0, 0.09);
     padding: 0;
     overflow: hidden;
 }
@@ -301,7 +301,7 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     display: flex;
     align-items: flex-start;
     position: relative;
-    z-index: 2;
+    z-index: 3;
     background-color: var(--bg-alt);
     padding: 5rem 0 3.5rem;
     box-sizing: border-box;
@@ -1909,7 +1909,9 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
    ========================================================================== */
 
 .topo-hero {
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 1;
     width: 100%;
     min-height: 100vh;
     background-color: #FBF9F5;
