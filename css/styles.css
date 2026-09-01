@@ -132,10 +132,16 @@ body {
 }
 
 @media (hover: hover) and (pointer: fine) {
-
     .cursor-dot,
     .cursor-ring {
         display: flex;
+    }
+}
+
+@media (max-width: 1024px), (hover: none), (pointer: coarse) {
+    .cursor-dot,
+    .cursor-ring {
+        display: none !important;
     }
 }
 
@@ -2189,24 +2195,6 @@ body {
     align-items: stretch;
 }
 
-@keyframes expPopBounce {
-    0% {
-        opacity: 0;
-        transform: translateY(60px) scale(0.86);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
-    }
-    65% {
-        opacity: 1;
-        transform: translateY(-8px) scale(1.035);
-        box-shadow: 0 24px 48px rgba(255, 77, 0, 0.16);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
-    }
-}
-
 .exp-panel,
 .cert-panel {
     flex: 1;
@@ -2221,17 +2209,7 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
     position: relative;
     overflow: hidden;
-    opacity: 0;
-    transform: translateY(60px) scale(0.86);
-    will-change: transform, opacity;
-}
-
-.exp-cert-chapter.is-popped .exp-panel {
-    animation: expPopBounce 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-}
-
-.exp-cert-chapter.is-popped .cert-panel {
-    animation: expPopBounce 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.15s forwards;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
 }
 
 /* Subtle top accent highlight bar for each card */
@@ -2247,11 +2225,11 @@ body {
     opacity: 0.85;
 }
 
-.exp-cert-chapter.is-popped .exp-panel:hover,
-.exp-cert-chapter.is-popped .cert-panel:hover {
-    transform: translateY(-6px) scale(1.015);
+.exp-panel:hover,
+.cert-panel:hover {
+    transform: translateY(-6px);
     border-color: rgba(255, 77, 0, 0.35);
-    box-shadow: 0 20px 48px rgba(255, 77, 0, 0.14);
+    box-shadow: 0 20px 48px rgba(255, 77, 0, 0.09);
 }
 
 .exp-panel .massive-title,
@@ -2288,87 +2266,84 @@ body {
 /* Responsive adjustments for Mobile & Tablet */
 @media (max-width: 1024px) {
     .port-lockup-grid {
-        font-size: clamp(4rem, 15vw, 9rem);
+        font-size: clamp(3.8rem, 14vw, 8rem);
     }
 }
 
 @media (max-width: 768px) {
-    /* Significantly Expanded Hero Section Length & Word Sizes on Mobile */
     .topo-hero {
-        min-height: 135vh;
-        min-height: 135dvh;
-        padding-top: 9.5rem;
-        padding-bottom: 5.5rem;
+        min-height: 100vh;
+        min-height: 100dvh;
+        padding: 6.5rem 1rem 3.5rem;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         box-sizing: border-box;
-        margin-bottom: 0;
+        overflow: hidden;
     }
 
     .port-lockup-container {
         width: 100%;
-        padding: 0 2%;
+        max-width: 100%;
+        padding: 0;
         display: flex;
         justify-content: center;
-    }
-
-    .port-lockup-wrapper {
-        width: 100%;
-        max-width: 98%;
-        display: flex;
-        flex-direction: column;
         align-items: center;
     }
 
+    .port-lockup-wrapper {
+        width: max-content;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+
     .port-eyebrow {
-        font-size: clamp(1.6rem, 6.8vw, 2.5rem);
-        margin-bottom: 0.6rem;
+        font-size: clamp(1.1rem, 4.5vw, 1.8rem);
+        margin-left: 0 !important;
+        margin-top: 0;
+        margin-bottom: 0.5rem;
         align-self: flex-start;
-        padding-left: 0;
         font-weight: 700;
     }
 
     .port-lockup-grid {
-        font-size: clamp(5.2rem, 23.5vw, 9.5rem);
+        font-size: clamp(2.9rem, 13vw, 5.2rem) !important;
         line-height: 0.86;
         column-gap: 0.05rem;
+        width: 100%;
+        justify-content: center;
     }
 
     .port-swetha-sans {
-        font-size: clamp(1.6rem, 6.8vw, 2.6rem);
-        letter-spacing: 0.24em;
-        margin-top: 0.8rem;
+        font-size: clamp(1.1rem, 4.5vw, 1.8rem);
+        letter-spacing: 0.22em;
+        margin-right: 0 !important;
+        margin-top: 0.6rem;
         align-self: flex-end;
-        padding-right: 0;
         font-weight: 800;
+    }
+
+    .lockup-glow-f,
+    .lockup-glow-t {
+        width: 180px;
+        height: 180px;
+        filter: blur(25px);
+        opacity: 0.75;
     }
 
     /* Position Begin The Journey prompt cleanly on mobile */
     .topo-scroll-prompt {
-        position: relative;
-        bottom: auto;
-        left: auto;
-        margin-top: 2.5rem;
-        align-self: center;
-        font-size: 0.95rem;
-    }
-
-    .topo-scroll-prompt span {
-        font-size: 0.92rem;
-        letter-spacing: 0.14em;
-    }
-
-    /* Generous section divider spacing on mobile */
-    .section-divider {
-        padding: 2.5rem 6.5%;
+        display: none !important;
     }
 
     /* About Me section on mobile */
     #about {
         min-height: auto;
-        padding: 1.5rem 6.5% 3rem;
+        padding: 4rem 6% 3.5rem;
         flex-direction: column;
         gap: 1.5rem;
     }
@@ -2377,26 +2352,16 @@ body {
         width: 100%;
         height: auto;
         position: relative;
-        padding-top: 1.5rem;
-        padding-left: 0;
+        padding: 0;
+    }
+
+    #about .massive-title {
+        font-size: clamp(2.4rem, 8vw, 3.5rem);
     }
 
     #about .scrolling-content-area {
         width: 100%;
         gap: 1.25rem;
-    }
-
-    /* Experience & Certifications on mobile */
-    .exp-cert-chapter {
-        flex-direction: column;
-        padding: 3rem 6.5%;
-        gap: 2rem;
-    }
-
-    .exp-panel,
-    .cert-panel {
-        width: 100%;
-        padding: 2.2rem 1.8rem;
     }
 }
 
@@ -2633,14 +2598,56 @@ body {
     color: var(--text-secondary);
 }
 
-/* Responsive Mobile Layout for Pinned Board */
+/* Responsive Mobile Layout for Pinned Board & Education */
 @media (max-width: 991px) {
+    #education.pinned-board-chapter {
+        min-height: auto;
+        padding: 4rem 5% 4.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #education .sticky-title-area {
+        width: 100%;
+        height: auto;
+        position: relative;
+        top: auto;
+        padding: 0 0 2.2rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .edu-stacked-title {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: clamp(0.12rem, 1.4vw, 0.45rem);
+        font-size: clamp(1.9rem, 7.8vw, 3.2rem);
+        max-height: none;
+        height: auto;
+        width: 100%;
+        letter-spacing: 0.02em;
+    }
+
+    .edu-letter {
+        display: inline-block;
+        margin-bottom: 0;
+        line-height: 1;
+    }
+
+    .edu-letter.edu-e-wrapper .grad-cap-icon {
+        top: -0.52em;
+        width: 0.85em;
+        height: 0.85em;
+    }
+
     .pinned-board-area {
         width: 100%;
         min-height: auto;
-        padding: 2rem 5% 4rem;
+        padding: 1.5rem 0 2.5rem;
         align-items: center;
-        gap: 3.5rem;
+        gap: 3rem;
     }
 
     .pinned-connecting-line {
@@ -2649,13 +2656,46 @@ body {
 
     .pinned-note-card {
         width: 100%;
-        max-width: 380px;
+        max-width: 360px;
         margin-left: 0 !important;
         margin-right: 0 !important;
         margin-top: 0 !important;
     }
 
-    .pinned-card-1 { transform: rotate(-2deg); }
-    .pinned-card-2 { transform: rotate(2deg); }
-    .pinned-card-3 { transform: rotate(-1.5deg); }
+    .pinned-card-1 { transform: rotate(-1.5deg); }
+    .pinned-card-2 { transform: rotate(1.5deg); }
+    .pinned-card-3 { transform: rotate(-1deg); }
+}
+
+@media (max-width: 480px) {
+    .pinned-note-card {
+        max-width: 100%;
+        padding: 1.2rem 1.1rem;
+        border-radius: 20px;
+    }
+
+    .pinned-note-inner {
+        padding: 1.25rem 1.1rem;
+        border-radius: 14px;
+    }
+}
+
+@media (max-width: 380px) {
+    .port-lockup-grid {
+        font-size: 2.6rem !important;
+    }
+
+    .port-eyebrow,
+    .port-swetha-sans {
+        font-size: 0.95rem;
+    }
+
+    .pinned-note-card {
+        max-width: 100%;
+        padding: 1rem 0.9rem;
+    }
+
+    .pinned-note-inner {
+        padding: 1.1rem 0.9rem;
+    }
 }

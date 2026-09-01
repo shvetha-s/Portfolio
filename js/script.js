@@ -136,30 +136,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ═══════════════════════════════════════════════════════════
-    //  EXPERIENCE & CERTIFICATIONS POP-ON-SCROLL ANIMATION
-    //  Triggers dynamic spring pop when scrolling/swiping from About Me
-    // ═══════════════════════════════════════════════════════════
-    const expSection = document.getElementById('experience');
-    if (expSection) {
-        const checkExpInView = () => {
-            const rect = expSection.getBoundingClientRect();
-            const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-            if (rect.top <= windowHeight * 0.88 && rect.bottom >= 0) {
-                expSection.classList.add('is-popped');
-            } else if (rect.top > windowHeight * 1.05) {
-                // Reset when scrolled back up above About Me so it can pop again
-                expSection.classList.remove('is-popped');
-            }
-        };
-
-        window.addEventListener('scroll', checkExpInView, { passive: true });
-        window.addEventListener('touchmove', checkExpInView, { passive: true });
-        window.addEventListener('resize', checkExpInView, { passive: true });
-        // Also run immediately on page load
-        setTimeout(checkExpInView, 100);
-    }
-
 });
 
 function initHero3DSphere() {
