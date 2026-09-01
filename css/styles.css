@@ -192,16 +192,16 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     padding-left: 8%;
 }
 
-/* About Section — Storybook Illustration Layout (Slides Up Over Sticky Hero) */
+/* About Section — Storybook Illustration Layout (Full Uncropped Foliage) */
 #about.about-storybook-section {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    position: relative;
-    z-index: 2;
+    position: sticky;
+    top: 0;
+    z-index: 1;
     background-color: #FFFFFF;
-    box-shadow: 0 -25px 60px rgba(0, 0, 0, 0.09);
     padding: 0;
     overflow: hidden;
 }
@@ -301,7 +301,7 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     display: flex;
     align-items: flex-start;
     position: relative;
-    z-index: 3;
+    z-index: 2;
     background-color: var(--bg-alt);
     padding: 5rem 0 3.5rem;
     box-sizing: border-box;
@@ -1909,9 +1909,7 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
    ========================================================================== */
 
 .topo-hero {
-    position: sticky;
-    top: 0;
-    z-index: 1;
+    position: relative;
     width: 100%;
     min-height: 100vh;
     background-color: #FBF9F5;
@@ -2046,10 +2044,10 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
 }
 
 .port-eyebrow {
-    font-family: 'Almendra', 'Cinzel Decorative', serif;
+    font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
     font-style: italic;
-    font-size: clamp(1.2rem, 2.4vw, 2.2rem);
-    font-weight: 700;
+    font-size: clamp(1.4rem, 2.8vw, 2.6rem);
+    font-weight: 600;
     color: #111111;
     letter-spacing: 0.02em;
     text-transform: lowercase;
@@ -2134,11 +2132,11 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     overflow: visible;
 }
 
-/* Fantasy "SWETHA" placed under LIO at bottom right */
+/* Editorial "SWETHA" placed under LIO at bottom right */
 .port-swetha-sans {
-    font-family: 'Cinzel Decorative', 'Almendra', serif;
-    font-size: clamp(1rem, 1.8vw, 1.8rem);
-    font-weight: 900;
+    font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.2rem, 2.2vw, 2.2rem);
+    font-weight: 700;
     color: #111111;
     letter-spacing: 0.35em;
     text-transform: uppercase;
@@ -2346,12 +2344,14 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     }
 
     .port-eyebrow {
-        font-size: clamp(1.2rem, 5vw, 1.8rem);
+        font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+        font-style: italic;
+        font-size: clamp(1.3rem, 5.2vw, 1.9rem);
         margin-left: 0 !important;
         margin-top: 0;
         margin-bottom: 0.4rem;
         align-self: flex-start;
-        font-weight: 700;
+        font-weight: 600;
         color: #111111 !important;
         text-shadow: 0 1px 6px rgba(255, 255, 255, 0.95);
     }
@@ -2367,12 +2367,13 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     }
 
     .port-swetha-sans {
-        font-size: clamp(0.95rem, 3.6vw, 1.3rem);
+        font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+        font-size: clamp(1.1rem, 4.2vw, 1.5rem);
         letter-spacing: 0.25em;
         margin-right: 0 !important;
         margin-top: 0.6rem;
         align-self: flex-end;
-        font-weight: 800;
+        font-weight: 700;
         color: #111111 !important;
         text-shadow: 0 1px 6px rgba(255, 255, 255, 0.95);
     }
