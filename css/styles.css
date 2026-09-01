@@ -239,39 +239,58 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
 }
 
 .about-header-lockup {
-    margin-bottom: 2rem;
+    margin-bottom: 1.8rem;
+}
+
+#about .massive-title {
+    font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(2.8rem, 5.2vw, 4.6rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    line-height: 1.05;
 }
 
 .about-storybook-text-card {
     display: flex;
     flex-direction: column;
-    gap: 1.6rem;
+    gap: 1.5rem;
 }
 
 .about-storybook-lead {
-    font-family: var(--font-body);
-    font-size: 1.15rem;
-    line-height: 1.85;
-    color: var(--text-primary);
+    font-family: 'Cormorant Garamond', 'Plus Jakarta Sans', Georgia, serif;
+    font-size: clamp(1.28rem, 1.65vw, 1.52rem);
+    font-weight: 500;
+    line-height: 1.78;
+    color: #1F1F23;
+    letter-spacing: 0.01em;
+}
+
+.about-storybook-lead strong {
+    font-weight: 700;
+    color: var(--accent);
 }
 
 .storybook-dropcap {
     float: left;
-    font-family: 'Outfit', var(--font-heading);
-    font-size: 4rem;
-    line-height: 0.82;
-    padding-top: 4px;
-    padding-right: 14px;
+    font-family: 'Playfair Display', 'Cormorant Garamond', serif;
+    font-size: clamp(4.2rem, 5.6vw, 5.4rem);
+    line-height: 0.78;
+    padding-top: 6px;
+    padding-right: 16px;
     padding-bottom: 2px;
     color: var(--accent);
-    font-weight: 900;
+    font-weight: 800;
+    font-style: normal;
 }
 
 .about-storybook-body {
-    font-family: var(--font-body);
-    font-size: 1.05rem;
-    line-height: 1.8;
-    color: var(--text-secondary);
+    font-family: 'Cormorant Garamond', 'Plus Jakarta Sans', Georgia, serif;
+    font-size: clamp(1.2rem, 1.55vw, 1.42rem);
+    font-weight: 500;
+    line-height: 1.78;
+    color: #38383D;
+    letter-spacing: 0.01em;
 }
 
 /* Experience Section — Slides Up with Compact Content */
