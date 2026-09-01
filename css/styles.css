@@ -1775,6 +1775,11 @@ body {
 }
 
 @media (max-width: 480px) {
+    .hero-chapter {
+        min-height: 72vh !important;
+        padding: 5.5rem 0 2.5rem !important;
+    }
+
     .scroll-prompt {
         position: relative !important;
         margin-top: 2rem !important;
@@ -1852,14 +1857,13 @@ body {
 .topo-hero {
     position: relative;
     width: 100%;
-    min-height: 140vh !important;
+    min-height: 100vh;
     background: var(--bg-color);
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    margin-bottom: 6rem;
-    padding: 10rem 1.5vw 8rem;
+    margin-bottom: 0;
 }
 
 /* Section Separator between Hero and About */
@@ -2268,16 +2272,15 @@ body {
 
 @media (max-width: 768px) {
     .topo-hero {
-        min-height: 200vh !important;
-        min-height: 200dvh !important;
-        padding: 14rem 0.75rem 12rem !important;
+        min-height: auto;
+        padding: 6.5rem 0.75rem 2rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         box-sizing: border-box;
         overflow: hidden;
-        margin-bottom: 8rem !important;
+        margin-bottom: 0;
     }
 
     .port-lockup-container {
@@ -2344,7 +2347,7 @@ body {
     /* About Me section on mobile */
     #about {
         min-height: auto;
-        padding: 3rem 6% 3rem;
+        padding: 1.5rem 6% 3rem;
         flex-direction: column;
         gap: 1.25rem;
         align-items: flex-start;
