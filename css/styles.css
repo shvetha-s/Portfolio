@@ -2013,68 +2013,43 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     align-items: flex-start;
 }
 
-/* Localized Circle Radial Gradients directly anchored into letter F and letter T */
+/* Localized Circle Radial Gradients */
 .lockup-glow {
-    position: absolute;
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: -1;
-    filter: blur(35px);
-    opacity: 0.95;
-}
-
-/* Gradient 1: Centered DEAD-CENTER inside the letter F */
-.lockup-glow-f {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: clamp(260px, 30vw, 450px);
-    height: clamp(260px, 30vw, 450px);
-    background: radial-gradient(circle, rgba(255, 80, 0, 0.68) 0%, rgba(255, 120, 50, 0.35) 45%, transparent 70%);
-}
-
-/* Gradient 2: Centered DEAD-CENTER inside the letter T */
-.lockup-glow-t {
-    top: 45%;
-    left: 60%;
-    transform: translate(-50%, -50%);
-    width: clamp(260px, 30vw, 450px);
-    height: clamp(260px, 30vw, 450px);
-    background: radial-gradient(circle, rgba(255, 80, 0, 0.68) 0%, rgba(255, 120, 50, 0.35) 45%, transparent 70%);
+    display: none !important;
 }
 
 .port-eyebrow {
     font-family: 'Almendra', 'Cinzel Decorative', serif;
     font-style: italic;
-    font-size: clamp(1.6rem, 3.5vw, 3.6rem);
+    font-size: clamp(1.2rem, 2.4vw, 2.2rem);
     font-weight: 700;
-    color: var(--accent);
+    color: #111111;
     letter-spacing: 0.02em;
     text-transform: lowercase;
-    margin-top: clamp(1.2rem, 3.5vw, 4.5rem);
-    margin-bottom: 0.5rem;
-    margin-left: clamp(-16rem, -13.5vw, -4rem);
+    margin-top: clamp(0.8rem, 2vw, 2rem);
+    margin-bottom: 0.35rem;
+    margin-left: clamp(-8rem, -6vw, -1rem);
     align-self: flex-start;
-    text-shadow: 0 2px 10px rgba(255, 255, 255, 0.85);
+    text-shadow: 0 1px 4px rgba(255, 255, 255, 0.9);
 }
 
-/* Grid: 3 columns × 2 rows — Fantasy Typography Lockup */
+/* Grid: 3 columns × 2 rows — Compact Fantasy Typography Lockup */
 .port-lockup-grid {
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto;
-    column-gap: clamp(0.05rem, 0.25vw, 0.4rem);
+    column-gap: clamp(0.05rem, 0.25vw, 0.35rem);
     row-gap: 0;
     align-items: center;
     font-family: 'Cinzel Decorative', 'Almendra', serif;
-    font-size: clamp(5.2rem, 17.5vw, 18.5rem);
+    font-size: clamp(3.6rem, 10vw, 10.5rem);
     font-weight: 900;
     line-height: 0.86;
     letter-spacing: -0.02em;
-    color: var(--text-primary);
+    color: #111111;
     text-transform: uppercase;
     user-select: none;
-    text-shadow: 0 4px 20px rgba(255, 255, 255, 0.9), 0 2px 8px rgba(0, 0, 0, 0.08);
+    text-shadow: 0 2px 8px rgba(255, 255, 255, 0.8);
 }
 
 .port-p {
@@ -2110,7 +2085,7 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     height: 1.68em;
     width: auto;
     display: block;
-    color: var(--text-primary);
+    color: #111111;
 }
 
 /* RT wrapper */
@@ -2135,16 +2110,16 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
 /* Fantasy "SWETHA" placed under LIO at bottom right */
 .port-swetha-sans {
     font-family: 'Cinzel Decorative', 'Almendra', serif;
-    font-size: clamp(1.3rem, 2.6vw, 3rem);
+    font-size: clamp(1rem, 1.8vw, 1.8rem);
     font-weight: 900;
-    color: var(--accent);
+    color: #111111;
     letter-spacing: 0.35em;
     text-transform: uppercase;
     line-height: 1;
-    margin-top: 0.8rem;
-    margin-right: clamp(-18rem, -14vw, -6rem);
+    margin-top: 0.6rem;
+    margin-right: clamp(-8rem, -6vw, -1rem);
     align-self: flex-end;
-    text-shadow: 0 2px 10px rgba(255, 255, 255, 0.85);
+    text-shadow: 0 1px 4px rgba(255, 255, 255, 0.9);
 }
 
 .port-rt {
@@ -2349,16 +2324,17 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     }
 
     .port-lockup-grid {
-        font-size: clamp(4.4rem, 19.5vw, 7.8rem) !important;
+        font-size: clamp(3.2rem, 14vw, 5.8rem) !important;
         line-height: 0.84;
         column-gap: 0.05rem;
         width: 100%;
         justify-content: center;
+        color: #111111 !important;
     }
 
     .port-swetha-sans {
-        font-size: clamp(1.35rem, 5.8vw, 2.2rem);
-        letter-spacing: 0.22em;
+        font-size: clamp(1rem, 3.8vw, 1.4rem);
+        letter-spacing: 0.25em;
         margin-right: clamp(-3rem, -5vw, -0.5rem) !important;
         margin-top: 0.8rem;
         align-self: flex-end;
