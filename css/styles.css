@@ -2274,7 +2274,7 @@ body {
     .topo-hero {
         min-height: 100vh;
         min-height: 100dvh;
-        padding: 6.5rem 1rem 3.5rem;
+        padding: 5rem 0.75rem 2.5rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -2294,7 +2294,7 @@ body {
 
     .port-lockup-wrapper {
         width: max-content;
-        max-width: 100%;
+        max-width: 96vw;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -2302,37 +2302,41 @@ body {
     }
 
     .port-eyebrow {
-        font-size: clamp(1.1rem, 4.5vw, 1.8rem);
-        margin-left: 0 !important;
+        font-size: clamp(1.35rem, 5.8vw, 2.2rem);
+        margin-left: clamp(-3rem, -5vw, -0.5rem) !important;
         margin-top: 0;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.6rem;
         align-self: flex-start;
         font-weight: 700;
     }
 
     .port-lockup-grid {
-        font-size: clamp(2.9rem, 13vw, 5.2rem) !important;
-        line-height: 0.86;
+        font-size: clamp(4.4rem, 19.5vw, 7.8rem) !important;
+        line-height: 0.84;
         column-gap: 0.05rem;
         width: 100%;
         justify-content: center;
     }
 
     .port-swetha-sans {
-        font-size: clamp(1.1rem, 4.5vw, 1.8rem);
+        font-size: clamp(1.35rem, 5.8vw, 2.2rem);
         letter-spacing: 0.22em;
-        margin-right: 0 !important;
-        margin-top: 0.6rem;
+        margin-right: clamp(-3rem, -5vw, -0.5rem) !important;
+        margin-top: 0.8rem;
         align-self: flex-end;
         font-weight: 800;
     }
 
+    .girl-on-l-img {
+        width: clamp(55px, 20vw, 95px);
+    }
+
     .lockup-glow-f,
     .lockup-glow-t {
-        width: 180px;
-        height: 180px;
-        filter: blur(25px);
-        opacity: 0.75;
+        width: clamp(220px, 55vw, 340px);
+        height: clamp(220px, 55vw, 340px);
+        filter: blur(30px);
+        opacity: 0.85;
     }
 
     /* Position Begin The Journey prompt cleanly on mobile */
