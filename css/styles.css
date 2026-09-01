@@ -247,8 +247,37 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     padding: 0 8% 0 0;
 }
 
+/* Certificate Section — Placed Below Education */
+#certificate {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 6rem 0;
+    box-sizing: border-box;
+}
+
+#certificate .sticky-title-area {
+    position: sticky;
+    top: 6.5rem;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    padding-left: 8%;
+    padding-top: 0;
+}
+
+#certificate .scrolling-content-area {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 8% 0 0;
+}
+
 #about .content-block,
-#experience .content-block {
+#experience .content-block,
+#certificate .content-block {
     background: transparent;
     border: none;
     border-radius: 0;
@@ -258,7 +287,6 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
 
 /* Framed Certificate with Right-Side Heading */
 .cert-framed-showcase {
-    margin-top: 2.25rem;
     display: flex;
     align-items: center;
     gap: 2.25rem;
@@ -2321,9 +2349,10 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
         display: none !important;
     }
 
-    /* About & Experience sections on mobile */
+    /* About, Experience, Certificate sections on mobile */
     #about,
-    #experience {
+    #experience,
+    #certificate {
         min-height: auto;
         padding: 1.5rem 6% 3rem;
         flex-direction: column;
@@ -2333,7 +2362,8 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     }
 
     #about .sticky-title-area,
-    #experience .sticky-title-area {
+    #experience .sticky-title-area,
+    #certificate .sticky-title-area {
         width: 100%;
         height: auto;
         position: relative;
@@ -2344,14 +2374,16 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     }
 
     #about .massive-title,
-    #experience .massive-title {
+    #experience .massive-title,
+    #certificate .massive-title {
         font-size: clamp(2.2rem, 7.5vw, 3.2rem);
         margin: 0 0 0.25rem 0;
         line-height: 1.1;
     }
 
     #about .scrolling-content-area,
-    #experience .scrolling-content-area {
+    #experience .scrolling-content-area,
+    #certificate .scrolling-content-area {
         width: 100%;
         min-height: auto;
         height: auto;
