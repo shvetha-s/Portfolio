@@ -2,12 +2,12 @@
     --bg-color: #F0EEE9;
     --bg-alt: #FFFFFF;
     --text-primary: #1C1C1F;
-    --text-secondary: #5C5C60;
+    --text-secondary: #4A4A50;
     --accent: #FF4D00;
-    /* Fluorescent Lime */
 
-    --font-heading: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
-    --font-body: 'Plus Jakarta Sans', 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    --font-heading: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'Cormorant Garamond', 'Plus Jakarta Sans', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', 'Inter', sans-serif;
 
     --transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -42,7 +42,8 @@ body {
     background-color: var(--bg-color);
     color: var(--text-primary);
     font-family: var(--font-body);
-    line-height: 1.6;
+    font-size: 1.18rem;
+    line-height: 1.72;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
     width: 100%;
@@ -85,9 +86,9 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
 
 .logo {
     font-family: var(--font-heading);
-    font-size: 1.15rem;
-    font-weight: 500;
-    letter-spacing: -0.02em;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
     color: var(--text-primary);
     text-decoration: none;
     transition: color 0.3s ease;
@@ -105,11 +106,12 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
 }
 
 .nav-links a {
+    font-family: var(--font-heading);
     color: var(--text-primary);
     text-decoration: none;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
     transition: color 0.3s ease, opacity 0.3s ease;
 }
 
@@ -453,10 +455,10 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
 /* Typography - Unbroken Single Line Section Titles */
 .massive-title {
     font-family: var(--font-heading);
-    font-size: clamp(2.5rem, 5.2vw, 7.5rem);
-    font-weight: 500;
-    line-height: 0.95;
-    letter-spacing: -0.03em;
+    font-size: clamp(2.8rem, 5.4vw, 7.5rem);
+    font-weight: 700;
+    line-height: 0.96;
+    letter-spacing: -0.02em;
     color: var(--text-primary);
     white-space: nowrap !important;
     word-break: keep-all !important;
