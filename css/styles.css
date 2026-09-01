@@ -2406,8 +2406,8 @@ body {
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 5rem 0 5.5rem 4%;
+    justify-content: flex-start;
+    padding: 5rem 0 5.5rem 8%;
 }
 
 .edu-stacked-title {
@@ -2627,12 +2627,12 @@ body {
 
     #education .sticky-title-area {
         width: 100%;
-        max-width: 360px;
-        margin: 0 auto;
+        max-width: 100%;
+        margin: 0;
         height: auto;
         position: relative;
         top: auto;
-        padding: 0 0 1.8rem 0;
+        padding: 0 0 1.5rem 0;
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
@@ -2647,6 +2647,8 @@ body {
         max-height: none;
         height: auto;
         width: 100%;
+        margin: 0;
+        padding: 0;
         letter-spacing: 0.02em;
     }
 
