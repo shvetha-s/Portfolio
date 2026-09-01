@@ -1,15 +1,22 @@
 :root {
-    --bg-color: #F0EEE9;
-    --bg-alt: #FFFFFF;
-    --text-primary: #1C1C1F;
-    --text-secondary: #5C5C60;
-    --accent: #FF4D00;
-    /* Fluorescent Lime */
+    /* Kids Storybook & Fantasy Theme Palette */
+    --bg-color: #FAF5EA;        /* Warm Enchanted Storybook Parchment */
+    --bg-alt: #FFFDF9;          /* Crisp Fairytale Book Page */
+    --text-primary: #2B1D19;    /* Storybook Deep Ink */
+    --text-secondary: #6E5D53;  /* Warm Antique Sepia Subtitle */
+    --accent: #FF5E14;          /* Vivid Enchanted Flame Orange */
+    --accent-gold: #D4AF37;     /* Royal Gilded Fairytale Gold */
+    --accent-amber: #FFA028;    /* Magic Amber Sunset */
+    --accent-violet: #6C3483;   /* Twilight Fantasy Violet */
+    --parchment-border: rgba(184, 153, 114, 0.28);
+    --gold-glow: rgba(212, 175, 55, 0.35);
 
-    --font-heading: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
-    --font-body: 'Plus Jakarta Sans', 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    --font-storybook: 'Berkshire Swash', 'Cinzel Decorative', Georgia, serif;
+    --font-heading: 'Space Grotesk', 'Outfit', sans-serif;
+    --font-body: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    --font-handwriting: 'Caveat', cursive;
 
-    --transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 * {
@@ -42,7 +49,7 @@ body {
     background-color: var(--bg-color);
     color: var(--text-primary);
     font-family: var(--font-body);
-    line-height: 1.6;
+    line-height: 1.65;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
     width: 100%;
@@ -73,31 +80,51 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     top: 0;
     left: 0;
     width: 100%;
-    padding: 1.25rem 4rem;
+    padding: 1.15rem 4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
-    background: rgba(240, 238, 233, 0.75);
+    background: rgba(250, 245, 234, 0.85);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid var(--parchment-border);
     transition: background-color 0.3s ease, padding 0.3s ease;
 }
 
 .logo {
     font-family: var(--font-heading);
     font-size: 1.15rem;
-    font-weight: 500;
-    letter-spacing: -0.02em;
+    font-weight: 700;
+    letter-spacing: -0.01em;
     color: var(--text-primary);
     text-decoration: none;
     transition: color 0.3s ease;
     z-index: 1002;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.logo-sparkle {
+    font-size: 1.1rem;
+    animation: fairySparkle 2.5s ease-in-out infinite alternate;
+}
+
+.logo-sub {
+    font-family: var(--font-handwriting);
+    font-size: 1.18rem;
+    color: var(--accent);
+    font-weight: 700;
 }
 
 .logo:hover {
     color: var(--accent);
+}
+
+@keyframes fairySparkle {
+    0% { transform: scale(0.9) rotate(-6deg); opacity: 0.8; }
+    100% { transform: scale(1.15) rotate(12deg); opacity: 1; filter: drop-shadow(0 0 6px rgba(255, 160, 40, 0.8)); }
 }
 
 .nav-links {
@@ -294,7 +321,72 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     box-shadow: none;
 }
 
-/* Framed Certificate Showcase */
+/* Storybook Chapter Tag */
+.storybook-chapter-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--font-handwriting);
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: var(--accent);
+    background: rgba(255, 94, 20, 0.08);
+    border: 1px dashed rgba(255, 94, 20, 0.35);
+    padding: 0.2rem 1.15rem;
+    border-radius: 999px;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.02em;
+    width: fit-content;
+}
+
+/* Storybook Parchment Block */
+.story-parchment-block {
+    background: var(--bg-alt) !important;
+    border: 1.5px solid var(--parchment-border) !important;
+    border-radius: 20px !important;
+    padding: 2.25rem !important;
+    box-shadow: 0 12px 35px rgba(43, 29, 25, 0.04), 0 2px 6px rgba(212, 175, 55, 0.08) !important;
+    position: relative;
+    transition: var(--transition);
+}
+
+.story-parchment-block:hover {
+    border-color: rgba(255, 94, 20, 0.35) !important;
+    box-shadow: 0 18px 45px rgba(255, 94, 20, 0.08), 0 0 20px rgba(255, 160, 40, 0.06) !important;
+    transform: translateY(-2px);
+}
+
+/* Storybook Illuminated Drop Cap */
+.storybook-dropcap {
+    float: left;
+    font-family: var(--font-storybook);
+    font-size: 3.8rem;
+    line-height: 0.82;
+    padding-top: 6px;
+    padding-right: 12px;
+    padding-bottom: 2px;
+    color: var(--accent);
+    text-shadow: 0 4px 14px rgba(255, 94, 20, 0.3);
+}
+
+/* Storybook Quest Badge */
+.story-quest-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--font-handwriting);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--accent);
+    background: #FFF2E6;
+    border: 1px solid rgba(255, 94, 20, 0.2);
+    padding: 0.2rem 0.95rem;
+    border-radius: 999px;
+    margin-bottom: 0.65rem;
+    width: fit-content;
+}
+
+/* Framed Certificate Showcase with Royal Decree Framing */
 .cert-framed-showcase {
     display: flex;
     align-items: center;
@@ -307,33 +399,54 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     min-width: 0;
     max-width: 660px;
     width: 100%;
+    position: relative;
 }
 
-.cert-gallery-frame {
-    padding: 10px;
-    background: #FFFFFF;
-    border: 9px solid #1C1C1F;
-    border-radius: 12px;
+.story-gilded-frame {
+    position: relative;
+    padding: 12px;
+    background: var(--bg-alt);
+    border: 8px solid var(--text-primary);
+    border-radius: 16px;
     box-shadow: 
-        0 20px 45px rgba(0, 0, 0, 0.12),
-        0 4px 12px rgba(0, 0, 0, 0.08),
-        inset 0 0 0 1px rgba(255, 255, 255, 0.4);
-    overflow: hidden;
+        0 20px 48px rgba(43, 29, 25, 0.12),
+        0 0 0 2px var(--accent-gold),
+        inset 0 0 15px rgba(212, 175, 55, 0.15);
+    overflow: visible;
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
 }
 
-.cert-gallery-frame:hover {
-    transform: translateY(-3px);
+.story-gilded-frame:hover {
+    transform: translateY(-4px);
     box-shadow: 
-        0 25px 55px rgba(0, 0, 0, 0.16),
-        0 6px 16px rgba(255, 77, 0, 0.15);
+        0 26px 58px rgba(43, 29, 25, 0.16),
+        0 0 0 3px var(--accent-gold),
+        0 0 25px rgba(255, 160, 40, 0.25);
+}
+
+.royal-decree-ribbon {
+    position: absolute;
+    top: -14px;
+    right: 20px;
+    background: linear-gradient(135deg, #FF5E14, #FFA028);
+    color: #FFFFFF;
+    font-family: var(--font-heading);
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.35rem 1.15rem;
+    border-radius: 999px;
+    box-shadow: 0 4px 16px rgba(255, 94, 20, 0.45);
+    z-index: 5;
+    border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .cert-display-img {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 2px;
+    border-radius: 4px;
 }
 
 /* Wave Partition below About Page */
@@ -378,18 +491,19 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     justify-content: center;
 }
 
-/* Typography - Unbroken Single Line Section Titles */
+/* Typography - Storybook Section Titles */
 .massive-title {
-    font-family: var(--font-heading);
-    font-size: clamp(2.5rem, 5.2vw, 7.5rem);
-    font-weight: 500;
-    line-height: 0.95;
-    letter-spacing: -0.03em;
+    font-family: var(--font-storybook);
+    font-size: clamp(2.6rem, 5.2vw, 7.2rem);
+    font-weight: 700;
+    line-height: 0.98;
+    letter-spacing: -0.01em;
     color: var(--text-primary);
     white-space: nowrap !important;
     word-break: keep-all !important;
     overflow-wrap: normal !important;
     hyphens: none !important;
+    text-shadow: 0 2px 8px rgba(212, 175, 55, 0.12);
 }
 
 /* Convocation Cap fitted sideways on Letter E */
@@ -482,7 +596,7 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     align-items: stretch;
 }
 
-/* Project Column Item (Card + Description Below) */
+/* Project Column Item (Fantasy Storybook Card) */
 .project-column-item {
     display: flex;
     flex-direction: column;
