@@ -1857,13 +1857,13 @@ body {
 .topo-hero {
     position: relative;
     width: 100%;
-    min-height: 110vh;
+    min-height: 125vh;
     background: var(--bg-color);
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 /* Section Separator between Hero and About */
@@ -2272,15 +2272,16 @@ body {
 
 @media (max-width: 768px) {
     .topo-hero {
-        min-height: 135vh;
-        min-height: 135dvh;
-        padding: 7.5rem 0.75rem 5rem;
+        min-height: 180vh;
+        min-height: 180dvh;
+        padding: 9.5rem 0.75rem 7.5rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         box-sizing: border-box;
         overflow: hidden;
+        margin-bottom: 3.5rem;
     }
 
     .port-lockup-container {
