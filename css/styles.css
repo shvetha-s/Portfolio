@@ -259,7 +259,8 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     gap: 1.5rem;
 }
 
-.about-storybook-lead {
+.about-storybook-lead,
+.about-storybook-body {
     font-family: 'Cormorant Garamond', 'Plus Jakarta Sans', Georgia, serif;
     font-size: clamp(1.28rem, 1.65vw, 1.52rem);
     font-weight: 500;
@@ -268,7 +269,8 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     letter-spacing: 0.01em;
 }
 
-.about-storybook-lead strong {
+.about-storybook-lead strong,
+.about-storybook-body strong {
     font-weight: 700;
     color: var(--accent);
 }
@@ -284,15 +286,6 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     color: var(--accent);
     font-weight: 800;
     font-style: normal;
-}
-
-.about-storybook-body {
-    font-family: 'Cormorant Garamond', 'Plus Jakarta Sans', Georgia, serif;
-    font-size: clamp(1.2rem, 1.55vw, 1.42rem);
-    font-weight: 500;
-    line-height: 1.78;
-    color: #38383D;
-    letter-spacing: 0.01em;
 }
 
 /* Experience Section — Waterfront Tree Illustration Spread (Content on Left) */
@@ -2466,14 +2459,11 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
         box-sizing: border-box !important;
     }
 
-    .about-storybook-lead {
+    .about-storybook-lead,
+    .about-storybook-body {
         font-size: clamp(1.15rem, 4vw, 1.35rem) !important;
         line-height: 1.75 !important;
-    }
-
-    .about-storybook-body {
-        font-size: clamp(1.1rem, 3.8vw, 1.28rem) !important;
-        line-height: 1.75 !important;
+        color: #1F1F23 !important;
     }
 
     #experience.experience-lake-section {
