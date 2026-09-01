@@ -256,15 +256,9 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     box-shadow: none;
 }
 
-/* Certificate Showcase Card in Experience */
-.cert-showcase-block {
-    margin-top: 1.5rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
-}
-
+/* Certificate Image Attached inside Experience */
 .cert-image-card {
-    margin-top: 1.25rem;
+    margin-top: 2rem;
     max-width: 580px;
     width: 100%;
     border-radius: 16px;
