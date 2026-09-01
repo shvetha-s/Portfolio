@@ -1,10 +1,10 @@
 :root {
-    --bg-color: #F0EEE9;
+    --bg-color: #F7F1EA;
     --bg-alt: #FFFFFF;
-    --text-primary: #1C1C1F;
-    --text-secondary: #5C5C60;
-    --accent: #FF4D00;
-    /* Fluorescent Lime */
+    --text-primary: #1F0811;
+    --text-secondary: #644F57;
+    --accent: #670626;
+    /* Cherry & Warm Ivory Design System */
 
     --font-heading: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
     --font-body: 'Plus Jakarta Sans', 'Inter', 'Helvetica Neue', Arial, sans-serif;
@@ -80,7 +80,7 @@ body {
     justify-content: center;
     align-items: center;
     will-change: left, top;
-    filter: drop-shadow(0 3px 10px rgba(255, 80, 0, 0.45));
+    filter: drop-shadow(0 3px 10px rgba(103, 6, 38, 0.45));
 }
 
 .sunflower-cursor-svg {
@@ -101,7 +101,7 @@ body {
     left: 0;
     width: 48px;
     height: 48px;
-    border: 1.5px solid rgba(255, 77, 0, 0.65);
+    border: 1.5px solid rgba(103, 6, 38, 0.65);
     border-radius: 50%;
     pointer-events: none;
     z-index: 10000;
@@ -124,7 +124,7 @@ body {
     font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: #FF4D00;
+    color: var(--accent);
     opacity: 0;
     transition: opacity 0.2s ease;
     white-space: nowrap;
@@ -148,15 +148,15 @@ body {
 /* ── HOVER STATE: link / button (refined subtle feedback) ── */
 .cursor-dot.is-hovering {
     transform: translate(-50%, -50%) scale(1.15);
-    filter: drop-shadow(0 4px 12px rgba(255, 80, 0, 0.6));
+    filter: drop-shadow(0 4px 12px rgba(103, 6, 38, 0.6));
 }
 
 .cursor-ring.is-hovering {
     width: 54px;
     height: 54px;
-    border-color: rgba(255, 77, 0, 0.9);
-    background: rgba(255, 77, 0, 0.08);
-    box-shadow: 0 0 14px rgba(255, 77, 0, 0.25);
+    border-color: rgba(103, 6, 38, 0.9);
+    background: rgba(103, 6, 38, 0.08);
+    box-shadow: 0 0 14px rgba(103, 6, 38, 0.25);
 }
 
 /* ── HOVER STATE: project card ── */
@@ -1996,7 +1996,7 @@ body {
     transform: translate(-50%, -50%);
     width: clamp(260px, 30vw, 450px);
     height: clamp(260px, 30vw, 450px);
-    background: radial-gradient(circle, rgba(255, 80, 0, 0.68) 0%, rgba(255, 120, 50, 0.35) 45%, transparent 70%);
+    background: radial-gradient(circle, rgba(103, 6, 38, 0.55) 0%, rgba(142, 19, 58, 0.28) 45%, transparent 70%);
 }
 
 /* Gradient 2: Centered DEAD-CENTER inside the letter T */
@@ -2006,7 +2006,7 @@ body {
     transform: translate(-50%, -50%);
     width: clamp(260px, 30vw, 450px);
     height: clamp(260px, 30vw, 450px);
-    background: radial-gradient(circle, rgba(255, 80, 0, 0.68) 0%, rgba(255, 120, 50, 0.35) 45%, transparent 70%);
+    background: radial-gradient(circle, rgba(103, 6, 38, 0.55) 0%, rgba(142, 19, 58, 0.28) 45%, transparent 70%);
 }
 
 .port-eyebrow {
@@ -2539,8 +2539,8 @@ body {
 }
 
 .note-theme-orange {
-    background: #FFF4EC;
-    border: 1px solid rgba(255, 80, 0, 0.18);
+    background: #FAF3EF;
+    border: 1px solid rgba(103, 6, 38, 0.18);
 }
 
 .note-theme-blue {
@@ -2562,7 +2562,7 @@ body {
     margin-bottom: 0.1rem;
 }
 
-.script-orange { color: #FF5000; }
+.script-orange { color: #670626; }
 .script-blue   { color: #1A73E8; }
 .script-purple { color: #8E24AA; }
 
@@ -2606,7 +2606,7 @@ body {
     border-radius: 20px;
 }
 
-.badge-orange { background: rgba(255, 80, 0, 0.12); color: #D63B00; }
+.badge-orange { background: rgba(103, 6, 38, 0.12); color: #670626; }
 .badge-blue   { background: rgba(26, 115, 232, 0.12); color: #1557B0; }
 .badge-purple { background: rgba(142, 36, 170, 0.12); color: #6A1B9A; }
 

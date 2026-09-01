@@ -11,20 +11,17 @@ Defined in `:root` inside `styles.css`:
 
 | Token Name | CSS Value | Usage / Role in Project |
 | :--- | :--- | :--- |
-| `--bg-color` | `#F0EEE9` | Primary deep black background for body, sections, and contrast elements |
-| `--bg-alt` | `#FFFFFF` | Elevated dark background for alternate sections (`.alt-bg`), cards (`.edu-card`, `.skill-card`) |
-| `--text-primary` | `#1C1C1F` | Primary high-contrast light text for headings, active links, and titles |
-| `--text-secondary` | `#5C5C60` | Muted neutral gray for subheadings, body paragraphs, and list items |
-| `--accent` | `#FF4D00` | High-visibility fluorescent lime-yellow for accents, numbers, dividers, and primary CTA buttons |
+| `--bg-color` | `#F7F1EA` | Primary **Warm Ivory** background for body, chapters, and storytelling framework |
+| `--bg-alt` | `#FFFFFF` | Elevated crisp card and panel backgrounds (`.alt-bg`, `.pinned-note-card`) |
+| `--text-primary` | `#1F0811` | Primary deep cherry-tinted black for massive titles, bold headings, and wordmarks |
+| `--text-secondary` | `#644F57` | Warm muted plum gray for body text, subtitles, and metadata |
+| `--accent` | `#670626` | Signature **Cherry** red accent for eyebrows, author name, buttons, badges, glows, and custom cursor |
 
 #### Component-Specific Color Implementations:
-- **Kinetic Dividers & Footer**: `background-color: var(--accent)`, `color: var(--bg-color)`
-- **Header Overlay**: `background: rgba(240, 238, 233, 0.85)` with `backdrop-filter: blur(16px)`
-- **Slide Wrap Background**: `#111114` with `border: 1px solid rgba(0, 0, 0, 0.08)`
-- **Lightbox Background**: `rgba(0, 0, 0, 0.94)`
-- **Borders & Dividers**: `rgba(0, 0, 0, 0.05)`, `rgba(0, 0, 0, 0.08)`, `rgba(0, 0, 0, 0.1)`, `rgba(0, 0, 0, 0.1)`
-- **Accent Glows & Hovers**: `rgba(255, 77, 0, 0.15)`, `rgba(255, 77, 0, 0.3)`, `rgba(255, 77, 0, 0.4)`
-- **Skill Image Gradient (`.bg-grad-1`)**: `linear-gradient(135deg, rgba(255, 77, 0, 0.9), rgba(255, 77, 0, 0.3))`
+- **Header Overlay**: `background: rgba(247, 241, 234, 0.88)` with `backdrop-filter: blur(16px)`
+- **Hero Radial Glows**: `radial-gradient(circle, rgba(103, 6, 38, 0.55) 0%, rgba(142, 19, 58, 0.28) 45%, transparent 70%)`
+- **Custom Cursor**: Cherry `#670626` with plum center `#3D0014` and halo `rgba(103, 6, 38, 0.65)`
+- **Pinned Education Theme**: `#FAF3EF` background with `border: 1px solid rgba(103, 6, 38, 0.18)` and Cherry pins/numbers (`#670626`)
 
 ---
 
