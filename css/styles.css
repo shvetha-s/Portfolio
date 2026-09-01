@@ -358,6 +358,18 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     margin-bottom: 1.25rem !important;
     color: var(--text-primary) !important;
     font-size: 1.18rem !important;
+    font-weight: 700 !important;
+}
+
+#experience .clean-list li {
+    font-family: var(--font-body);
+    font-size: clamp(1.18rem, 1.4vw, 1.38rem);
+    font-weight: 700 !important;
+    line-height: 1.75;
+    color: #141416 !important;
+    padding: 0.95rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+    text-shadow: 0 1px 4px rgba(255, 255, 255, 0.95);
 }
 
 /* Certificate Section — Placed Below Education */
