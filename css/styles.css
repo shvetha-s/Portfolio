@@ -192,18 +192,15 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     padding-left: 8%;
 }
 
-/* About Section — Orange Glassy Gradient Background */
 /* About Section — Dedicated Full 2nd Page */
-#about,
-#experience {
+#about {
     min-height: 100vh;
     display: flex;
     align-items: center;
     position: relative;
 }
 
-#about .sticky-title-area,
-#experience .sticky-title-area {
+#about .sticky-title-area {
     height: 100vh;
     position: sticky;
     top: 0;
@@ -212,14 +209,42 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     padding-left: 8%;
 }
 
-#about .scrolling-content-area,
-#experience .scrolling-content-area {
+#about .scrolling-content-area {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 2.5rem;
     padding: 5rem 8% 5rem 0;
+}
+
+/* Experience Section — Pinned Title Aligned with Top Content */
+#experience {
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    padding: 6.5rem 0 8rem;
+    box-sizing: border-box;
+}
+
+#experience .sticky-title-area {
+    position: sticky;
+    top: 6.5rem;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    padding-left: 8%;
+    padding-top: 0;
+}
+
+#experience .scrolling-content-area {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 3.5rem;
+    padding: 0 8% 0 0;
 }
 
 #about .content-block,
