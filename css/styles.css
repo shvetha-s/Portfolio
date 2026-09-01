@@ -190,11 +190,12 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     padding-left: 8%;
 }
 
-/* About Section — Storybook Illustration Layout */
+/* About Section — Storybook Illustration Layout (Full Uncropped Foliage) */
 #about.about-storybook-section {
     min-height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     position: sticky;
     top: 0;
     z-index: 1;
@@ -203,46 +204,48 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     overflow: hidden;
 }
 
-.about-illustration-side {
-    width: 50%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    background: #FFFFFF;
-}
-
-.about-storybook-cover-img {
+.about-backdrop-art {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.about-full-art-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
     object-position: left center;
     display: block;
 }
 
-.about-content-side {
-    width: 50%;
-    height: 100vh;
+.about-content-overlay {
+    width: 48%;
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: 7%;
+    position: relative;
+    z-index: 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 4rem 8% 4rem 4rem;
-    box-sizing: border-box;
-    background: #FFFFFF;
-    position: relative;
-    z-index: 2;
+    padding: 3rem 0;
 }
 
 .about-header-lockup {
-    margin-bottom: 2.25rem;
+    margin-bottom: 2rem;
 }
 
 .about-storybook-text-card {
     display: flex;
     flex-direction: column;
-    gap: 1.75rem;
-    max-width: 560px;
+    gap: 1.6rem;
 }
 
 .about-storybook-lead {
@@ -2413,14 +2416,24 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
         padding: 0;
     }
 
-    .about-illustration-side {
-        width: 100%;
-        height: 320px;
-    }
-
-    .about-content-side {
+    .about-backdrop-art {
+        position: relative;
         width: 100%;
         height: auto;
+        max-height: 420px;
+    }
+
+    .about-full-art-img {
+        width: 100%;
+        height: auto;
+        max-height: 420px;
+        object-fit: contain;
+    }
+
+    .about-content-overlay {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
         padding: 2.5rem 6% 3.5rem;
     }
 
