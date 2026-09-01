@@ -3,23 +3,22 @@
    ========================================================================== */
 
 html, body, * {
-    cursor: url('../assets/icons/cursor_32.png?v=3d2026') 3 3, auto !important;
+    cursor: url('../assets/icons/cursor_32.png?v=storybook_01') 3 3, auto !important;
 }
 
 a, button, [role="button"], input, select, textarea, .process-card, .takeaway-card {
-    cursor: url('../assets/icons/cursor_32.png?v=3d2026') 3 3, pointer !important;
+    cursor: url('../assets/icons/cursor_32.png?v=storybook_01') 3 3, pointer !important;
 }
 
 .case-study-body {
-    background-color: var(--bg-color, #FAF5EA);
-    color: var(--text-primary, #2B1D19);
-    font-family: var(--font-body, 'Plus Jakarta Sans', sans-serif);
+    background-color: #FAF7EE;
+    color: #1C3D29;
+    font-family: 'Plus Jakarta Sans', 'Nunito', sans-serif;
     line-height: 1.7;
     overflow-x: hidden;
     margin: 0;
     padding: 0;
 }
-
 
 /* Header */
 .cs-header {
@@ -27,14 +26,14 @@ a, button, [role="button"], input, select, textarea, .process-card, .takeaway-ca
     top: 0;
     left: 0;
     width: 100%;
-    padding: 1.25rem 2.5rem;
+    padding: 1.15rem 2.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(250, 245, 234, 0.88);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(184, 153, 114, 0.28);
+    background: rgba(250, 247, 238, 0.88);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1.5px solid rgba(44, 94, 59, 0.12);
     z-index: 100;
     box-sizing: border-box;
 }
@@ -43,30 +42,30 @@ a, button, [role="button"], input, select, textarea, .process-card, .takeaway-ca
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    color: var(--text-primary);
+    color: #1C3D29;
     text-decoration: none;
     font-size: 0.95rem;
-    font-weight: 500;
-    padding: 0.5rem 1rem;
+    font-weight: 600;
+    padding: 0.5rem 1.15rem;
     border-radius: 999px;
-    background: rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: #FFFDF8;
+    border: 1.5px solid rgba(44, 94, 59, 0.18);
     transition: all 0.3s ease;
 }
 
 .cs-back-btn:hover {
-    background: var(--accent);
-    color: var(--bg-color);
-    border-color: var(--accent);
+    background: #234E35;
+    color: #FFFFFF;
+    border-color: #234E35;
+    transform: translateY(-2px);
 }
 
 .cs-header-title {
-    font-family: var(--font-heading);
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--text-primary);
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
+    font-family: 'Fraunces', 'DM Serif Display', Georgia, serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #1C3D29;
+    letter-spacing: 0.02em;
 }
 
 /* Main Container - Spans Edge-to-Edge 100% Screen Width */
