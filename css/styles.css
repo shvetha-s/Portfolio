@@ -1857,7 +1857,7 @@ body {
 .topo-hero {
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    min-height: 110vh;
     background: var(--bg-color);
     display: flex;
     justify-content: center;
@@ -2272,9 +2272,9 @@ body {
 
 @media (max-width: 768px) {
     .topo-hero {
-        min-height: 100vh;
-        min-height: 100dvh;
-        padding: 5rem 0.75rem 2.5rem;
+        min-height: 135vh;
+        min-height: 135dvh;
+        padding: 7.5rem 0.75rem 5rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
