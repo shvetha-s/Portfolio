@@ -194,7 +194,7 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
 
 /* About Section — Storybook Illustration Layout (Full Uncropped Foliage) */
 #about.about-storybook-section {
-    min-height: 100vh;
+    min-height: 125vh;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -202,7 +202,7 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     top: 0;
     z-index: 1;
     background-color: #FFFFFF;
-    padding: 0;
+    padding: 4rem 0;
     overflow: hidden;
 }
 
@@ -2427,7 +2427,7 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
         min-height: auto !important;
         position: relative !important;
         top: auto !important;
-        padding: 2.5rem 0 3rem !important;
+        padding: 3.5rem 0 4rem !important;
         background-color: #FFFFFF !important;
         display: flex !important;
     }
@@ -2436,7 +2436,7 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
         position: relative !important;
         width: 100% !important;
         height: auto !important;
-        max-height: 380px !important;
+        max-height: 440px !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
@@ -2446,7 +2446,7 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     .about-full-art-img {
         width: 100% !important;
         height: auto !important;
-        max-height: 360px !important;
+        max-height: 420px !important;
         object-fit: contain !important;
         display: block !important;
     }
