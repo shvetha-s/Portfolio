@@ -295,33 +295,22 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     letter-spacing: 0.01em;
 }
 
-/* Experience Section — Looking Up at the Forest Canopy Spread */
-#experience.experience-canopy-section {
-    min-height: 85vh;
+/* Experience Section — Waterfront Tree Illustration Spread (Content on Left) */
+#experience.experience-lake-section {
+    min-height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     position: relative;
     z-index: 2;
-    background-color: #FFFFFF;
-    padding: 6rem 0;
+    background-color: #FAF8F2;
+    padding: 0;
     box-sizing: border-box;
-    box-shadow: none;
+    box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.04);
     overflow: hidden;
 }
 
-/* Seamless Riverbank / Stream Transition from About */
-.exp-stream-transition {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: clamp(90px, 16vh, 200px);
-    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.9) 30%, rgba(255, 255, 255, 0) 100%);
-    pointer-events: none;
-    z-index: 2;
-}
-
-.exp-canopy-backdrop {
+.exp-lake-backdrop {
     position: absolute;
     top: 0;
     left: 0;
@@ -329,74 +318,46 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     height: 100%;
     pointer-events: none;
     z-index: 1;
-    overflow: hidden;
-    mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.4) 60px, black 160px);
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.4) 60px, black 160px);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
-.exp-canopy-img {
+.exp-lake-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center center;
-    opacity: 0.35;
-    filter: saturate(1.15) contrast(1.05);
+    object-position: right center;
     display: block;
 }
 
-.exp-title-area {
+.exp-content-left-container {
+    width: 46%;
+    max-width: 580px;
+    margin-left: 8%;
+    margin-right: auto;
     position: relative;
     z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem 0;
 }
 
-.exp-content-area {
-    position: relative;
-    z-index: 2;
+.exp-header-lockup {
+    margin-bottom: 1.8rem;
 }
 
-.exp-glass-card {
-    background: rgba(255, 255, 255, 0.94) !important;
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.8) !important;
-    border-radius: 24px !important;
-    padding: 2.75rem 2.75rem 2.5rem !important;
-    box-shadow: 
-        0 20px 45px rgba(0, 0, 0, 0.07),
-        0 4px 12px rgba(0, 0, 0, 0.03),
-        inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
-    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
-}
-
-.exp-glass-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 
-        0 25px 55px rgba(0, 0, 0, 0.1),
-        0 6px 16px rgba(255, 77, 0, 0.12) !important;
+.exp-story-card {
+    display: flex;
+    flex-direction: column;
 }
 
 .exp-company-line {
+    margin-top: 0.2rem !important;
     margin-bottom: 1.25rem !important;
     color: var(--text-primary) !important;
-}
-
-#experience .sticky-title-area {
-    position: sticky;
-    top: 6.5rem;
-    height: auto;
-    display: flex;
-    align-items: flex-start;
-    padding-left: 8%;
-    padding-top: 0;
-}
-
-#experience .scrolling-content-area {
-    min-height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 2rem;
-    padding: 0 8% 0 0;
+    font-size: 1.18rem !important;
 }
 
 /* Certificate Section — Placed Below Education */
@@ -2503,7 +2464,44 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
         line-height: 1.75 !important;
     }
 
-    #experience,
+    #experience.experience-lake-section {
+        flex-direction: column !important;
+        height: auto !important;
+        min-height: auto !important;
+        position: relative !important;
+        top: auto !important;
+        padding: 2.5rem 0 3rem !important;
+        background-color: #FAF8F2 !important;
+        display: flex !important;
+    }
+
+    .exp-lake-backdrop {
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
+        max-height: 380px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 0 1rem !important;
+    }
+
+    .exp-lake-img {
+        width: 100% !important;
+        height: auto !important;
+        max-height: 360px !important;
+        object-fit: contain !important;
+        display: block !important;
+    }
+
+    .exp-content-left-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 1.8rem 6% 1rem !important;
+        box-sizing: border-box !important;
+    }
+
     #certificate {
         min-height: auto !important;
         padding: 3rem 6% 3.5rem !important;
@@ -2515,7 +2513,6 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
         top: auto !important;
     }
 
-    #experience .sticky-title-area,
     #certificate .sticky-title-area {
         width: 100% !important;
         height: auto !important;
@@ -2526,14 +2523,12 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
         display: block !important;
     }
 
-    #experience .massive-title,
     #certificate .massive-title {
         font-size: clamp(2.2rem, 7.5vw, 3.2rem) !important;
         margin: 0 0 0.25rem 0 !important;
         line-height: 1.1 !important;
     }
 
-    #experience .scrolling-content-area,
     #certificate .scrolling-content-area {
         width: 100% !important;
         min-height: auto !important;
