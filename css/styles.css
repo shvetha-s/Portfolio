@@ -40,10 +40,6 @@ body::-webkit-scrollbar {
 
 body {
     background-color: var(--bg-color);
-    background-image: 
-        linear-gradient(to right, rgba(28, 28, 31, 0.055) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(28, 28, 31, 0.055) 1px, transparent 1px);
-    background-size: 32px 32px;
     color: var(--text-primary);
     font-family: var(--font-body);
     line-height: 1.6;
@@ -183,10 +179,6 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
 
 .alt-bg {
     background-color: var(--bg-alt);
-    background-image: 
-        linear-gradient(to right, rgba(28, 28, 31, 0.055) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(28, 28, 31, 0.055) 1px, transparent 1px);
-    background-size: 32px 32px;
 }
 
 .sticky-title-area {
@@ -209,10 +201,6 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     top: 0;
     z-index: 1;
     background-color: var(--bg-color);
-    background-image: 
-        linear-gradient(to right, rgba(28, 28, 31, 0.055) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(28, 28, 31, 0.055) 1px, transparent 1px);
-    background-size: 32px 32px;
 }
 
 #about .sticky-title-area {
@@ -241,10 +229,6 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     position: relative;
     z-index: 2;
     background-color: var(--bg-alt);
-    background-image: 
-        linear-gradient(to right, rgba(28, 28, 31, 0.055) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(28, 28, 31, 0.055) 1px, transparent 1px);
-    background-size: 32px 32px;
     padding: 5rem 0 3.5rem;
     box-sizing: border-box;
     box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.04);
@@ -279,10 +263,6 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     padding: 6rem 0;
     box-sizing: border-box;
     background-color: var(--bg-color);
-    background-image: 
-        linear-gradient(to right, rgba(28, 28, 31, 0.055) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(28, 28, 31, 0.055) 1px, transparent 1px);
-    background-size: 32px 32px;
     box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.04);
 }
 
@@ -455,10 +435,6 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     width: 100%;
     padding: 6.5rem 5% 8rem;
     background-color: var(--bg-color);
-    background-image: 
-        linear-gradient(to right, rgba(28, 28, 31, 0.055) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(28, 28, 31, 0.055) 1px, transparent 1px);
-    background-size: 32px 32px;
     box-sizing: border-box;
     position: relative;
     overflow: visible;
@@ -2413,10 +2389,6 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
 .pinned-board-chapter {
     min-height: 100vh;
     background-color: var(--bg-alt);
-    background-image: 
-        linear-gradient(to right, rgba(28, 28, 31, 0.055) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(28, 28, 31, 0.055) 1px, transparent 1px);
-    background-size: 32px 32px;
     position: relative;
     z-index: 3;
     overflow: hidden;
