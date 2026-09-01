@@ -68,20 +68,19 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
 
 
 
-/* Header */
+/* Header — Fixed to the Hero Section */
 .story-header {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    padding: 1.25rem 4rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 9999 !important;
+    z-index: 100;
     background: transparent;
     border-bottom: none;
-    pointer-events: auto;
     transition: background-color 0.3s ease, padding 0.3s ease;
 }
 
@@ -2047,28 +2046,28 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
 .port-eyebrow {
     font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
     font-style: italic;
-    font-size: clamp(1.6rem, 3.2vw, 3.2rem);
+    font-size: clamp(1.4rem, 2.8vw, 2.6rem);
     font-weight: 600;
     color: #111111;
     letter-spacing: 0.02em;
     text-transform: lowercase;
-    margin-top: clamp(0.8rem, 2vw, 2.5rem);
-    margin-bottom: 0.4rem;
-    margin-left: clamp(-10rem, -8vw, -1.5rem);
+    margin-top: clamp(0.8rem, 2vw, 2rem);
+    margin-bottom: 0.35rem;
+    margin-left: clamp(-8rem, -6vw, -1rem);
     align-self: flex-start;
     text-shadow: 0 1px 4px rgba(255, 255, 255, 0.9);
 }
 
-/* Grid: 3 columns × 2 rows — Prominent Hero Typography Lockup */
+/* Grid: 3 columns × 2 rows — Compact Fantasy Typography Lockup */
 .port-lockup-grid {
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto;
-    column-gap: clamp(0.05rem, 0.25vw, 0.4rem);
+    column-gap: clamp(0.05rem, 0.25vw, 0.35rem);
     row-gap: 0;
     align-items: center;
     font-family: 'Cinzel Decorative', 'Almendra', serif;
-    font-size: clamp(4.8rem, 13.5vw, 14.5rem);
+    font-size: clamp(3.6rem, 10vw, 10.5rem);
     font-weight: 900;
     line-height: 0.86;
     letter-spacing: -0.02em;
@@ -2136,14 +2135,14 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
 /* Editorial "SWETHA" placed under LIO at bottom right */
 .port-swetha-sans {
     font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
-    font-size: clamp(1.4rem, 2.6vw, 2.6rem);
+    font-size: clamp(1.2rem, 2.2vw, 2.2rem);
     font-weight: 700;
     color: #111111;
     letter-spacing: 0.35em;
     text-transform: uppercase;
     line-height: 1;
-    margin-top: 0.8rem;
-    margin-right: clamp(-10rem, -8vw, -1.5rem);
+    margin-top: 0.6rem;
+    margin-right: clamp(-8rem, -6vw, -1rem);
     align-self: flex-end;
     text-shadow: 0 1px 4px rgba(255, 255, 255, 0.9);
 }
@@ -2347,7 +2346,7 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     .port-eyebrow {
         font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
         font-style: italic;
-        font-size: clamp(1.4rem, 5.5vw, 2.1rem);
+        font-size: clamp(1.3rem, 5.2vw, 1.9rem);
         margin-left: 0 !important;
         margin-top: 0;
         margin-bottom: 0.4rem;
@@ -2358,7 +2357,7 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     }
 
     .port-lockup-grid {
-        font-size: clamp(3.4rem, 14vw, 5.8rem) !important;
+        font-size: clamp(2.8rem, 12vw, 4.8rem) !important;
         line-height: 0.88;
         column-gap: clamp(0.04rem, 0.5vw, 0.2rem);
         width: 100%;
@@ -2369,7 +2368,7 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
 
     .port-swetha-sans {
         font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
-        font-size: clamp(1.2rem, 4.5vw, 1.6rem);
+        font-size: clamp(1.1rem, 4.2vw, 1.5rem);
         letter-spacing: 0.25em;
         margin-right: 0 !important;
         margin-top: 0.6rem;
