@@ -190,33 +190,85 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     padding-left: 8%;
 }
 
-/* About Section — Sticky Page that Stays While Next Sections Slide Up */
-#about {
+/* About Section — Storybook Illustration Layout */
+#about.about-storybook-section {
     min-height: 100vh;
     display: flex;
     align-items: center;
     position: sticky;
     top: 0;
     z-index: 1;
-    background-color: var(--bg-color);
+    background-color: #FFFFFF;
+    padding: 0;
+    overflow: hidden;
 }
 
-#about .sticky-title-area {
+.about-illustration-side {
+    width: 50%;
     height: 100vh;
-    position: sticky;
-    top: 0;
     display: flex;
     align-items: center;
-    padding-left: 8%;
+    justify-content: center;
+    overflow: hidden;
+    background: #FFFFFF;
 }
 
-#about .scrolling-content-area {
-    min-height: 100vh;
+.about-storybook-cover-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left center;
+    display: block;
+}
+
+.about-content-side {
+    width: 50%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 2.5rem;
-    padding: 5rem 8% 5rem 0;
+    padding: 4rem 8% 4rem 4rem;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    position: relative;
+    z-index: 2;
+}
+
+.about-header-lockup {
+    margin-bottom: 2.25rem;
+}
+
+.about-storybook-text-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    max-width: 560px;
+}
+
+.about-storybook-lead {
+    font-family: var(--font-body);
+    font-size: 1.15rem;
+    line-height: 1.85;
+    color: var(--text-primary);
+}
+
+.storybook-dropcap {
+    float: left;
+    font-family: 'Outfit', var(--font-heading);
+    font-size: 4rem;
+    line-height: 0.82;
+    padding-top: 4px;
+    padding-right: 14px;
+    padding-bottom: 2px;
+    color: var(--accent);
+    font-weight: 900;
+}
+
+.about-storybook-body {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
 }
 
 /* Experience Section — Slides Up with Compact Content */
@@ -2370,6 +2422,30 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+    }
+
+    #about.about-storybook-section {
+        flex-direction: column;
+        height: auto;
+        min-height: auto;
+        position: relative;
+        top: auto;
+        padding: 0;
+    }
+
+    .about-illustration-side {
+        width: 100%;
+        height: 320px;
+    }
+
+    .about-content-side {
+        width: 100%;
+        height: auto;
+        padding: 2.5rem 6% 3.5rem;
+    }
+
+    .about-storybook-text-card {
+        max-width: 100%;
     }
 
     .cert-framed-showcase {
