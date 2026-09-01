@@ -262,16 +262,16 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
 .about-storybook-lead,
 .about-storybook-body {
     font-family: 'Cormorant Garamond', 'Plus Jakarta Sans', Georgia, serif;
-    font-size: clamp(1.28rem, 1.65vw, 1.52rem);
-    font-weight: 500;
-    line-height: 1.78;
-    color: #1F1F23;
+    font-size: clamp(1.25rem, 1.6vw, 1.48rem);
+    font-weight: 400;
+    line-height: 1.82;
+    color: #4A4A50;
     letter-spacing: 0.01em;
 }
 
 .about-storybook-lead strong,
 .about-storybook-body strong {
-    font-weight: 700;
+    font-weight: 600;
     color: var(--accent);
 }
 
@@ -2462,8 +2462,9 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     .about-storybook-lead,
     .about-storybook-body {
         font-size: clamp(1.15rem, 4vw, 1.35rem) !important;
-        line-height: 1.75 !important;
-        color: #1F1F23 !important;
+        line-height: 1.78 !important;
+        font-weight: 400 !important;
+        color: #4A4A50 !important;
     }
 
     #experience.experience-lake-section {
