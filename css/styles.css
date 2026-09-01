@@ -1,11 +1,12 @@
 :root {
-    --bg-color: #F7F1EA;
+    --bg-color: #FEF0B6;
     --bg-alt: #FFFFFF;
-    --text-primary: #1C0A0E;
-    --text-secondary: #5C4A50;
-    --accent: #750608;
-    --accent-cosmos: #74A5BE;
-    /* Cherry Red (#750608) & Cosmos Marble (#74A5BE) Design System */
+    --bg-azure: #BBD3E0;
+    --text-primary: #472F26;
+    --text-secondary: #6E554C;
+    --accent: #472F26;
+    --accent-azure: #BBD3E0;
+    /* Light Yellow, Light Azure & Dark Gray Brown Design System */
 
     --font-heading: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
     --font-body: 'Plus Jakarta Sans', 'Inter', 'Helvetica Neue', Arial, sans-serif;
@@ -81,7 +82,7 @@ body {
     justify-content: center;
     align-items: center;
     will-change: left, top;
-    filter: drop-shadow(0 3px 10px rgba(117, 6, 8, 0.45));
+    filter: drop-shadow(0 3px 10px rgba(71, 47, 38, 0.35));
 }
 
 .sunflower-cursor-svg {
@@ -102,7 +103,7 @@ body {
     left: 0;
     width: 48px;
     height: 48px;
-    border: 1.5px solid rgba(117, 6, 8, 0.65);
+    border: 1.5px solid rgba(71, 47, 38, 0.65);
     border-radius: 50%;
     pointer-events: none;
     z-index: 10000;
@@ -149,15 +150,15 @@ body {
 /* ── HOVER STATE: link / button (refined subtle feedback) ── */
 .cursor-dot.is-hovering {
     transform: translate(-50%, -50%) scale(1.15);
-    filter: drop-shadow(0 4px 12px rgba(117, 6, 8, 0.6));
+    filter: drop-shadow(0 4px 12px rgba(71, 47, 38, 0.5));
 }
 
 .cursor-ring.is-hovering {
     width: 54px;
     height: 54px;
-    border-color: rgba(117, 6, 8, 0.9);
-    background: rgba(116, 165, 190, 0.12);
-    box-shadow: 0 0 16px rgba(116, 165, 190, 0.35);
+    border-color: rgba(71, 47, 38, 0.9);
+    background: rgba(187, 211, 224, 0.25);
+    box-shadow: 0 0 14px rgba(71, 47, 38, 0.2);
 }
 
 /* ── HOVER STATE: project card ── */
@@ -1254,12 +1255,12 @@ body {
     font-family: var(--font-heading);
     font-size: 1.6rem;
     font-weight: 700;
-    color: var(--text-primary);
+    color: #FEF0B6;
 }
 
 .footer-tagline {
     font-size: 0.95rem;
-    color: var(--text-secondary);
+    color: rgba(254, 240, 182, 0.82);
     max-width: 380px;
     margin-top: 0.5rem;
     margin-bottom: 1.25rem;
@@ -1291,20 +1292,26 @@ body {
     align-items: center;
     width: 42px;
     height: 42px;
-    background-color: var(--bg-alt);
-    border: 1px solid rgba(0, 0, 0, 0.08);
+    background-color: rgba(254, 240, 182, 0.12);
+    border: 1px solid rgba(254, 240, 182, 0.3);
     border-radius: 50%;
-    transition: transform 0.3s ease, border-color 0.3s ease;
+    transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
     flex-shrink: 0;
 }
 
 .footer-social-icons a svg {
-    fill: var(--accent);
+    fill: #FEF0B6;
+    transition: fill 0.3s ease;
 }
 
 .footer-social-icons a:hover {
     transform: translateY(-4px);
-    border-color: var(--accent);
+    border-color: #BBD3E0;
+    background-color: #BBD3E0;
+}
+
+.footer-social-icons a:hover svg {
+    fill: #472F26;
 }
 
 .footer-right {
@@ -1319,7 +1326,7 @@ body {
 }
 
 .footer-nav-grid a {
-    color: var(--text-primary);
+    color: #FEF0B6;
     font-weight: 600;
     text-decoration: none;
     font-size: 0.95rem;
@@ -1327,7 +1334,7 @@ body {
 }
 
 .footer-nav-grid a:hover {
-    color: var(--accent);
+    color: #BBD3E0;
 }
 
 .footer-text-wrapper {
@@ -1347,8 +1354,8 @@ body {
     font-weight: 800;
     letter-spacing: -0.03em;
     text-transform: uppercase;
-    color: #FFFFFF;
-    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
+    color: #FEF0B6;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.35), 0 0 45px rgba(187, 211, 224, 0.3);
     white-space: nowrap;
     text-align: center;
     width: 100%;
@@ -1990,24 +1997,24 @@ body {
     opacity: 0.95;
 }
 
-/* Gradient 1: Centered DEAD-CENTER inside the letter F — Cherry Red */
+/* Gradient 1: Centered DEAD-CENTER inside the letter F */
 .lockup-glow-f {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: clamp(260px, 30vw, 450px);
     height: clamp(260px, 30vw, 450px);
-    background: radial-gradient(circle, rgba(117, 6, 8, 0.62) 0%, rgba(148, 18, 21, 0.32) 45%, transparent 70%);
+    background: radial-gradient(circle, rgba(187, 211, 224, 0.75) 0%, rgba(187, 211, 224, 0.35) 45%, transparent 70%);
 }
 
-/* Gradient 2: Centered DEAD-CENTER inside the letter T — Cosmos Marble */
+/* Gradient 2: Centered DEAD-CENTER inside the letter T */
 .lockup-glow-t {
     top: 45%;
     left: 60%;
     transform: translate(-50%, -50%);
     width: clamp(260px, 30vw, 450px);
     height: clamp(260px, 30vw, 450px);
-    background: radial-gradient(circle, rgba(116, 165, 190, 0.65) 0%, rgba(116, 165, 190, 0.28) 45%, transparent 70%);
+    background: radial-gradient(circle, rgba(187, 211, 224, 0.75) 0%, rgba(187, 211, 224, 0.35) 45%, transparent 70%);
 }
 
 .port-eyebrow {
