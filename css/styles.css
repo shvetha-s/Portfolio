@@ -302,11 +302,23 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     align-items: center;
     position: relative;
     z-index: 2;
-    background-color: #F8FAF6;
+    background-color: #FFFFFF;
     padding: 6rem 0;
     box-sizing: border-box;
-    box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.04);
+    box-shadow: none;
     overflow: hidden;
+}
+
+/* Seamless Riverbank / Stream Transition from About */
+.exp-stream-transition {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: clamp(90px, 16vh, 200px);
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.9) 30%, rgba(255, 255, 255, 0) 100%);
+    pointer-events: none;
+    z-index: 2;
 }
 
 .exp-canopy-backdrop {
@@ -318,6 +330,8 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     pointer-events: none;
     z-index: 1;
     overflow: hidden;
+    mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.4) 60px, black 160px);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.4) 60px, black 160px);
 }
 
 .exp-canopy-img {
@@ -325,7 +339,7 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     height: 100%;
     object-fit: cover;
     object-position: center center;
-    opacity: 0.32;
+    opacity: 0.35;
     filter: saturate(1.15) contrast(1.05);
     display: block;
 }
