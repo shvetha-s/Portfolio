@@ -285,18 +285,19 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     box-shadow: none;
 }
 
-/* Framed Certificate with Right-Side Heading */
+/* Framed Certificate Showcase */
 .cert-framed-showcase {
     display: flex;
     align-items: center;
-    gap: 2.25rem;
+    justify-content: flex-start;
     width: 100%;
 }
 
 .cert-frame-wrapper {
     flex: 1;
     min-width: 0;
-    max-width: 520px;
+    max-width: 660px;
+    width: 100%;
 }
 
 .cert-gallery-frame {
@@ -324,40 +325,6 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     height: auto;
     display: block;
     border-radius: 2px;
-}
-
-.cert-sidebar-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 0.35rem;
-    min-width: 180px;
-}
-
-.cert-sidebar-heading {
-    font-family: var(--font-heading);
-    font-size: clamp(1.5rem, 2.4vw, 2.1rem);
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    color: var(--text-primary);
-    line-height: 1.05;
-    margin: 0;
-}
-
-.cert-sidebar-subheading {
-    font-family: var(--font-heading);
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: var(--accent);
-    margin: 0.15rem 0 0 0;
-}
-
-.cert-sidebar-meta {
-    font-family: var(--font-body);
-    font-size: 0.82rem;
-    color: var(--text-secondary);
-    line-height: 1.45;
-    margin: 0.2rem 0 0 0;
 }
 
 /* Wave Partition below About Page */
