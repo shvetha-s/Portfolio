@@ -254,14 +254,14 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
 
 .storybook-dropcap {
     float: left;
-    font-family: 'Pinyon Script', 'Great Vibes', cursive;
-    font-size: 5.2rem;
-    line-height: 0.72;
-    padding-top: 6px;
+    font-family: 'Outfit', var(--font-heading);
+    font-size: 4rem;
+    line-height: 0.82;
+    padding-top: 4px;
     padding-right: 14px;
     padding-bottom: 2px;
     color: var(--accent);
-    font-weight: 400;
+    font-weight: 900;
 }
 
 .about-storybook-body {
@@ -2019,21 +2019,21 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
 }
 
 .port-eyebrow {
-    font-family: 'Pinyon Script', 'Alex Brush', cursive;
-    font-size: clamp(2.2rem, 4.8vw, 4.6rem);
-    font-weight: 400;
+    font-family: 'Almendra', 'Cinzel Decorative', serif;
+    font-style: italic;
+    font-size: clamp(1.2rem, 2.4vw, 2.2rem);
+    font-weight: 700;
     color: #111111;
     letter-spacing: 0.02em;
-    text-transform: none;
-    line-height: 1;
-    margin-top: clamp(0.5rem, 1.5vw, 1.5rem);
-    margin-bottom: -0.2rem;
-    margin-left: clamp(-6rem, -5vw, 0rem);
+    text-transform: lowercase;
+    margin-top: clamp(0.8rem, 2vw, 2rem);
+    margin-bottom: 0.35rem;
+    margin-left: clamp(-8rem, -6vw, -1rem);
     align-self: flex-start;
-    text-shadow: 0 2px 8px rgba(255, 255, 255, 0.9);
+    text-shadow: 0 1px 4px rgba(255, 255, 255, 0.9);
 }
 
-/* Grid: 3 columns × 2 rows — Premium Editorial Writing / Display Lockup */
+/* Grid: 3 columns × 2 rows — Compact Fantasy Typography Lockup */
 .port-lockup-grid {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -2041,16 +2041,15 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     column-gap: clamp(0.05rem, 0.25vw, 0.35rem);
     row-gap: 0;
     align-items: center;
-    font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
-    font-style: italic;
-    font-size: clamp(3.8rem, 11vw, 11.5rem);
-    font-weight: 700;
+    font-family: 'Cinzel Decorative', 'Almendra', serif;
+    font-size: clamp(3.6rem, 10vw, 10.5rem);
+    font-weight: 900;
     line-height: 0.86;
     letter-spacing: -0.02em;
     color: #111111;
     text-transform: uppercase;
     user-select: none;
-    text-shadow: 0 2px 10px rgba(255, 255, 255, 0.9);
+    text-shadow: 0 2px 8px rgba(255, 255, 255, 0.8);
 }
 
 .port-p {
@@ -2108,19 +2107,19 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     overflow: visible;
 }
 
-/* Premium Script "Swetha" signature placed under LIO at bottom right */
+/* Fantasy "SWETHA" placed under LIO at bottom right */
 .port-swetha-sans {
-    font-family: 'Pinyon Script', 'Great Vibes', cursive;
-    font-size: clamp(2.4rem, 4.8vw, 4.6rem);
-    font-weight: 400;
+    font-family: 'Cinzel Decorative', 'Almendra', serif;
+    font-size: clamp(1rem, 1.8vw, 1.8rem);
+    font-weight: 900;
     color: #111111;
-    letter-spacing: 0.04em;
-    text-transform: none;
-    line-height: 0.9;
-    margin-top: 0.4rem;
-    margin-right: clamp(-6rem, -5vw, 0rem);
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-top: 0.6rem;
+    margin-right: clamp(-8rem, -6vw, -1rem);
     align-self: flex-end;
-    text-shadow: 0 2px 8px rgba(255, 255, 255, 0.9);
+    text-shadow: 0 1px 4px rgba(255, 255, 255, 0.9);
 }
 
 .port-rt {
