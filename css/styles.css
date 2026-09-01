@@ -107,53 +107,18 @@ body {
     100% { transform: scale(1.1) rotate(360deg); }
 }
 
-/* ── Ring: lags behind (lerp via JS), bigger, hollow ── */
 .cursor-ring {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 44px;
-    height: 44px;
-    border: 1.5px solid rgba(255, 77, 0, 0.45);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 10000;
-    transform: translate(-50%, -50%);
-    transition: width 0.25s cubic-bezier(0.16, 1, 0.3, 1),
-        height 0.25s cubic-bezier(0.16, 1, 0.3, 1),
-        border-color 0.25s ease,
-        background 0.25s ease,
-        opacity 0.25s ease;
-    will-change: left, top;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-.cursor-ring-label {
-    font-family: var(--font-heading);
-    font-size: 0.55rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #FF4D00;
-    opacity: 0;
-    transition: opacity 0.2s ease;
-    white-space: nowrap;
-    user-select: none;
+    display: none !important;
 }
 
 @media (hover: hover) and (pointer: fine) {
-    .cursor-dot,
-    .cursor-ring {
+    .cursor-dot {
         display: flex;
     }
 }
 
 @media (max-width: 1024px), (hover: none), (pointer: coarse) {
-    .cursor-dot,
-    .cursor-ring {
+    .cursor-dot {
         display: none !important;
     }
 }

@@ -1,16 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     // ═══════════════════════════════════════════════════════════
-    //  PREMIUM DOT + RING CURSOR
-    //  Dot: snaps instantly to mouse
-    //  Ring: lerps/lags behind for the premium trailing feel
+    //  3D GLOSSY ORANGE POINTER & FLOWER CURSOR
     // ═══════════════════════════════════════════════════════════
     const dot  = document.getElementById('cursorDot');
     const ring = document.getElementById('cursorRing');
     const label = document.getElementById('cursorLabel');
     const hasFinePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
-    if (dot && ring && hasFinePointer) {
+    if (dot && hasFinePointer) {
 
         let mouseX = -200, mouseY = -200; // off-screen initially
         let ringX  = -200, ringY  = -200;
@@ -23,82 +21,82 @@ document.addEventListener('DOMContentLoaded', () => {
             dot.style.top  = mouseY + 'px';
         });
 
-        // Smooth lerp ring position via rAF
-        function lerpRing() {
-            const speed = 0.1; // 0 = no lag, 1 = instant
-            ringX += (mouseX - ringX) * speed;
-            ringY += (mouseY - ringY) * speed;
-            ring.style.left = ringX + 'px';
-            ring.style.top  = ringY + 'px';
-            requestAnimationFrame(lerpRing);
+        // Smooth lerp ring position via rAF (if ring exists)
+        if (ring) {
+            function lerpRing() {
+                const speed = 0.1;
+                ringX += (mouseX - ringX) * speed;
+                ringY += (mouseY - ringY) * speed;
+                ring.style.left = ringX + 'px';
+                ring.style.top  = ringY + 'px';
+                requestAnimationFrame(lerpRing);
+            }
+            lerpRing();
         }
-        lerpRing();
 
         // ── Hide when mouse leaves window ──
         document.addEventListener('mouseleave', () => {
             dot.classList.add('is-hidden');
-            ring.classList.add('is-hidden');
+            if (ring) ring.classList.add('is-hidden');
         });
         document.addEventListener('mouseenter', () => {
             dot.classList.remove('is-hidden');
-            ring.classList.remove('is-hidden');
+            if (ring) ring.classList.remove('is-hidden');
         });
 
         // ── Click burst effect ──
         document.addEventListener('mousedown', () => {
             dot.classList.add('is-clicking');
-            ring.classList.add('is-clicking');
+            if (ring) ring.classList.add('is-clicking');
         });
         document.addEventListener('mouseup', () => {
             dot.classList.remove('is-clicking');
-            ring.classList.remove('is-clicking');
+            if (ring) ring.classList.remove('is-clicking');
         });
 
         // ── Contextual states ──
-        // Links & buttons → ring expands with lime glow
+        // Links & buttons → pointer transitions to rotating flower
         const links = document.querySelectorAll('a, button');
         links.forEach(el => {
             el.addEventListener('mouseenter', () => {
                 dot.classList.add('is-hovering');
-                ring.classList.add('is-hovering');
+                if (ring) ring.classList.add('is-hovering');
             });
             el.addEventListener('mouseleave', () => {
                 dot.classList.remove('is-hovering');
-                ring.classList.remove('is-hovering');
+                if (ring) ring.classList.remove('is-hovering');
             });
         });
 
-        // Project cards on homepage → ring becomes "VIEW" label overlay
+        // Project cards on homepage
         const projectCards = document.querySelectorAll('.project-column-item, .project-image-box, .project-below-cta, .project-below-title a');
         projectCards.forEach(el => {
             el.addEventListener('mouseenter', () => {
                 dot.classList.add('is-project');
-                ring.classList.add('is-project');
+                if (ring) ring.classList.add('is-project');
                 if (label) label.textContent = 'VIEW';
-                // Remove link state so project state wins
                 dot.classList.remove('is-hovering');
-                ring.classList.remove('is-hovering');
+                if (ring) ring.classList.remove('is-hovering');
             });
             el.addEventListener('mouseleave', () => {
                 dot.classList.remove('is-project');
-                ring.classList.remove('is-project');
+                if (ring) ring.classList.remove('is-project');
                 if (label) label.textContent = '';
             });
         });
 
-        // Skill cards → ring with subtle glow
+        // Skill cards
         const skillCards = document.querySelectorAll('.skill-card');
         skillCards.forEach(el => {
             el.addEventListener('mouseenter', () => {
                 dot.classList.add('is-hovering');
-                ring.classList.add('is-hovering');
+                if (ring) ring.classList.add('is-hovering');
             });
             el.addEventListener('mouseleave', () => {
                 dot.classList.remove('is-hovering');
-                ring.classList.remove('is-hovering');
+                if (ring) ring.classList.remove('is-hovering');
             });
         });
-
     }
 
     // --- Mobile Header Navigation Toggle ---
