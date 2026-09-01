@@ -1753,6 +1753,17 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
         padding-bottom: 0.5rem !important;
     }
 
+    .block-title {
+        font-size: 1.45rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .block-text,
+    .clean-list li {
+        font-size: 1.15rem;
+        line-height: 1.7;
+    }
+
     .massive-title {
         font-size: clamp(2.2rem, 8.5vw, 3.8rem) !important;
         white-space: nowrap !important;
@@ -1760,16 +1771,6 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
 
     .project-title.project-title-long {
         font-size: clamp(1.45rem, 5vw, 2.25rem) !important;
-    }
-
-    .block-title {
-        font-size: 1.75rem;
-        margin-bottom: 0.75rem;
-    }
-
-    .block-text,
-    .clean-list li {
-        font-size: 0.98rem;
     }
 
     .kinetic-divider {
@@ -2309,8 +2310,10 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
 
 @media (max-width: 768px) {
     .topo-hero {
-        min-height: auto;
-        padding: 6.5rem 0.75rem 2rem;
+        min-height: 100svh;
+        min-height: 100vh;
+        width: 100%;
+        padding: 5rem 1rem 3rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -2318,6 +2321,8 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
         box-sizing: border-box;
         overflow: hidden;
         margin-bottom: 0;
+        background-size: cover;
+        background-position: center bottom;
     }
 
     .port-lockup-container {
@@ -2330,8 +2335,8 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     }
 
     .port-lockup-wrapper {
-        width: max-content;
-        max-width: 96vw;
+        width: 100%;
+        max-width: 92vw;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -2339,138 +2344,142 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     }
 
     .port-eyebrow {
-        font-size: clamp(1.35rem, 5.8vw, 2.2rem);
-        margin-left: clamp(-3rem, -5vw, -0.5rem) !important;
+        font-size: clamp(1.2rem, 5vw, 1.8rem);
+        margin-left: 0 !important;
         margin-top: 0;
-        margin-bottom: 0.6rem;
+        margin-bottom: 0.4rem;
         align-self: flex-start;
         font-weight: 700;
+        color: #111111 !important;
+        text-shadow: 0 1px 6px rgba(255, 255, 255, 0.95);
     }
 
     .port-lockup-grid {
-        font-size: clamp(3.2rem, 14vw, 5.8rem) !important;
-        line-height: 0.84;
-        column-gap: 0.05rem;
+        font-size: clamp(2.8rem, 12vw, 4.8rem) !important;
+        line-height: 0.88;
+        column-gap: clamp(0.04rem, 0.5vw, 0.2rem);
         width: 100%;
         justify-content: center;
         color: #111111 !important;
+        text-shadow: 0 2px 8px rgba(255, 255, 255, 0.9);
     }
 
     .port-swetha-sans {
-        font-size: clamp(1rem, 3.8vw, 1.4rem);
+        font-size: clamp(0.95rem, 3.6vw, 1.3rem);
         letter-spacing: 0.25em;
-        margin-right: clamp(-3rem, -5vw, -0.5rem) !important;
-        margin-top: 0.8rem;
+        margin-right: 0 !important;
+        margin-top: 0.6rem;
         align-self: flex-end;
         font-weight: 800;
+        color: #111111 !important;
+        text-shadow: 0 1px 6px rgba(255, 255, 255, 0.95);
     }
 
-    .girl-on-l-img {
-        width: clamp(55px, 20vw, 95px);
-    }
-
-    .lockup-glow-f,
-    .lockup-glow-t {
-        width: clamp(220px, 55vw, 340px);
-        height: clamp(220px, 55vw, 340px);
-        filter: blur(30px);
-        opacity: 0.85;
-    }
-
-    /* Position Begin The Journey prompt cleanly on mobile */
     .topo-scroll-prompt {
         display: none !important;
     }
 
     /* About, Experience, Certificate sections on mobile */
-    #about,
-    #experience,
-    #certificate {
-        min-height: auto;
-        padding: 1.5rem 6% 3rem;
-        flex-direction: column;
-        gap: 1.25rem;
-        align-items: flex-start;
-        display: flex;
-    }
-
-    #about .sticky-title-area,
-    #experience .sticky-title-area,
-    #certificate .sticky-title-area {
-        width: 100%;
-        height: auto;
-        position: relative;
-        top: auto;
-        padding: 0;
-        margin: 0;
-        display: block;
-    }
-
-    #about .massive-title,
-    #experience .massive-title,
-    #certificate .massive-title {
-        font-size: clamp(2.2rem, 7.5vw, 3.2rem);
-        margin: 0 0 0.25rem 0;
-        line-height: 1.1;
-    }
-
-    #about .scrolling-content-area,
-    #experience .scrolling-content-area,
-    #certificate .scrolling-content-area {
-        width: 100%;
-        min-height: auto;
-        height: auto;
-        padding: 0;
-        margin: 0;
-        gap: 1.25rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-
     #about.about-storybook-section {
-        flex-direction: column;
-        height: auto;
-        min-height: auto;
-        position: relative;
-        top: auto;
-        padding: 0;
+        flex-direction: column !important;
+        height: auto !important;
+        min-height: auto !important;
+        position: relative !important;
+        top: auto !important;
+        padding: 2.5rem 0 3rem !important;
+        background-color: #FFFFFF !important;
+        display: flex !important;
     }
 
     .about-backdrop-art {
-        position: relative;
-        width: 100%;
-        height: auto;
-        max-height: 420px;
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
+        max-height: 380px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 0 1rem !important;
     }
 
     .about-full-art-img {
-        width: 100%;
-        height: auto;
-        max-height: 420px;
-        object-fit: contain;
+        width: 100% !important;
+        height: auto !important;
+        max-height: 360px !important;
+        object-fit: contain !important;
+        display: block !important;
     }
 
     .about-content-overlay {
-        width: 100%;
-        max-width: 100%;
-        margin: 0;
-        padding: 2.5rem 6% 3.5rem;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 1.8rem 6% 1rem !important;
+        box-sizing: border-box !important;
     }
 
-    .about-storybook-text-card {
-        max-width: 100%;
+    .about-storybook-lead {
+        font-size: clamp(1.15rem, 4vw, 1.35rem) !important;
+        line-height: 1.75 !important;
+    }
+
+    .about-storybook-body {
+        font-size: clamp(1.1rem, 3.8vw, 1.28rem) !important;
+        line-height: 1.75 !important;
+    }
+
+    #experience,
+    #certificate {
+        min-height: auto !important;
+        padding: 3rem 6% 3.5rem !important;
+        flex-direction: column !important;
+        gap: 1.5rem !important;
+        align-items: flex-start !important;
+        display: flex !important;
+        position: relative !important;
+        top: auto !important;
+    }
+
+    #experience .sticky-title-area,
+    #certificate .sticky-title-area {
+        width: 100% !important;
+        height: auto !important;
+        position: relative !important;
+        top: auto !important;
+        padding: 0 0 0.5rem 0 !important;
+        margin: 0 !important;
+        display: block !important;
+    }
+
+    #experience .massive-title,
+    #certificate .massive-title {
+        font-size: clamp(2.2rem, 7.5vw, 3.2rem) !important;
+        margin: 0 0 0.25rem 0 !important;
+        line-height: 1.1 !important;
+    }
+
+    #experience .scrolling-content-area,
+    #certificate .scrolling-content-area {
+        width: 100% !important;
+        min-height: auto !important;
+        height: auto !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        gap: 1.5rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
     }
 
     .cert-framed-showcase {
-        flex-direction: column;
-        gap: 1.25rem;
-        align-items: flex-start;
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
     }
 
     .cert-frame-wrapper {
-        width: 100%;
-        max-width: 100%;
+        width: 100% !important;
+        max-width: 100% !important;
     }
 }
 
