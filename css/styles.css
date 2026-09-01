@@ -1,10 +1,11 @@
 :root {
     --bg-color: #F7F1EA;
     --bg-alt: #FFFFFF;
-    --text-primary: #1F0811;
-    --text-secondary: #644F57;
-    --accent: #670626;
-    /* Cherry & Warm Ivory Design System */
+    --text-primary: #1C0A0E;
+    --text-secondary: #5C4A50;
+    --accent: #750608;
+    --accent-cosmos: #74A5BE;
+    /* Cherry Red (#750608) & Cosmos Marble (#74A5BE) Design System */
 
     --font-heading: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
     --font-body: 'Plus Jakarta Sans', 'Inter', 'Helvetica Neue', Arial, sans-serif;
@@ -80,7 +81,7 @@ body {
     justify-content: center;
     align-items: center;
     will-change: left, top;
-    filter: drop-shadow(0 3px 10px rgba(103, 6, 38, 0.45));
+    filter: drop-shadow(0 3px 10px rgba(117, 6, 8, 0.45));
 }
 
 .sunflower-cursor-svg {
@@ -101,7 +102,7 @@ body {
     left: 0;
     width: 48px;
     height: 48px;
-    border: 1.5px solid rgba(103, 6, 38, 0.65);
+    border: 1.5px solid rgba(117, 6, 8, 0.65);
     border-radius: 50%;
     pointer-events: none;
     z-index: 10000;
@@ -148,15 +149,15 @@ body {
 /* ── HOVER STATE: link / button (refined subtle feedback) ── */
 .cursor-dot.is-hovering {
     transform: translate(-50%, -50%) scale(1.15);
-    filter: drop-shadow(0 4px 12px rgba(103, 6, 38, 0.6));
+    filter: drop-shadow(0 4px 12px rgba(117, 6, 8, 0.6));
 }
 
 .cursor-ring.is-hovering {
     width: 54px;
     height: 54px;
-    border-color: rgba(103, 6, 38, 0.9);
-    background: rgba(103, 6, 38, 0.08);
-    box-shadow: 0 0 14px rgba(103, 6, 38, 0.25);
+    border-color: rgba(117, 6, 8, 0.9);
+    background: rgba(116, 165, 190, 0.12);
+    box-shadow: 0 0 16px rgba(116, 165, 190, 0.35);
 }
 
 /* ── HOVER STATE: project card ── */
@@ -1989,24 +1990,24 @@ body {
     opacity: 0.95;
 }
 
-/* Gradient 1: Centered DEAD-CENTER inside the letter F */
+/* Gradient 1: Centered DEAD-CENTER inside the letter F — Cherry Red */
 .lockup-glow-f {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: clamp(260px, 30vw, 450px);
     height: clamp(260px, 30vw, 450px);
-    background: radial-gradient(circle, rgba(103, 6, 38, 0.55) 0%, rgba(142, 19, 58, 0.28) 45%, transparent 70%);
+    background: radial-gradient(circle, rgba(117, 6, 8, 0.62) 0%, rgba(148, 18, 21, 0.32) 45%, transparent 70%);
 }
 
-/* Gradient 2: Centered DEAD-CENTER inside the letter T */
+/* Gradient 2: Centered DEAD-CENTER inside the letter T — Cosmos Marble */
 .lockup-glow-t {
     top: 45%;
     left: 60%;
     transform: translate(-50%, -50%);
     width: clamp(260px, 30vw, 450px);
     height: clamp(260px, 30vw, 450px);
-    background: radial-gradient(circle, rgba(103, 6, 38, 0.55) 0%, rgba(142, 19, 58, 0.28) 45%, transparent 70%);
+    background: radial-gradient(circle, rgba(116, 165, 190, 0.65) 0%, rgba(116, 165, 190, 0.28) 45%, transparent 70%);
 }
 
 .port-eyebrow {

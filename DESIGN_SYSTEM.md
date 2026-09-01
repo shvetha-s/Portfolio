@@ -13,15 +13,17 @@ Defined in `:root` inside `styles.css`:
 | :--- | :--- | :--- |
 | `--bg-color` | `#F7F1EA` | Primary **Warm Ivory** background for body, chapters, and storytelling framework |
 | `--bg-alt` | `#FFFFFF` | Elevated crisp card and panel backgrounds (`.alt-bg`, `.pinned-note-card`) |
-| `--text-primary` | `#1F0811` | Primary deep cherry-tinted black for massive titles, bold headings, and wordmarks |
-| `--text-secondary` | `#644F57` | Warm muted plum gray for body text, subtitles, and metadata |
-| `--accent` | `#670626` | Signature **Cherry** red accent for eyebrows, author name, buttons, badges, glows, and custom cursor |
+| `--text-primary` | `#1C0A0E` | Primary deep cherry-tinted black for massive titles, bold headings, and wordmarks |
+| `--text-secondary` | `#5C4A50` | Muted cherry plum gray for body text, subtitles, and metadata |
+| `--accent` | `#750608` | Signature **Cherry Red** for eyebrows, author name, buttons, badges, pushpins, and custom cursor |
+| `--accent-cosmos` | `#74A5BE` | Complementary **Cosmos Marble** blue for secondary glows, sky layers, badges, and card accents |
 
 #### Component-Specific Color Implementations:
 - **Header Overlay**: `background: rgba(247, 241, 234, 0.88)` with `backdrop-filter: blur(16px)`
-- **Hero Radial Glows**: `radial-gradient(circle, rgba(103, 6, 38, 0.55) 0%, rgba(142, 19, 58, 0.28) 45%, transparent 70%)`
-- **Custom Cursor**: Cherry `#670626` with plum center `#3D0014` and halo `rgba(103, 6, 38, 0.65)`
-- **Pinned Education Theme**: `#FAF3EF` background with `border: 1px solid rgba(103, 6, 38, 0.18)` and Cherry pins/numbers (`#670626`)
+- **Hero Radial Glows**: Cherry Red `rgba(117, 6, 8, 0.62)` inside F & Cosmos Marble `rgba(116, 165, 190, 0.65)` inside T
+- **Custom Cursor**: Cherry Red `#750608` petals with Cosmos Marble `#74A5BE` accents and halo
+- **Cloudscape Footer**: 4-Layer Landscape from Pale Cosmos Sky (`#E2ECF1`, `#B0D0DE`, `#74A5BE`) down to rich Cherry Red Base (`#750608`)
+- **Pinned Education Theme**: `#FAF3EF` background with `border: 1px solid rgba(117, 6, 8, 0.18)` and Cherry Red pins/numbers (`#750608`)
 
 ---
 
