@@ -11,20 +11,17 @@ Defined in `:root` inside `styles.css`:
 
 | Token Name | CSS Value | Usage / Role in Project |
 | :--- | :--- | :--- |
-| `--bg-color` | `#FEF0B6` | Primary **Light Yellow** background for body, chapters, and warm storytelling canvas |
-| `--bg-azure` | `#BBD3E0` | Secondary **Light Azure** for cloud layers, glow accents, and interactive badges |
+| `--bg-color` | `#F7F1EA` | Primary **Warm Ivory** background for body, chapters, and storytelling framework |
 | `--bg-alt` | `#FFFFFF` | Elevated crisp card and panel backgrounds (`.alt-bg`, `.pinned-note-card`) |
-| `--text-primary` | `#472F26` | Primary **Dark Gray Brown** for bold wordmark headlines, massive titles, and text |
-| `--text-secondary` | `#6E554C` | Warm muted espresso brown for body copy, school names, and metadata |
-| `--accent` | `#472F26` | Signature **Dark Gray Brown** accent for eyebrows, author name, buttons, and custom cursor |
-| `--accent-azure` | `#BBD3E0` | Signature **Light Azure** contrast accent for clouds, footer links, and radial glows |
+| `--text-primary` | `#1F0811` | Primary deep cherry-tinted black for massive titles, bold headings, and wordmarks |
+| `--text-secondary` | `#644F57` | Warm muted plum gray for body text, subtitles, and metadata |
+| `--accent` | `#670626` | Signature **Cherry** red accent for eyebrows, author name, buttons, badges, glows, and custom cursor |
 
 #### Component-Specific Color Implementations:
-- **Header Overlay**: `background: rgba(254, 240, 182, 0.88)` with `backdrop-filter: blur(16px)`
-- **Hero Radial Glows**: `radial-gradient(circle, rgba(187, 211, 224, 0.75) 0%, rgba(187, 211, 224, 0.35) 45%, transparent 70%)`
-- **Custom Cursor**: Dark Gray Brown `#472F26` sunflower petals with Light Azure `#BBD3E0` and Light Yellow `#FEF0B6` core
-- **Pinned Education Theme**: `#FEF0B6` drafting grid background with white cards and Dark Gray Brown `#472F26` pushpins
-- **Cloudscape Footer**: 4-Layer Cloudscape (Layer 1 Pale Azure `#DCE8EF`, Layer 2 Light Azure `#BBD3E0`, Layer 3 Light Yellow `#FEF0B6`, Layer 4 Dark Gray Brown `#472F26`) with glowing Light Yellow "Get in touch" headline
+- **Header Overlay**: `background: rgba(247, 241, 234, 0.88)` with `backdrop-filter: blur(16px)`
+- **Hero Radial Glows**: `radial-gradient(circle, rgba(103, 6, 38, 0.55) 0%, rgba(142, 19, 58, 0.28) 45%, transparent 70%)`
+- **Custom Cursor**: Cherry `#670626` with plum center `#3D0014` and halo `rgba(103, 6, 38, 0.65)`
+- **Pinned Education Theme**: `#FAF3EF` background with `border: 1px solid rgba(103, 6, 38, 0.18)` and Cherry pins/numbers (`#670626`)
 
 ---
 

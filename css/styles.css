@@ -1,12 +1,10 @@
 :root {
-    --bg-color: #FEF0B6;
+    --bg-color: #F7F1EA;
     --bg-alt: #FFFFFF;
-    --bg-azure: #BBD3E0;
-    --text-primary: #472F26;
-    --text-secondary: #6E554C;
-    --accent: #472F26;
-    --accent-azure: #BBD3E0;
-    /* Light Yellow, Light Azure & Dark Gray Brown Design System */
+    --text-primary: #1F0811;
+    --text-secondary: #644F57;
+    --accent: #670626;
+    /* Cherry & Warm Ivory Design System */
 
     --font-heading: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
     --font-body: 'Plus Jakarta Sans', 'Inter', 'Helvetica Neue', Arial, sans-serif;
@@ -82,7 +80,7 @@ body {
     justify-content: center;
     align-items: center;
     will-change: left, top;
-    filter: drop-shadow(0 3px 10px rgba(71, 47, 38, 0.35));
+    filter: drop-shadow(0 3px 10px rgba(103, 6, 38, 0.45));
 }
 
 .sunflower-cursor-svg {
@@ -103,7 +101,7 @@ body {
     left: 0;
     width: 48px;
     height: 48px;
-    border: 1.5px solid rgba(71, 47, 38, 0.65);
+    border: 1.5px solid rgba(103, 6, 38, 0.65);
     border-radius: 50%;
     pointer-events: none;
     z-index: 10000;
@@ -150,15 +148,15 @@ body {
 /* ── HOVER STATE: link / button (refined subtle feedback) ── */
 .cursor-dot.is-hovering {
     transform: translate(-50%, -50%) scale(1.15);
-    filter: drop-shadow(0 4px 12px rgba(71, 47, 38, 0.5));
+    filter: drop-shadow(0 4px 12px rgba(103, 6, 38, 0.6));
 }
 
 .cursor-ring.is-hovering {
     width: 54px;
     height: 54px;
-    border-color: rgba(71, 47, 38, 0.9);
-    background: rgba(187, 211, 224, 0.25);
-    box-shadow: 0 0 14px rgba(71, 47, 38, 0.2);
+    border-color: rgba(103, 6, 38, 0.9);
+    background: rgba(103, 6, 38, 0.08);
+    box-shadow: 0 0 14px rgba(103, 6, 38, 0.25);
 }
 
 /* ── HOVER STATE: project card ── */
@@ -519,8 +517,8 @@ body {
 }
 
 .project-column-item:hover {
-    border-color: rgba(255, 77, 0, 0.45);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.85), 0 0 25px rgba(255, 77, 0, 0.15);
+    border-color: rgba(103, 6, 38, 0.45);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08), 0 0 25px rgba(103, 6, 38, 0.15);
     transform: translateY(-8px);
 }
 
@@ -573,12 +571,12 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.06em;
     color: var(--accent);
-    background: rgba(240, 238, 233, 0.85);
+    background: rgba(247, 241, 234, 0.92);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     padding: 0.22rem 0.6rem;
     border-radius: 999px;
-    border: 1px solid rgba(255, 77, 0, 0.3);
+    border: 1px solid rgba(103, 6, 38, 0.3);
 }
 
 /* ==========================================================================
@@ -1066,7 +1064,7 @@ body {
 }
 
 .skill-card:hover {
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 77, 0, 0.15);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08), 0 0 20px rgba(103, 6, 38, 0.15);
 }
 
 .skill-card-image {
@@ -1081,7 +1079,7 @@ body {
 }
 
 .bg-grad-1 {
-    background: linear-gradient(135deg, rgba(255, 77, 0, 0.9), rgba(255, 77, 0, 0.3));
+    background: linear-gradient(135deg, rgba(103, 6, 38, 0.95), rgba(156, 28, 69, 0.45));
 }
 
 .skill-card-number {
@@ -1255,12 +1253,12 @@ body {
     font-family: var(--font-heading);
     font-size: 1.6rem;
     font-weight: 700;
-    color: #FEF0B6;
+    color: var(--text-primary);
 }
 
 .footer-tagline {
     font-size: 0.95rem;
-    color: rgba(254, 240, 182, 0.82);
+    color: var(--text-secondary);
     max-width: 380px;
     margin-top: 0.5rem;
     margin-bottom: 1.25rem;
@@ -1292,26 +1290,20 @@ body {
     align-items: center;
     width: 42px;
     height: 42px;
-    background-color: rgba(254, 240, 182, 0.12);
-    border: 1px solid rgba(254, 240, 182, 0.3);
+    background-color: var(--bg-alt);
+    border: 1px solid rgba(0, 0, 0, 0.08);
     border-radius: 50%;
-    transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+    transition: transform 0.3s ease, border-color 0.3s ease;
     flex-shrink: 0;
 }
 
 .footer-social-icons a svg {
-    fill: #FEF0B6;
-    transition: fill 0.3s ease;
+    fill: var(--accent);
 }
 
 .footer-social-icons a:hover {
     transform: translateY(-4px);
-    border-color: #BBD3E0;
-    background-color: #BBD3E0;
-}
-
-.footer-social-icons a:hover svg {
-    fill: #472F26;
+    border-color: var(--accent);
 }
 
 .footer-right {
@@ -1326,7 +1318,7 @@ body {
 }
 
 .footer-nav-grid a {
-    color: #FEF0B6;
+    color: var(--text-primary);
     font-weight: 600;
     text-decoration: none;
     font-size: 0.95rem;
@@ -1334,7 +1326,7 @@ body {
 }
 
 .footer-nav-grid a:hover {
-    color: #BBD3E0;
+    color: var(--accent);
 }
 
 .footer-text-wrapper {
@@ -1354,8 +1346,8 @@ body {
     font-weight: 800;
     letter-spacing: -0.03em;
     text-transform: uppercase;
-    color: #FEF0B6;
-    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.35), 0 0 45px rgba(187, 211, 224, 0.3);
+    color: #FFFFFF;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
     white-space: nowrap;
     text-align: center;
     width: 100%;
@@ -2004,7 +1996,7 @@ body {
     transform: translate(-50%, -50%);
     width: clamp(260px, 30vw, 450px);
     height: clamp(260px, 30vw, 450px);
-    background: radial-gradient(circle, rgba(187, 211, 224, 0.75) 0%, rgba(187, 211, 224, 0.35) 45%, transparent 70%);
+    background: radial-gradient(circle, rgba(103, 6, 38, 0.55) 0%, rgba(142, 19, 58, 0.28) 45%, transparent 70%);
 }
 
 /* Gradient 2: Centered DEAD-CENTER inside the letter T */
@@ -2014,7 +2006,7 @@ body {
     transform: translate(-50%, -50%);
     width: clamp(260px, 30vw, 450px);
     height: clamp(260px, 30vw, 450px);
-    background: radial-gradient(circle, rgba(187, 211, 224, 0.75) 0%, rgba(187, 211, 224, 0.35) 45%, transparent 70%);
+    background: radial-gradient(circle, rgba(103, 6, 38, 0.55) 0%, rgba(142, 19, 58, 0.28) 45%, transparent 70%);
 }
 
 .port-eyebrow {
