@@ -134,220 +134,225 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Initialize GSAP Cinematic Scroll Transitions
+    initScrollTransitions();
+
 });
 
-function initHero3DSphere() {
-    const container = document.getElementById('hero3dWrapper');
-    const canvas = document.getElementById('hero3dCanvas');
-    if (!container || !canvas || typeof THREE === 'undefined') return;
+// ═══════════════════════════════════════════════════════════════
+//  GSAP SCROLLTRIGGER CINEMATIC SECTION TRANSITIONS
+//  - Incoming section image reveals first, then text follows
+//  - Outgoing section text fades out first, followed by image
+// ═══════════════════════════════════════════════════════════════
+function initScrollTransitions() {
+    if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
+        console.warn('GSAP or ScrollTrigger not loaded');
+        return;
+    }
 
-    const scene = new THREE.Scene();
+    gsap.registerPlugin(ScrollTrigger);
 
-    // Camera
-    const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.1, 100);
-    camera.position.set(0, 0, 4.4);
+    // Honor reduced motion user preferences
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) return;
 
-    // Renderer
-    const renderer = new THREE.WebGLRenderer({
-        canvas: canvas,
-        antialias: true,
-        alpha: true,
-        powerPreference: "high-performance"
-    });
-    renderer.setSize(container.clientWidth, container.clientHeight);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    renderer.toneMapping = THREE.ACESFilmicToneMapping;
-    renderer.toneMappingExposure = 1.15;
+    const isMobile = window.innerWidth <= 768;
+    const scrubVal = isMobile ? 0.6 : 1.0;
 
-    // Main 3D Sphere Group
-    const sphereGroup = new THREE.Group();
-    scene.add(sphereGroup);
+    // Storytelling Sections Sequence
+    const storySections = [
+        {
+            section: document.querySelector('.topo-hero'),
+            backdrop: document.querySelector('.hero-forest-backdrop'),
+            content: document.querySelector('.port-lockup-container'),
+            isHero: true
+        },
+        {
+            section: document.querySelector('#about'),
+            backdrop: document.querySelector('.about-backdrop-art'),
+            content: document.querySelector('.about-content-overlay'),
+            isHero: false
+        },
+        {
+            section: document.querySelector('#experience'),
+            backdrop: document.querySelector('.exp-lake-backdrop'),
+            content: document.querySelector('.exp-content-left-container'),
+            isHero: false
+        },
+        {
+            section: document.querySelector('#education'),
+            backdrop: document.querySelector('.edu-storybook-backdrop'),
+            content: document.querySelector('.edu-content-right-container'),
+            isHero: false
+        }
+    ];
 
-    // 1. Top Hemisphere: Glossy Black Obsidian with Reflective Highlights
-    const topGeo = new THREE.SphereGeometry(1.2, 64, 32, 0, Math.PI * 2, 0, Math.PI / 2);
-    const topMat = new THREE.MeshStandardMaterial({
-        color: 0x050508,
-        roughness: 0.18,
-        metalness: 0.85,
-        flatShading: false
-    });
-    const topMesh = new THREE.Mesh(topGeo, topMat);
-    sphereGroup.add(topMesh);
+    storySections.forEach((item, index) => {
+        if (!item.section) return;
+        const nextItem = storySections[index + 1];
 
-    // 2. Glowing Fluorescent Lime Crescent Rim along the upper curve
-    const crescentCurve = new THREE.EllipseCurve(
-        0, 0,
-        1.205, 1.205,
-        0, Math.PI * 0.95,
-        false,
-        0
-    );
-    const crescentPoints = crescentCurve.getPoints(64);
-    const crescentPath = new THREE.CatmullRomCurve3(crescentPoints.map(p => new THREE.Vector3(p.x, p.y, 0)));
-    const crescentGeo = new THREE.TubeGeometry(crescentPath, 64, 0.045, 12, false);
-    const crescentMat = new THREE.MeshBasicMaterial({
-        color: 0xccff00
-    });
-    const crescentMesh = new THREE.Mesh(crescentGeo, crescentMat);
-    crescentMesh.rotation.x = Math.PI * 0.15;
-    crescentMesh.rotation.z = -Math.PI * 0.12;
-    crescentMesh.position.set(0, 0.08, 0.04);
-    sphereGroup.add(crescentMesh);
+        // 1. Entrance: Next section image reveals FIRST, then text fades in
+        if (!item.isHero) {
+            // Backdrop Image: Fades in early as the section enters the viewport
+            if (item.backdrop) {
+                gsap.set(item.backdrop, { opacity: 0.08, scale: 1.04, transformOrigin: 'center center' });
+                gsap.to(item.backdrop, {
+                    opacity: 1,
+                    scale: 1.0,
+                    ease: 'power2.out',
+                    scrollTrigger: {
+                        trigger: item.section,
+                        start: 'top 92%',
+                        end: 'top 40%',
+                        scrub: scrubVal
+                    }
+                });
+            }
 
-    // 3. Bottom Hemisphere: Luminous Fluorescent Lime Green
-    const btmGeo = new THREE.SphereGeometry(1.2, 64, 32, 0, Math.PI * 2, Math.PI / 2, Math.PI / 2);
-    const btmMat = new THREE.MeshStandardMaterial({
-        color: 0x54d216,
-        emissive: 0x227708,
-        emissiveIntensity: 0.42,
-        roughness: 0.32,
-        metalness: 0.12
-    });
-    const btmMesh = new THREE.Mesh(btmGeo, btmMat);
-    sphereGroup.add(btmMesh);
+            // Text / Story Content: Fades in after the image is already visible
+            if (item.content) {
+                gsap.set(item.content, { opacity: 0, y: 36 });
+                gsap.to(item.content, {
+                    opacity: 1,
+                    y: 0,
+                    ease: 'power2.out',
+                    scrollTrigger: {
+                        trigger: item.section,
+                        start: 'top 60%',
+                        end: 'top 20%',
+                        scrub: scrubVal
+                    }
+                });
+            }
+        }
 
-    // 4. Sharp Equator Divider Trim
-    const eqGeo = new THREE.RingGeometry(1.195, 1.215, 64);
-    const eqMat = new THREE.MeshBasicMaterial({
-        color: 0x060608,
-        side: THREE.DoubleSide
-    });
-    const eqMesh = new THREE.Mesh(eqGeo, eqMat);
-    eqMesh.rotation.x = Math.PI / 2;
-    sphereGroup.add(eqMesh);
-
-    // 5. Luminous Lime Green Ambient Ground Glow (Studio Floor Effect)
-    const floorCanvas = document.createElement('canvas');
-    floorCanvas.width = 512;
-    floorCanvas.height = 512;
-    const ctx = floorCanvas.getContext('2d');
-    const grad = ctx.createRadialGradient(256, 256, 20, 256, 256, 240);
-    grad.addColorStop(0, 'rgba(84, 220, 20, 0.88)');
-    grad.addColorStop(0.35, 'rgba(65, 185, 15, 0.5)');
-    grad.addColorStop(0.7, 'rgba(30, 110, 10, 0.15)');
-    grad.addColorStop(1, 'rgba(12, 12, 14, 0)');
-    ctx.fillStyle = grad;
-    ctx.fillRect(0, 0, 512, 512);
-
-    const floorTexture = new THREE.CanvasTexture(floorCanvas);
-    const floorGeo = new THREE.PlaneGeometry(4.2, 2.6);
-    const floorMat = new THREE.MeshBasicMaterial({
-        map: floorTexture,
-        transparent: true,
-        opacity: 0.85,
-        blending: THREE.AdditiveBlending,
-        depthWrite: false
-    });
-    const floorMesh = new THREE.Mesh(floorGeo, floorMat);
-    floorMesh.position.set(0, -1.55, 0);
-    floorMesh.rotation.x = -Math.PI * 0.44;
-    scene.add(floorMesh);
-
-    // 6. Soft Radial Contact Shadow
-    const shadowCanvas = document.createElement('canvas');
-    shadowCanvas.width = 256;
-    shadowCanvas.height = 256;
-    const sCtx = shadowCanvas.getContext('2d');
-    const sGrad = sCtx.createRadialGradient(128, 128, 0, 128, 128, 120);
-    sGrad.addColorStop(0, 'rgba(0, 0, 0, 0.92)');
-    sGrad.addColorStop(0.5, 'rgba(0, 0, 0, 0.4)');
-    sGrad.addColorStop(1, 'rgba(0, 0, 0, 0)');
-    sCtx.fillStyle = sGrad;
-    sCtx.fillRect(0, 0, 256, 256);
-
-    const shadowTexture = new THREE.CanvasTexture(shadowCanvas);
-    const shadowGeo = new THREE.PlaneGeometry(1.8, 1.0);
-    const shadowMat = new THREE.MeshBasicMaterial({
-        map: shadowTexture,
-        transparent: true,
-        opacity: 0.82,
-        depthWrite: false
-    });
-    const shadowMesh = new THREE.Mesh(shadowGeo, shadowMat);
-    shadowMesh.position.set(0, -1.53, 0.05);
-    shadowMesh.rotation.x = -Math.PI * 0.44;
-    scene.add(shadowMesh);
-
-    // Lighting
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.65);
-    scene.add(ambientLight);
-
-    const keyLight = new THREE.DirectionalLight(0xccff00, 2.4);
-    keyLight.position.set(-2.5, 4, 3);
-    scene.add(keyLight);
-
-    const bottomGlowLight = new THREE.PointLight(0x44dd11, 4.0, 7);
-    bottomGlowLight.position.set(0, -1.3, 1.2);
-    scene.add(bottomGlowLight);
-
-    const rimLight = new THREE.DirectionalLight(0x88ff00, 2.6);
-    rimLight.position.set(2, 3.5, -2);
-    scene.add(rimLight);
-
-    // Mouse Interaction
-    let mouseX = 0, mouseY = 0;
-    let targetRotX = 0, targetRotY = 0;
-    let isDragging = false;
-    let prevMouseX = 0, prevMouseY = 0;
-
-    window.addEventListener('mousemove', (e) => {
-        const rect = container.getBoundingClientRect();
-        if (rect.width > 0 && rect.height > 0) {
-            mouseX = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
-            mouseY = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
-            targetRotY = mouseX * 0.45;
-            targetRotX = mouseY * 0.35;
+        // 2. Exit: Text fades out first as section scrolls away, followed by image fade-out
+        if (item.isHero) {
+            // Hero section exit behavior
+            if (item.content) {
+                gsap.to(item.content, {
+                    opacity: 0,
+                    y: -45,
+                    ease: 'power1.inOut',
+                    scrollTrigger: {
+                        trigger: item.section,
+                        start: 'top top',
+                        end: 'bottom 45%',
+                        scrub: scrubVal
+                    }
+                });
+            }
+            if (item.backdrop) {
+                gsap.to(item.backdrop, {
+                    opacity: 0.15,
+                    scale: 1.02,
+                    ease: 'power1.inOut',
+                    scrollTrigger: {
+                        trigger: item.section,
+                        start: 'center center',
+                        end: 'bottom top',
+                        scrub: scrubVal
+                    }
+                });
+            }
+        } else if (nextItem && nextItem.section) {
+            // Story section exit behavior
+            if (item.content) {
+                gsap.to(item.content, {
+                    opacity: 0,
+                    y: -35,
+                    ease: 'power1.inOut',
+                    scrollTrigger: {
+                        trigger: item.section,
+                        start: 'bottom 75%',
+                        end: 'bottom 25%',
+                        scrub: scrubVal
+                    }
+                });
+            }
+            if (item.backdrop) {
+                gsap.to(item.backdrop, {
+                    opacity: 0.12,
+                    scale: 0.98,
+                    ease: 'power1.inOut',
+                    scrollTrigger: {
+                        trigger: item.section,
+                        start: 'bottom 65%',
+                        end: 'bottom 10%',
+                        scrub: scrubVal
+                    }
+                });
+            }
         }
     });
 
-    canvas.addEventListener('mousedown', (e) => {
-        isDragging = true;
-        prevMouseX = e.clientX;
-        prevMouseY = e.clientY;
-    });
-
-    window.addEventListener('mouseup', () => isDragging = false);
-
-    window.addEventListener('mousemove', (e) => {
-        if (!isDragging) return;
-        const deltaX = e.clientX - prevMouseX;
-        const deltaY = e.clientY - prevMouseY;
-        sphereGroup.rotation.y += deltaX * 0.01;
-        sphereGroup.rotation.x += deltaY * 0.01;
-        prevMouseX = e.clientX;
-        prevMouseY = e.clientY;
-    });
-
-    // Resize Handler
-    function onResize() {
-        if (!container) return;
-        const w = container.clientWidth;
-        const h = container.clientHeight;
-        if (w === 0 || h === 0) return;
-        camera.aspect = w / h;
-        camera.updateProjectionMatrix();
-        renderer.setSize(w, h);
+    // 3. Subsequent Sections Coordinated Reveals
+    // Certificate Showcase
+    const certSection = document.querySelector('#certificate');
+    const certShowcase = document.querySelector('.cert-framed-showcase');
+    if (certSection && certShowcase) {
+        gsap.fromTo(certShowcase,
+            { opacity: 0, y: 45, scale: 0.97 },
+            {
+                opacity: 1,
+                y: 0,
+                scale: 1.0,
+                ease: 'power2.out',
+                scrollTrigger: {
+                    trigger: certSection,
+                    start: 'top 75%',
+                    end: 'top 30%',
+                    scrub: scrubVal
+                }
+            }
+        );
     }
-    window.addEventListener('resize', onResize);
 
-    // Animation Loop
-    let clock = new THREE.Clock();
-    function animate() {
-        requestAnimationFrame(animate);
-        const elapsedTime = clock.getElapsedTime();
-
-        // Smooth Floating
-        sphereGroup.position.y = Math.sin(elapsedTime * 1.5) * 0.09 + 0.1;
-        floorMesh.material.opacity = 0.8 + Math.sin(elapsedTime * 1.5) * 0.12;
-
-        // Smooth Mouse Parallax Tilt
-        if (!isDragging) {
-            sphereGroup.rotation.y += (targetRotY - sphereGroup.rotation.y) * 0.05;
-            sphereGroup.rotation.x += (targetRotX - sphereGroup.rotation.x) * 0.05;
-        }
-
-        renderer.render(scene, camera);
+    // Skills Cards Stagger
+    const skillsSection = document.querySelector('#skills');
+    const skillCards = document.querySelectorAll('.skill-card');
+    if (skillsSection && skillCards.length > 0) {
+        gsap.fromTo(skillCards,
+            { opacity: 0, y: 40 },
+            {
+                opacity: 1,
+                y: 0,
+                stagger: 0.12,
+                ease: 'power2.out',
+                scrollTrigger: {
+                    trigger: skillsSection,
+                    start: 'top 72%',
+                    end: 'top 28%',
+                    scrub: scrubVal
+                }
+            }
+        );
     }
-    animate();
+
+    // Projects Grid Stagger
+    const workSection = document.querySelector('#work');
+    const projectCards = document.querySelectorAll('.project-column-item');
+    if (workSection && projectCards.length > 0) {
+        gsap.fromTo(projectCards,
+            { opacity: 0, y: 45 },
+            {
+                opacity: 1,
+                y: 0,
+                stagger: 0.1,
+                ease: 'power2.out',
+                scrollTrigger: {
+                    trigger: workSection,
+                    start: 'top 75%',
+                    end: 'top 30%',
+                    scrub: scrubVal
+                }
+            }
+        );
+    }
+
+    // Refresh ScrollTrigger calculations after assets and layout settle
+    window.addEventListener('load', () => {
+        ScrollTrigger.refresh();
+    });
 }
 

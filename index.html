@@ -13,7 +13,7 @@
         href="https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=Cinzel+Decorative:wght@700;900&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Fondamento:ital@0;1&family=Outfit:wght@800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="css/styles.css?v=20260903_02">
+    <link rel="stylesheet" href="css/styles.css?v=20260903_03">
 </head>
 
 <body>
@@ -25,6 +25,11 @@
     <main class="story-container">
         <!-- Chapter: New Typographic Hero -->
         <section class="story-chapter topo-hero">
+
+            <!-- Hero Forest Backdrop for GSAP Crossfade -->
+            <div class="hero-forest-backdrop">
+                <img src="assets/images/hero_forest_bg.jpg?v=20260901_26" alt="Forest meadow clearing background" class="hero-forest-img">
+            </div>
 
             <!-- Header Fixed to Hero Section -->
             <header class="story-header" id="storyHeader">
@@ -548,7 +553,11 @@
         </footer>
     </main>
 
-    <script src="js/script.js?v=20260827_05"></script>
+    <!-- GSAP Core & ScrollTrigger Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <script src="js/script.js?v=20260903_03"></script>
 </body>
 
 </html>
