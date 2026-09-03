@@ -187,101 +187,96 @@ function initScrollTransitions() {
         }
     ];
 
-    storySections.forEach((item, index) => {
+    storySections.forEach((item) => {
         if (!item.section) return;
-        const nextItem = storySections[index + 1];
 
-        // 1. Entrance: Next section image reveals FIRST, then text fades in
-        if (!item.isHero) {
-            // Backdrop Image: Fades in early as the section enters the viewport
+        if (item.isHero) {
+            // Hero section: starts at 100% visible, fades on scroll down, immediately unfades on scroll up
+            const heroTl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: item.section,
+                    start: 'top top',
+                    end: 'bottom top',
+                    scrub: scrubVal
+                }
+            });
+
+            if (item.content) {
+                heroTl.to(item.content, {
+                    opacity: 0,
+                    y: -45,
+                    ease: 'power1.inOut'
+                }, 0.25);
+            }
+
+            if (item.backdrop) {
+                heroTl.to(item.backdrop, {
+                    opacity: 0.15,
+                    scale: 1.02,
+                    ease: 'power1.inOut'
+                }, 0.45);
+            }
+        } else {
+            // Story sections (About, Experience, Education):
+            // - Next image reveals first, followed by text on scroll down
+            // - Stays 100% unfaded and readable throughout center view
+            // - On scroll UP: instantly unfades back to 100% visibility to view the above page!
+            const storyTl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: item.section,
+                    start: 'top bottom',
+                    end: 'bottom top',
+                    scrub: scrubVal
+                }
+            });
+
+            // Set initial state
             if (item.backdrop) {
                 gsap.set(item.backdrop, { opacity: 0.08, scale: 1.04, transformOrigin: 'center center' });
-                gsap.to(item.backdrop, {
+            }
+            if (item.content) {
+                gsap.set(item.content, { opacity: 0, y: 35 });
+            }
+
+            // Phase 1: Entrance — Image reveals first (0.05 -> 0.25), text follows (0.16 -> 0.36)
+            if (item.backdrop) {
+                storyTl.to(item.backdrop, {
                     opacity: 1,
                     scale: 1.0,
                     ease: 'power2.out',
-                    scrollTrigger: {
-                        trigger: item.section,
-                        start: 'top 92%',
-                        end: 'top 40%',
-                        scrub: scrubVal
-                    }
-                });
+                    duration: 0.22
+                }, 0.05);
             }
 
-            // Text / Story Content: Fades in after the image is already visible
             if (item.content) {
-                gsap.set(item.content, { opacity: 0, y: 36 });
-                gsap.to(item.content, {
+                storyTl.to(item.content, {
                     opacity: 1,
                     y: 0,
                     ease: 'power2.out',
-                    scrollTrigger: {
-                        trigger: item.section,
-                        start: 'top 60%',
-                        end: 'top 20%',
-                        scrub: scrubVal
-                    }
-                });
+                    duration: 0.2
+                }, 0.16);
             }
-        }
 
-        // 2. Exit: Text fades out first as section scrolls away, followed by image fade-out
-        if (item.isHero) {
-            // Hero section exit behavior
+            // Phase 2: Dwell Window (0.36 -> 0.70)
+            // Stays 100% fully unfaded and visible
+
+            // Phase 3: Exit — Text fades out first (0.70 -> 0.88), backdrop fades out (0.78 -> 0.98)
             if (item.content) {
-                gsap.to(item.content, {
-                    opacity: 0,
-                    y: -45,
-                    ease: 'power1.inOut',
-                    scrollTrigger: {
-                        trigger: item.section,
-                        start: 'top top',
-                        end: 'bottom 45%',
-                        scrub: scrubVal
-                    }
-                });
-            }
-            if (item.backdrop) {
-                gsap.to(item.backdrop, {
-                    opacity: 0.15,
-                    scale: 1.02,
-                    ease: 'power1.inOut',
-                    scrollTrigger: {
-                        trigger: item.section,
-                        start: 'center center',
-                        end: 'bottom top',
-                        scrub: scrubVal
-                    }
-                });
-            }
-        } else if (nextItem && nextItem.section) {
-            // Story section exit behavior
-            if (item.content) {
-                gsap.to(item.content, {
+                storyTl.to(item.content, {
                     opacity: 0,
                     y: -35,
                     ease: 'power1.inOut',
-                    scrollTrigger: {
-                        trigger: item.section,
-                        start: 'bottom 75%',
-                        end: 'bottom 25%',
-                        scrub: scrubVal
-                    }
-                });
+                    duration: 0.18
+                }, 0.70);
             }
+
             if (item.backdrop) {
-                gsap.to(item.backdrop, {
+                storyTl.to(item.backdrop, {
                     opacity: 0.12,
                     scale: 0.98,
                     ease: 'power1.inOut',
-                    scrollTrigger: {
-                        trigger: item.section,
-                        start: 'bottom 65%',
-                        end: 'bottom 10%',
-                        scrub: scrubVal
-                    }
-                });
+                    duration: 0.2
+                }, 0.78);
             }
         }
     });
