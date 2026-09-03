@@ -443,14 +443,16 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     text-align: right;
 }
 
-.cert-section-heading {
-    font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+#certificate .massive-title {
+    font-family: var(--font-heading);
     font-size: clamp(2.8rem, 5vw, 4.4rem);
-    font-weight: 800;
-    color: #111418;
+    font-weight: 700;
+    color: var(--text-primary);
     line-height: 1.05;
     letter-spacing: -0.02em;
     margin: 0;
+    text-align: right;
+    white-space: normal;
     text-shadow: 
         0 0 35px #FFFFFF,
         0 0 18px #FFFFFF,
@@ -458,13 +460,14 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
 }
 
 .cert-regular-sub {
-    font-family: var(--font-heading), 'Playfair Display', Georgia, serif;
+    font-family: var(--font-body);
     font-size: clamp(1.2rem, 1.8vw, 1.55rem);
     font-weight: 400 !important;
-    color: #383D48;
+    color: var(--text-secondary);
     margin: 0.45rem 0 0;
     letter-spacing: 0.01em;
     line-height: 1.35;
+    text-align: right;
     text-shadow: 
         0 0 25px #FFFFFF,
         0 0 12px #FFFFFF;
@@ -2555,7 +2558,7 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
         text-align: right !important;
     }
 
-    .cert-section-heading {
+    #certificate .massive-title {
         font-size: clamp(2.2rem, 7.5vw, 3.2rem) !important;
     }
 
