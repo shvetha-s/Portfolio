@@ -2557,18 +2557,23 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   EDUCATION SECTION — PINNED STICKY NOTES BOARD
+   EDUCATION SECTION — VINTAGE STORYBOOK WOODLAND CLEARING SPREAD
    ═══════════════════════════════════════════════════════════════ */
-.pinned-board-chapter {
+#education.education-storybook-section {
     min-height: 100vh;
-    background-color: #0E1612;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     position: relative;
     z-index: 3;
+    background-color: #E8E2D2;
+    padding: 5rem 0;
+    box-sizing: border-box;
+    box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.06);
     overflow: hidden;
-    box-shadow: 0 -25px 50px rgba(0, 0, 0, 0.15);
 }
 
-.edu-forest-backdrop {
+.edu-storybook-backdrop {
     position: absolute;
     top: 0;
     left: 0;
@@ -2576,327 +2581,187 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     height: 100%;
     pointer-events: none;
     z-index: 1;
-    overflow: hidden;
-}
-
-.edu-forest-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
-    display: block;
-    opacity: 0.96;
-    filter: saturate(1.12) contrast(1.06);
-}
-
-/* Upright Vertically Stacked Bold Title for Education Section */
-#education .sticky-title-area {
-    width: 40%;
-    position: sticky;
-    top: 0;
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 5rem 0 5.5rem 8%;
-    z-index: 2;
 }
 
-.edu-stacked-title {
+.edu-storybook-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left center;
+    display: block;
+}
+
+.edu-content-right-container {
+    width: 48%;
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: 8%;
+    position: relative;
+    z-index: 2;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    height: 100%;
-    max-height: 1050px;
-    font-family: 'Outfit', 'Plus Jakarta Sans', var(--font-heading);
-    font-size: clamp(4.2rem, 7.5vw, 8.8rem);
-    font-weight: 900;
-    line-height: 0.88;
+    justify-content: center;
+    padding: 3rem 0;
+}
+
+.edu-header-lockup {
+    margin-bottom: 2rem;
+}
+
+#education .massive-title {
+    font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(2.8rem, 5.2vw, 4.6rem);
+    font-weight: 700;
     letter-spacing: -0.02em;
-    color: #FFFFFF;
-    text-transform: uppercase;
-    -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.92);
-    paint-order: stroke fill;
-    text-shadow: 0 4px 24px rgba(0, 0, 0, 0.75), 0 0 45px rgba(255, 200, 100, 0.35);
+    color: #1A1F18;
+    line-height: 1.05;
+    text-shadow: 0 1px 4px rgba(255, 255, 255, 0.8);
 }
 
-.edu-letter {
-    display: block;
-    text-align: center;
-    line-height: 0.88;
-    font-weight: 900;
-    margin-bottom: 0.5rem;
+.edu-storybook-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
 }
 
-.edu-letter.edu-e-wrapper {
-    position: relative;
+.edu-story-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.35rem;
+    background: rgba(254, 252, 246, 0.90);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(212, 202, 178, 0.65);
+    border-radius: 20px;
+    padding: 1.4rem 1.7rem;
+    box-shadow: 
+        0 14px 35px rgba(45, 52, 38, 0.08),
+        0 2px 6px rgba(0, 0, 0, 0.03);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
 }
 
-.edu-letter.edu-e-wrapper .grad-cap-icon {
-    position: absolute;
-    top: -0.48em;
-    left: 50%;
-    transform: translateX(-50%) rotate(-15deg);
-    width: 0.85em;
-    height: 0.85em;
+.edu-story-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 
+        0 20px 45px rgba(45, 52, 38, 0.14),
+        0 4px 12px rgba(255, 77, 0, 0.12);
+    border-color: rgba(255, 77, 0, 0.35);
+}
+
+.edu-num-ribbon {
+    font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.65rem;
+    font-weight: 700;
+    font-style: italic;
     color: var(--accent);
-    filter: drop-shadow(0 6px 14px rgba(255, 80, 0, 0.6));
-}
-
-.pinned-board-area {
-    width: 50%;
-    min-height: 100vh;
-    position: relative;
-    padding: 5rem 5% 5.5rem 2%;
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
-    z-index: 2;
-}
-
-.pinned-connecting-line {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1;
-}
-
-/* Individual Pinned Note Card */
-.pinned-note-card {
-    position: relative;
-    width: clamp(280px, 28vw, 360px);
-    background: #FFFFFF;
-    border-radius: 24px;
-    padding: 1.4rem 1.4rem 1.6rem 1.4rem;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35), 0 6px 16px rgba(0, 0, 0, 0.2);
-    z-index: 2;
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
-}
-
-/* Staggered Floating Positions & Tilt Rotations */
-.pinned-card-1 {
-    align-self: flex-start;
-    margin-left: 2vw;
-    transform: rotate(-3.5deg);
-}
-
-.pinned-card-2 {
-    align-self: flex-end;
-    margin-right: 2vw;
-    margin-top: -1.5rem;
-    transform: rotate(3deg);
-}
-
-.pinned-card-3 {
-    align-self: flex-start;
-    margin-left: 5vw;
-    margin-top: -1.5rem;
-    transform: rotate(-2.5deg);
-}
-
-.pinned-note-card:hover {
-    transform: rotate(0deg) translateY(-8px) scale(1.03);
-    box-shadow: 0 28px 60px rgba(0, 0, 0, 0.14), 0 8px 20px rgba(0, 0, 0, 0.06);
-    z-index: 5;
-}
-
-/* 3D Push Pin on Top Center */
-.pinned-pin {
-    position: absolute;
-    top: -22px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 32px;
-    height: 42px;
-    z-index: 10;
-    filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.28));
-}
-
-.pin-svg {
-    width: 100%;
-    height: 100%;
-    display: block;
-}
-
-/* Inner Tinted Theme Containers */
-.pinned-note-inner {
-    border-radius: 18px;
-    padding: 1.5rem 1.6rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-}
-
-.note-theme-orange {
-    background: #FFF4EC;
-    border: 1px solid rgba(255, 80, 0, 0.18);
-}
-
-.note-theme-blue {
-    background: #EFF5FF;
-    border: 1px solid rgba(26, 115, 232, 0.18);
-}
-
-.note-theme-purple {
-    background: #F8EFFF;
-    border: 1px solid rgba(142, 36, 170, 0.18);
-}
-
-/* Script Number */
-.pinned-script-num {
-    font-family: 'Caveat', cursive, sans-serif;
-    font-size: 2.8rem;
-    font-weight: 700;
     line-height: 1;
-    margin-bottom: 0.1rem;
+    min-width: 32px;
+    padding-top: 2px;
 }
 
-.script-orange { color: #FF5000; }
-.script-blue   { color: #1A73E8; }
-.script-purple { color: #8E24AA; }
-
-/* Card Content Typography */
-.pinned-note-title {
-    font-family: var(--font-heading);
-    font-size: clamp(1.2rem, 1.8vw, 1.45rem);
-    font-weight: 700;
-    color: var(--text-primary);
-    line-height: 1.25;
-}
-
-.pinned-note-school {
-    font-size: 0.94rem;
-    font-weight: 600;
-    color: var(--text-primary);
-    margin-top: 0.2rem;
-}
-
-.pinned-note-text {
-    font-size: 0.86rem;
-    color: var(--text-secondary);
-}
-
-/* Card Footer Badges & Year */
-.pinned-note-footer {
+.edu-story-details {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 0.25rem;
+    flex: 1;
+}
+
+.edu-degree-title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.2rem, 1.6vw, 1.4rem);
+    font-weight: 700;
+    color: #1A1F18;
+    line-height: 1.25;
+    margin: 0;
+}
+
+.edu-college-name {
+    font-family: var(--font-body);
+    font-size: 1.18rem;
+    font-weight: 600;
+    font-style: italic;
+    color: #384034;
+    margin: 0.15rem 0 0;
+    line-height: 1.4;
+}
+
+.edu-board-info {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    color: #555E50;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.edu-meta-row {
+    display: flex;
     align-items: center;
-    margin-top: 1rem;
-    padding-top: 0.8rem;
+    justify-content: space-between;
+    margin-top: 0.65rem;
+    padding-top: 0.65rem;
     border-top: 1px dashed rgba(0, 0, 0, 0.1);
 }
 
-.pinned-note-badge {
-    font-size: 0.78rem;
+.edu-pill-badge {
+    font-family: var(--font-body);
+    font-size: 0.92rem;
     font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    padding: 0.3rem 0.75rem;
+    color: var(--accent);
+    background: rgba(255, 77, 0, 0.1);
+    padding: 0.2rem 0.75rem;
     border-radius: 20px;
+    letter-spacing: 0.02em;
 }
 
-.badge-orange { background: rgba(255, 80, 0, 0.12); color: #D63B00; }
-.badge-blue   { background: rgba(26, 115, 232, 0.12); color: #1557B0; }
-.badge-purple { background: rgba(142, 36, 170, 0.12); color: #6A1B9A; }
-
-.pinned-note-year {
-    font-size: 0.82rem;
+.edu-period {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
     font-weight: 600;
-    color: var(--text-secondary);
+    color: #60685C;
 }
 
-/* Responsive Mobile Layout for Pinned Board & Education */
+/* Responsive Mobile Layout for Education Storybook Spread */
 @media (max-width: 991px) {
-    #education.pinned-board-chapter {
-        min-height: auto;
-        padding: 4rem 5% 4.5rem;
-        display: flex;
-        flex-direction: column;
-        background-color: #0E1612;
+    #education.education-storybook-section {
+        flex-direction: column !important;
+        height: auto !important;
+        min-height: auto !important;
+        position: relative !important;
+        top: auto !important;
+        padding: 2.5rem 0 3.5rem !important;
+        background-color: #E8E2D2 !important;
+        display: flex !important;
     }
 
-    #education .sticky-title-area {
-        width: 100%;
-        max-width: 100%;
-        margin: 0;
-        height: auto;
-        position: relative;
-        top: auto;
-        padding: 0 0 1.5rem 0;
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-        z-index: 2;
+    .edu-storybook-backdrop {
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
+        max-height: 380px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 0 1rem !important;
     }
 
-    .edu-stacked-title {
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        gap: clamp(0.12rem, 1.4vw, 0.45rem);
-        font-size: clamp(1.9rem, 7.8vw, 3.2rem);
-        max-height: none;
-        height: auto;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        letter-spacing: 0.02em;
-        color: #FFFFFF !important;
-        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.9) !important;
-        text-shadow: 0 4px 18px rgba(0, 0, 0, 0.85);
+    .edu-storybook-img {
+        width: 100% !important;
+        height: auto !important;
+        max-height: 360px !important;
+        object-fit: contain !important;
+        display: block !important;
     }
 
-    .edu-letter {
-        display: inline-block;
-        margin-bottom: 0;
-        line-height: 1;
-    }
-
-    .edu-letter.edu-e-wrapper .grad-cap-icon {
-        top: -0.52em;
-        width: 0.85em;
-        height: 0.85em;
-    }
-
-    .pinned-board-area {
-        width: 100%;
-        min-height: auto;
-        padding: 1.5rem 0 2.5rem;
-        align-items: center;
-        gap: 3rem;
-    }
-
-    .pinned-connecting-line {
-        display: none;
-    }
-
-    .pinned-note-card {
-        width: 100%;
-        max-width: 360px;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        margin-top: 0 !important;
-    }
-
-    .pinned-card-1 { transform: rotate(-1.5deg); }
-    .pinned-card-2 { transform: rotate(1.5deg); }
-    .pinned-card-3 { transform: rotate(-1deg); }
-}
-
-@media (max-width: 480px) {
-    .pinned-note-card {
-        max-width: 100%;
-        padding: 1.2rem 1.1rem;
-        border-radius: 20px;
-    }
-
-    .pinned-note-inner {
-        padding: 1.25rem 1.1rem;
-        border-radius: 14px;
+    .edu-content-right-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 1.8rem 6% 1rem !important;
+        box-sizing: border-box !important;
     }
 }
 
@@ -2908,14 +2773,5 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     .port-eyebrow,
     .port-swetha-sans {
         font-size: 0.95rem;
-    }
-
-    .pinned-note-card {
-        max-width: 100%;
-        padding: 1rem 0.9rem;
-    }
-
-    .pinned-note-inner {
-        padding: 1.1rem 0.9rem;
     }
 }
