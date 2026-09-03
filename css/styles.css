@@ -359,35 +359,26 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     font-weight: 700 !important;
 }
 
-#experience .clean-list {
-    list-style: none;
-    padding-left: 0;
-    margin-top: 0.5rem;
-}
-
 #experience .clean-list li {
-    position: relative;
-    padding-left: 1.75rem;
     font-family: var(--font-body);
     font-size: clamp(1.18rem, 1.4vw, 1.38rem);
     font-weight: 700 !important;
     line-height: 1.75;
     color: #141416 !important;
-    padding-top: 0.95rem;
-    padding-bottom: 0.95rem;
+    padding: 0.95rem 0 0.95rem 1.4rem;
+    position: relative;
     border-bottom: 1px solid rgba(0, 0, 0, 0.09);
     text-shadow: 0 1px 4px rgba(255, 255, 255, 0.95);
 }
 
-#experience .clean-list li::before {
-    content: "•";
+#experience .exp-bullet {
     position: absolute;
-    left: 0.1rem;
-    top: 0.88rem;
+    left: 0;
+    top: 0.82rem;
+    font-weight: 700;
     color: var(--accent);
-    font-size: 1.5rem;
-    line-height: 1.75;
-    font-weight: 900;
+    font-size: 1.25em;
+    line-height: 1;
 }
 
 /* Certificate Section — Placed Below Education */
