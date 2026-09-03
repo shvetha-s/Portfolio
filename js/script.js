@@ -182,7 +182,13 @@ function initScrollTransitions() {
         {
             section: document.querySelector('#education'),
             backdrop: document.querySelector('.edu-storybook-backdrop'),
-            content: document.querySelector('.edu-content-right-container'),
+            content: document.querySelector('.edu-content-right-container') || document.querySelector('.edu-content-horizontal-container'),
+            isHero: false
+        },
+        {
+            section: document.querySelector('#certificate'),
+            backdrop: document.querySelector('.cert-storybook-backdrop'),
+            content: document.querySelector('.cert-content-container'),
             isHero: false
         }
     ];
@@ -282,26 +288,7 @@ function initScrollTransitions() {
     });
 
     // 3. Subsequent Sections Coordinated Reveals
-    // Certificate Showcase
-    const certSection = document.querySelector('#certificate');
-    const certShowcase = document.querySelector('.cert-framed-showcase');
-    if (certSection && certShowcase) {
-        gsap.fromTo(certShowcase,
-            { opacity: 0, y: 45, scale: 0.97 },
-            {
-                opacity: 1,
-                y: 0,
-                scale: 1.0,
-                ease: 'power2.out',
-                scrollTrigger: {
-                    trigger: certSection,
-                    start: 'top 75%',
-                    end: 'top 30%',
-                    scrub: scrubVal
-                }
-            }
-        );
-    }
+    // Skills Cards Stagger
 
     // Skills Cards Stagger
     const skillsSection = document.querySelector('#skills');

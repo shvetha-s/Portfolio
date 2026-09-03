@@ -381,87 +381,158 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     line-height: 1;
 }
 
-/* Certificate Section — Placed Below Education */
-#certificate {
-    min-height: 80vh;
+/* ═══════════════════════════════════════════════════════════════
+   CERTIFICATE SECTION — REDWOOD CANOPY STORYBOOK SPREAD
+   ═══════════════════════════════════════════════════════════════ */
+#certificate.cert-storybook-section {
+    min-height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
     position: relative;
     z-index: 4;
-    padding: 6rem 0;
+    background-color: #EBF2EA;
+    padding: 6rem 5%;
     box-sizing: border-box;
-    background-color: var(--bg-color);
-    box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
 }
 
-#certificate .sticky-title-area {
-    position: sticky;
-    top: 6.5rem;
-    height: auto;
-    display: flex;
-    align-items: flex-start;
-    padding-left: 8%;
-    padding-top: 0;
-}
-
-#certificate .scrolling-content-area {
-    min-height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 8% 0 0;
-}
-
-#about .content-block,
-#experience .content-block,
-#certificate .content-block {
-    background: transparent;
-    border: none;
-    border-radius: 0;
-    padding: 0;
-    box-shadow: none;
-}
-
-/* Framed Certificate Showcase */
-.cert-framed-showcase {
+.cert-storybook-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
+    will-change: transform, opacity;
+}
+
+.cert-storybook-img {
     width: 100%;
-}
-
-.cert-frame-wrapper {
-    flex: 1;
-    min-width: 0;
-    max-width: 660px;
-    width: 100%;
-}
-
-.cert-gallery-frame {
-    padding: 10px;
-    background: #FFFFFF;
-    border: 9px solid #1C1C1F;
-    border-radius: 12px;
-    box-shadow: 
-        0 20px 45px rgba(0, 0, 0, 0.12),
-        0 4px 12px rgba(0, 0, 0, 0.08),
-        inset 0 0 0 1px rgba(255, 255, 255, 0.4);
-    overflow: hidden;
-    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
-}
-
-.cert-gallery-frame:hover {
-    transform: translateY(-3px);
-    box-shadow: 
-        0 25px 55px rgba(0, 0, 0, 0.16),
-        0 6px 16px rgba(255, 77, 0, 0.15);
-}
-
-.cert-display-img {
-    width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
     display: block;
-    border-radius: 2px;
+    filter: brightness(1.03) contrast(1.02);
+    will-change: transform, opacity;
+}
+
+.cert-content-container {
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    will-change: transform, opacity;
+}
+
+.cert-storybook-card {
+    width: 100%;
+    background: #F5EFE1;
+    background: linear-gradient(150deg, #FAF6EC 0%, #F4EEDA 50%, #EDE4CE 100%);
+    border: 1.5px solid rgba(212, 195, 162, 0.85);
+    border-radius: 24px;
+    padding: 2.4rem 2.8rem;
+    box-shadow: 
+        0 22px 50px rgba(40, 30, 20, 0.15),
+        0 2px 8px rgba(0, 0, 0, 0.04),
+        inset 0 0 32px rgba(226, 210, 180, 0.35);
+    text-align: center;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+}
+
+.cert-storybook-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 
+        0 28px 60px rgba(40, 30, 20, 0.2),
+        0 8px 24px rgba(217, 72, 15, 0.16),
+        inset 0 0 36px rgba(226, 210, 180, 0.45);
+}
+
+.cert-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.85rem;
+    border-bottom: 1px dashed rgba(160, 138, 105, 0.35);
+}
+
+.cert-kicker-tag {
+    font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.45rem;
+    font-weight: 700;
+    font-style: italic;
+    color: #D9480F;
+    letter-spacing: 0.02em;
+}
+
+.cert-date-badge {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #221C16;
+    background: rgba(217, 72, 15, 0.09);
+    border: 1px solid rgba(217, 72, 15, 0.25);
+    padding: 0.3rem 0.9rem;
+    border-radius: 20px;
+    letter-spacing: 0.02em;
+}
+
+.cert-course-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 3.8vw, 2.75rem);
+    font-weight: 800;
+    color: #161412;
+    line-height: 1.2;
+    margin: 0.5rem 0 0.8rem;
+    letter-spacing: -0.01em;
+}
+
+.cert-summary-line {
+    font-family: var(--font-body);
+    font-size: 1.12rem;
+    font-weight: 600;
+    color: #584E42;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.cert-card-footer {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.cert-view-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    background: #FF4D00;
+    padding: 0.65rem 1.4rem;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(255, 77, 0, 0.3);
+    transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cert-view-btn:hover {
+    background: #E04400;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 77, 0, 0.45);
 }
 
 /* Wave Partition below About Page */
@@ -2538,54 +2609,17 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
         box-sizing: border-box !important;
     }
 
-    #certificate {
+    #certificate.cert-storybook-section {
         min-height: auto !important;
-        padding: 3rem 6% 3.5rem !important;
-        flex-direction: column !important;
-        gap: 1.5rem !important;
-        align-items: flex-start !important;
-        display: flex !important;
-        position: relative !important;
-        top: auto !important;
+        padding: 4.5rem 6% !important;
     }
 
-    #certificate .sticky-title-area {
-        width: 100% !important;
-        height: auto !important;
-        position: relative !important;
-        top: auto !important;
-        padding: 0 0 0.5rem 0 !important;
-        margin: 0 !important;
-        display: block !important;
+    .cert-storybook-card {
+        padding: 1.8rem 1.4rem !important;
     }
 
-    #certificate .massive-title {
-        font-size: clamp(2.2rem, 7.5vw, 3.2rem) !important;
-        margin: 0 0 0.25rem 0 !important;
-        line-height: 1.1 !important;
-    }
-
-    #certificate .scrolling-content-area {
-        width: 100% !important;
-        min-height: auto !important;
-        height: auto !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        gap: 1.5rem !important;
-        display: flex !important;
-        flex-direction: column !important;
-        justify-content: flex-start !important;
-    }
-
-    .cert-framed-showcase {
-        width: 100% !important;
-        display: flex !important;
-        justify-content: center !important;
-    }
-
-    .cert-frame-wrapper {
-        width: 100% !important;
-        max-width: 100% !important;
+    .cert-course-title {
+        font-size: clamp(1.6rem, 6.5vw, 2.1rem) !important;
     }
 }
 
