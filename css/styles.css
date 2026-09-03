@@ -436,51 +436,38 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     will-change: transform, opacity;
 }
 
-.cert-corner-info {
-    font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
-    font-size: clamp(1.45rem, 2.4vw, 2.35rem);
-    font-weight: 700;
-    color: #161412;
-    line-height: 1.35;
+.cert-heading-lockup {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     text-align: right;
-    letter-spacing: -0.01em;
-    margin: 0;
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    text-shadow: 
-        0 0 30px rgba(255, 255, 255, 1),
-        0 0 15px rgba(255, 255, 255, 0.95),
-        0 1px 4px rgba(255, 255, 255, 0.9);
-    display: inline-flex;
-    align-items: center;
-    gap: 0.65rem;
-    flex-wrap: wrap;
-    justify-content: flex-end;
 }
 
-.cert-info-kicker {
-    font-style: italic;
-    color: #D9480F;
-    font-weight: 700;
-}
-
-.cert-info-title {
-    font-family: var(--font-heading);
-    color: #111317;
+.cert-section-heading {
+    font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(2.8rem, 5vw, 4.4rem);
     font-weight: 800;
+    color: #111418;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin: 0;
+    text-shadow: 
+        0 0 35px #FFFFFF,
+        0 0 18px #FFFFFF,
+        0 2px 6px rgba(255, 255, 255, 0.95);
 }
 
-.cert-info-sep {
-    color: #7A7268;
-    font-weight: 400;
-}
-
-.cert-info-date {
-    font-family: var(--font-body);
-    font-size: 0.9em;
-    font-weight: 700;
-    color: #24201A;
+.cert-regular-sub {
+    font-family: var(--font-heading), 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.2rem, 1.8vw, 1.55rem);
+    font-weight: 400 !important;
+    color: #383D48;
+    margin: 0.45rem 0 0;
+    letter-spacing: 0.01em;
+    line-height: 1.35;
+    text-shadow: 
+        0 0 25px #FFFFFF,
+        0 0 12px #FFFFFF;
 }
 
 /* Wave Partition below About Page */
@@ -2563,10 +2550,17 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
         justify-content: flex-end !important;
     }
 
-    .cert-corner-info {
-        font-size: clamp(1.2rem, 5vw, 1.65rem) !important;
+    .cert-heading-lockup {
+        align-items: flex-end !important;
         text-align: right !important;
-        justify-content: flex-end !important;
+    }
+
+    .cert-section-heading {
+        font-size: clamp(2.2rem, 7.5vw, 3.2rem) !important;
+    }
+
+    .cert-regular-sub {
+        font-size: clamp(1.05rem, 4vw, 1.25rem) !important;
     }
 }
 
