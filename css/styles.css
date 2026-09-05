@@ -2611,17 +2611,18 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
 
 .edu-content-horizontal-container,
 .edu-content-right-container {
-    width: 100%;
-    max-width: 1260px;
-    margin: 0 auto;
+    width: 62%;
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: 3%;
     position: relative;
     z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2.2rem 1.5rem 1.8rem;
-    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.65) 0%, rgba(255, 255, 255, 0.25) 55%, transparent 75%);
+    padding: 2rem 1.2rem 1.6rem;
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.2) 60%, transparent 80%);
     border-radius: 36px;
     will-change: transform, opacity;
 }
@@ -2648,7 +2649,7 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
 .edu-storybook-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.6rem;
+    gap: 1.25rem;
     width: 100%;
 }
 
@@ -2660,7 +2661,7 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     background: linear-gradient(150deg, #FAF6EC 0%, #F4EEDA 50%, #EDE4CE 100%);
     border: 1.5px solid rgba(212, 195, 162, 0.75);
     border-radius: 22px;
-    padding: 1.75rem 1.75rem 1.5rem;
+    padding: 1.55rem 1.4rem 1.35rem;
     box-shadow: 
         0 18px 42px rgba(60, 48, 30, 0.12),
         0 2px 8px rgba(0, 0, 0, 0.04),
