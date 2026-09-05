@@ -2609,169 +2609,113 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     will-change: transform, opacity;
 }
 
-.edu-content-horizontal-container,
 .edu-content-right-container {
-    width: 62%;
-    max-width: 980px;
+    width: 46%;
+    max-width: 580px;
     margin-left: auto;
-    margin-right: 3%;
+    margin-right: 8%;
     position: relative;
     z-index: 2;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    padding: 2rem 1.2rem 1.6rem;
-    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.2) 60%, transparent 80%);
-    border-radius: 36px;
+    padding: 4rem 0;
     will-change: transform, opacity;
 }
 
 .edu-header-lockup {
-    margin-bottom: 2.2rem;
-    text-align: center;
+    margin-bottom: 1.8rem;
+    text-align: left;
 }
 
 #education .massive-title {
-    font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
-    font-size: clamp(3.2rem, 5.8vw, 4.8rem);
-    font-weight: 800;
+    font-family: var(--font-heading);
+    font-size: clamp(2.8rem, 5.2vw, 4.6rem);
+    font-weight: 700;
     letter-spacing: -0.02em;
-    color: #0F1216;
+    color: var(--text-primary);
     line-height: 1.05;
-    text-align: center;
-    text-shadow: 
-        0 0 35px #FFFFFF,
-        0 0 18px #FFFFFF,
-        0 2px 6px rgba(255, 255, 255, 0.95);
+    text-align: left;
+    margin: 0;
+    text-shadow: 0 1px 4px rgba(255, 255, 255, 0.95);
 }
 
-.edu-storybook-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.25rem;
+.edu-story-card {
+    display: flex;
+    flex-direction: column;
     width: 100%;
 }
 
-.edu-story-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background: #F5EFE1;
-    background: linear-gradient(150deg, #FAF6EC 0%, #F4EEDA 50%, #EDE4CE 100%);
-    border: 1.5px solid rgba(212, 195, 162, 0.75);
-    border-radius: 22px;
-    padding: 1.55rem 1.4rem 1.35rem;
-    box-shadow: 
-        0 18px 42px rgba(60, 48, 30, 0.12),
-        0 2px 8px rgba(0, 0, 0, 0.04),
-        inset 0 0 28px rgba(226, 210, 180, 0.35);
-    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
-}
-
-.edu-story-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 
-        0 26px 52px rgba(60, 48, 30, 0.18),
-        0 6px 18px rgba(217, 72, 15, 0.16),
-        inset 0 0 32px rgba(226, 210, 180, 0.45);
-    border-color: rgba(217, 72, 15, 0.45);
-}
-
-.edu-item-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-}
-
-.edu-num-ribbon {
-    font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
-    font-size: 2.1rem;
-    font-weight: 800;
-    font-style: italic;
-    color: #D9480F;
-    line-height: 1;
-}
-
-.edu-story-details {
-    display: flex;
-    flex-direction: column;
-    gap: 0.35rem;
-    flex: 1;
-}
-
-.edu-degree-title {
-    font-family: var(--font-heading);
-    font-size: clamp(1.22rem, 1.5vw, 1.44rem);
-    font-weight: 800;
-    color: #161412;
-    line-height: 1.3;
+#education .clean-list {
+    list-style: none;
+    padding: 0;
     margin: 0;
 }
 
-.edu-college-name {
+#education .clean-list li {
     font-family: var(--font-body);
-    font-size: 1.14rem;
-    font-weight: 700;
-    font-style: italic;
-    color: #362F26;
-    margin: 0.3rem 0 0;
-    line-height: 1.4;
+    font-size: clamp(1.18rem, 1.4vw, 1.38rem);
+    font-weight: 700 !important;
+    line-height: 1.6;
+    color: #141416 !important;
+    padding: 1.1rem 0 1.1rem 1.6rem;
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+    text-shadow: 0 1px 4px rgba(255, 255, 255, 0.95);
+    list-style: none;
 }
 
-.edu-board-info {
+#education .clean-list li:last-child {
+    border-bottom: none;
+}
+
+#education .exp-bullet {
+    position: absolute;
+    left: 0;
+    top: 1.2rem;
+    font-weight: 700;
+    color: var(--accent);
+    font-size: 1.25em;
+    line-height: 1;
+}
+
+.edu-milestone-title {
+    font-family: var(--font-heading) !important;
+    font-size: clamp(1.35rem, 1.7vw, 1.75rem) !important;
+    font-weight: 600 !important;
+    color: var(--accent) !important;
+    margin: 0 0 0.25rem 0 !important;
+    line-height: 1.25 !important;
+    letter-spacing: -0.01em;
+    text-shadow: 0 1px 4px rgba(255, 255, 255, 0.95);
+}
+
+.edu-school-line {
+    margin-top: 0.15rem !important;
+    margin-bottom: 0.25rem !important;
+    color: var(--text-primary) !important;
+    font-size: 1.15rem !important;
+    font-weight: 700 !important;
+    line-height: 1.4 !important;
+}
+
+.edu-meta-score {
     font-family: var(--font-body);
-    font-size: 1.02rem;
+    font-size: 1.05rem;
     font-weight: 600;
-    color: #584E42;
-    margin: 0.15rem 0 0;
-    line-height: 1.4;
-}
-
-.edu-meta-row {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin-top: 1.4rem;
-    padding-top: 0.95rem;
-    border-top: 1px dashed rgba(160, 138, 105, 0.35);
-}
-
-.edu-pill-badge {
-    font-family: var(--font-body);
-    font-size: 0.92rem;
-    font-weight: 800;
-    color: #C93B00;
-    background: rgba(217, 72, 15, 0.09);
-    border: 1px solid rgba(217, 72, 15, 0.28);
-    padding: 0.28rem 0.85rem;
-    border-radius: 20px;
-    letter-spacing: 0.03em;
-    box-shadow: 0 2px 6px rgba(217, 72, 15, 0.08);
-}
-
-.edu-period {
-    font-family: var(--font-body);
-    font-size: 1.04rem;
-    font-weight: 700;
-    color: #221C16;
+    color: #4A3E33;
+    margin: 0;
+    line-height: 1.35;
 }
 
 /* Responsive Layout */
-@media (max-width: 1024px) {
-    .edu-storybook-list {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.2rem;
-    }
-}
-
 @media (max-width: 860px) {
-    .edu-storybook-list {
-        grid-template-columns: 1fr;
-        max-width: 520px;
-        margin: 0 auto;
-        gap: 1.3rem;
+    .edu-content-right-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 1.8rem 6% 1rem !important;
+        box-sizing: border-box !important;
     }
 
     #education.education-storybook-section {
