@@ -5,9 +5,11 @@
     --text-secondary: #4A4A50;
     --accent: #FF4D00;
 
-    --font-heading: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
-    --font-body: 'Cormorant Garamond', 'Plus Jakarta Sans', Georgia, serif;
+    --font-heading: 'Fraunces', 'Playfair Display', Georgia, serif;
+    --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
     --font-sans: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    --font-story: 'Fondamento', 'Almendra', cursive;
+    --font-display: 'Cinzel Decorative', 'Fraunces', serif;
 
     --transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
