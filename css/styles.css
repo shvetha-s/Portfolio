@@ -201,16 +201,16 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     padding-left: 8%;
 }
 
-/* About Section — Storybook Illustration Layout (Full Uncropped Foliage) */
+/* About Section — Balanced Storybook Layout */
 #about.about-storybook-section {
-    min-height: 125vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     position: relative;
     z-index: 2;
     background-color: #FDFBF7;
-    padding: 4rem 0;
+    padding: 0;
     overflow: hidden;
 }
 
@@ -239,21 +239,21 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
 }
 
 .about-content-overlay {
-    width: 48%;
+    width: 46%;
     max-width: 580px;
     margin-left: auto;
-    margin-right: 7%;
+    margin-right: 8%;
     position: relative;
     z-index: 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 3rem 0;
+    padding: 4rem 0;
     will-change: transform, opacity;
 }
 
 .about-header-lockup {
-    margin-bottom: 1.8rem;
+    margin-bottom: 2rem;
 }
 
 #about .massive-title {
@@ -268,7 +268,7 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
 .about-storybook-text-card {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.75rem;
 }
 
 .about-storybook-lead,
@@ -276,7 +276,7 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     font-family: 'Cormorant Garamond', 'Plus Jakarta Sans', Georgia, serif;
     font-size: clamp(1.25rem, 1.6vw, 1.48rem);
     font-weight: 500;
-    line-height: 1.82;
+    line-height: 1.85;
     color: #2B2B32;
     letter-spacing: 0.01em;
 }
