@@ -134,6 +134,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // ── Smooth Scrolling for Anchor Links ──
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const targetId = this.getAttribute('href');
+            if (targetId === '#' || !targetId) return;
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                e.preventDefault();
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+                setTimeout(() => {
+                    if (typeof ScrollTrigger !== 'undefined') {
+                        ScrollTrigger.refresh();
+                    }
+                }, 600);
+            }
+        });
+    });
+
     // Initialize GSAP Cinematic Scroll Transitions
     initScrollTransitions();
 
@@ -292,7 +313,7 @@ function initScrollTransitions() {
 
     // Skills Cards Stagger
     const skillsSection = document.querySelector('#skills');
-    const skillCards = document.querySelectorAll('.skill-card');
+    const skillCards = document.querySelectorAll('.skill-point-block, .skill-card');
     if (skillsSection && skillCards.length > 0) {
         gsap.fromTo(skillCards,
             { opacity: 0, y: 40 },
