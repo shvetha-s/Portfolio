@@ -209,7 +209,7 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     justify-content: flex-end;
     position: relative;
     z-index: 2;
-    background-color: #FFFFFF;
+    background-color: #FDFBF7;
     padding: 4rem 0;
     overflow: hidden;
 }
@@ -234,6 +234,7 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     object-fit: contain;
     object-position: left center;
     display: block;
+    mix-blend-mode: multiply;
     will-change: transform, opacity;
 }
 
