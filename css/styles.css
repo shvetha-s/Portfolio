@@ -5,11 +5,11 @@
     --text-secondary: #4A4A50;
     --accent: #FF4D00;
 
-    --font-heading: 'Fraunces', 'Playfair Display', Georgia, serif;
-    --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-heading: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+    --font-body: 'Cormorant Garamond', Georgia, serif;
     --font-sans: 'Plus Jakarta Sans', 'Inter', sans-serif;
     --font-story: 'Fondamento', 'Almendra', cursive;
-    --font-display: 'Cinzel Decorative', 'Fraunces', serif;
+    --font-display: 'Cinzel Decorative', 'Cormorant Garamond', serif;
 
     --transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -70,26 +70,28 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
 
 
 
-/* Header — Attached Exclusively to Top of Hero Section with Soft Ice-Blue Color */
+/* Header — Cloud Rectangle Attached to Top with Ice-Blue Color */
 .story-header {
     position: absolute;
     top: 0;
-    left: 0;
-    transform: none;
-    width: 100%;
-    max-width: 100%;
-    padding: 1.1rem 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 2.5rem);
+    max-width: 1360px;
+    padding: 0.95rem 2.8rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
-    background: rgba(226, 238, 242, 0.95);
+    background: rgba(226, 238, 242, 0.96);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: none;
-    border-bottom: 1px solid rgba(180, 208, 218, 0.5);
-    border-radius: 0 0 24px 24px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.92);
+    border-top: none;
+    border-radius: 0 0 38px 38px / 0 0 52px 52px;
+    box-shadow: 
+        0 12px 32px rgba(160, 195, 208, 0.35),
+        0 4px 12px rgba(255, 255, 255, 0.9) inset;
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
