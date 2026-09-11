@@ -2715,7 +2715,7 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-start;
     position: relative;
     z-index: 3;
     background-color: #FDFDFB;
@@ -2755,10 +2755,10 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
 }
 
 .edu-content-right-container {
-    width: 40%;
-    max-width: 520px;
-    margin-left: auto;
-    margin-right: 4%;
+    width: 45%;
+    max-width: 550px;
+    margin-left: 2%;
+    margin-right: auto;
     position: relative;
     z-index: 2;
     display: flex;
