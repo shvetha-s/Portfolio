@@ -2124,7 +2124,7 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding-top: 5.5rem;
+    padding-top: 3.5rem;
     overflow: hidden;
     margin-bottom: 0;
 }
@@ -2278,7 +2278,7 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     color: #111111;
     letter-spacing: 0.02em;
     text-transform: lowercase;
-    margin-top: clamp(0.8rem, 2vw, 2rem);
+    margin-top: 0.2rem;
     margin-bottom: 0.35rem;
     margin-left: clamp(-8rem, -6vw, -1rem);
     align-self: flex-start;
