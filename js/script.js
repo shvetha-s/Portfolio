@@ -244,35 +244,35 @@ function initScrollTransitions() {
                 }, 0.45);
             }
         } else {
-            // Story sections (About, Experience, Education):
-            // - Next image reveals first, followed by text on scroll down
-            // - Stays 100% unfaded and readable throughout center view
-            // - On scroll UP: instantly unfades back to 100% visibility to view the above page!
+            // Story sections (About, Experience, Education, Certificate):
+            // - Rapid entrance as section comes into view
+            // - Stays 100% fully visible and crystal clear throughout center view
+            // - Smooth exit transition only when leaving section at bottom
             const storyTl = gsap.timeline({
                 scrollTrigger: {
                     trigger: item.section,
-                    start: 'top bottom',
-                    end: 'bottom top',
+                    start: 'top 85%',
+                    end: 'bottom 15%',
                     scrub: scrubVal
                 }
             });
 
             // Set initial state
             if (item.backdrop) {
-                gsap.set(item.backdrop, { opacity: 0.08, scale: 1.04, transformOrigin: 'center center' });
+                gsap.set(item.backdrop, { opacity: 0.1, scale: 1.03, transformOrigin: 'center center' });
             }
             if (item.content) {
-                gsap.set(item.content, { opacity: 0, y: 35 });
+                gsap.set(item.content, { opacity: 0, y: 30 });
             }
 
-            // Phase 1: Entrance — Image reveals first (0.05 -> 0.25), text follows (0.16 -> 0.36)
+            // Phase 1: Rapid Entrance (0.0 -> 0.20)
             if (item.backdrop) {
                 storyTl.to(item.backdrop, {
                     opacity: 1,
                     scale: 1.0,
                     ease: 'power2.out',
-                    duration: 0.22
-                }, 0.05);
+                    duration: 0.15
+                }, 0.0);
             }
 
             if (item.content) {
@@ -280,30 +280,29 @@ function initScrollTransitions() {
                     opacity: 1,
                     y: 0,
                     ease: 'power2.out',
-                    duration: 0.2
-                }, 0.16);
+                    duration: 0.18
+                }, 0.05);
             }
 
-            // Phase 2: Dwell Window (0.36 -> 0.70)
-            // Stays 100% fully unfaded and visible
+            // Phase 2: Dwell Window (0.20 -> 0.85) — Stays 100% fully visible and clear
 
-            // Phase 3: Exit — Text fades out first (0.70 -> 0.88), backdrop fades out (0.78 -> 0.98)
+            // Phase 3: Exit (0.85 -> 1.0)
             if (item.content) {
                 storyTl.to(item.content, {
                     opacity: 0,
-                    y: -35,
+                    y: -30,
                     ease: 'power1.inOut',
-                    duration: 0.18
-                }, 0.70);
+                    duration: 0.12
+                }, 0.85);
             }
 
             if (item.backdrop) {
                 storyTl.to(item.backdrop, {
-                    opacity: 0.12,
+                    opacity: 0.15,
                     scale: 0.98,
                     ease: 'power1.inOut',
-                    duration: 0.2
-                }, 0.78);
+                    duration: 0.14
+                }, 0.86);
             }
         }
     });
