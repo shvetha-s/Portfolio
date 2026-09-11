@@ -2123,7 +2123,8 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     background-color: #FFFFFF;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    padding-top: 5.5rem;
     overflow: hidden;
     margin-bottom: 0;
 }
@@ -2542,7 +2543,7 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
         padding: 5rem 1rem 3rem;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         box-sizing: border-box;
         overflow: hidden;
