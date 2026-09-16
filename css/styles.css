@@ -2481,6 +2481,8 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     object-position: center center;
     display: block;
     mix-blend-mode: normal !important;
+    transform: scale(1.25);
+    transform-origin: center center;
 }
 
 .about-content-overlay {
