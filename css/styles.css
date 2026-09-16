@@ -2777,7 +2777,7 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     justify-content: flex-start;
     position: relative;
     z-index: 3;
-    background-color: #FAF8F3;
+    background-color: #FFFFFF;
     padding: 5rem 6%;
     box-sizing: border-box;
     box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.04);
@@ -2787,32 +2787,31 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
 .edu-storybook-backdrop {
     position: absolute;
     top: 0;
-    right: 0;
-    left: auto;
-    width: 50%;
+    left: 0;
+    width: 100%;
     height: 100%;
     pointer-events: none;
     z-index: 1;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    background-color: transparent;
-    padding-right: 2%;
-    will-change: transform, opacity;
+    justify-content: center;
+    background-color: #FFFFFF;
+    overflow: hidden;
 }
 
 .edu-storybook-backdrop::after {
     display: none;
 }
 
-.edu-storybook-img {
-    width: 95%;
-    height: 85%;
-    object-fit: contain;
-    object-position: right center;
+.edu-storybook-img,
+.edu-video-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right bottom;
     display: block;
-    mix-blend-mode: multiply;
-    will-change: transform, opacity;
+    mix-blend-mode: multiply !important;
+    filter: brightness(1.05) contrast(1.03) !important;
 }
 
 .edu-content-right-container {
@@ -2907,19 +2906,58 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     line-height: 1.35;
 }
 
-/* Responsive Layout */
+/* Responsive Layout for Education */
 @media (max-width: 860px) {
+    #education.education-storybook-section {
+        min-height: 100vh !important;
+        position: relative !important;
+        background-color: #FFFFFF !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-end !important;
+        padding: 4rem 6% 3rem !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+    }
+
+    .edu-storybook-backdrop {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        max-height: none !important;
+        aspect-ratio: auto !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        background-color: #FFFFFF !important;
+        overflow: hidden !important;
+        z-index: 1 !important;
+    }
+
+    .edu-storybook-img,
+    .edu-video-bg {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: right bottom !important;
+        transform: none !important;
+        display: block !important;
+        mix-blend-mode: multiply !important;
+        filter: brightness(1.05) contrast(1.03) !important;
+    }
+
     .edu-content-right-container {
         width: 100% !important;
         max-width: 100% !important;
         margin: 0 !important;
-        padding: 1.8rem 6% 1rem !important;
+        padding: 1.5rem 0 1rem !important;
+        position: relative !important;
+        z-index: 2 !important;
         box-sizing: border-box !important;
-    }
-
-    #education.education-storybook-section {
-        min-height: auto !important;
-        padding: 4.5rem 6% !important;
     }
 }
 
