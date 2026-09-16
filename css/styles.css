@@ -2452,7 +2452,7 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     justify-content: flex-end;
     position: relative;
     z-index: 3;
-    background-color: #FAF8F3;
+    background-color: #F7F4EF;
     padding: 5rem 8%;
     box-sizing: border-box;
     overflow: hidden;
@@ -2469,7 +2469,7 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #FAF8F3;
+    background-color: #F7F4EF;
     overflow: hidden;
 }
 
@@ -2479,6 +2479,8 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     height: 100%;
     object-fit: cover;
     object-position: left bottom;
+    transform: scale(1.45);
+    transform-origin: left bottom;
     display: block;
     mix-blend-mode: normal !important;
 }
@@ -2577,31 +2579,35 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
         display: none !important;
     }
 
-    /* About, Experience, Certificate sections on mobile */
+    /* About section on mobile */
     #about.about-storybook-section {
-        flex-direction: column !important;
-        height: auto !important;
-        min-height: auto !important;
+        min-height: 100vh !important;
         position: relative !important;
-        top: auto !important;
-        padding: 3rem 0 4rem !important;
-        background-color: #FAF8F3 !important;
+        background-color: #F7F4EF !important;
         display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-end !important;
+        padding: 4rem 6% 3rem !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
     }
 
     .about-backdrop-art {
-        position: relative !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
         width: 100% !important;
-        height: auto !important;
-        aspect-ratio: 16 / 9 !important;
-        max-height: 480px !important;
+        height: 100% !important;
+        max-height: none !important;
+        aspect-ratio: auto !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
         padding: 0 !important;
-        margin: 0 auto !important;
-        background-color: #FAF8F3 !important;
+        margin: 0 !important;
+        background-color: #F7F4EF !important;
         overflow: hidden !important;
+        z-index: 1 !important;
     }
 
     .about-full-art-img,
@@ -2609,8 +2615,9 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
         width: 100% !important;
         height: 100% !important;
         object-fit: cover !important;
-        object-position: left bottom !important;
-        transform: none !important;
+        object-position: 10% bottom !important;
+        transform: scale(1.5) !important;
+        transform-origin: left bottom !important;
         display: block !important;
     }
 
@@ -2618,7 +2625,9 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
         width: 100% !important;
         max-width: 100% !important;
         margin: 0 !important;
-        padding: 1.8rem 6% 1rem !important;
+        padding: 1.5rem 0 1rem !important;
+        position: relative !important;
+        z-index: 2 !important;
         box-sizing: border-box !important;
     }
 
