@@ -2497,6 +2497,61 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     padding: 4rem 0;
 }
 
+/* ═══════════════════════════════════════════════════════════════
+   EXPERIENCE SECTION — LAPTOP TYPING VIDEO BACKDROP
+   ═══════════════════════════════════════════════════════════════ */
+#experience.experience-lake-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 3;
+    background-color: #FFFFFF;
+    padding: 5rem 8%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.exp-lake-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+    overflow: hidden;
+}
+
+.exp-lake-img,
+.exp-video-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right bottom;
+    display: block;
+    mix-blend-mode: multiply !important;
+    filter: brightness(1.05) contrast(1.03) !important;
+}
+
+.exp-content-left-container {
+    width: 45%;
+    max-width: 550px;
+    margin-right: auto;
+    margin-left: 2%;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem 0;
+}
+
 /* Responsive adjustments for Mobile & Tablet */
 @media (max-width: 1024px) {
     .port-lockup-grid {
@@ -2639,41 +2694,56 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
         color: #4A4A50 !important;
     }
 
+    /* Experience section on mobile */
     #experience.experience-lake-section {
-        flex-direction: column !important;
-        height: auto !important;
-        min-height: auto !important;
+        min-height: 100vh !important;
         position: relative !important;
-        top: auto !important;
-        padding: 2.5rem 0 3rem !important;
-        background-color: #FAF8F2 !important;
+        background-color: #FFFFFF !important;
         display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-end !important;
+        padding: 4rem 6% 3rem !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
     }
 
     .exp-lake-backdrop {
-        position: relative !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
         width: 100% !important;
-        height: auto !important;
-        max-height: 380px !important;
+        height: 100% !important;
+        max-height: none !important;
+        aspect-ratio: auto !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
-        padding: 0 1rem !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        background-color: #FFFFFF !important;
+        overflow: hidden !important;
+        z-index: 1 !important;
     }
 
-    .exp-lake-img {
+    .exp-lake-img,
+    .exp-video-bg {
         width: 100% !important;
-        height: auto !important;
-        max-height: 360px !important;
-        object-fit: contain !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: right bottom !important;
+        transform: none !important;
         display: block !important;
+        mix-blend-mode: multiply !important;
+        filter: brightness(1.05) contrast(1.03) !important;
     }
 
     .exp-content-left-container {
         width: 100% !important;
         max-width: 100% !important;
         margin: 0 !important;
-        padding: 1.8rem 6% 1rem !important;
+        padding: 1.5rem 0 1rem !important;
+        position: relative !important;
+        z-index: 2 !important;
         box-sizing: border-box !important;
     }
 
