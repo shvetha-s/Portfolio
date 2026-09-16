@@ -2452,7 +2452,7 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     justify-content: flex-end;
     position: relative;
     z-index: 3;
-    background-color: #FFFFFF;
+    background-color: #F7F4EF;
     padding: 5rem 8%;
     box-sizing: border-box;
     overflow: hidden;
@@ -2469,7 +2469,7 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #FFFFFF;
+    background-color: #F7F4EF;
     overflow: hidden;
 }
 
@@ -2479,11 +2479,9 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     height: 100%;
     object-fit: cover;
     object-position: left bottom;
-    transform: scale(1.35);
-    transform-origin: left bottom;
     display: block;
-    mix-blend-mode: multiply !important;
-    filter: brightness(1.07) contrast(1.06) !important;
+    mix-blend-mode: normal !important;
+    filter: none !important;
 }
 
 .about-content-overlay {
@@ -2584,7 +2582,7 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     #about.about-storybook-section {
         min-height: 100vh !important;
         position: relative !important;
-        background-color: #FFFFFF !important;
+        background-color: #F7F4EF !important;
         display: flex !important;
         flex-direction: column !important;
         justify-content: flex-end !important;
@@ -2606,7 +2604,7 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
         justify-content: center !important;
         padding: 0 !important;
         margin: 0 !important;
-        background-color: #FFFFFF !important;
+        background-color: #F7F4EF !important;
         overflow: hidden !important;
         z-index: 1 !important;
     }
@@ -2617,11 +2615,10 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
         height: 100% !important;
         object-fit: cover !important;
         object-position: left bottom !important;
-        transform: scale(1.25) !important;
-        transform-origin: left bottom !important;
+        transform: none !important;
         display: block !important;
-        mix-blend-mode: multiply !important;
-        filter: brightness(1.07) contrast(1.06) !important;
+        mix-blend-mode: normal !important;
+        filter: none !important;
     }
 
     .about-content-overlay {
