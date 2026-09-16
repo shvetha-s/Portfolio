@@ -2479,10 +2479,11 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     height: 100%;
     object-fit: cover;
     object-position: left bottom;
-    transform: scale(1.45);
+    transform: scale(1.35);
     transform-origin: left bottom;
     display: block;
-    mix-blend-mode: normal !important;
+    mix-blend-mode: multiply !important;
+    filter: brightness(1.07) contrast(1.06) !important;
 }
 
 .about-content-overlay {
@@ -2615,10 +2616,12 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
         width: 100% !important;
         height: 100% !important;
         object-fit: cover !important;
-        object-position: 10% bottom !important;
-        transform: scale(1.5) !important;
+        object-position: left bottom !important;
+        transform: scale(1.25) !important;
         transform-origin: left bottom !important;
         display: block !important;
+        mix-blend-mode: multiply !important;
+        filter: brightness(1.07) contrast(1.06) !important;
     }
 
     .about-content-overlay {
