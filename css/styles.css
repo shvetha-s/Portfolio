@@ -2478,11 +2478,11 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: left center;
+    object-position: right center;
     display: block;
     mix-blend-mode: normal !important;
-    transform: scale(1.05);
-    transform-origin: left center;
+    transform: scale(1.15);
+    transform-origin: right center;
 }
 
 .about-content-overlay {
