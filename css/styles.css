@@ -2796,7 +2796,7 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     justify-content: flex-start !important;
     pointer-events: none !important;
     z-index: 1 !important;
-    will-change: transform, opacity;
+    opacity: 1 !important;
 }
 
 .edu-full-art-img {
@@ -2806,7 +2806,6 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     object-position: left center !important;
     display: block !important;
     mix-blend-mode: multiply !important;
-    will-change: transform, opacity;
 }
 
 .edu-content-right-container {
@@ -2820,7 +2819,7 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     flex-direction: column;
     justify-content: center;
     padding: 4rem 0 !important;
-    will-change: transform, opacity;
+    opacity: 1 !important;
 }
 
 .edu-header-lockup {
