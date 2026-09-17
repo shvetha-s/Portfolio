@@ -2772,14 +2772,14 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
    ═══════════════════════════════════════════════════════════════ */
 #education.education-storybook-section {
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
     position: relative;
     z-index: 3;
     background-color: #FFFFFF;
-    padding: 6rem 8%;
+    padding: 6rem 6% !important;
     box-sizing: border-box;
     box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.04);
     overflow: hidden;
@@ -2790,10 +2790,10 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
 }
 
 .edu-content-right-container {
-    width: 100%;
-    max-width: 780px;
-    margin-left: 0;
-    margin-right: auto;
+    width: 48% !important;
+    max-width: 680px !important;
+    margin-left: auto !important;
+    margin-right: 2% !important;
     position: relative;
     z-index: 2;
     display: flex;
