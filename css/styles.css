@@ -1450,7 +1450,7 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     width: 100%;
     background-color: #FFFFFF !important;
     color: var(--text-primary);
-    padding: 5rem 6% 2.5rem;
+    padding: 5rem 6% 0;
     box-sizing: border-box;
     overflow: hidden;
     border-top: 1px solid rgba(0, 0, 0, 0.08);
@@ -1468,7 +1468,27 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 3.5rem;
+    gap: 2.5rem;
+}
+
+/* Bottom Watercolor Wildflower Garden Banner */
+.footer-garden-bottom {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 1.5rem;
+    line-height: 0;
+}
+
+.footer-garden-img {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    pointer-events: none;
 }
 
 .footer-main-grid {
