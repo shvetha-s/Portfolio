@@ -2773,12 +2773,13 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
 #education.education-storybook-section {
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
     z-index: 3;
     background-color: #FFFFFF;
-    padding: 5rem 6%;
+    padding: 6rem 8%;
     box-sizing: border-box;
     box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.04);
     overflow: hidden;
@@ -2790,25 +2791,25 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
 
 .edu-content-right-container {
     width: 100%;
-    max-width: 680px;
+    max-width: 820px;
     margin: 0 auto;
     position: relative;
     z-index: 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 3rem 0;
+    padding: 2.5rem 0;
     will-change: transform, opacity;
 }
 
 .edu-header-lockup {
-    margin-bottom: 1.8rem;
+    margin-bottom: 2.2rem;
     text-align: left;
 }
 
 #education .massive-title {
     font-family: var(--font-heading);
-    font-size: clamp(2.8rem, 5.2vw, 4.6rem);
+    font-size: clamp(3rem, 5.5vw, 4.8rem);
     font-weight: 700;
     letter-spacing: -0.02em;
     color: var(--text-primary);
@@ -2831,8 +2832,8 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
 
 #education .clean-list li {
     font-family: var(--font-body);
-    padding: 1.1rem 0 1.1rem 1.6rem;
-    position: relative;
+    padding: 1.6rem 0 !important;
+    position: relative !important;
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
     list-style: none;
 }
@@ -2841,38 +2842,48 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     border-bottom: none;
 }
 
+.edu-heading-row {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: baseline !important;
+    gap: 0.55rem !important;
+    margin-bottom: 0.35rem !important;
+}
+
 #education .exp-bullet {
-    position: absolute;
-    left: 0;
-    top: 1.15rem;
-    font-weight: 700;
-    color: var(--accent);
-    font-size: 1.3em;
-    line-height: 1;
+    position: static !important;
+    display: inline-block !important;
+    font-weight: 700 !important;
+    color: var(--accent) !important;
+    font-size: 1.35em !important;
+    line-height: 1 !important;
+    margin: 0 !important;
+    flex-shrink: 0 !important;
 }
 
 .edu-milestone-title {
+    display: inline-block !important;
     font-family: var(--font-heading) !important;
-    font-size: clamp(1.25rem, 1.6vw, 1.65rem) !important;
+    font-size: clamp(1.4rem, 2vw, 1.85rem) !important;
     font-weight: 600 !important;
     color: var(--accent) !important;
-    margin: 0 0 0.35rem 0 !important;
+    margin: 0 !important;
     line-height: 1.25 !important;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.01em !important;
 }
 
 .edu-school-line {
-    margin-top: 0.15rem !important;
-    margin-bottom: 0.25rem !important;
+    margin-top: 0.2rem !important;
+    margin-bottom: 0.35rem !important;
     color: #2C2C2E !important;
-    font-size: 1.05rem !important;
+    font-size: 1.08rem !important;
     font-weight: 400 !important;
     line-height: 1.45 !important;
 }
 
 .edu-meta-score {
     font-family: var(--font-body);
-    font-size: 0.95rem;
+    font-size: 0.98rem;
     font-weight: 400;
     color: #666666;
     margin: 0;
@@ -2887,46 +2898,17 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
         background-color: #FFFFFF !important;
         display: flex !important;
         flex-direction: column !important;
-        justify-content: flex-end !important;
+        justify-content: center !important;
+        align-items: center !important;
         padding: 4rem 6% 3rem !important;
         box-sizing: border-box !important;
         overflow: hidden !important;
     }
 
-    .edu-storybook-backdrop {
-        position: absolute !important;
-        top: 0 !important;
-        left: 0 !important;
-        width: 100% !important;
-        height: 100% !important;
-        max-height: none !important;
-        aspect-ratio: auto !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        background-color: #FFFFFF !important;
-        overflow: hidden !important;
-        z-index: 1 !important;
-    }
-
-    .edu-storybook-img,
-    .edu-video-bg {
-        width: 100% !important;
-        height: 100% !important;
-        object-fit: cover !important;
-        object-position: right bottom !important;
-        transform: none !important;
-        display: block !important;
-        mix-blend-mode: multiply !important;
-        filter: brightness(1.05) contrast(1.03) !important;
-    }
-
     .edu-content-right-container {
         width: 100% !important;
         max-width: 100% !important;
-        margin: 0 !important;
+        margin: 0 auto !important;
         padding: 1.5rem 0 1rem !important;
         position: relative !important;
         z-index: 2 !important;
