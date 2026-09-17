@@ -199,12 +199,6 @@ function initScrollTransitions() {
             backdrop: document.querySelector('.exp-lake-backdrop'),
             content: document.querySelector('.exp-content-left-container'),
             isHero: false
-        },
-        {
-            section: document.querySelector('#education'),
-            backdrop: document.querySelector('.edu-storybook-backdrop'),
-            content: null,
-            isHero: false
         }
     ];
 
