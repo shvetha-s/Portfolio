@@ -205,12 +205,6 @@ function initScrollTransitions() {
             backdrop: document.querySelector('.edu-storybook-backdrop'),
             content: null,
             isHero: false
-        },
-        {
-            section: document.querySelector('#certificate'),
-            backdrop: document.querySelector('.cert-storybook-backdrop'),
-            content: document.querySelector('.cert-content-container'),
-            isHero: false
         }
     ];
 
