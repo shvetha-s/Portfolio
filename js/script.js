@@ -203,7 +203,7 @@ function initScrollTransitions() {
         {
             section: document.querySelector('#education'),
             backdrop: document.querySelector('.edu-storybook-backdrop'),
-            content: document.querySelector('.edu-content-right-container'),
+            content: null,
             isHero: false
         },
         {
