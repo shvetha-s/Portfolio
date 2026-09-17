@@ -304,26 +304,7 @@ function initScrollTransitions() {
     // 3. Subsequent Sections Coordinated Reveals
     // Skills Cards Stagger
 
-    // Skills Cards Stagger
-    const skillsSection = document.querySelector('#skills');
-    const skillCards = document.querySelectorAll('.skill-point-block, .skill-card');
-    if (skillsSection && skillCards.length > 0) {
-        gsap.fromTo(skillCards,
-            { opacity: 0, y: 40 },
-            {
-                opacity: 1,
-                y: 0,
-                stagger: 0.12,
-                ease: 'power2.out',
-                scrollTrigger: {
-                    trigger: skillsSection,
-                    start: 'top 72%',
-                    end: 'top 28%',
-                    scrub: scrubVal
-                }
-            }
-        );
-    }
+
 
     // Projects Grid Stagger
     const workSection = document.querySelector('#work');
