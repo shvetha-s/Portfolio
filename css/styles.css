@@ -1472,7 +1472,7 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
 }
 
 .footer-left-floral-img {
-    width: 250px;
+    width: 440px;
     height: auto;
     display: block;
     object-fit: contain;
@@ -1575,8 +1575,8 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     justify-content: space-between;
     align-items: center;
     padding-top: 1.8rem;
-    padding-left: 260px;
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    padding-left: 450px;
+    border-top: none;
 }
 
 .footer-copyright {
