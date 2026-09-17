@@ -1462,6 +1462,23 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     display: none !important;
 }
 
+.footer-floral-art-left {
+    position: absolute;
+    bottom: -3.5rem;
+    left: 0;
+    z-index: 2;
+    pointer-events: none;
+    line-height: 0;
+}
+
+.footer-left-floral-img {
+    width: 250px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    object-position: bottom left;
+}
+
 .footer-inner-container {
     position: relative;
     z-index: 5;
@@ -1558,6 +1575,7 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     justify-content: space-between;
     align-items: center;
     padding-top: 1.8rem;
+    padding-left: 260px;
     border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
@@ -1818,7 +1836,8 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
         flex-wrap: wrap;
     }
 
-    .footer-floral-art {
+    .footer-floral-art,
+    .footer-floral-art-left {
         display: none;
     }
 
@@ -1826,6 +1845,7 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
         flex-direction: column;
         gap: 1.25rem;
         align-items: flex-start;
+        padding-left: 0;
     }
 }
 
