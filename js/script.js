@@ -204,8 +204,7 @@ function initScrollTransitions() {
             section: document.querySelector('#education'),
             backdrop: document.querySelector('.edu-storybook-backdrop'),
             content: document.querySelector('.edu-content-right-container') || document.querySelector('.edu-content-horizontal-container'),
-            isHero: false,
-            alwaysVisible: true
+            isHero: false
         },
         {
             section: document.querySelector('#certificate'),
@@ -244,16 +243,8 @@ function initScrollTransitions() {
                     ease: 'power1.inOut'
                 }, 0.45);
             }
-        } else if (item.alwaysVisible) {
-            // Section configured to stay always 100% visible (e.g. Education)
-            if (item.backdrop) {
-                gsap.set(item.backdrop, { opacity: 1, scale: 1.0 });
-            }
-            if (item.content) {
-                gsap.set(item.content, { opacity: 1, y: 0 });
-            }
         } else {
-            // Story sections (About, Experience, Certificate):
+            // Story sections (About, Experience, Education, Certificate):
             // - Rapid entrance as section comes into view
             // - Stays 100% fully visible and crystal clear throughout center view
             // - Smooth exit transition only when leaving section at bottom
