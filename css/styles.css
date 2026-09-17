@@ -2923,15 +2923,14 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
 }
 
 /* Responsive Layout for Education */
-@media (max-width: 860px) {
+@media (max-width: 768px) {
     #education.education-storybook-section {
         min-height: 100vh !important;
         position: relative !important;
         background-color: #FFFFFF !important;
         display: flex !important;
         flex-direction: column !important;
-        justify-content: center !important;
-        align-items: flex-start !important;
+        justify-content: flex-end !important;
         padding: 4rem 6% 3rem !important;
         box-sizing: border-box !important;
         overflow: hidden !important;
@@ -2944,7 +2943,10 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
         margin-right: auto !important;
         padding: 1.5rem 0 1rem !important;
         position: relative !important;
-        z-index: 2 !important;
+        z-index: 10 !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
         box-sizing: border-box !important;
     }
 }
