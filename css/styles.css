@@ -1552,7 +1552,6 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     justify-content: space-between;
     align-items: center;
     padding-top: 1.8rem;
-    padding-left: 240px; /* Offset copyright so it sits cleanly next to corner floral art */
     border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
