@@ -3,11 +3,11 @@
    ========================================================================== */
 
 html, body, * {
-    cursor: url('../assets/icons/cursor_32.png?v=3d2026') 3 3, auto !important;
+    cursor: url('../assets/icons/cursor_heart.svg?v=heart2026') 16 16, auto !important;
 }
 
 a, button, [role="button"], input, select, textarea, .process-card, .takeaway-card {
-    cursor: url('../assets/icons/cursor_32.png?v=3d2026') 3 3, pointer !important;
+    cursor: url('../assets/icons/cursor_heart_pointer.svg?v=heart2026') 18 18, pointer !important;
 }
 
 .case-study-body {

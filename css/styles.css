@@ -52,15 +52,15 @@ body {
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   3D GLOSSY ORANGE CUSTOM CURSOR — Design System Accent #FF4D00
+   3D GLOSSY HEART CUSTOM CURSOR
    Hardware accelerated, instant response, zero latency
    ═══════════════════════════════════════════════════════════════ */
 html, body, * {
-    cursor: url('../assets/icons/cursor_32.png?v=3d2026') 3 3, auto !important;
+    cursor: url('../assets/icons/cursor_heart.svg?v=heart2026') 16 16, auto !important;
 }
 
 a, button, [role="button"], input, select, textarea, .project-column-item, .project-image-box, .skill-card, .pinned-note-card {
-    cursor: url('../assets/icons/cursor_32.png?v=3d2026') 3 3, pointer !important;
+    cursor: url('../assets/icons/cursor_heart_pointer.svg?v=heart2026') 18 18, pointer !important;
 }
 
 .cursor-dot,
