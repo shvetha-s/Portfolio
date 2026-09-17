@@ -214,7 +214,7 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     justify-content: flex-end;
     position: relative;
     z-index: 2;
-    background-color: #FDFBF7;
+    background-color: #FFFFFF !important;
     padding: 0;
     overflow: hidden;
 }
