@@ -2776,10 +2776,11 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     flex-direction: row !important;
     justify-content: flex-end !important;
     align-items: center !important;
+    width: 100% !important;
     position: relative;
     z-index: 3;
     background-color: #FFFFFF;
-    padding: 6rem 6% !important;
+    padding: 6rem 6% 6rem 50% !important;
     box-sizing: border-box;
     box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.04);
     overflow: hidden;
@@ -2790,16 +2791,16 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
 }
 
 .edu-content-right-container {
-    width: 48% !important;
-    max-width: 680px !important;
+    width: 100% !important;
+    max-width: 620px !important;
     margin-left: auto !important;
-    margin-right: 2% !important;
+    margin-right: 0 !important;
     position: relative;
     z-index: 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 2.5rem 0;
+    padding: 2rem 0;
     will-change: transform, opacity;
 }
 
