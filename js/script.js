@@ -203,7 +203,7 @@ function initScrollTransitions() {
         {
             section: document.querySelector('#education'),
             backdrop: document.querySelector('.edu-storybook-backdrop'),
-            content: document.querySelector('.edu-content-right-container') || document.querySelector('.edu-content-horizontal-container'),
+            content: document.querySelector('.edu-content-right-container'),
             isHero: false
         },
         {
@@ -252,7 +252,7 @@ function initScrollTransitions() {
                 scrollTrigger: {
                     trigger: item.section,
                     start: 'top 85%',
-                    end: 'bottom 15%',
+                    end: 'bottom top',
                     scrub: scrubVal
                 }
             });
@@ -287,7 +287,7 @@ function initScrollTransitions() {
             // Phase 2: Dwell Window (0.20 -> 0.85) — Stays 100% fully visible and clear
 
             // Phase 3: Exit (0.85 -> 1.0)
-            if (item.content) {
+            if (item.content && !item.disableExitFade) {
                 storyTl.to(item.content, {
                     opacity: 0,
                     y: -30,
