@@ -2101,8 +2101,42 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     }
 
 /* ==========================================================================
-   Empty Hero Section (Pure White Background)
+   Reference Image Hero Section (Displaying Attached Reference Artwork)
    ========================================================================== */
+
+.reference-image-hero {
+    position: relative;
+    width: 100%;
+    min-height: 90vh;
+    background-color: #F2EBE3 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 5.5rem 4% 2rem;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.hero-image-wrapper {
+    width: 100%;
+    max-width: 1350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+}
+
+.hero-art-image {
+    width: 100%;
+    height: auto;
+    max-height: 75vh;
+    object-fit: contain;
+    display: block;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    user-select: none;
+}
 
 .empty-white-hero {
     position: relative;
