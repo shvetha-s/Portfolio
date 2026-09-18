@@ -189,8 +189,8 @@ function initScrollTransitions() {
     const storySections = [
         {
             section: document.querySelector('.topo-hero'),
-            backdrop: document.querySelector('.hero-forest-backdrop'),
-            content: document.querySelector('.hero-editorial-container'),
+            backdrop: null,
+            content: document.querySelector('.hero-playful-container'),
             isHero: true
         },
         {
@@ -203,6 +203,12 @@ function initScrollTransitions() {
             section: document.querySelector('#experience'),
             backdrop: document.querySelector('.exp-lake-backdrop'),
             content: document.querySelector('.exp-content-left-container'),
+            isHero: false
+        },
+        {
+            section: document.querySelector('#education'),
+            backdrop: null,
+            content: document.querySelector('.edu-container'),
             isHero: false
         }
     ];

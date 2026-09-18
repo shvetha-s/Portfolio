@@ -10,10 +10,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=Cinzel+Decorative:wght@700;900&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Fondamento:ital@0;1&family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..900&family=Outfit:wght@800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@400;500;600;700;800&family=Syne:wght@700;800&family=Caveat:wght@600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=Cinzel+Decorative:wght@700;900&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Fondamento:ital@0;1&family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..900&family=Gaegu:wght@400;700&family=Outfit:wght@800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@400;500;600;700;800&family=Syne:wght@700;800&family=Caveat:wght@600;700&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="css/styles.css?v=20260917_v92">
+    <link rel="stylesheet" href="css/styles.css?v=20260918_v95">
 </head>
 
 <body>
@@ -23,8 +23,8 @@
     </div>
 
     <main class="story-container">
-        <!-- Chapter: New Typographic Hero -->
-        <section class="story-chapter topo-hero">
+        <!-- Chapter: New Organic Playful Hero (Matching Reference Design) -->
+        <section class="story-chapter topo-hero playful-hero">
 
             <!-- Header Fixed to Hero Section -->
             <header class="story-header" id="storyHeader">
@@ -32,6 +32,7 @@
                 <nav class="nav-links" id="navLinks">
                     <a href="#about">About</a>
                     <a href="#experience">Experience</a>
+                    <a href="#education">Education</a>
                     <a href="#work">Work</a>
                     <a href="assets/docs/Swetha_S_Resume.pdf" target="_blank">Resume</a>
                     <a href="#contact">Contact</a>
@@ -43,32 +44,44 @@
                 </button>
             </header>
 
-            <!-- Editorial Typographic Hero Container (Matching Reference Design) -->
-            <div class="hero-editorial-container">
+            <!-- Organic Playful Hero Container -->
+            <div class="hero-playful-container">
 
-                <!-- Top Row: "PORT" + Top-Right Metadata -->
-                <div class="hero-editorial-row hero-row-top">
-                    <h1 class="hero-mega-text hero-text-port">PORT</h1>
-                    <div class="hero-meta-topright">
-                        <span class="hero-meta-date">18 Sep, 2026</span>
-                        <h2 class="hero-meta-title">Creative Presentation</h2>
-                        <span class="hero-meta-presenter">Presented By: <strong>Swetha S.</strong></span>
+                <!-- Sketched Doodle Accents Top-Left -->
+                <div class="hero-doodle-topleft">
+                    <svg viewBox="0 0 100 100" class="doodle-exclamation-svg">
+                        <path d="M25,15 L45,55 M35,70 L35,80" stroke="#5FB8EF" stroke-width="12" stroke-linecap="round" fill="none" />
+                        <path d="M25,15 L45,55 M35,70 L35,80" stroke="#111113" stroke-width="4" stroke-linecap="round" fill="none" />
+                    </svg>
+                </div>
+
+                <!-- Top Row: "port" (Doodle Script) + "2026" (Handwritten) -->
+                <div class="hero-playful-row hero-playful-top">
+                    <div class="hero-title-port-wrap">
+                        <h1 class="hero-hand-text hero-text-port">port</h1>
+                    </div>
+                    <div class="hero-title-year-wrap">
+                        <span class="hero-hand-year">2026</span>
                     </div>
                 </div>
 
-                <!-- Bottom Row: Bottom-Left Intro Paragraph & Info + "FOLIO" -->
-                <div class="hero-editorial-row hero-row-bottom">
-                    <div class="hero-meta-bottomleft">
-                        <p class="hero-intro-paragraph">
-                            Fresher UI/UX Designer turning complex ideas and user problems into simple, intuitive, and delightful visual experiences.
-                        </p>
-                        <div class="hero-contact-footer-line">
-                            <span>swethaseyavelu@gmail.com</span>
-                            <span>+91 94988 28876</span>
-                            <span>Tamil Nadu, India</span>
-                        </div>
+                <!-- Bottom Row: "ui/ux design" (Subtext) + "folio" (Mega Chunky) -->
+                <div class="hero-playful-row hero-playful-bottom">
+                    <div class="hero-subtext-left">
+                        <span class="hero-tag-graphic">ui/ux</span>
+                        <span class="hero-tag-design">design</span>
                     </div>
-                    <h1 class="hero-mega-text hero-text-folio">FOLIO</h1>
+                    <div class="hero-title-folio-wrap">
+                        <h1 class="hero-mega-folio">folio</h1>
+                    </div>
+                </div>
+
+                <!-- Sketched Doodle Accents Bottom-Right -->
+                <div class="hero-doodle-bottomright">
+                    <svg viewBox="0 0 120 100" class="doodle-sparkle-svg">
+                        <path d="M20,60 L80,20 M70,80 L90,65" stroke="#5FB8EF" stroke-width="14" stroke-linecap="round" fill="none" />
+                        <path d="M20,60 L80,20 M70,80 L90,65" stroke="#111113" stroke-width="4" stroke-linecap="round" fill="none" />
+                    </svg>
                 </div>
 
             </div>
@@ -114,6 +127,50 @@
                         <li><span class="exp-bullet">*</span> Primary point of contact for client communication, translating requirements into clear, actionable steps &mdash; a direct precursor to translating user needs into design requirements.</li>
                         <li><span class="exp-bullet">*</span> Identified recurring process bottlenecks and proposed workflow improvements; maintained close attention to detail on high-volume, sensitive data while resolving escalations cross-functionally.</li>
                     </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chapter: Education & Certifications (New Section Below Experience) -->
+        <section id="education" class="story-chapter education-cert-section">
+            <div class="edu-container">
+                <div class="edu-header-lockup">
+                    <h2 class="massive-title">Education &amp; Certifications</h2>
+                    <p class="edu-subtitle">Specialized UI/UX Certification &amp; Academic Background</p>
+                </div>
+
+                <div class="edu-cards-grid">
+                    <!-- Card 01: Google UX Certificate -->
+                    <div class="edu-card edu-card-highlight">
+                        <div class="edu-card-badge">Professional Certification</div>
+                        <h3 class="edu-card-title">Google UX Design Certificate</h3>
+                        <p class="edu-card-issuer">Coursera &bull; Google Authorized</p>
+                        <p class="edu-card-desc">
+                            Completed intensive 7-course specialization covering end-to-end UX research, wireframing, low/high-fidelity prototyping in Figma, usability testing, and web accessibility (WCAG).
+                        </p>
+                        <div class="edu-skills-pills">
+                            <span>User Research</span>
+                            <span>Figma</span>
+                            <span>Wireframing</span>
+                            <span>Usability Testing</span>
+                            <span>Design Systems</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 02: Academic Degree -->
+                    <div class="edu-card">
+                        <div class="edu-card-badge">Academic Degree</div>
+                        <h3 class="edu-card-title">Higher Education &amp; Design Fundamentals</h3>
+                        <p class="edu-card-issuer">Tamil Nadu, India</p>
+                        <p class="edu-card-desc">
+                            Focused on analytical thinking, structured workflow management, digital communication, and visual problem-solving.
+                        </p>
+                        <div class="edu-skills-pills">
+                            <span>Visual Design</span>
+                            <span>Problem Solving</span>
+                            <span>Information Architecture</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
