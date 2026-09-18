@@ -188,16 +188,10 @@ function initScrollTransitions() {
     // Storytelling Sections Sequence
     const storySections = [
         {
-            section: document.querySelector('.watercolor-hero'),
-            backdrop: null,
-            content: document.querySelector('.watercolor-hero-wrapper'),
-            isHero: true
-        },
-        {
             section: document.querySelector('#about'),
             backdrop: document.querySelector('.about-backdrop-art'),
             content: document.querySelector('.about-content-overlay'),
-            isHero: false
+            isHero: true
         },
         {
             section: document.querySelector('#experience'),
