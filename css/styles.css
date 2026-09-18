@@ -216,7 +216,7 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     align-items: center;
     justify-content: center;
     background-color: #FAFAFA;
-    padding-top: 5rem;
+    padding-top: 0;
     overflow: hidden;
 }
 
