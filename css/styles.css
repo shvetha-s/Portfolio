@@ -55,11 +55,11 @@ body {
    3D GLOSSY ORANGE FLOWER CUSTOM CURSOR
    ═══════════════════════════════════════════════════════════════ */
 html, body, * {
-    cursor: url('../assets/icons/flower_cursor_32.png?v=flw2026') 24 24, auto !important;
+    cursor: url('../assets/icons/flower_cursor_32.png?v=flw2026_v5') 24 24, auto !important;
 }
 
 a, button, [role="button"], input, select, textarea, .project-column-item, .project-image-box, .skill-card, .pinned-note-card {
-    cursor: url('../assets/icons/flower_cursor_32.png?v=flw2026') 24 24, pointer !important;
+    cursor: url('../assets/icons/flower_cursor_32.png?v=flw2026_v5') 24 24, pointer !important;
 }
 
 .cursor-dot,
