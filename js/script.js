@@ -188,9 +188,9 @@ function initScrollTransitions() {
     // Storytelling Sections Sequence
     const storySections = [
         {
-            section: document.querySelector('.lockup-hero'),
+            section: document.querySelector('.watercolor-hero'),
             backdrop: null,
-            content: document.querySelector('.hero-image-wrapper'),
+            content: document.querySelector('.watercolor-hero-wrapper'),
             isHero: true
         },
         {
