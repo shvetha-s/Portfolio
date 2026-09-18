@@ -2,12 +2,12 @@
    Case Study Styles - Edge-to-Edge Full Screen Fit (As per Screenshot)
    ========================================================================== */
 
-html, body, * {
-    cursor: url('../assets/icons/cursor_heart.svg?v=heart2026') 16 16, auto !important;
+html, body {
+    cursor: default !important;
 }
 
 a, button, [role="button"], input, select, textarea, .process-card, .takeaway-card {
-    cursor: url('../assets/icons/cursor_heart_pointer.svg?v=heart2026') 18 18, pointer !important;
+    cursor: pointer !important;
 }
 
 .case-study-body {
