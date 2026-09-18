@@ -146,6 +146,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     behavior: 'smooth',
                     block: 'start'
                 });
+                
+                // Force reveal target section content immediately so text never disappears
+                const targetContent = targetElement.querySelector('.about-content-overlay, .exp-content-left-container, .projects-header-area, .projects-4col-grid, .hero-editorial-container');
+                if (targetContent) {
+                    gsap.to(targetContent, { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' });
+                }
+
                 setTimeout(() => {
                     if (typeof ScrollTrigger !== 'undefined') {
                         ScrollTrigger.refresh();
@@ -162,8 +169,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // ═══════════════════════════════════════════════════════════════
 //  GSAP SCROLLTRIGGER CINEMATIC SECTION TRANSITIONS
-//  - Incoming section image reveals first, then text follows
-//  - Outgoing section text fades out first, followed by image
 // ═══════════════════════════════════════════════════════════════
 function initScrollTransitions() {
     if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
@@ -206,60 +211,49 @@ function initScrollTransitions() {
         if (!item.section) return;
 
         if (item.isHero) {
-            // Hero section: starts at 100% visible, fades on scroll down, immediately unfades on scroll up
+            // Hero section: starts 100% visible, subtle fade when scrolling down to next section
             const heroTl = gsap.timeline({
                 scrollTrigger: {
                     trigger: item.section,
                     start: 'top top',
-                    end: 'bottom top',
+                    end: 'bottom 40%',
                     scrub: scrubVal
                 }
             });
 
             if (item.content) {
                 heroTl.to(item.content, {
-                    opacity: 0,
-                    y: -45,
+                    opacity: 0.2,
+                    y: -20,
                     ease: 'power1.inOut'
-                }, 0.25);
-            }
-
-            if (item.backdrop) {
-                heroTl.to(item.backdrop, {
-                    opacity: 0.15,
-                    scale: 1.02,
-                    ease: 'power1.inOut'
-                }, 0.45);
+                }, 0.5);
             }
         } else {
-            // Story sections (About, Experience, Education, Certificate):
-            // - Rapid entrance as section comes into view
-            // - Stays 100% fully visible and crystal clear throughout center view
-            // - Smooth exit transition only when leaving section at bottom
+            // Story sections (About, Experience):
+            // Smooth entrance as section comes into view, remains 100% fully visible while active
             const storyTl = gsap.timeline({
                 scrollTrigger: {
                     trigger: item.section,
                     start: 'top 85%',
-                    end: 'bottom top',
+                    end: 'top 30%',
                     scrub: scrubVal
                 }
             });
 
-            // Set initial state
+            // Set initial entrance state
             if (item.backdrop) {
-                gsap.set(item.backdrop, { opacity: 0.1, scale: 1.03, transformOrigin: 'center center' });
+                gsap.set(item.backdrop, { opacity: 0.3, scale: 1.02, transformOrigin: 'center center' });
             }
             if (item.content) {
-                gsap.set(item.content, { opacity: 0, y: 30 });
+                gsap.set(item.content, { opacity: 0, y: 25 });
             }
 
-            // Phase 1: Rapid Entrance (0.0 -> 0.20)
+            // Smooth entrance reveal
             if (item.backdrop) {
                 storyTl.to(item.backdrop, {
                     opacity: 1,
                     scale: 1.0,
-                    ease: 'power2.out',
-                    duration: 0.15
+                    ease: 'power2.out'
                 }, 0.0);
             }
 
@@ -267,30 +261,8 @@ function initScrollTransitions() {
                 storyTl.to(item.content, {
                     opacity: 1,
                     y: 0,
-                    ease: 'power2.out',
-                    duration: 0.18
-                }, 0.05);
-            }
-
-            // Phase 2: Dwell Window (0.20 -> 0.85) — Stays 100% fully visible and clear
-
-            // Phase 3: Exit (0.85 -> 1.0)
-            if (item.content && !item.disableExitFade) {
-                storyTl.to(item.content, {
-                    opacity: 0,
-                    y: -30,
-                    ease: 'power1.inOut',
-                    duration: 0.12
-                }, 0.85);
-            }
-
-            if (item.backdrop) {
-                storyTl.to(item.backdrop, {
-                    opacity: 0.15,
-                    scale: 0.98,
-                    ease: 'power1.inOut',
-                    duration: 0.14
-                }, 0.86);
+                    ease: 'power2.out'
+                }, 0.1);
             }
         }
     });
