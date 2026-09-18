@@ -2101,8 +2101,16 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     }
 
 /* ==========================================================================
-   Organic Playful Hero Section (Matching Warm Beige Doodle Reference)
+   Empty Hero Section (Pure White Background)
    ========================================================================== */
+
+.empty-white-hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #FFFFFF !important;
+    overflow: hidden;
+}
 
 .playful-hero {
     position: relative;

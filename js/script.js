@@ -188,6 +188,12 @@ function initScrollTransitions() {
     // Storytelling Sections Sequence
     const storySections = [
         {
+            section: document.querySelector('.empty-white-hero'),
+            backdrop: null,
+            content: null,
+            isHero: true
+        },
+        {
             section: document.querySelector('#about'),
             backdrop: document.querySelector('.about-backdrop-art'),
             content: document.querySelector('.about-content-overlay'),
@@ -197,12 +203,6 @@ function initScrollTransitions() {
             section: document.querySelector('#experience'),
             backdrop: document.querySelector('.exp-lake-backdrop'),
             content: document.querySelector('.exp-content-left-container'),
-            isHero: false
-        },
-        {
-            section: document.querySelector('#education'),
-            backdrop: null,
-            content: document.querySelector('.edu-container'),
             isHero: false
         }
     ];
