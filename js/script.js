@@ -190,7 +190,7 @@ function initScrollTransitions() {
         {
             section: document.querySelector('.lockup-hero'),
             backdrop: null,
-            content: document.querySelector('.tall-lockup-container'),
+            content: document.querySelector('.hero-image-wrapper'),
             isHero: true
         },
         {
