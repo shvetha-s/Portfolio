@@ -70,7 +70,7 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
 
 
 
-/* Header — Cloud Rectangle Fixed to Top with Ice-Blue Glassmorphism */
+/* Header — Clean Floating Pill Navigation Bar */
 .story-header {
     position: fixed;
     top: 0;
@@ -83,14 +83,14 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     justify-content: space-between;
     align-items: center;
     z-index: 9999;
-    background: rgba(226, 238, 242, 0.96);
+    background: rgba(243, 241, 237, 0.98) !important;
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 2px solid rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(0, 0, 0, 0.08);
     border-top: none;
     border-radius: 0 0 38px 38px / 0 0 52px 52px;
     box-shadow: 
-        0 12px 32px rgba(160, 195, 208, 0.35),
+        0 10px 28px rgba(0, 0, 0, 0.06),
         0 4px 12px rgba(255, 255, 255, 0.9) inset;
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -2101,8 +2101,115 @@ a, button, [role="button"], input, select, textarea, .project-column-item, .proj
     }
 
 /* ==========================================================================
-   Reference Image Hero Section (Displaying Attached Reference Artwork)
+   2nd Reference Hero Section (PORT O FOLIO Tall O Typography Lockup)
    ========================================================================== */
+
+.lockup-hero {
+    position: relative;
+    width: 100%;
+    min-height: 90vh;
+    background-color: #F3F1ED !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 5% 3.5rem;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.tall-lockup-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tall-lockup-grid {
+    display: grid;
+    grid-template-columns: auto min-content auto;
+    grid-template-rows: auto auto;
+    align-items: center;
+    justify-content: center;
+    column-gap: clamp(0.2rem, 1.8vw, 2.2rem);
+    row-gap: 0;
+    position: relative;
+}
+
+.lockup-p {
+    grid-column: 1;
+    grid-row: 1;
+    text-align: right;
+    justify-self: end;
+}
+
+.lockup-rt {
+    grid-column: 3;
+    grid-row: 1;
+    text-align: left;
+    justify-self: start;
+}
+
+.lockup-f {
+    grid-column: 1;
+    grid-row: 2;
+    text-align: right;
+    justify-self: end;
+}
+
+.lockup-lio {
+    grid-column: 3;
+    grid-row: 2;
+    text-align: left;
+    justify-self: start;
+}
+
+.lockup-giant-o-wrap {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0.7;
+}
+
+.lockup-char {
+    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+    font-weight: 900;
+    font-size: clamp(5.5rem, 17.5vw, 16.5rem);
+    line-height: 0.85;
+    letter-spacing: -0.04em;
+    color: #1A1A1C;
+    user-select: none;
+}
+
+.giant-o-char {
+    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+    font-weight: 900;
+    font-size: clamp(11rem, 34vw, 32rem);
+    transform: scaleY(1.95) scaleX(0.55);
+    display: inline-block;
+    color: #1A1A1C;
+    line-height: 0.7;
+    margin: 0 -0.5vw;
+    user-select: none;
+}
+
+@media (max-width: 768px) {
+    .lockup-hero {
+        padding: 5.5rem 1rem 2.5rem;
+    }
+
+    .lockup-char {
+        font-size: clamp(3.2rem, 16vw, 6.5rem);
+    }
+
+    .giant-o-char {
+        font-size: clamp(6.5rem, 32vw, 13rem);
+    }
+}
 
 .reference-image-hero {
     position: relative;
