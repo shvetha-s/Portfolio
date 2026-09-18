@@ -188,12 +188,6 @@ function initScrollTransitions() {
     // Storytelling Sections Sequence
     const storySections = [
         {
-            section: document.querySelector('.topo-hero'),
-            backdrop: null,
-            content: document.querySelector('.hero-playful-container'),
-            isHero: true
-        },
-        {
             section: document.querySelector('#about'),
             backdrop: document.querySelector('.about-backdrop-art'),
             content: document.querySelector('.about-content-overlay'),
