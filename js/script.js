@@ -185,7 +185,7 @@ function initScrollTransitions() {
         {
             section: document.querySelector('.topo-hero'),
             backdrop: document.querySelector('.hero-forest-backdrop'),
-            content: document.querySelector('.port-lockup-container'),
+            content: document.querySelector('.hero-editorial-container'),
             isHero: true
         },
         {
