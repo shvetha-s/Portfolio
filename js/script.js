@@ -165,7 +165,51 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize GSAP Cinematic Scroll Transitions
     initScrollTransitions();
 
+    // Initialize Kinetic Typography for Swetha in South Indian Languages
+    initKineticTypography();
+
 });
+
+// ═══════════════════════════════════════════════════════════
+//  KINETIC TYPOGRAPHY FOR NAME "SWETHA" IN SOUTH INDIAN LANGUAGES
+// ═══════════════════════════════════════════════════════════
+function initKineticTypography() {
+    const kineticEl = document.getElementById('kineticNameText');
+    if (!kineticEl) return;
+
+    const names = [
+        { text: 'Swetha', font: "'Gaegu', 'Sniglet', 'Caveat', cursive", size: "clamp(2.6rem, 5.5vw, 4.2rem)" },
+        { text: 'ஸ்வேதா', font: "'Mukta Malar', 'Noto Sans Tamil', sans-serif", size: "clamp(2.5rem, 5.2vw, 4.0rem)" },
+        { text: 'శ్వేత', font: "'Mandali', 'Noto Sans Telugu', sans-serif", size: "clamp(2.5rem, 5.2vw, 4.0rem)" },
+        { text: 'ಶ್ವೇತಾ', font: "'Noto Sans Kannada', sans-serif", size: "clamp(2.5rem, 5.2vw, 4.0rem)" },
+        { text: 'ശ്വേത', font: "'Noto Sans Malayalam', sans-serif", size: "clamp(2.5rem, 5.2vw, 4.0rem)" }
+    ];
+
+    let currentIndex = 0;
+
+    setInterval(() => {
+        // Blur out & scale down
+        kineticEl.style.opacity = '0';
+        kineticEl.style.transform = 'rotate(-2deg) scale(0.9)';
+        kineticEl.style.filter = 'blur(6px)';
+
+        setTimeout(() => {
+            currentIndex = (currentIndex + 1) % names.length;
+            const currentObj = names[currentIndex];
+
+            kineticEl.textContent = currentObj.text;
+            kineticEl.style.fontFamily = currentObj.font;
+            if (currentObj.size) {
+                kineticEl.style.fontSize = currentObj.size;
+            }
+
+            // Blur back in & restore scale
+            kineticEl.style.opacity = '1';
+            kineticEl.style.transform = 'rotate(-2deg) scale(1)';
+            kineticEl.style.filter = 'blur(0px)';
+        }, 350);
+    }, 2200);
+}
 
 // ═══════════════════════════════════════════════════════════════
 //  GSAP SCROLLTRIGGER CINEMATIC SECTION TRANSITIONS
