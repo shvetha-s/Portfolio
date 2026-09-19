@@ -1736,12 +1736,14 @@ body {
     top: 0;
     bottom: 0;
     left: 0;
-    width: 640px;
-    max-width: 46vw;
+    width: 520px;
+    max-width: 38vw;
     z-index: 2;
     pointer-events: none;
     display: flex;
     align-items: flex-end;
+    padding: 1.5rem 0 0 1rem;
+    box-sizing: border-box;
     line-height: 0;
 }
 
@@ -1752,8 +1754,7 @@ body {
     display: block;
     object-fit: contain;
     object-position: bottom left;
-    transform: scale(1.75);
-    transform-origin: bottom left;
+    transform: none;
 }
 
 .footer-inner-container {
@@ -1770,7 +1771,7 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding-left: 520px;
+    padding-left: 420px;
 }
 
 .footer-brand-block {
@@ -1853,7 +1854,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding-top: 1.8rem;
-    padding-left: 520px;
+    padding-left: 420px;
     border-top: none;
 }
 
