@@ -212,8 +212,27 @@ body {
     padding: 2rem 1.5rem;
 }
 
-.hero-ambient-bg {
-    display: none !important;
+.hero-backdrop-art {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.hero-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right center;
+    opacity: 0.95;
+    mix-blend-mode: multiply;
 }
 
 .ambient-orb {
