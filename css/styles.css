@@ -5,11 +5,11 @@
     --text-secondary: #4A4A50;
     --accent: #FF4D00;
 
-    --font-heading: 'Montserrat', 'Plus Jakarta Sans', sans-serif;
-    --font-body: 'Montserrat', sans-serif;
-    --font-sans: 'Montserrat', sans-serif;
-    --font-story: 'Montserrat', sans-serif;
-    --font-display: 'Montserrat', sans-serif;
+    --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-sans: 'Inter', sans-serif;
+    --font-story: 'Inter', sans-serif;
+    --font-display: 'Inter', sans-serif;
 
     --transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -532,8 +532,8 @@ body {
 }
 
 #about .massive-title {
-    font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
-    font-size: clamp(2.8rem, 5.2vw, 4.6rem);
+    font-family: var(--font-heading);
+    font-size: clamp(2.6rem, 4.8vw, 4.2rem);
     font-weight: 700;
     letter-spacing: -0.02em;
     color: #1C1C1F;
@@ -548,12 +548,12 @@ body {
 
 .about-storybook-lead,
 .about-storybook-body {
-    font-family: 'Cormorant Garamond', 'Plus Jakarta Sans', Georgia, serif;
-    font-size: clamp(1.25rem, 1.6vw, 1.48rem);
-    font-weight: 500;
-    line-height: 1.85;
+    font-family: var(--font-body);
+    font-size: clamp(1.1rem, 1.45vw, 1.35rem);
+    font-weight: 400;
+    line-height: 1.8;
     color: #2B2B32;
-    letter-spacing: 0.01em;
+    letter-spacing: -0.01em;
 }
 
 .about-storybook-lead strong,
@@ -564,11 +564,11 @@ body {
 
 .storybook-dropcap {
     float: left;
-    font-family: 'Playfair Display', 'Cormorant Garamond', serif;
-    font-size: clamp(4.2rem, 5.6vw, 5.4rem);
-    line-height: 0.78;
-    padding-top: 6px;
-    padding-right: 16px;
+    font-family: var(--font-heading);
+    font-size: clamp(3.8rem, 5vw, 4.8rem);
+    line-height: 0.8;
+    padding-top: 4px;
+    padding-right: 12px;
     padding-bottom: 2px;
     color: var(--accent);
     font-weight: 800;
