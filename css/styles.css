@@ -205,11 +205,11 @@ body {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     background-color: #FFFFFF !important;
     background-image: none !important;
     overflow: hidden;
-    padding: 1.5rem 1.5rem;
+    padding: 2rem 5vw;
 }
 
 .hero-backdrop-art {
@@ -240,13 +240,13 @@ body {
     z-index: 5;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    text-align: center;
-    max-width: 1360px;
+    text-align: left;
+    max-width: 60vw;
     width: 100%;
-    margin: 0 auto;
-    padding: 0 1.5rem;
+    margin: 0;
+    padding: 0;
 }
 
 /* Top Pill Badge */
@@ -296,9 +296,9 @@ body {
 .hero-playful-lockup {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    margin: 0.5rem 0 1.8rem;
+    margin: 0.5rem 0 1.5rem;
     user-select: none;
     width: 100%;
 }
@@ -312,18 +312,18 @@ body {
 
 .hero-line--top {
     justify-content: flex-start;
-    transform: translateX(-4rem);
+    transform: translateX(3rem);
 }
 
 .hero-line--bottom {
-    justify-content: flex-end;
-    transform: translateX(3.5rem);
+    justify-content: flex-start;
+    transform: translateX(0);
     margin-top: -0.6rem;
 }
 
 .word-port {
     font-family: 'Gaegu', 'Mali', 'Sniglet', cursive;
-    font-size: clamp(4.8rem, 16vw, 13.5rem);
+    font-size: clamp(4.2rem, 13vw, 11rem);
     font-weight: 700;
     color: var(--text-primary);
     letter-spacing: -0.02em;
@@ -337,7 +337,7 @@ body {
 
 .word-folio {
     font-family: 'Fredoka', 'Outfit', 'Syne', sans-serif;
-    font-size: clamp(5.6rem, 18.5vw, 16rem);
+    font-size: clamp(5rem, 15vw, 13.5rem);
     font-weight: 800;
     color: var(--text-primary);
     letter-spacing: -0.04em;
@@ -352,7 +352,7 @@ body {
 
 .year-chip {
     font-family: 'Gaegu', 'Sniglet', cursive;
-    font-size: clamp(1.8rem, 4.2vw, 3.4rem);
+    font-size: clamp(1.6rem, 3.5vw, 2.8rem);
     font-weight: 700;
     color: var(--text-primary);
     transform: translateY(-1.2rem) rotate(6deg);
@@ -360,22 +360,40 @@ body {
 
 .sub-label-chip {
     font-family: 'Fredoka', 'Outfit', sans-serif;
-    font-size: clamp(1.35rem, 3.2vw, 2.5rem);
+    font-size: clamp(1.2rem, 2.8vw, 2.2rem);
     font-weight: 800;
     color: var(--text-primary);
     transform: translateY(0.2rem) rotate(-4deg);
     line-height: 1.05;
-    max-width: 160px;
+    max-width: 140px;
     text-align: right;
 }
 
 @media (max-width: 768px) {
+    .designer-hero-section {
+        justify-content: center;
+        padding: 2rem 1.5rem;
+    }
+    .designer-hero-container {
+        align-items: center;
+        text-align: center;
+        max-width: 100%;
+    }
+    .hero-playful-lockup {
+        align-items: center;
+    }
     .hero-line--top {
-        transform: translateX(-1.5rem);
+        transform: translateX(-1rem);
     }
     .hero-line--bottom {
-        transform: translateX(1.5rem);
+        transform: translateX(1rem);
         margin-top: -0.3rem;
+    }
+    .hero-subtext {
+        text-align: center;
+    }
+    .hero-scroll-indicator {
+        align-self: center;
     }
 }
 
@@ -387,13 +405,14 @@ body {
 /* Subtitle Tagline */
 .hero-subtext {
     font-family: var(--font-body);
-    font-size: clamp(1.3rem, 2.6vw, 1.75rem);
+    font-size: clamp(1.2rem, 2.3vw, 1.55rem);
     font-weight: 500;
     color: var(--text-secondary);
-    max-width: 740px;
+    max-width: 580px;
     line-height: 1.5;
     margin-bottom: 2rem;
     letter-spacing: -0.01em;
+    text-align: left;
 }
 
 /* Scroll Prompt Indicator */
@@ -413,6 +432,7 @@ body {
     background: rgba(255, 255, 255, 0.65);
     border: 1px solid rgba(0, 0, 0, 0.06);
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    align-self: flex-start;
 }
 
 .hero-scroll-indicator:hover {
