@@ -209,7 +209,7 @@ body {
     background-color: #FFFFFF !important;
     background-image: none !important;
     overflow: hidden;
-    padding: 2rem 5vw;
+    padding: 2rem 3vw;
 }
 
 .hero-backdrop-art {
@@ -243,9 +243,9 @@ body {
     align-items: flex-start;
     justify-content: center;
     text-align: left;
-    max-width: 60vw;
+    max-width: 52vw;
     width: 100%;
-    margin: 0;
+    margin: 0 0 0 10vw;
     padding: 0;
 }
 
@@ -312,7 +312,7 @@ body {
 
 .hero-line--top {
     justify-content: flex-start;
-    transform: translateX(3rem);
+    transform: translateX(1rem);
 }
 
 .hero-line--bottom {
@@ -323,7 +323,7 @@ body {
 
 .word-port {
     font-family: 'Gaegu', 'Mali', 'Sniglet', cursive;
-    font-size: clamp(4.2rem, 13vw, 11rem);
+    font-size: clamp(3.8rem, 11vw, 9.5rem);
     font-weight: 700;
     color: var(--text-primary);
     letter-spacing: -0.02em;
@@ -337,7 +337,7 @@ body {
 
 .word-folio {
     font-family: 'Fredoka', 'Outfit', 'Syne', sans-serif;
-    font-size: clamp(5rem, 15vw, 13.5rem);
+    font-size: clamp(4.5rem, 13vw, 11.5rem);
     font-weight: 800;
     color: var(--text-primary);
     letter-spacing: -0.04em;
@@ -352,7 +352,7 @@ body {
 
 .year-chip {
     font-family: 'Gaegu', 'Sniglet', cursive;
-    font-size: clamp(1.6rem, 3.5vw, 2.8rem);
+    font-size: clamp(1.4rem, 3vw, 2.5rem);
     font-weight: 700;
     color: var(--text-primary);
     transform: translateY(-1.2rem) rotate(6deg);
@@ -360,12 +360,12 @@ body {
 
 .sub-label-chip {
     font-family: 'Fredoka', 'Outfit', sans-serif;
-    font-size: clamp(1.2rem, 2.8vw, 2.2rem);
+    font-size: clamp(1.1rem, 2.4vw, 2rem);
     font-weight: 800;
     color: var(--text-primary);
     transform: translateY(0.2rem) rotate(-4deg);
     line-height: 1.05;
-    max-width: 140px;
+    max-width: 130px;
     text-align: right;
 }
 
@@ -378,6 +378,7 @@ body {
         align-items: center;
         text-align: center;
         max-width: 100%;
+        margin: 0;
     }
     .hero-playful-lockup {
         align-items: center;
@@ -405,10 +406,10 @@ body {
 /* Subtitle Tagline */
 .hero-subtext {
     font-family: var(--font-body);
-    font-size: clamp(1.2rem, 2.3vw, 1.55rem);
+    font-size: clamp(1.15rem, 2.1vw, 1.45rem);
     font-weight: 500;
     color: var(--text-secondary);
-    max-width: 580px;
+    max-width: 500px;
     line-height: 1.5;
     margin-bottom: 2rem;
     letter-spacing: -0.01em;
