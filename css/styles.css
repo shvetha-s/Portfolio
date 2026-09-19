@@ -295,39 +295,91 @@ body {
     color: var(--text-primary);
 }
 
-/* Centered PORTFOLIO Typography Headline */
-.hero-center-lockup {
-    width: 100%;
+/* Playful Staggered PORT FOLIO Headline (Attached Image Font Match) */
+.hero-playful-lockup {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     margin: 0.5rem 0 1.8rem;
-}
-
-.hero-main-title {
-    font-family: 'Cinzel Decorative', 'Syne', 'Cormorant Garamond', serif;
-    font-size: clamp(3.2rem, 11vw, 10.5rem);
-    font-weight: 900;
-    line-height: 0.95;
-    letter-spacing: 0.06em;
-    color: var(--text-primary);
-    text-transform: uppercase;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
     user-select: none;
+    width: 100%;
 }
 
-.hero-main-title .char {
-    display: inline-block;
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), color 0.4s ease;
-    will-change: transform;
+.hero-line {
+    display: flex;
+    align-items: baseline;
+    gap: 1.5rem;
+    line-height: 0.88;
 }
 
-.hero-main-title .char:hover {
-    transform: translateY(-8px) scale(1.05);
+.hero-line--top {
+    justify-content: flex-start;
+    transform: translateX(-4rem);
+}
+
+.hero-line--bottom {
+    justify-content: flex-end;
+    transform: translateX(3.5rem);
+    margin-top: -0.6rem;
+}
+
+.word-port {
+    font-family: 'Gaegu', 'Mali', 'Sniglet', cursive;
+    font-size: clamp(3.8rem, 13vw, 11rem);
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.word-port:hover {
+    transform: rotate(-3deg) scale(1.03);
     color: var(--accent);
+}
+
+.word-folio {
+    font-family: 'Fredoka', 'Outfit', 'Syne', sans-serif;
+    font-size: clamp(4.5rem, 15vw, 13rem);
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.word-folio:hover {
+    transform: rotate(2deg) scale(1.03);
+    color: var(--accent);
+}
+
+.year-chip {
+    font-family: 'Gaegu', 'Sniglet', cursive;
+    font-size: clamp(1.4rem, 3.5vw, 2.8rem);
+    font-weight: 700;
+    color: var(--text-primary);
+    transform: translateY(-1.2rem) rotate(6deg);
+}
+
+.sub-label-chip {
+    font-family: 'Fredoka', 'Outfit', sans-serif;
+    font-size: clamp(1.1rem, 2.6vw, 2rem);
+    font-weight: 800;
+    color: var(--text-primary);
+    transform: translateY(0.2rem) rotate(-4deg);
+    line-height: 1.05;
+    max-width: 130px;
+    text-align: right;
+}
+
+@media (max-width: 768px) {
+    .hero-line--top {
+        transform: translateX(-1.5rem);
+    }
+    .hero-line--bottom {
+        transform: translateX(1.5rem);
+        margin-top: -0.3rem;
+    }
 }
 
 .hero-main-title .char--accent {
