@@ -224,18 +224,18 @@ body {
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
-    padding-right: 6vw;
+    padding-right: 5vw;
+    padding-bottom: 1.5rem;
 }
 
 .hero-bg-img {
-    height: 96vh;
+    height: 76vh;
     width: auto;
-    max-width: 75vw;
+    max-width: 50vw;
     object-fit: contain;
     object-position: bottom right;
     opacity: 0.98;
-    transform: translateY(14vh) scale(1.35);
-    transform-origin: bottom right;
+    transform: none;
 }
 
 .designer-hero-container {
