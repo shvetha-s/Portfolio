@@ -5,11 +5,11 @@
     --text-secondary: #4A4A50;
     --accent: #FF4D00;
 
-    --font-heading: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
-    --font-body: 'Cormorant Garamond', Georgia, serif;
-    --font-sans: 'Plus Jakarta Sans', 'Inter', sans-serif;
-    --font-story: 'Fondamento', 'Almendra', cursive;
-    --font-display: 'Cinzel Decorative', 'Cormorant Garamond', serif;
+    --font-heading: 'Montserrat', 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Montserrat', sans-serif;
+    --font-sans: 'Montserrat', sans-serif;
+    --font-story: 'Montserrat', sans-serif;
+    --font-display: 'Montserrat', sans-serif;
 
     --transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
