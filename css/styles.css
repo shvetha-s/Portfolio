@@ -234,7 +234,7 @@ body {
     object-fit: contain;
     object-position: bottom right;
     opacity: 0.98;
-    transform: scale(1.35);
+    transform: translateY(14vh) scale(1.35);
     transform-origin: bottom right;
 }
 
