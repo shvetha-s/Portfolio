@@ -1717,9 +1717,10 @@ body {
 .storybook-footer {
     position: relative;
     width: 100%;
+    min-height: 380px;
     background-color: #FFFFFF !important;
     color: var(--text-primary);
-    padding: 5rem 6% 3.5rem;
+    padding: 4.5rem 6% 3.5rem;
     box-sizing: border-box;
     overflow: hidden;
     border-top: 1px solid rgba(0, 0, 0, 0.08);
@@ -1736,13 +1737,13 @@ body {
     top: 0;
     bottom: 0;
     left: 0;
-    width: 520px;
-    max-width: 38vw;
+    width: 600px;
+    max-width: 44vw;
     z-index: 2;
     pointer-events: none;
     display: flex;
     align-items: flex-end;
-    padding: 1.5rem 0 0 1rem;
+    padding: 0;
     box-sizing: border-box;
     line-height: 0;
 }
@@ -1771,7 +1772,7 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding-left: 420px;
+    padding-left: 520px;
 }
 
 .footer-brand-block {
@@ -1854,7 +1855,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding-top: 1.8rem;
-    padding-left: 420px;
+    padding-left: 520px;
     border-top: none;
 }
 
