@@ -247,9 +247,9 @@ body {
     align-items: flex-start;
     justify-content: center;
     text-align: left;
-    max-width: 50vw;
+    max-width: 58vw;
     width: 100%;
-    margin: 2.5rem 0 0 11vw;
+    margin: 0.5rem 0 0 6vw;
     padding: 0;
 }
 
@@ -310,27 +310,27 @@ body {
 .hero-line {
     display: flex;
     align-items: baseline;
-    gap: 1.2rem;
-    line-height: 0.85;
+    gap: 1.5rem;
+    line-height: 0.88;
 }
 
 .hero-line--top {
     justify-content: flex-start;
-    transform: translateX(5.2rem);
+    transform: translateX(4.2rem);
 }
 
 .hero-line--bottom {
     justify-content: flex-start;
     transform: translateX(0);
-    margin-top: -0.4rem;
+    margin-top: -0.5rem;
 }
 
 .word-port {
     font-family: 'Gaegu', 'Mali', 'Sniglet', cursive;
-    font-size: clamp(3.2rem, 9.5vw, 7.8rem);
+    font-size: clamp(4.6rem, 13.5vw, 11.5rem);
     font-weight: 700;
     color: var(--text-primary);
-    letter-spacing: -0.02em;
+    letter-spacing: 0.08em;
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
@@ -341,10 +341,10 @@ body {
 
 .word-folio {
     font-family: 'Fredoka', 'Outfit', 'Syne', sans-serif;
-    font-size: clamp(4.2rem, 12.5vw, 10.5rem);
+    font-size: clamp(5.6rem, 16.5vw, 14.5rem);
     font-weight: 800;
     color: var(--text-primary);
-    letter-spacing: -0.04em;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
     transition: transform 0.3s ease, color 0.3s ease;
 }
@@ -356,20 +356,22 @@ body {
 
 .year-chip {
     font-family: 'Gaegu', 'Sniglet', cursive;
-    font-size: clamp(1.3rem, 2.8vw, 2.2rem);
+    font-size: clamp(1.8rem, 3.8vw, 3rem);
     font-weight: 700;
     color: var(--text-primary);
-    transform: translateY(-1rem) rotate(6deg);
+    letter-spacing: 0.08em;
+    transform: translateY(-1.2rem) rotate(6deg);
 }
 
 .sub-label-chip {
     font-family: 'Fredoka', 'Outfit', sans-serif;
-    font-size: clamp(1.05rem, 2.2vw, 1.85rem);
+    font-size: clamp(1.25rem, 2.6vw, 2.3rem);
     font-weight: 800;
     color: var(--text-primary);
+    letter-spacing: 0.04em;
     transform: translateY(0.2rem) rotate(-4deg);
     line-height: 1.05;
-    max-width: 125px;
+    max-width: 150px;
     text-align: right;
 }
 
@@ -439,7 +441,7 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.06);
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     align-self: flex-start;
-    margin-left: 3.2rem;
+    margin-left: 0;
 }
 
 .hero-scroll-indicator:hover {
