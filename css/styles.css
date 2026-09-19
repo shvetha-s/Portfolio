@@ -1718,10 +1718,10 @@ body {
 .storybook-footer {
     position: relative;
     width: 100%;
-    min-height: 380px;
+    min-height: 480px;
     background-color: #FFFFFF !important;
     color: var(--text-primary);
-    padding: 4.5rem 6% 3.5rem;
+    padding: 6.5rem 6% 4.5rem;
     box-sizing: border-box;
     overflow: hidden;
     border-top: 1px solid rgba(0, 0, 0, 0.08);
@@ -1738,13 +1738,13 @@ body {
     top: 0;
     bottom: 0;
     left: 0;
-    width: 600px;
-    max-width: 44vw;
+    width: 780px;
+    max-width: 52vw;
     z-index: 2;
     pointer-events: none;
     display: flex;
     align-items: flex-end;
-    padding: 0;
+    padding: 0.5rem 0 0 0;
     box-sizing: border-box;
     line-height: 0;
 }
@@ -1756,7 +1756,8 @@ body {
     display: block;
     object-fit: contain;
     object-position: bottom left;
-    transform: none;
+    transform: scale(1.32);
+    transform-origin: bottom left;
 }
 
 .footer-inner-container {
@@ -1773,7 +1774,7 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding-left: 520px;
+    padding-left: 620px;
 }
 
 .footer-brand-block {
@@ -1856,7 +1857,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding-top: 1.8rem;
-    padding-left: 520px;
+    padding-left: 620px;
     border-top: none;
 }
 
