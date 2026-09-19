@@ -224,6 +224,7 @@ body {
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
+    padding-right: 14vw;
 }
 
 .hero-bg-img {
@@ -243,9 +244,9 @@ body {
     align-items: flex-start;
     justify-content: center;
     text-align: left;
-    max-width: 60vw;
+    max-width: 55vw;
     width: 100%;
-    margin: 0.5rem 0 0 6vw;
+    margin: 0.5rem 0 0 7vw;
     padding: 0;
 }
 
