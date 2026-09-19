@@ -297,5 +297,52 @@ function initScrollTransitions() {
     window.addEventListener('load', () => {
         ScrollTrigger.refresh();
     });
-}
+
+    // ═══════════════════════════════════════════════════════════
+    //  INTERACTIVE CASE STUDY CARDS (3D Tilt & Category Filtering)
+    // ═══════════════════════════════════════════════════════════
+    const caseStudyCards = document.querySelectorAll('.work-masonry-card');
+    const filterBtns = document.querySelectorAll('.work-filter-btn');
+
+    // 1. 3D Magnetic Parallax Tilt on Mouse Move
+    caseStudyCards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            // Calculate tilt angle (max 8 deg)
+            const rotateX = ((y - centerY) / centerY) * -8;
+            const rotateY = ((x - centerX) / centerX) * 8;
+            
+            card.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.03, 1.03, 1.03)`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+        });
+    });
+
+    // 2. Interactive Category Filter Pills
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filter = btn.getAttribute('data-filter');
+
+            caseStudyCards.forEach(card => {
+                const category = card.getAttribute('data-category');
+                if (filter === 'all' || category === filter) {
+                    card.classList.remove('is-filtered-out');
+                } else {
+                    card.classList.add('is-filtered-out');
+                }
+            });
+        });
+    });
+});
 

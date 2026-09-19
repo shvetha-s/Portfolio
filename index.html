@@ -227,40 +227,71 @@
 
             <div class="work-section-split" style="display: grid !important; grid-template-columns: 32% 64% !important; gap: 4% !important; align-items: flex-start !important;">
                 
-                <!-- Left Column: Section Title & Subtitle -->
+                <!-- Left Column: Section Title & Subtitle + Category Filter Pills -->
                 <div class="projects-header-area" style="position: sticky !important; top: 6rem !important; margin-bottom: 0 !important;">
                     <div class="projects-title-row">
                         <h2 class="massive-title" style="font-family: 'Inter', sans-serif !important; font-size: clamp(2.5rem, 5vw, 3.8rem) !important; font-weight: 700 !important; color: #1C1C1F !important; letter-spacing: -0.02em !important; line-height: 1.1 !important; margin: 0 !important;">Work</h2>
                     </div>
-                    <p class="projects-header-subtitle" style="font-family: 'Inter', sans-serif !important; font-size: 1.1rem !important; font-weight: 500 !important; color: #5A5A60 !important; margin-top: 0.8rem !important; line-height: 1.5 !important;">Selected UI/UX Case Studies, Research &amp; Interactive Product Design</p>
+                    <p class="projects-header-subtitle" style="font-family: 'Inter', sans-serif !important; font-size: 1.05rem !important; font-weight: 500 !important; color: #5A5A60 !important; margin-top: 0.8rem !important; line-height: 1.5 !important;">Selected UI/UX Case Studies, Research &amp; Interactive Product Design</p>
+
+                    <!-- Interactive Category Filter Pills -->
+                    <div class="work-filter-pills" style="display: flex !important; flex-wrap: wrap !important; gap: 0.55rem !important; margin-top: 1.8rem !important;">
+                        <button class="work-filter-btn active" data-filter="all">All (4)</button>
+                        <button class="work-filter-btn" data-filter="mobile">Mobile Apps</button>
+                        <button class="work-filter-btn" data-filter="web">Web Platforms</button>
+                    </div>
                 </div>
 
-                <!-- Right Column: Clean Even 2x2 Case Studies Grid (Matching the red box diagram) -->
+                <!-- Right Column: Interactive 2x2 Case Studies Grid -->
                 <div class="work-editorial-right" style="width: 100% !important; background-color: transparent !important; overflow: hidden !important; padding: 0.5rem 0 !important;">
                     <div class="work-even-grid" style="display: grid !important; grid-template-columns: repeat(2, 1fr) !important; gap: 1.5rem !important; width: 100% !important; align-items: stretch !important;">
                         
                         <!-- Card 1: Butterfingers -->
-                        <a href="butterfingers.html" class="work-masonry-card" aria-label="Butterfingers Mobile App" style="position: relative !important; border-radius: 16px !important; overflow: hidden !important; display: block !important; box-shadow: 0 8px 24px rgba(0,0,0,0.08) !important; transition: transform 0.3s ease, box-shadow 0.3s ease !important;">
-                            <img src="assets/images/bake.jpg" alt="Butterfingers App" style="width: 100% !important; aspect-ratio: 16 / 10 !important; object-fit: cover !important; display: block !important;">
-                            <div class="work-masonry-badge" style="position: absolute !important; bottom: 0.8rem !important; left: 0.8rem !important; background: rgba(28,28,31,0.88) !important; color: #FFF !important; font-family: 'Inter', sans-serif !important; font-size: 0.85rem !important; font-weight: 600 !important; padding: 0.35rem 0.85rem !important; border-radius: 12px !important; backdrop-filter: blur(8px) !important;">Butterfingers</div>
+                        <a href="butterfingers.html" class="work-masonry-card" data-category="mobile" aria-label="Butterfingers Mobile App">
+                            <div class="work-card-media">
+                                <img src="assets/images/bake.jpg" alt="Butterfingers App">
+                                <div class="work-card-overlay"></div>
+                            </div>
+                            <div class="work-card-info-bar">
+                                <span class="work-masonry-badge">Butterfingers</span>
+                                <span class="work-card-cta">View Story &rarr;</span>
+                            </div>
                         </a>
 
                         <!-- Card 2: Neighbour to Neighbour -->
-                        <a href="neighbour-to-neighbour.html" class="work-masonry-card" aria-label="Neighbour to Neighbour Tool Lending" style="position: relative !important; border-radius: 16px !important; overflow: hidden !important; display: block !important; box-shadow: 0 8px 24px rgba(0,0,0,0.08) !important; transition: transform 0.3s ease, box-shadow 0.3s ease !important;">
-                            <img src="assets/images/tool.jpg" alt="Neighbour to Neighbour App" style="width: 100% !important; aspect-ratio: 16 / 10 !important; object-fit: cover !important; display: block !important;">
-                            <div class="work-masonry-badge" style="position: absolute !important; bottom: 0.8rem !important; left: 0.8rem !important; background: rgba(28,28,31,0.88) !important; color: #FFF !important; font-family: 'Inter', sans-serif !important; font-size: 0.85rem !important; font-weight: 600 !important; padding: 0.35rem 0.85rem !important; border-radius: 12px !important; backdrop-filter: blur(8px) !important;">Neighbour to Neighbour</div>
+                        <a href="neighbour-to-neighbour.html" class="work-masonry-card" data-category="mobile" aria-label="Neighbour to Neighbour Tool Lending">
+                            <div class="work-card-media">
+                                <img src="assets/images/tool.jpg" alt="Neighbour to Neighbour App">
+                                <div class="work-card-overlay"></div>
+                            </div>
+                            <div class="work-card-info-bar">
+                                <span class="work-masonry-badge">Neighbour to Neighbour</span>
+                                <span class="work-card-cta">View Story &rarr;</span>
+                            </div>
                         </a>
 
                         <!-- Card 3: Fresh Track -->
-                        <a href="freshtrack-case-study.html" class="work-masonry-card" aria-label="Fresh Track Food Waste App" style="position: relative !important; border-radius: 16px !important; overflow: hidden !important; display: block !important; box-shadow: 0 8px 24px rgba(0,0,0,0.08) !important; transition: transform 0.3s ease, box-shadow 0.3s ease !important;">
-                            <img src="assets/images/fresh.jpg" alt="Fresh Track App" style="width: 100% !important; aspect-ratio: 16 / 10 !important; object-fit: cover !important; display: block !important;">
-                            <div class="work-masonry-badge" style="position: absolute !important; bottom: 0.8rem !important; left: 0.8rem !important; background: rgba(28,28,31,0.88) !important; color: #FFF !important; font-family: 'Inter', sans-serif !important; font-size: 0.85rem !important; font-weight: 600 !important; padding: 0.35rem 0.85rem !important; border-radius: 12px !important; backdrop-filter: blur(8px) !important;">Fresh Track</div>
+                        <a href="freshtrack-case-study.html" class="work-masonry-card" data-category="mobile" aria-label="Fresh Track Food Waste App">
+                            <div class="work-card-media">
+                                <img src="assets/images/fresh.jpg" alt="Fresh Track App">
+                                <div class="work-card-overlay"></div>
+                            </div>
+                            <div class="work-card-info-bar">
+                                <span class="work-masonry-badge">Fresh Track</span>
+                                <span class="work-card-cta">View Story &rarr;</span>
+                            </div>
                         </a>
 
                         <!-- Card 4: Toy Traders -->
-                        <a href="toy-traders.html" class="work-masonry-card" aria-label="Toy Traders Web Platform" style="position: relative !important; border-radius: 16px !important; overflow: hidden !important; display: block !important; box-shadow: 0 8px 24px rgba(0,0,0,0.08) !important; transition: transform 0.3s ease, box-shadow 0.3s ease !important;">
-                            <img src="assets/images/toy.jpg" alt="Toy Traders Platform" style="width: 100% !important; aspect-ratio: 16 / 10 !important; object-fit: cover !important; display: block !important;">
-                            <div class="work-masonry-badge" style="position: absolute !important; bottom: 0.8rem !important; left: 0.8rem !important; background: rgba(28,28,31,0.88) !important; color: #FFF !important; font-family: 'Inter', sans-serif !important; font-size: 0.85rem !important; font-weight: 600 !important; padding: 0.35rem 0.85rem !important; border-radius: 12px !important; backdrop-filter: blur(8px) !important;">Toy Traders</div>
+                        <a href="toy-traders.html" class="work-masonry-card" data-category="web" aria-label="Toy Traders Web Platform">
+                            <div class="work-card-media">
+                                <img src="assets/images/toy.jpg" alt="Toy Traders Platform">
+                                <div class="work-card-overlay"></div>
+                            </div>
+                            <div class="work-card-info-bar">
+                                <span class="work-masonry-badge">Toy Traders</span>
+                                <span class="work-card-cta">View Story &rarr;</span>
+                            </div>
                         </a>
 
                     </div>
