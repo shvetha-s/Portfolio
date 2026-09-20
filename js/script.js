@@ -178,11 +178,11 @@ function initKineticTypography() {
     if (!kineticEl) return;
 
     const names = [
-        { text: 'Swetha', font: "'Gaegu', 'Sniglet', 'Caveat', cursive", size: "clamp(2.6rem, 5.5vw, 4.2rem)" },
-        { text: 'ஸ்வேதா', font: "'Mukta Malar', 'Noto Sans Tamil', sans-serif", size: "clamp(2.5rem, 5.2vw, 4.0rem)" },
-        { text: 'శ్వేత', font: "'Mandali', 'Noto Sans Telugu', sans-serif", size: "clamp(2.5rem, 5.2vw, 4.0rem)" },
-        { text: 'ಶ್ವೇತಾ', font: "'Noto Sans Kannada', sans-serif", size: "clamp(2.5rem, 5.2vw, 4.0rem)" },
-        { text: 'ശ്വേത', font: "'Noto Sans Malayalam', sans-serif", size: "clamp(2.5rem, 5.2vw, 4.0rem)" }
+        { text: 'Swetha', font: "'Gaegu', 'Sniglet', 'Caveat', cursive", size: "clamp(2.4rem, 5vw, 3.8rem)" },
+        { text: 'ஸ்வேதா', font: "'Mukta Malar', 'Noto Sans Tamil', sans-serif", size: "clamp(2.4rem, 5vw, 3.8rem)" },
+        { text: 'శ్వేత', font: "'Mandali', 'Noto Sans Telugu', sans-serif", size: "clamp(2.4rem, 5vw, 3.8rem)" },
+        { text: 'ಶ್ವೇತಾ', font: "'Noto Sans Kannada', sans-serif", size: "clamp(2.4rem, 5vw, 3.8rem)" },
+        { text: 'ശ്വേത', font: "'Noto Sans Malayalam', sans-serif", size: "clamp(2.4rem, 5vw, 3.8rem)" }
     ];
 
     let currentIndex = 0;
