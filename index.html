@@ -168,16 +168,23 @@
             </div>
         </section>
 
-        <!-- Chapter: Skills -->
-        <section id="skills" class="resume-plain-section" style="background-color: #FFFFFF !important; background: #FFFFFF !important; padding: 5rem 6% !important; border-bottom: 1px solid #EAEAEA !important;">
-            <div class="resume-section-container" style="width: 56% !important; max-width: 850px !important; margin-left: auto !important; margin-right: 6% !important;">
+        <!-- Chapter: Skills (Video Background Spread) -->
+        <section id="skills" class="resume-plain-section story-chapter" style="position: relative !important; padding: 5rem 6% !important; overflow: hidden !important; border-bottom: 1px solid #EAEAEA !important;">
+            
+            <!-- Video Background Container -->
+            <div class="skills-video-backdrop" style="position: absolute !important; top: 0 !important; left: 0 !important; width: 100% !important; height: 100% !important; z-index: 1 !important; pointer-events: none !important; overflow: hidden !important;">
+                <video src="assets/skill.mp4" autoplay loop muted playsinline style="width: 100% !important; height: 100% !important; object-fit: cover !important; object-position: center !important; display: block !important;"></video>
+            </div>
+
+            <!-- Content Overlay (Elevated above video) -->
+            <div class="resume-section-container" style="position: relative !important; z-index: 2 !important; width: 56% !important; max-width: 850px !important; margin-left: auto !important; margin-right: 6% !important;">
                 <div class="resume-header-lockup" style="margin-bottom: 2.8rem !important; text-align: left !important;">
                     <h2 class="massive-title" style="font-family: 'Inter', sans-serif !important; font-size: clamp(2.5rem, 5vw, 3.8rem) !important; font-weight: 700 !important; color: #1C1C1F !important; letter-spacing: -0.02em !important; line-height: 1.1 !important; margin: 0 !important; text-align: left !important;">Skills</h2>
                 </div>
 
                 <div class="skills-categories-grid" style="display: grid !important; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important; gap: 1.8rem !important; width: 100% !important;">
                     <!-- Category 1: Transferable & Soft Skills -->
-                    <div class="skill-category-card" style="background-color: #F9F9FB !important; border: 1px solid #E5E5EA !important; border-radius: 20px !important; padding: 2.2rem 2rem !important; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03) !important; display: flex !important; flex-direction: column !important; box-sizing: border-box !important;">
+                    <div class="skill-category-card" style="background: rgba(255, 255, 255, 0.94) !important; backdrop-filter: blur(12px) !important; -webkit-backdrop-filter: blur(12px) !important; border: 1px solid rgba(229, 229, 234, 0.8) !important; border-radius: 20px !important; padding: 2.2rem 2rem !important; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08) !important; display: flex !important; flex-direction: column !important; box-sizing: border-box !important;">
                         <div class="skill-cat-header" style="margin-bottom: 1.5rem !important; padding-bottom: 1rem !important; border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;">
                             <h3 class="skill-cat-title" style="font-family: 'Inter', sans-serif !important; font-size: 1.35rem !important; font-weight: 700 !important; color: #1C1C1F !important; margin: 0 !important;">Transferable Skills</h3>
                         </div>
@@ -193,7 +200,7 @@
                     </div>
 
                     <!-- Category 2: UX Process & Methodology -->
-                    <div class="skill-category-card" style="background-color: #F9F9FB !important; border: 1px solid #E5E5EA !important; border-radius: 20px !important; padding: 2.2rem 2rem !important; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03) !important; display: flex !important; flex-direction: column !important; box-sizing: border-box !important;">
+                    <div class="skill-category-card" style="background: rgba(255, 255, 255, 0.94) !important; backdrop-filter: blur(12px) !important; -webkit-backdrop-filter: blur(12px) !important; border: 1px solid rgba(229, 229, 234, 0.8) !important; border-radius: 20px !important; padding: 2.2rem 2rem !important; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08) !important; display: flex !important; flex-direction: column !important; box-sizing: border-box !important;">
                         <div class="skill-cat-header" style="margin-bottom: 1.5rem !important; padding-bottom: 1rem !important; border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;">
                             <h3 class="skill-cat-title" style="font-family: 'Inter', sans-serif !important; font-size: 1.35rem !important; font-weight: 700 !important; color: #1C1C1F !important; margin: 0 !important;">UX Process</h3>
                         </div>
@@ -210,7 +217,7 @@
                     </div>
 
                     <!-- Category 3: Technical Tools -->
-                    <div class="skill-category-card" style="background-color: #F9F9FB !important; border: 1px solid #E5E5EA !important; border-radius: 20px !important; padding: 2.2rem 2rem !important; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03) !important; display: flex !important; flex-direction: column !important; box-sizing: border-box !important;">
+                    <div class="skill-category-card" style="background: rgba(255, 255, 255, 0.94) !important; backdrop-filter: blur(12px) !important; -webkit-backdrop-filter: blur(12px) !important; border: 1px solid rgba(229, 229, 234, 0.8) !important; border-radius: 20px !important; padding: 2.2rem 2rem !important; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08) !important; display: flex !important; flex-direction: column !important; box-sizing: border-box !important;">
                         <div class="skill-cat-header" style="margin-bottom: 1.5rem !important; padding-bottom: 1rem !important; border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;">
                             <h3 class="skill-cat-title" style="font-family: 'Inter', sans-serif !important; font-size: 1.35rem !important; font-weight: 700 !important; color: #1C1C1F !important; margin: 0 !important;">Technical Tools</h3>
                         </div>
@@ -234,7 +241,7 @@
                     </div>
 
                     <!-- Category 4: Other Tools -->
-                    <div class="skill-category-card" style="background-color: #F9F9FB !important; border: 1px solid #E5E5EA !important; border-radius: 20px !important; padding: 2.2rem 2rem !important; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03) !important; display: flex !important; flex-direction: column !important; box-sizing: border-box !important;">
+                    <div class="skill-category-card" style="background: rgba(255, 255, 255, 0.94) !important; backdrop-filter: blur(12px) !important; -webkit-backdrop-filter: blur(12px) !important; border: 1px solid rgba(229, 229, 234, 0.8) !important; border-radius: 20px !important; padding: 2.2rem 2rem !important; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08) !important; display: flex !important; flex-direction: column !important; box-sizing: border-box !important;">
                         <div class="skill-cat-header" style="margin-bottom: 1.5rem !important; padding-bottom: 1rem !important; border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;">
                             <h3 class="skill-cat-title" style="font-family: 'Inter', sans-serif !important; font-size: 1.35rem !important; font-weight: 700 !important; color: #1C1C1F !important; margin: 0 !important;">Other Tools</h3>
                         </div>
