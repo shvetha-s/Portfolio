@@ -190,7 +190,7 @@ function initKineticTypography() {
     setInterval(() => {
         // Blur out & scale down
         kineticEl.style.opacity = '0';
-        kineticEl.style.transform = 'rotate(-2deg) scale(0.9)';
+        kineticEl.style.transform = 'rotate(0deg) scale(0.95)';
         kineticEl.style.filter = 'blur(6px)';
 
         setTimeout(() => {
@@ -205,7 +205,7 @@ function initKineticTypography() {
 
             // Blur back in & restore scale
             kineticEl.style.opacity = '1';
-            kineticEl.style.transform = 'rotate(-2deg) scale(1)';
+            kineticEl.style.transform = 'rotate(0deg) scale(1)';
             kineticEl.style.filter = 'blur(0px)';
         }, 350);
     }, 2200);
