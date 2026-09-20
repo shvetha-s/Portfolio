@@ -294,11 +294,21 @@
             </div>
 
             <!-- Content Overlay (Elevated above background image) -->
-            <div class="work-section-split" style="position: relative !important; z-index: 2 !important; display: grid !important; grid-template-columns: 64% 32% !important; gap: 4% !important; align-items: flex-start !important;">
+            <div class="work-section-split" style="position: relative !important; z-index: 2 !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; width: 100% !important;">
                 
-                <!-- Left Column: Clean Even 2x2 Case Studies Grid -->
-                <div class="work-editorial-left" style="width: 100% !important; background-color: transparent !important; overflow: hidden !important; padding: 0.5rem 0 !important; display: flex !important; justify-content: flex-start !important;">
-                    <div class="work-even-grid" style="display: grid !important; grid-template-columns: repeat(2, minmax(0, 260px)) !important; gap: 1.2rem !important; width: 100% !important; max-width: 540px !important; margin-right: auto !important; align-items: stretch !important;">
+                <!-- Left Column: Title Area + Clean Even 2x2 Case Studies Grid -->
+                <div class="work-editorial-left" style="width: 100% !important; max-width: 540px !important; background-color: transparent !important; overflow: hidden !important; padding: 0.5rem 0 !important; display: flex !important; flex-direction: column !important; gap: 1.5rem !important;">
+                    
+                    <!-- Section Title & Subtitle (Positioned right above the grid, matching red line) -->
+                    <div class="projects-header-area" style="margin-bottom: 0.5rem !important;">
+                        <div class="projects-title-row">
+                            <h2 class="massive-title" style="font-family: 'Inter', sans-serif !important; font-size: clamp(2.5rem, 5vw, 3.8rem) !important; font-weight: 700 !important; color: #1C1C1F !important; letter-spacing: -0.02em !important; line-height: 1.1 !important; margin: 0 !important;">Work</h2>
+                        </div>
+                        <p class="projects-header-subtitle" style="font-family: 'Inter', sans-serif !important; font-size: 1.05rem !important; font-weight: 500 !important; color: #5A5A60 !important; margin-top: 0.6rem !important; line-height: 1.45 !important;">Selected UI/UX Case Studies, Research &amp; Interactive Product Design</p>
+                    </div>
+
+                    <!-- 2x2 Case Studies Grid -->
+                    <div class="work-even-grid" style="display: grid !important; grid-template-columns: repeat(2, minmax(0, 260px)) !important; gap: 1.2rem !important; width: 100% !important; align-items: stretch !important;">
                         
                         <!-- Card 1: Butterfingers -->
                         <a href="butterfingers.html" class="work-masonry-card" aria-label="Butterfingers Mobile App" style="position: relative !important; border-radius: 16px !important; overflow: hidden !important; display: block !important; box-shadow: 0 8px 24px rgba(0,0,0,0.08) !important; transition: transform 0.3s ease, box-shadow 0.3s ease !important;">
@@ -325,14 +335,6 @@
                         </a>
 
                     </div>
-                </div>
-
-                <!-- Right Column: Section Title & Subtitle -->
-                <div class="projects-header-area" style="position: sticky !important; top: 6rem !important; margin-bottom: 0 !important;">
-                    <div class="projects-title-row">
-                        <h2 class="massive-title" style="font-family: 'Inter', sans-serif !important; font-size: clamp(2.5rem, 5vw, 3.8rem) !important; font-weight: 700 !important; color: #1C1C1F !important; letter-spacing: -0.02em !important; line-height: 1.1 !important; margin: 0 !important;">Work</h2>
-                    </div>
-                    <p class="projects-header-subtitle" style="font-family: 'Inter', sans-serif !important; font-size: 1.1rem !important; font-weight: 500 !important; color: #5A5A60 !important; margin-top: 0.8rem !important; line-height: 1.5 !important;">Selected UI/UX Case Studies, Research &amp; Interactive Product Design</p>
                 </div>
 
             </div>
