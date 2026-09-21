@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
                 
                 // Force reveal target section content immediately so text never disappears
-                const targetContent = targetElement.querySelector('.about-content-overlay, .exp-content-left-container, .projects-header-area, .projects-4col-grid, .hero-editorial-container');
+                const targetContent = targetElement.querySelector('.about-content-overlay, .exp-content-left-container, .projects-header-area, .projects-4col-grid, .hero-editorial-container, .designer-hero-container');
                 if (targetContent) {
                     gsap.to(targetContent, { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' });
                 }
@@ -255,22 +255,9 @@ function initScrollTransitions() {
         if (!item.section) return;
 
         if (item.isHero) {
-            // Hero section: starts 100% visible, subtle fade when scrolling down to next section
-            const heroTl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: item.section,
-                    start: 'top top',
-                    end: 'bottom 40%',
-                    scrub: scrubVal
-                }
-            });
-
+            // Hero section: Always remains 100% opaque and fully visible when scrolling
             if (item.content) {
-                heroTl.to(item.content, {
-                    opacity: 0.2,
-                    y: -20,
-                    ease: 'power1.inOut'
-                }, 0.5);
+                gsap.set(item.content, { opacity: 1, y: 0 });
             }
         } else {
             // Story sections (About, Experience):
