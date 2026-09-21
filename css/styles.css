@@ -229,13 +229,13 @@ body {
 }
 
 .hero-bg-img {
-    height: 86vh;
+    height: 82vh;
     width: auto;
-    max-width: 60vw;
+    max-width: 46vw;
     object-fit: contain;
     object-position: bottom right;
     opacity: 0.98;
-    transform: scale(1.22);
+    transform: scale(0.98);
     transform-origin: bottom right;
 }
 
@@ -247,9 +247,9 @@ body {
     align-items: flex-start;
     justify-content: center;
     text-align: left;
-    max-width: 58vw;
+    max-width: 52vw;
     width: 100%;
-    margin: 0.5rem 0 0 6vw;
+    margin: 0.5rem 0 0 5vw;
     padding: 0;
 }
 
@@ -316,7 +316,7 @@ body {
 
 .hero-line--top {
     justify-content: flex-start;
-    transform: translateX(4.2rem);
+    transform: translateX(3.2rem);
 }
 
 .hero-line--bottom {
@@ -327,7 +327,7 @@ body {
 
 .word-port {
     font-family: 'Gaegu', 'Mali', 'Sniglet', cursive;
-    font-size: clamp(4.6rem, 13.5vw, 11.5rem);
+    font-size: clamp(3.6rem, 9vw, 8.2rem);
     font-weight: 700;
     color: var(--text-primary);
     letter-spacing: 0.08em;
@@ -341,7 +341,7 @@ body {
 
 .word-folio {
     font-family: 'Fredoka', 'Outfit', 'Syne', sans-serif;
-    font-size: clamp(5.6rem, 16.5vw, 14.5rem);
+    font-size: clamp(4.4rem, 11vw, 10.2rem);
     font-weight: 800;
     color: var(--text-primary);
     letter-spacing: 0.05em;
