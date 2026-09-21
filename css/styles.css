@@ -376,32 +376,250 @@ body {
 }
 
 @media (max-width: 768px) {
+    /* Main Navigation Header Mobile Styling */
+    .main-header {
+        padding: 0.75rem 1rem !important;
+        flex-wrap: wrap !important;
+        gap: 0.4rem !important;
+    }
+    
+    .header-logo {
+        font-size: 1.35rem !important;
+        white-space: nowrap !important;
+    }
+
+    .header-nav {
+        gap: 0.55rem !important;
+        flex-wrap: wrap !important;
+    }
+
+    .header-nav a {
+        font-size: 0.82rem !important;
+        padding: 0.25rem 0.45rem !important;
+    }
+
+    .header-nav a[href="#contact"] {
+        padding: 0.35rem 0.8rem !important;
+        font-size: 0.82rem !important;
+    }
+
+    /* Hero Section Mobile Styling */
     .designer-hero-section {
-        justify-content: center;
-        padding: 2rem 1.5rem;
+        min-height: auto !important;
+        padding: 5.2rem 1.2rem 2.2rem !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
     }
+
+    .hero-backdrop-art {
+        position: relative !important;
+        height: auto !important;
+        max-height: 320px !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin-top: 1.2rem !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        overflow: visible !important;
+    }
+
+    .hero-bg-img {
+        height: 280px !important;
+        max-height: 280px !important;
+        width: auto !important;
+        max-width: 92% !important;
+        transform: none !important;
+        object-fit: contain !important;
+        object-position: center !important;
+    }
+
     .designer-hero-container {
-        align-items: center;
-        text-align: center;
-        max-width: 100%;
-        margin: 0;
+        align-items: center !important;
+        text-align: center !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        width: 100% !important;
     }
+
     .hero-playful-lockup {
-        align-items: center;
+        align-items: center !important;
+        margin-bottom: 1rem !important;
+        width: 100% !important;
     }
+
     .hero-line--top {
-        transform: translateX(0);
+        transform: none !important;
+        justify-content: center !important;
+        gap: 0.5rem !important;
     }
+
     .hero-line--bottom {
-        transform: translateX(0);
-        margin-top: -0.3rem;
+        transform: none !important;
+        justify-content: center !important;
+        gap: 0.5rem !important;
+        margin-top: -0.2rem !important;
     }
+
+    .word-port {
+        font-size: clamp(2.6rem, 12vw, 4.5rem) !important;
+    }
+
+    .word-folio {
+        font-size: clamp(3.2rem, 15vw, 5.5rem) !important;
+    }
+
+    .year-chip {
+        font-size: clamp(1.2rem, 5vw, 2rem) !important;
+        transform: translateY(-0.4rem) rotate(4deg) !important;
+    }
+
+    .sub-label-chip {
+        font-size: clamp(0.95rem, 4vw, 1.4rem) !important;
+        transform: none !important;
+        text-align: center !important;
+        max-width: none !important;
+    }
+
+    .hero-bottom-action-row {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 0.8rem !important;
+        margin-top: 1.2rem !important;
+    }
+
+    .kinetic-name-wrapper {
+        margin-left: 0 !important;
+        min-height: 60px !important;
+    }
+
     .hero-subtext {
-        text-align: center;
+        text-align: center !important;
     }
+
     .hero-scroll-indicator {
-        align-self: center;
-        margin-left: 0;
+        align-self: center !important;
+        margin-left: 0 !important;
+        margin-top: 0 !important;
+    }
+
+    /* About Section Mobile Styling */
+    .about-storybook-section {
+        padding: 3.5rem 1.2rem 2.5rem !important;
+        min-height: auto !important;
+    }
+
+    .about-content-overlay {
+        max-width: 100% !important;
+        width: 100% !important;
+        padding: 1.6rem 1.3rem !important;
+        background: rgba(255, 255, 255, 0.94) !important;
+        backdrop-filter: blur(16px) !important;
+        -webkit-backdrop-filter: blur(16px) !important;
+        border-radius: 24px !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06) !important;
+        margin: 0 !important;
+    }
+
+    .about-storybook-lead {
+        font-size: 1.12rem !important;
+        line-height: 1.6 !important;
+    }
+
+    .about-storybook-body {
+        font-size: 1.0rem !important;
+        line-height: 1.65 !important;
+    }
+
+    /* Experience Section Mobile Styling */
+    .experience-lake-section {
+        padding: 3.5rem 1.2rem 2.5rem !important;
+        min-height: auto !important;
+    }
+
+    .exp-content-left-container {
+        max-width: 100% !important;
+        width: 100% !important;
+        padding: 1.6rem 1.3rem !important;
+        background: rgba(255, 255, 255, 0.94) !important;
+        backdrop-filter: blur(16px) !important;
+        -webkit-backdrop-filter: blur(16px) !important;
+        border-radius: 24px !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06) !important;
+        margin: 0 !important;
+    }
+
+    /* Education & Resume Section Mobile Styling */
+    .education-grid-area,
+    .resume-plain-section {
+        padding: 3.5rem 1.2rem !important;
+    }
+
+    .resume-two-col {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+        width: 100% !important;
+    }
+
+    .resume-column {
+        width: 100% !important;
+    }
+
+    /* Skills Categories Grid Mobile Styling */
+    .skills-categories-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.2rem !important;
+        width: 100% !important;
+    }
+
+    .skill-category-card {
+        padding: 1.6rem 1.3rem !important;
+        width: 100% !important;
+    }
+
+    /* Projects / Case Studies Grid Mobile Styling */
+    .projects-4col-grid,
+    .projects-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+        width: 100% !important;
+    }
+
+    .project-column-item {
+        width: 100% !important;
+    }
+
+    .project-image-box {
+        height: 220px !important;
+    }
+
+    /* Footer Mobile Styling */
+    .footer-container,
+    .massive-footer {
+        padding: 3rem 1.2rem 1.5rem !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .footer-top-content {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 1.5rem !important;
+    }
+
+    .footer-huge-text {
+        font-size: clamp(2.2rem, 10vw, 4.2rem) !important;
+        text-align: center !important;
+    }
+
+    .footer-bottom-bar {
+        flex-direction: column !important;
+        gap: 1rem !important;
+        text-align: center !important;
     }
 }
 
