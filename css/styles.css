@@ -598,43 +598,36 @@ body {
 
     /* Hero Section Mobile Styling */
     .designer-hero-section {
+        display: flex !important;
+        flex-direction: column !important;
         min-height: auto !important;
         padding: 5.8rem 1.2rem 2.2rem !important;
-        flex-direction: column !important;
         align-items: center !important;
         justify-content: center !important;
         text-align: center !important;
     }
 
-    .hero-backdrop-art {
-        position: relative !important;
-        height: auto !important;
-        max-height: 320px !important;
-        width: 100% !important;
-        padding: 0 !important;
-        margin-top: 1.2rem !important;
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-        overflow: visible !important;
-    }
-
-    .hero-bg-img {
-        height: 280px !important;
-        max-height: 280px !important;
-        width: auto !important;
-        max-width: 92% !important;
-        transform: none !important;
-        object-fit: contain !important;
-        object-position: center !important;
-    }
-
     .designer-hero-container {
+        order: 1 !important;
         align-items: center !important;
         text-align: center !important;
         max-width: 100% !important;
         margin: 0 !important;
         width: 100% !important;
+    }
+
+    .hero-backdrop-art {
+        order: 2 !important;
+        position: relative !important;
+        height: auto !important;
+        max-height: 320px !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin-top: 1.8rem !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        overflow: visible !important;
     }
 
     .hero-playful-lockup {
