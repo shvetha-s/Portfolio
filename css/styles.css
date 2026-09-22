@@ -445,16 +445,16 @@ body {
 .edu-section-container {
     position: relative !important;
     z-index: 2 !important;
-    width: 100% !important;
-    max-width: 1100px !important;
+    width: 52% !important;
+    max-width: 850px !important;
     margin-left: auto !important;
-    margin-right: auto !important;
+    margin-right: 3% !important;
 }
 
 .education-timeline-grid {
     display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 1.8rem !important;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+    gap: 1.6rem !important;
     width: 100% !important;
     margin-bottom: 3rem !important;
 }
