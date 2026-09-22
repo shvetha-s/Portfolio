@@ -714,12 +714,12 @@ body {
     .about-content-overlay {
         max-width: 100% !important;
         width: 100% !important;
-        padding: 1.6rem 1.3rem !important;
-        background: rgba(255, 255, 255, 0.94) !important;
-        backdrop-filter: blur(16px) !important;
-        -webkit-backdrop-filter: blur(16px) !important;
-        border-radius: 24px !important;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06) !important;
+        padding: 0 !important;
+        background: transparent !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
         margin: 0 !important;
     }
 
@@ -742,12 +742,12 @@ body {
     .exp-content-left-container {
         max-width: 100% !important;
         width: 100% !important;
-        padding: 1.6rem 1.3rem !important;
-        background: rgba(255, 255, 255, 0.94) !important;
-        backdrop-filter: blur(16px) !important;
-        -webkit-backdrop-filter: blur(16px) !important;
-        border-radius: 24px !important;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06) !important;
+        padding: 0 !important;
+        background: transparent !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
         margin: 0 !important;
     }
 
@@ -3884,10 +3884,31 @@ body {
     transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease !important;
 }
 
-.skill-pill:hover {
-    background: rgba(255, 77, 0, 0.12) !important;
-    color: var(--accent) !important;
-    border-color: rgba(255, 77, 0, 0.25) !important;
+/* Fade out background character videos & images apart from hero section */
+.about-full-art-img,
+.about-video-bg,
+.exp-lake-img,
+.exp-video-bg,
+.edu-video-backdrop video,
+.skills-backdrop-art img,
+.skills-full-art-img {
+    opacity: 0.1 !important;
+    filter: brightness(1.05) contrast(1.02) !important;
+    transition: opacity 0.3s ease !important;
+}
+
+/* Remove background highlight cards from About Me & Experience sections */
+.about-content-overlay,
+.about-storybook-text-card,
+.exp-content-left-container,
+.exp-story-card {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border-radius: 0 !important;
 }
 
 @media (max-width: 768px) {
@@ -3910,11 +3931,11 @@ body {
     .about-storybook-text-card {
         width: 100% !important;
         max-width: 100% !important;
-        background: rgba(255, 255, 255, 0.96) !important;
-        border: 1px solid rgba(229, 229, 234, 0.8) !important;
-        border-radius: 18px !important;
-        padding: 1.6rem 1.3rem !important;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04) !important;
+        background: transparent !important;
+        border: none !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        box-shadow: none !important;
         box-sizing: border-box !important;
         display: flex !important;
         flex-direction: column !important;
@@ -3938,6 +3959,14 @@ body {
         color: inherit !important;
         font-weight: inherit !important;
         display: inline !important;
+    }
+
+    /* Hide / Deeply fade non-hero backdrops on mobile */
+    .about-backdrop-art,
+    .exp-lake-backdrop,
+    .edu-video-backdrop,
+    .skills-backdrop-art {
+        opacity: 0.05 !important;
     }
 
     /* Mobile Alignment — Education Section */
@@ -4012,6 +4041,7 @@ body {
         color: #1C1C1F !important;
         line-height: 1.3 !important;
         margin-bottom: 0.35rem !important;
+        text-align: left !important;
         word-break: break-word !important;
     }
 
@@ -4021,6 +4051,7 @@ body {
         color: #3A3A3C !important;
         line-height: 1.4 !important;
         margin-bottom: 0.2rem !important;
+        text-align: left !important;
         word-break: break-word !important;
     }
 
@@ -4028,6 +4059,7 @@ body {
         font-size: 0.85rem !important;
         font-weight: 400 !important;
         color: #6C6C70 !important;
+        text-align: left !important;
         margin-top: auto !important;
     }
 
