@@ -442,23 +442,7 @@ body {
 }
 
 /* Desktop layout rules for Education, Skills & Work */
-.edu-section-container {
-    position: relative !important;
-    z-index: 2 !important;
-    width: 52% !important;
-    max-width: 850px !important;
-    margin-left: auto !important;
-    margin-right: 3% !important;
-}
-
-.education-timeline-grid {
-    display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
-    gap: 1.6rem !important;
-    width: 100% !important;
-    margin-bottom: 3rem !important;
-}
-
+.edu-section-container,
 .skills-section-container {
     position: relative !important;
     z-index: 2 !important;
@@ -466,6 +450,14 @@ body {
     max-width: 850px !important;
     margin-left: auto !important;
     margin-right: 6% !important;
+}
+
+.education-timeline-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+    gap: 1.8rem !important;
+    width: 100% !important;
+    margin-bottom: 3rem !important;
 }
 
 .work-editorial-left {
@@ -3638,17 +3630,19 @@ body {
 /* --- 1. EDUCATION GRID --- */
 .education-timeline-grid {
     display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
     gap: 1.8rem !important;
     width: 100% !important;
 }
 
 .education-card {
-    background: #FFFFFF !important;
+    background: rgba(255, 255, 255, 0.94) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
     border: 1px solid rgba(229, 229, 234, 0.8) !important;
     border-radius: 20px !important;
-    padding: 2.2rem 2.2rem 2rem !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+    padding: 2.2rem 2rem !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08) !important;
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease !important;
     display: flex !important;
     flex-direction: column !important;
@@ -3657,7 +3651,7 @@ body {
 
 .education-card:hover {
     transform: translateY(-4px) !important;
-    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.08) !important;
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.12) !important;
     border-color: rgba(255, 77, 0, 0.35) !important;
 }
 
@@ -3719,21 +3713,23 @@ body {
 
 /* --- 2. CERTIFICATIONS HIGHLIGHT --- */
 .certificate-highlight-card {
-    background-color: #F9F9FB !important;
-    border: 1px solid #E5E5EA !important;
+    background: rgba(255, 255, 255, 0.94) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(229, 229, 234, 0.8) !important;
     border-radius: 20px !important;
-    padding: 2.5rem !important;
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.03) !important;
+    padding: 2.2rem 2rem !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08) !important;
     display: flex !important;
-    gap: 2rem !important;
-    align-items: flex-start !important;
+    gap: 1.8rem !important;
+    align-items: center !important;
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease !important;
     box-sizing: border-box !important;
 }
 
 .certificate-highlight-card:hover {
     transform: translateY(-4px) !important;
-    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.08) !important;
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.12) !important;
     border-color: rgba(255, 77, 0, 0.35) !important;
 }
 
