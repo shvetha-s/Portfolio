@@ -3762,7 +3762,7 @@ body {
 .cert-title {
     font-family: var(--font-heading) !important;
     font-size: 1.55rem !important;
-    font-weight: 700 !important;
+    font-weight: 300 !important;
     color: var(--text-primary) !important;
     line-height: 1.25 !important;
 }
