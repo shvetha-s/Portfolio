@@ -442,7 +442,15 @@ body {
 }
 
 /* Desktop layout rules for Education, Skills & Work */
-.edu-section-container,
+.edu-section-container {
+    position: relative !important;
+    z-index: 2 !important;
+    width: 48% !important;
+    max-width: 720px !important;
+    margin-left: auto !important;
+    margin-right: 2% !important;
+}
+
 .skills-section-container {
     position: relative !important;
     z-index: 2 !important;
@@ -454,10 +462,10 @@ body {
 
 .education-timeline-grid {
     display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
-    gap: 1.8rem !important;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
+    gap: 1.6rem !important;
     width: 100% !important;
-    margin-bottom: 3rem !important;
+    margin-bottom: 2.5rem !important;
 }
 
 .work-editorial-left {
