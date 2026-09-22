@@ -224,19 +224,18 @@ body {
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
-    padding-right: 1.5vw;
+    padding-right: 4vw;
     padding-bottom: 0;
 }
 
 .hero-bg-img {
-    height: 88vh;
+    height: 75vh;
     width: auto;
-    max-width: 54vw;
+    max-width: 42vw;
     object-fit: contain;
     object-position: bottom right;
     opacity: 0.98;
-    transform: scale(1.15);
-    transform-origin: bottom right;
+    transform: none;
 }
 
 .designer-hero-container {
@@ -620,14 +619,29 @@ body {
         order: 2 !important;
         position: relative !important;
         height: auto !important;
-        max-height: 320px !important;
+        max-height: none !important;
         width: 100% !important;
         padding: 0 !important;
-        margin-top: 1.8rem !important;
+        margin-top: 1.2rem !important;
+        margin-bottom: 0.5rem !important;
         display: flex !important;
         justify-content: center !important;
-        align-items: center !important;
+        align-items: flex-end !important;
         overflow: visible !important;
+    }
+
+    .hero-bg-img {
+        height: auto !important;
+        max-height: 280px !important;
+        width: 75% !important;
+        max-width: 260px !important;
+        transform: none !important;
+        object-fit: contain !important;
+        object-position: center bottom !important;
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        margin: 0 auto !important;
     }
 
     .hero-playful-lockup {
