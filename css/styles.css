@@ -2436,28 +2436,28 @@ body {
     overflow: hidden;
     background: var(--accent);
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-    padding: 2.2rem 0;
+    padding: 3.5rem 0;
     margin-bottom: 4rem;
     white-space: nowrap;
 }
 
 .footer-ticker-track {
     display: flex;
-    gap: 2.5rem;
+    gap: 3rem;
     width: max-content;
     animation: footerTicker 28s linear infinite;
 }
 
 .footer-ticker-track span {
     font-family: 'Space Grotesk', 'Noto Sans Telugu', 'Noto Sans Tamil', 'Noto Sans Kannada', 'Noto Sans Malayalam', 'Mukta Malar', sans-serif;
-    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-size: clamp(2.5rem, 5vw, 4.2rem);
     font-weight: 700;
     line-height: 1.1;
     letter-spacing: 0.05em;
     color: #FFFFFF;
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 2.2rem;
 }
 
 .ticker-dot {
@@ -2753,18 +2753,19 @@ body {
     transform: translateY(-2px);
 }
 
-/* Subtle Watermark */
+/* Subtle Watermark (Half Faded at Bottom Area) */
 .footer-watermark {
     position: absolute;
-    bottom: -1rem;
+    bottom: -2.2rem;
     left: 50%;
     transform: translateX(-50%);
     font-family: var(--font-heading);
-    font-size: clamp(6rem, 20vw, 25rem);
+    font-size: clamp(4.5rem, 14vw, 16rem);
     font-weight: 800;
     letter-spacing: -0.04em;
     white-space: nowrap;
-    color: rgba(0, 0, 0, 0.05);
+    color: rgba(0, 0, 0, 0.04);
+    opacity: 0.5;
     pointer-events: none;
     user-select: none;
     z-index: 1;
