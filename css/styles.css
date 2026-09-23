@@ -1016,31 +1016,109 @@ body {
         height: auto !important;
     }
 
-    /* Footer Mobile Styling */
-    .footer-container,
-    .massive-footer {
-        padding: 3rem 1.2rem 1.5rem !important;
+    /* Footer Mobile Styling with Flower Bunch Artwork */
+    .storybook-footer {
+        position: relative !important;
+        padding: 3rem 1.2rem 2.2rem !important;
+        min-height: auto !important;
+        overflow: hidden !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-end !important;
+        box-sizing: border-box !important;
+    }
+
+    .footer-floral-art-left {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: relative !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        transform: none !important;
+        width: 100% !important;
+        max-width: 360px !important;
+        margin: 1.5rem auto 1rem !important;
+        justify-content: center !important;
+        align-items: flex-end !important;
+        z-index: 1 !important;
+        pointer-events: none !important;
+    }
+
+    .footer-left-floral-img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        display: block !important;
+        object-fit: contain !important;
+        object-position: center bottom !important;
+        transform: none !important;
+    }
+
+    .footer-inner-container {
+        position: relative !important;
+        z-index: 2 !important;
+        width: 100% !important;
+        display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
         text-align: center !important;
     }
 
-    .footer-top-content {
+    .footer-main-grid {
+        display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
         text-align: center !important;
-        gap: 1.5rem !important;
+        margin-bottom: 0.5rem !important;
+        width: 100% !important;
     }
 
-    .footer-huge-text {
-        font-size: clamp(2.2rem, 10vw, 4.2rem) !important;
+    .footer-brand-block {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
         text-align: center !important;
+        max-width: 100% !important;
+    }
+
+    .footer-brand-name {
+        font-size: 1.6rem !important;
+        font-weight: 700 !important;
+        color: #1C1C1F !important;
+        text-align: center !important;
+    }
+
+    .footer-brand-desc {
+        font-size: 0.98rem !important;
+        color: #4A4A50 !important;
+        text-align: center !important;
+        margin-top: 0.5rem !important;
+        max-width: 320px !important;
     }
 
     .footer-bottom-bar {
+        display: flex !important;
         flex-direction: column !important;
-        gap: 1rem !important;
+        align-items: center !important;
         text-align: center !important;
+        gap: 1rem !important;
+        width: 100% !important;
+        margin-top: 0.8rem !important;
+    }
+
+    .footer-copyright {
+        font-size: 0.9rem !important;
+        color: #6C6C70 !important;
+        text-align: center !important;
+    }
+
+    .footer-social-links {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 0.85rem !important;
     }
 }
 
@@ -2753,8 +2831,7 @@ body {
         flex-wrap: wrap;
     }
 
-    .footer-floral-art,
-    .footer-floral-art-left {
+    .footer-floral-art {
         display: none;
     }
 
