@@ -2650,24 +2650,24 @@ body {
     justify-content: flex-end !important;
     align-items: center !important;
     width: 100% !important;
-    padding-right: 5rem !important;
-    margin-top: -1.5rem !important;
+    padding-right: 4.5rem !important;
+    margin-top: -4.5rem !important;
     margin-bottom: 0.5rem !important;
     box-sizing: border-box !important;
 }
 
 .footer-funky-name {
     font-family: 'Fredoka', 'Gaegu', 'Sniglet', sans-serif !important;
-    font-size: clamp(3.8rem, 8.5vw, 7.5rem) !important;
+    font-size: clamp(7.5rem, 18vw, 16rem) !important;
     font-weight: 800 !important;
-    letter-spacing: -0.02em !important;
-    line-height: 0.95 !important;
-    background: linear-gradient(135deg, #FF4D00 0%, #FF7A00 50%, #FFA800 100%) !important;
+    letter-spacing: -0.04em !important;
+    line-height: 0.82 !important;
+    background: linear-gradient(135deg, #FF4D00 0%, #FF7A00 45%, #FFA800 100%) !important;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
     background-clip: text !important;
     color: transparent !important;
-    filter: drop-shadow(0 6px 16px rgba(255, 77, 0, 0.22)) !important;
+    filter: drop-shadow(0 10px 28px rgba(255, 77, 0, 0.28)) !important;
     display: inline-block !important;
     user-select: none !important;
 }
