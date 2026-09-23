@@ -554,7 +554,21 @@ body {
 
 .certifications-merged-block {
     width: 100% !important;
-    margin-top: 2rem !important;
+    margin-top: 2.5rem !important;
+    text-align: left !important;
+}
+
+.certifications-merged-block .resume-header-lockup,
+#certificate .resume-header-lockup {
+    text-align: left !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+}
+
+.certifications-merged-block .massive-title,
+#certificate .massive-title {
+    text-align: left !important;
+    margin: 0 !important;
 }
 
 .certificate-highlight-card {
@@ -1354,8 +1368,8 @@ body {
 .cert-heading-lockup {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    text-align: right;
+    align-items: flex-start;
+    text-align: left;
 }
 
 #certificate .massive-title {
@@ -1366,12 +1380,8 @@ body {
     line-height: 1.05;
     letter-spacing: -0.02em;
     margin: 0;
-    text-align: right;
+    text-align: left !important;
     white-space: normal;
-    text-shadow: 
-        0 0 35px #FFFFFF,
-        0 0 18px #FFFFFF,
-        0 2px 6px rgba(255, 255, 255, 0.95);
 }
 
 .cert-regular-sub {
