@@ -598,8 +598,8 @@ body {
 .cert-title {
     font-family: 'Inter', sans-serif !important;
     font-size: 1.25rem !important;
-    font-weight: 700 !important;
-    color: #1C1C1F !important;
+    font-weight: 500 !important;
+    color: #2C2C2E !important;
     margin: 0 !important;
     line-height: 1.35 !important;
 }
@@ -3904,8 +3904,8 @@ body {
 .cert-title {
     font-family: 'Inter', sans-serif !important;
     font-size: 1.25rem !important;
-    font-weight: 700 !important;
-    color: #1C1C1F !important;
+    font-weight: 500 !important;
+    color: #2C2C2E !important;
     margin: 0 !important;
     text-align: left !important;
 }
