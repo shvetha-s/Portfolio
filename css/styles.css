@@ -2422,19 +2422,20 @@ body {
 .storybook-footer {
     position: relative;
     width: 100%;
-    background-color: var(--bg-color) !important;
-    color: var(--text-primary);
+    background-color: #FF4D00 !important;
+    background: #FF4D00 !important;
+    color: #FFFFFF !important;
     padding: 0 0 1rem;
     box-sizing: border-box;
     overflow: hidden;
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    border-top: none !important;
 }
 
-/* Kinetic Ticker Banner */
+/* Kinetic Ticker Banner - Clean White Strip with Orange Text */
 .footer-kinetic-ticker {
     width: 100%;
     overflow: hidden;
-    background: var(--accent);
+    background: #FFFFFF !important;
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
     padding: 1.1rem 0;
     margin-bottom: 1.5rem;
@@ -2454,14 +2455,14 @@ body {
     font-weight: 700;
     line-height: 1.1;
     letter-spacing: 0.05em;
-    color: #FFFFFF;
+    color: #FF4D00 !important;
     display: flex;
     align-items: center;
     gap: 1.5rem;
 }
 
 .ticker-dot {
-    color: #FFFFFF;
+    color: #FF4D00 !important;
     opacity: 0.85;
     font-style: normal;
     font-weight: 700;
@@ -2485,7 +2486,7 @@ body {
     box-sizing: border-box;
 }
 
-/* 3-Column Footer Main Grid - Expanded to Fill Entire Rectangle Width */
+/* 3-Column Footer Main Grid */
 .footer-main-grid {
     display: flex !important;
     justify-content: space-between !important;
@@ -2507,18 +2508,18 @@ body {
     font-family: var(--font-heading);
     font-size: 1.9rem;
     font-weight: 700;
-    color: var(--text-primary);
+    color: #FFFFFF !important;
     letter-spacing: -0.02em;
 }
 
 .brand-dot {
-    color: var(--accent);
+    color: #1C1C1F !important;
 }
 
 .footer-brand-desc {
     font-family: var(--font-body);
     font-size: 1rem;
-    color: var(--text-secondary);
+    color: rgba(255, 255, 255, 0.9) !important;
     line-height: 1.65;
     margin: 0;
 }
@@ -2536,7 +2537,7 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: var(--text-primary);
+    color: #FFFFFF !important;
     margin: 0;
 }
 
@@ -2553,14 +2554,14 @@ body {
     font-family: var(--font-body);
     font-size: 0.96rem;
     font-weight: 500;
-    color: var(--text-secondary);
+    color: rgba(255, 255, 255, 0.85) !important;
     text-decoration: none;
     transition: var(--transition);
     display: inline-block;
 }
 
 .footer-col-list a:hover {
-    color: var(--accent);
+    color: #FFFFFF !important;
     transform: translateX(4px);
 }
 
@@ -2577,21 +2578,21 @@ body {
     align-items: center;
     width: 44px;
     height: 44px;
-    background: #FFFFFF;
-    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: rgba(255, 255, 255, 0.18) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
     border-radius: 50%;
-    color: var(--text-primary);
+    color: #FFFFFF !important;
     text-decoration: none;
     transition: var(--transition);
     flex-shrink: 0;
 }
 
 .footer-social-links a:hover {
-    background: var(--accent);
-    color: #FFFFFF;
-    border-color: var(--accent);
+    background: #FFFFFF !important;
+    color: #FF4D00 !important;
+    border-color: #FFFFFF !important;
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(255, 77, 0, 0.35);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
 }
 
 /* Bottom Copyright Bar */
@@ -2609,11 +2610,11 @@ body {
 .footer-copyright-text {
     font-family: var(--font-body);
     font-size: 0.9rem;
-    color: var(--text-secondary);
+    color: rgba(255, 255, 255, 0.85) !important;
     margin: 0;
 }
 
-/* Up-Arrow Circular Button (Enlarged inside Right Circle Area) */
+/* Up-Arrow Circular Button */
 .back-to-top-btn {
     display: inline-flex !important;
     align-items: center !important;
@@ -2622,11 +2623,11 @@ body {
     height: 50px !important;
     border-radius: 50% !important;
     background: #FFFFFF !important;
-    border: 1.5px solid rgba(0, 0, 0, 0.12) !important;
-    color: var(--text-primary) !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.4) !important;
+    color: #FF4D00 !important;
     text-decoration: none !important;
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06) !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15) !important;
     flex-shrink: 0 !important;
 }
 
@@ -2637,11 +2638,11 @@ body {
 }
 
 .back-to-top-btn:hover {
-    background: var(--accent) !important;
+    background: #1C1C1F !important;
     color: #FFFFFF !important;
-    border-color: var(--accent) !important;
+    border-color: #1C1C1F !important;
     transform: scale(1.08) translateY(-2px) !important;
-    box-shadow: 0 10px 24px rgba(255, 77, 0, 0.35) !important;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35) !important;
 }
 
 /* Funky Orange Gradient Swetha Name (Removed) */
