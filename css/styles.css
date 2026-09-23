@@ -2422,13 +2422,13 @@ body {
 .storybook-footer {
     position: relative;
     width: 100%;
-    background-color: #FF4D00 !important;
-    background: #FF4D00 !important;
-    color: #FFFFFF !important;
+    background-color: var(--bg-color, #F0EEE9) !important;
+    background: var(--bg-color, #F0EEE9) !important;
+    color: var(--text-primary) !important;
     padding: 0 0 1rem;
     box-sizing: border-box;
     overflow: hidden;
-    border-top: none !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
 }
 
 /* Kinetic Ticker Banner - Clean White Strip with Orange Text */
@@ -2508,18 +2508,18 @@ body {
     font-family: var(--font-heading);
     font-size: 1.9rem;
     font-weight: 700;
-    color: #FFFFFF !important;
+    color: var(--text-primary) !important;
     letter-spacing: -0.02em;
 }
 
 .brand-dot {
-    color: #1C1C1F !important;
+    color: var(--accent) !important;
 }
 
 .footer-brand-desc {
     font-family: var(--font-body);
     font-size: 1rem;
-    color: rgba(255, 255, 255, 0.9) !important;
+    color: var(--text-secondary) !important;
     line-height: 1.65;
     margin: 0;
 }
@@ -2537,7 +2537,7 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: #FFFFFF !important;
+    color: var(--text-primary) !important;
     margin: 0;
 }
 
@@ -2554,14 +2554,14 @@ body {
     font-family: var(--font-body);
     font-size: 0.96rem;
     font-weight: 500;
-    color: rgba(255, 255, 255, 0.85) !important;
+    color: var(--text-secondary) !important;
     text-decoration: none;
     transition: var(--transition);
     display: inline-block;
 }
 
 .footer-col-list a:hover {
-    color: #FFFFFF !important;
+    color: var(--accent) !important;
     transform: translateX(4px);
 }
 
@@ -2578,21 +2578,21 @@ body {
     align-items: center;
     width: 44px;
     height: 44px;
-    background: rgba(255, 255, 255, 0.18) !important;
-    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    background: #FFFFFF !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
     border-radius: 50%;
-    color: #FFFFFF !important;
+    color: var(--text-primary) !important;
     text-decoration: none;
     transition: var(--transition);
     flex-shrink: 0;
 }
 
 .footer-social-links a:hover {
-    background: #FFFFFF !important;
-    color: #FF4D00 !important;
-    border-color: #FFFFFF !important;
+    background: var(--accent) !important;
+    color: #FFFFFF !important;
+    border-color: var(--accent) !important;
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 10px 20px rgba(255, 77, 0, 0.35);
 }
 
 /* Bottom Copyright Bar */
@@ -2610,7 +2610,7 @@ body {
 .footer-copyright-text {
     font-family: var(--font-body);
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.85) !important;
+    color: var(--text-secondary) !important;
     margin: 0;
 }
 
@@ -2623,11 +2623,11 @@ body {
     height: 50px !important;
     border-radius: 50% !important;
     background: #FFFFFF !important;
-    border: 1.5px solid rgba(255, 255, 255, 0.4) !important;
-    color: #FF4D00 !important;
+    border: 1.5px solid rgba(0, 0, 0, 0.12) !important;
+    color: var(--text-primary) !important;
     text-decoration: none !important;
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15) !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06) !important;
     flex-shrink: 0 !important;
 }
 
@@ -2638,11 +2638,11 @@ body {
 }
 
 .back-to-top-btn:hover {
-    background: #1C1C1F !important;
+    background: var(--accent) !important;
     color: #FFFFFF !important;
-    border-color: #1C1C1F !important;
+    border-color: var(--accent) !important;
     transform: scale(1.08) translateY(-2px) !important;
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35) !important;
+    box-shadow: 0 10px 24px rgba(255, 77, 0, 0.35) !important;
 }
 
 /* Funky Orange Gradient Swetha Name (Removed) */
