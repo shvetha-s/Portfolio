@@ -2753,22 +2753,9 @@ body {
     transform: translateY(-2px);
 }
 
-/* Subtle Watermark (Half Faded at Bottom Area) */
+/* Subtle Watermark (Removed) */
 .footer-watermark {
-    position: absolute;
-    bottom: -2.2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    font-family: var(--font-heading);
-    font-size: clamp(4.5rem, 14vw, 16rem);
-    font-weight: 800;
-    letter-spacing: -0.04em;
-    white-space: nowrap;
-    color: rgba(0, 0, 0, 0.04);
-    opacity: 0.5;
-    pointer-events: none;
-    user-select: none;
-    z-index: 1;
+    display: none !important;
 }
 
 /* Animations */
