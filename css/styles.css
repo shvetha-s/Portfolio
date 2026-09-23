@@ -3638,19 +3638,17 @@ body {
 /* --- 1. EDUCATION GRID --- */
 .education-timeline-grid {
     display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
-    gap: 1.8rem !important;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+    gap: 1.6rem !important;
     width: 100% !important;
 }
 
 .education-card {
-    background: rgba(255, 255, 255, 0.94) !important;
-    backdrop-filter: blur(12px) !important;
-    -webkit-backdrop-filter: blur(12px) !important;
-    border: 1px solid rgba(229, 229, 234, 0.8) !important;
+    background: #FFFFFF !important;
+    border: 1.5px solid #E2E2E8 !important;
     border-radius: 20px !important;
-    padding: 2.2rem 2rem !important;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08) !important;
+    padding: 1.8rem 1.8rem 1.6rem !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04) !important;
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease !important;
     display: flex !important;
     flex-direction: column !important;
@@ -3659,24 +3657,25 @@ body {
 
 .education-card:hover {
     transform: translateY(-4px) !important;
-    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.12) !important;
-    border-color: rgba(255, 77, 0, 0.35) !important;
+    box-shadow: 0 16px 38px rgba(0, 0, 0, 0.12) !important;
+    border-color: rgba(255, 77, 0, 0.4) !important;
 }
 
 .edu-card-header {
     display: flex !important;
     justify-content: space-between !important;
     align-items: center !important;
-    margin-bottom: 1.5rem !important;
+    margin-bottom: 1.2rem !important;
     width: 100% !important;
 }
 
 .edu-year-badge {
     font-family: 'Inter', var(--font-heading), sans-serif !important;
-    font-size: 0.88rem !important;
-    font-weight: 600 !important;
-    color: #FF5500 !important;
-    background: rgba(255, 77, 0, 0.08) !important;
+    font-size: 0.85rem !important;
+    font-weight: 700 !important;
+    color: #FF4D00 !important;
+    background: #FFEBE3 !important;
+    border: 1px solid rgba(255, 77, 0, 0.2) !important;
     padding: 0.35rem 0.85rem !important;
     border-radius: 20px !important;
     white-space: nowrap !important;
@@ -3684,10 +3683,11 @@ body {
 
 .edu-score-pill {
     font-family: 'Inter', var(--font-heading), sans-serif !important;
-    font-size: 0.88rem !important;
-    font-weight: 600 !important;
-    color: #2C2C2E !important;
-    background: #EBEBEF !important;
+    font-size: 0.85rem !important;
+    font-weight: 700 !important;
+    color: #1C1C1F !important;
+    background: #EBECEF !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
     padding: 0.35rem 0.85rem !important;
     border-radius: 20px !important;
     white-space: nowrap !important;
@@ -3695,27 +3695,27 @@ body {
 
 .edu-degree-title {
     font-family: 'Inter', var(--font-heading), sans-serif !important;
-    font-size: 1.35rem !important;
+    font-size: 1.3rem !important;
     font-weight: 700 !important;
     color: #1C1C1F !important;
-    margin-bottom: 0.6rem !important;
+    margin-bottom: 0.5rem !important;
     line-height: 1.25 !important;
 }
 
 .edu-institution-name {
     font-family: 'Inter', var(--font-body), sans-serif !important;
-    font-size: 1.05rem !important;
+    font-size: 1.0rem !important;
     font-weight: 500 !important;
     color: #4A4A50 !important;
-    margin-bottom: 0.4rem !important;
+    margin-bottom: 0.35rem !important;
     line-height: 1.45 !important;
 }
 
 .edu-meta-sub {
     font-family: 'Inter', var(--font-body), sans-serif !important;
-    font-size: 0.92rem !important;
+    font-size: 0.9rem !important;
     font-weight: 400 !important;
-    color: #8E8E93 !important;
+    color: #7C7C80 !important;
     margin-top: auto !important;
 }
 
@@ -3741,13 +3741,11 @@ body {
 }
 
 .certificate-highlight-card {
-    background: rgba(255, 255, 255, 0.94) !important;
-    backdrop-filter: blur(12px) !important;
-    -webkit-backdrop-filter: blur(12px) !important;
-    border: 1px solid rgba(229, 229, 234, 0.8) !important;
+    background: #FFFFFF !important;
+    border: 1.5px solid #E2E2E8 !important;
     border-radius: 20px !important;
-    padding: 1.8rem 2rem !important;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08) !important;
+    padding: 1.6rem 1.8rem !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04) !important;
     display: flex !important;
     justify-content: space-between !important;
     align-items: center !important;
@@ -3770,10 +3768,11 @@ body {
 
 .cert-date-badge {
     font-family: 'Inter', var(--font-heading), sans-serif !important;
-    font-size: 0.88rem !important;
-    font-weight: 600 !important;
-    color: #FF5500 !important;
-    background: rgba(255, 77, 0, 0.08) !important;
+    font-size: 0.85rem !important;
+    font-weight: 700 !important;
+    color: #FF4D00 !important;
+    background: #FFEBE3 !important;
+    border: 1px solid rgba(255, 77, 0, 0.2) !important;
     padding: 0.35rem 0.85rem !important;
     border-radius: 20px !important;
     white-space: nowrap !important;
@@ -3781,8 +3780,8 @@ body {
 
 .certificate-highlight-card:hover {
     transform: translateY(-4px) !important;
-    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.12) !important;
-    border-color: rgba(255, 77, 0, 0.35) !important;
+    box-shadow: 0 16px 38px rgba(0, 0, 0, 0.12) !important;
+    border-color: rgba(255, 77, 0, 0.4) !important;
 }
 
 .cert-icon-badge {
