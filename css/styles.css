@@ -2437,28 +2437,28 @@ body {
     overflow: hidden;
     background: #F0EEE9 !important;
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-    padding: 1.1rem 0;
-    margin-bottom: 1.5rem;
+    padding: 2.8rem 0;
+    margin-bottom: 1.8rem;
     white-space: nowrap;
 }
 
 .footer-ticker-track {
     display: flex;
-    gap: 2rem;
+    gap: 2.5rem;
     width: max-content;
     animation: footerTicker 28s linear infinite;
 }
 
 .footer-ticker-track span {
     font-family: 'Space Grotesk', 'Noto Sans Telugu', 'Noto Sans Tamil', 'Noto Sans Kannada', 'Noto Sans Malayalam', 'Mukta Malar', sans-serif;
-    font-size: clamp(1.4rem, 3.2vw, 2.4rem);
+    font-size: clamp(2.4rem, 4.8vw, 4rem);
     font-weight: 700;
     line-height: 1.1;
     letter-spacing: 0.05em;
     color: #FF4D00 !important;
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 .ticker-dot {
