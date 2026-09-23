@@ -2719,7 +2719,7 @@ body {
     align-items: center;
     padding-top: 2.2rem;
     padding-left: 0 !important;
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    border-top: none;
     margin-top: 1rem;
 }
 
