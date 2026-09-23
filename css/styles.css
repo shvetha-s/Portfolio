@@ -2431,11 +2431,11 @@ body {
     border-top: none !important;
 }
 
-/* Kinetic Ticker Banner - Off-White Background Matching 2nd Reference Image */
+/* Kinetic Ticker Banner - Orange Background with White Typography */
 .footer-kinetic-ticker {
     width: 100%;
     overflow: hidden;
-    background: #F0EEE9 !important;
+    background: #FF4D00 !important;
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
     padding: 2.8rem 0;
     margin-bottom: 1.8rem;
@@ -2455,14 +2455,14 @@ body {
     font-weight: 700;
     line-height: 1.1;
     letter-spacing: 0.05em;
-    color: #FF4D00 !important;
+    color: #FFFFFF !important;
     display: flex;
     align-items: center;
     gap: 2rem;
 }
 
 .ticker-dot {
-    color: #FF4D00 !important;
+    color: #FFFFFF !important;
     opacity: 0.85;
     font-style: normal;
     font-weight: 700;
