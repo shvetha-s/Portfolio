@@ -2415,9 +2415,9 @@ body {
 .footer-kinetic-ticker {
     width: 100%;
     overflow: hidden;
-    background: #FFFFFF;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-    padding: 0.95rem 0;
+    background: var(--accent);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 1.05rem 0;
     margin-bottom: 4rem;
     white-space: nowrap;
 }
@@ -2430,18 +2430,19 @@ body {
 }
 
 .footer-ticker-track span {
-    font-family: var(--font-heading), 'Noto Sans Tamil', 'Noto Sans Telugu', 'Noto Sans Kannada', 'Noto Sans Malayalam', 'Mukta Malar', sans-serif;
-    font-size: 1.1rem;
+    font-family: 'Space Grotesk', 'Noto Sans Telugu', 'Noto Sans Tamil', 'Noto Sans Kannada', 'Noto Sans Malayalam', 'Mukta Malar', sans-serif;
+    font-size: 1.15rem;
     font-weight: 700;
-    letter-spacing: 0.04em;
-    color: var(--text-primary);
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
     display: flex;
     align-items: center;
     gap: 1.6rem;
 }
 
 .ticker-dot {
-    color: var(--accent);
+    color: #FFFFFF;
+    opacity: 0.85;
     font-style: normal;
     font-weight: 700;
 }
