@@ -4238,6 +4238,14 @@ body {
         opacity: 0.05 !important;
     }
 
+    /* Hide work section background image in mobile view */
+    .work-backdrop-art,
+    .work-backdrop-art img {
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+    }
+
     /* Mobile Alignment — Education Section */
     #education.resume-plain-section {
         padding: 3.5rem 5% 2.5rem !important;
