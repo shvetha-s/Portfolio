@@ -74,7 +74,7 @@ a, button, [role="button"], input, select, textarea, .process-card, .takeaway-ca
     width: 100%;
     max-width: 100%;
     margin: 0;
-    padding: 0;
+    padding-top: 5rem;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -251,19 +251,22 @@ a, button, [role="button"], input, select, textarea, .process-card, .takeaway-ca
 /* Responsive Mobile & Tablet Rules */
 @media (max-width: 1023px) {
     .cs-header {
-        padding: 1rem 1.5rem;
+        padding: 0.85rem 1.25rem;
     }
     .cs-container {
-        padding: 0;
+        padding-top: 4.5rem;
     }
 }
 
 @media (max-width: 640px) {
+    .cs-header {
+        padding: 0.75rem 1rem;
+    }
     .cs-header-title {
         display: none;
     }
     .cs-container {
-        padding: 0;
+        padding-top: 4.2rem;
     }
     .cs-bottom-nav {
         padding: 2.5rem 1rem 2rem;
