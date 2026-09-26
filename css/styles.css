@@ -200,16 +200,17 @@ body {
    PRODUCT DESIGNER CENTERED "PORTFOLIO" HERO SECTION
    ═══════════════════════════════════════════════════════════════ */
 .designer-hero-section {
-    min-height: 82vh;
+    min-height: auto !important;
+    height: auto !important;
     width: 100%;
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
     background-color: #FFFFFF !important;
     background-image: none !important;
     overflow: hidden;
-    padding: 6.8rem 3vw 2.5rem !important;
+    padding: 5.5rem 3vw 1rem !important;
 }
 
 .hero-backdrop-art {
