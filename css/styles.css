@@ -919,9 +919,20 @@ body {
     }
 
     /* About Section Mobile Styling */
+    #about,
+    #about.about-storybook-section,
     .about-storybook-section {
-        padding: 0.8rem 1.2rem 2.5rem !important;
+        padding: 1rem 1.2rem 2rem !important;
         min-height: auto !important;
+        height: auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        align-items: stretch !important;
+    }
+
+    .about-backdrop-art {
+        display: none !important;
     }
 
     .about-content-overlay {
@@ -4456,9 +4467,12 @@ body {
         overflow: hidden !important;
     }
 
-    #about {
-        padding: 0.8rem 1.2rem 2.5rem !important;
+    #about,
+    #about.about-storybook-section,
+    .about-storybook-section {
+        padding: 1rem 1.2rem 2rem !important;
         min-height: auto !important;
+        height: auto !important;
     }
 
     #experience,
