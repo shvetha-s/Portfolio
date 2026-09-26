@@ -209,7 +209,7 @@ body {
     background-color: #FFFFFF !important;
     background-image: none !important;
     overflow: hidden;
-    padding: 2rem 3vw;
+    padding: 6.8rem 3vw 2.5rem !important;
 }
 
 .hero-backdrop-art {
