@@ -214,10 +214,10 @@ body {
 
 .hero-backdrop-art {
     position: absolute;
-    top: 0;
+    top: 4.8rem !important;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: calc(100% - 4.8rem) !important;
     z-index: 1;
     pointer-events: none;
     overflow: hidden;
@@ -226,10 +226,12 @@ body {
     justify-content: flex-end;
     padding-right: 4vw;
     padding-bottom: 0;
+    padding-top: 1.5rem !important;
 }
 
 .hero-bg-img {
-    height: 75vh;
+    height: 64vh !important;
+    max-height: calc(100% - 1.5rem) !important;
     width: auto;
     max-width: 42vw;
     object-fit: contain;
