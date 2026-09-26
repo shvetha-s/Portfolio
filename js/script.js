@@ -254,14 +254,17 @@ function initScrollTransitions() {
     storySections.forEach((item) => {
         if (!item.section) return;
 
-        if (item.isHero) {
-            // Hero section: Always remains 100% opaque and fully visible when scrolling
+        if (item.isHero || isMobile) {
+            // Hero section and Mobile screens: Always remain 100% opaque and fully visible
             if (item.content) {
                 gsap.set(item.content, { opacity: 1, y: 0 });
             }
+            if (item.backdrop) {
+                gsap.set(item.backdrop, { opacity: 0.65, scale: 1.0 });
+            }
         } else {
-            // Story sections (About, Experience):
-            // Smooth entrance as section comes into view, remains 100% fully visible while active
+            // Story sections (About, Experience) on Desktop:
+            // Smooth entrance as section comes into view
             const storyTl = gsap.timeline({
                 scrollTrigger: {
                     trigger: item.section,
