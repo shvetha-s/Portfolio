@@ -177,6 +177,8 @@ function initKineticTypography() {
     const kineticEl = document.getElementById('kineticNameText');
     if (!kineticEl) return;
 
+    kineticEl.style.color = '#FF4D00';
+
     const names = [
         { text: 'Swetha', font: "'Gaegu', 'Sniglet', 'Caveat', cursive", size: "clamp(2.4rem, 5vw, 3.8rem)" },
         { text: 'ஸ்வேதா', font: "'Mukta Malar', 'Noto Sans Tamil', sans-serif", size: "clamp(2.4rem, 5vw, 3.8rem)" },
@@ -199,6 +201,7 @@ function initKineticTypography() {
 
             kineticEl.textContent = currentObj.text;
             kineticEl.style.fontFamily = currentObj.font;
+            kineticEl.style.color = '#FF4D00';
             if (currentObj.size) {
                 kineticEl.style.fontSize = currentObj.size;
             }

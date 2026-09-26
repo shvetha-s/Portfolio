@@ -455,6 +455,26 @@ body {
     transition: opacity 0.2s ease !important;
 }
 
+/* Base Kinetic Typography Name Styling */
+.kinetic-name-wrapper {
+    position: relative !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    min-height: 60px !important;
+}
+
+.kinetic-name-text,
+#kineticNameText {
+    font-family: 'Gaegu', 'Sniglet', 'Caveat', cursive !important;
+    font-size: clamp(2.4rem, 5vw, 3.8rem) !important;
+    font-weight: 700 !important;
+    color: #FF4D00 !important;
+    letter-spacing: 0.02em !important;
+    display: inline-block !important;
+    line-height: 1.4 !important;
+    transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), filter 0.35s ease !important;
+}
+
 /* Desktop layout rules for Mobile Button & Navigation */
 .mobile-menu-btn {
     display: none !important;
@@ -750,6 +770,26 @@ body {
 
     .header-nav a:hover {
         color: #FF4D00 !important;
+        transform: scale(1.05) !important;
+    }
+
+    .header-nav a.nav-resume-btn {
+        font-size: 1.35rem !important;
+        padding: 0.65rem 2.2rem !important;
+        border-radius: 30px !important;
+        background-color: transparent !important;
+        border: 2px solid #FF4D00 !important;
+        color: #FF4D00 !important;
+        margin-top: 0.2rem !important;
+        transition: all 0.25s ease !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .header-nav a.nav-resume-btn:hover {
+        background-color: #FF4D00 !important;
+        color: #FFFFFF !important;
         transform: scale(1.05) !important;
     }
 
@@ -4369,6 +4409,7 @@ body {
 
     .kinetic-name-text {
         font-size: clamp(2.2rem, 7vw, 3.4rem) !important;
+        color: #FF4D00 !important;
         letter-spacing: 0.02em !important;
         text-align: center !important;
     }

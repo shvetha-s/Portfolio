@@ -27,6 +27,14 @@
     {
       "source": "/freshtrack",
       "destination": "/freshtrack-case-study.html"
+    },
+    {
+      "source": "/resume",
+      "destination": "/assets/docs/Swetha_S_product_designer.pdf"
+    },
+    {
+      "source": "/resume.pdf",
+      "destination": "/assets/docs/Swetha_S_product_designer.pdf"
     }
   ]
 }
