@@ -29,6 +29,10 @@
       "destination": "/freshtrack-case-study.html"
     },
     {
+      "source": "/toy-traders",
+      "destination": "/toy-traders.html"
+    },
+    {
       "source": "/resume",
       "destination": "/assets/docs/Swetha_S_product_designer.pdf"
     },
