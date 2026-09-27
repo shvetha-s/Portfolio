@@ -9,7 +9,7 @@ Welcome to the official personal portfolio codebase of **Swetha S.**, a fresher 
 - **Custom Interactive Sunflower Cursor**: Real-time rotating vector sunflower cursor (`#cursorDot`) with lerped fluid trailing ring (`#cursorRing`) and interactive scaling on link/card hover.
 - **Topographic Contour Hero Section**: Interactive mouse-tracking topographic line SVG (`#contourGlow`) featuring custom anime girl illustration sitting on letter **L** (`PORTFOLIO`).
 - **Split-Screen Storytelling Layout**: Desktop sticky 50/50 dual-column narrative layout for seamless reading.
-- **Multi-Layered Sunset Cloudscape Footer**: Vector cumulus cloudscape matching warm design system palette (`#F7E6D0`, `#FAD399`, `#FF9426`, `#FF4D00`) with edge-to-edge `GET IN TOUCH` typography statement.
+- **Multi-Layered Vector Orange Mountain Footer**: Multi-depth sunset mountain range vector landscape matching warm design system palette (`#FCE4D6`, `#FAD399`, `#FF9426`, `#FF4D00`) with glowing sunset disk and infinite kinetic marquee statement.
 - **Interactive Case Studies**:
   - 🥐 **Butterfingers**: Artisan Bakery App Case Study & Interactive Slide Deck Modal
   - 🏡 **Neighbour-to-Neighbour**: Hyperlocal Community Help Network Case Study

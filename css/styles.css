@@ -1102,7 +1102,7 @@ body {
     }
 
     .footer-kinetic-ticker {
-        margin-bottom: 2rem !important;
+        margin-bottom: 0 !important;
         padding: 0.65rem 0 !important;
     }
 
@@ -2479,13 +2479,15 @@ body {
 /* ═══════════════════════════════════════════════════════════════
    ULTIMATE UI/UX PORTFOLIO FOOTER DESIGN (DESIGN SYSTEM ALIGNED)
    ═══════════════════════════════════════════════════════════════ */
+
+
 .storybook-footer {
     position: relative;
     width: 100%;
     background-color: #FF4D00 !important;
     background: #FF4D00 !important;
     color: #FFFFFF !important;
-    padding: 0 0 1rem;
+    padding: 3.5rem 0 1.5rem;
     box-sizing: border-box;
     overflow: hidden;
     border-top: none !important;
@@ -2496,9 +2498,9 @@ body {
     width: 100%;
     overflow: hidden;
     background: #FF4D00 !important;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    border-bottom: none !important;
     padding: 2.8rem 0;
-    margin-bottom: 1.8rem;
+    margin-bottom: 0 !important;
     white-space: nowrap;
 }
 
@@ -2679,8 +2681,8 @@ body {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    width: 50px !important;
-    height: 50px !important;
+    width: 56px !important;
+    height: 56px !important;
     border-radius: 50% !important;
     background: #FFFFFF !important;
     border: 1.5px solid rgba(255, 255, 255, 0.4) !important;
@@ -2692,8 +2694,8 @@ body {
 }
 
 .back-to-top-btn svg {
-    width: 22px !important;
-    height: 22px !important;
+    width: 32px !important;
+    height: 32px !important;
     transition: transform 0.3s ease !important;
 }
 
